@@ -12,10 +12,15 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'compass'
   config.gem 'compass-960-plugin', :lib => false
+  config.gem "simple-navigation", :lib => "simple_navigation"
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
+
+  # Default locale
+  config.i18n.default_locale = :mk
+  
 end
 
 ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))

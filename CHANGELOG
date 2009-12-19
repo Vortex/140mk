@@ -9,3 +9,4 @@ Version 0.1
   * Introducing Compass with Compass-960 plugin for 960gs CSS library
   * Default layout with HAML / SASS (using Compass)
   * Introducing basic design and logo
+  * Introducing simple navigation plugin and macedonian locale

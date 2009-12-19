@@ -1,0 +1,7 @@
+# Macedonian translation file for 140.mk
+
+mk:
+  navigation:
+    home: "Дома"
+    users: "Членови"
+    lists: "Листи"

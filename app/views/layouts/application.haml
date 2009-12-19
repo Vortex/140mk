@@ -12,10 +12,8 @@
       .logo
         %h1= SITE_TITLE
       .navigation
-        %ul
-          %li= link_to "Home", root_path
-          %li= link_to "Users", users_path
-          %li= link_to "Lists", lists_path
+        = render_navigation
+        
     #main-content
       .content
         = yield

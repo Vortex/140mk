@@ -6,3 +6,15 @@ en:
     home: "Home"
     users: "Users"
     lists: "Lists"
+
+  tweet:
+    created_at: "{{time}} ago"
+
+  user:
+    created_at: "registered {{time}} ago"
+    has_written: "has written"
+    tweet: 'tweet'
+
+  title:
+    last_tweets: "Last tweets"
+    last_members: "Last members"

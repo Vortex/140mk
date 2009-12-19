@@ -15,6 +15,9 @@ Version 0.1
   * Added callbacks in subscription model for adding/removing users in twitter lists
   * Added TwitterHttpAuth class for http authorization of 140_mk user which is responsible for adding/removing users to it's lists
   * Added listing of last tweets from most subscribed lists on front page
+  * Added last members from a list on front page
+  * Added localization of front page and localization for Rails internals
+  * Refactoring of requests to Twitter API via TwitterHttpAuth
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Added this CHANGELOG file

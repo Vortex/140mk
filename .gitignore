@@ -11,3 +11,4 @@ db/*.sqlite3
 .project
 db/schema.rb
 .idea
+.sass-cache

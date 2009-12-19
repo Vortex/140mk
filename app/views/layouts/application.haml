@@ -3,29 +3,34 @@
   %head
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/text.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/main.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     %link(rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico")
     %title
       = SITE_TITLE
   %body.two-column
     #header
-      = link_to "Home", root_path
-      = link_to "Users", users_path
-      = link_to "Lists", lists_path
+      .logo
+        %h1= SITE_TITLE
+      .navigation
+        %ul
+          %li= link_to "Home", root_path
+          %li= link_to "Users", users_path
+          %li= link_to "Lists", lists_path
     #main-content
-      = yield
+      .content
+        = yield
 
     #sidebar
-      - unless signed_in?
-        = link_to 'Login', session_path, :method => :post
-      - else
-        = "Yo #{link_to current_user.screen_name, my_tweets_path}!"
-        (
-        = link_to "tweets", tweets_path
-        |
-        = link_to "subscriptions", subscriptions_path
-        |
-        = link_to "logout", session_path, :method => :delete
-        )
+      .content
+        - unless signed_in?
+          = link_to 'Login', session_path, :method => :post
+        - else
+          = "Yo #{link_to current_user.screen_name, my_tweets_path}!"
+          %br
+          = link_to "tweets", tweets_path
+          |
+          = link_to "subscriptions", subscriptions_path
+          |
+          = link_to "logout", session_path, :method => :delete
 
     #footer

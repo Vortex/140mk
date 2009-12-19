@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   def create
     oauth.set_callback_url(callback_session_url)
     
@@ -23,7 +22,9 @@ class SessionsController < ApplicationController
     session['rsecret'] = nil
     
     profile = Twitter::Base.new(oauth).verify_credentials
-    user    = User.find_or_create_by_screen_name(profile.screen_name)
+    user = User.find_or_initialize_by_screen_name(profile.screen_name)
+    user.twitter_id = profile.id
+    user.save
     
     user.update_attributes({
       :atoken => oauth.access_token.token, 

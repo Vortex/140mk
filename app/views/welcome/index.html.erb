@@ -1,0 +1,9 @@
+<% @lists_tweets.each_pair do |list_name, tweets| -%>
+  <h2><%= list_name %></h2>
+  <% for tweet in tweets -%>
+    <p>
+      <%= link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name) -%> (<%= time_ago_in_words tweet.created_at -%>)<br />
+      <%= auto_link(tweet.text) %>
+    </p>
+  <% end -%>
+<% end -%>

@@ -21,6 +21,13 @@
       <% end %>
     </div>
 
+    <%- unless flash[:notice].blank? -%>
+      <p style="color: green"><%= flash[:notice] %></p>
+    <%- end -%>
+    <%- unless flash[:error].blank? -%>
+      <p style="color: red"><%= flash[:error] %></p>
+    <%- end -%>
+
     <%= yield -%>
 
   </body>

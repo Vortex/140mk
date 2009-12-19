@@ -5,13 +5,16 @@ Version 0.1
 ==========
 
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Project setup
+  * Added OAuth twitter authorization (login and logout functionallity)
+  * Added authentication helpers
+  * Added my / friend's tweets timeline
+  * Added rake task (rake twitter:refresh_lists) for refreshing lists in database with those on the twitter account
+  * Added subscriptions resource for user subscriptions to a list
   * Added twitter_id (id of the user on twitter) column to users table
   * Added callbacks in subscription model for adding/removing users in twitter lists
   * Added TwitterHttpAuth class for http authorization of 140_mk user which is responsible for adding/removing users to it's lists
   * Added listing of last tweets from most subscribed lists on front page
-
-19.12.2009
-==========
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Added this CHANGELOG file
@@ -19,15 +22,4 @@ Version 0.1
   * Default layout with HAML / SASS (using Compass)
   * Introducing basic design and logo
   * Introducing simple navigation plugin and macedonian locale
-=======
 
-19.12.2009
-==========
-
-  Dalibor Nasevic <dalibor.nasevic@gmail.com>
-  * Project setup
-  * Added OAuth twitter authorization (login and logout functionallity)
-  * Added authentication helpers
-  * Added my / friend's tweets timeline
-  * Added rake task (rake twitter:refresh_lists) for refreshing lists in database with those on the twitter account
-  * Added subscriptions resource for user subscriptions to a list

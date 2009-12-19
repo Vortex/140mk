@@ -6,3 +6,5 @@ Version 0.1
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Added this CHANGELOG file
+  * Introducing Compass with Compass-960 plugin for 960gs CSS library
+  * Default layout with HAML / SASS (using Compass)

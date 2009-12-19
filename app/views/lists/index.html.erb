@@ -1,0 +1,6 @@
+<h1>Existing lists</h1>
+
+<% for list in @lists -%>
+  <p><%= list.name -%> (<%= time_ago_in_words(list.created_at) -%> ago)</p>
+  <p><%= will_paginate @lists %></p>
+<% end -%>

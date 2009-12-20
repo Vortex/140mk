@@ -29,6 +29,11 @@ Version 0.1
 20.12.2009
 ==========
 
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Refactoring in twitter_http_auth class, using singletone instance
+  * Added new rake tasks (rake twitter:update_lists, rake twitter:update_subscriptions and rake twitter:update that does both)
+  * Moved global constants to G140 hash namespace (example: G140[:site_title])
+
   Peco Danajlovski <vortexmk@gmail.com>
   * Introducing automated deployment with capistrano
   * Updated CSS on the front page

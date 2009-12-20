@@ -27,7 +27,7 @@ class TwitterHttpAuth
   end
 
   def refresh_lists_in_database
-    base.lists(twitter_auth.username).lists.each{ |l| List.find_or_create_by_name(l.name)}
+    base.lists(username).lists.each{ |l| List.find_or_create_by_name(l.name)}
   end
 
   private

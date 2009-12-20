@@ -33,6 +33,7 @@ Version 0.1
   * Refactoring in twitter_http_auth class, using singletone instance
   * Added new rake tasks (rake twitter:update_lists, rake twitter:update_subscriptions and rake twitter:update that does both)
   * Moved global constants to G140 hash namespace (example: G140[:site_title])
+  * Added list show page displaying last tweets and members
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Introducing automated deployment with capistrano

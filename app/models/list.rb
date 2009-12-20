@@ -10,4 +10,8 @@ class List < ActiveRecord::Base
       :limit => lists_limit,
       :order => 'count ASC'
   end
+
+  def to_param
+    name
+  end
 end

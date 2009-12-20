@@ -13,15 +13,27 @@ class TwitterHttpAuth
     @username
   end
 
+  def tweets_from_list(list, limit)
+    base.list_timeline(username, list.name, :per_page => limit)
+  end
+
   def tweets_from_lists(lists, limit)
     lists_tweets = {}
-    lists.each{|list| lists_tweets[list.name] = base.list_timeline(username, list.name, :per_page => limit)}
+    lists.each do |list|
+      lists_tweets[list.name] = tweets_from_list(list, limit)
+    end
     lists_tweets
+  end
+
+  def members_from_list(list)
+    base.list_members(username, list.name, -1).users.compact!
   end
 
   def members_from_lists(lists)
     lists_members = {}
-    lists.each{|list| lists_members[list.name] = base.list_members(username, list.name, -1).users.compact}
+    lists.each do |list|
+      lists_members[list.name] = members_from_list(list)
+    end
     lists_members
   end
 

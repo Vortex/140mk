@@ -1,0 +1,12 @@
+#categories
+  - @lists_tweets.each_pair do |list_name, tweets|
+    .category      
+      .tweets
+        %h2= translate_list_name(list_name)
+        - tweets.each do |tweet|
+          .tweet
+            = link_to image_tag(tweet.user.profile_image_url), user_url(tweet.user.screen_name)
+            .body
+              = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
+              %span.when= t('tweet.created_at', :time => time_ago_in_words(tweet.created_at))
+              = auto_link(tweet.text)

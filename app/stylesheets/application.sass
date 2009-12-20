@@ -1,43 +1,45 @@
+@import 960/grid.sass
 @import base.sass
 @import border_radius
 @import compass/utilities.sass
+@import layout.sass
 
-body
-  background: url(../../images/twitter-ny-bg.jpg)
 
-#header, #sidebar
-  a
-    +hover-link
-
-#header
-  position: relative
-  
-  .navigation
-    background: #fff
-    padding: 5px
-    position: absolute
-    top: 10px
-    right: 10px
+#categories
+  .category
+    background: #E1F3FD
+    margin-top: 10px
+    +grid(8,24)
     +border-radius(12px)
+    margin-right: 0px
+    margin-left: 7px
 
-    ul
-      +horizontal-list
+    h2
+      background: #0094DA
+      color: #fff
+      text-align: center
+      +border-radius(12px)
 
-  .logo
-    float: left
+    .tweets
+      padding: 5px
+
+      .tweet
+        padding: 10px 5px
+        border-bottom: 1px dashed #999
+
+        .body
+          color: #666
+          font-size: 0.9em          
+          padding-left: 55px
+
+          .when
+            font-weight: bold
+
+        img
+          float: left          
+          width: 48px
+          height: 48px
+
     
-    h1
-      +replace-text("140-mk-logo.png")
-      width: 200px
-      height: 84px
+    
 
-#main-content, #sidebar
-  background: #fff
-  +border-radius(12px)
-  
-  .content
-    padding: 10px
-
-#sidebar
-  .content
-    text-align: right

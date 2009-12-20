@@ -26,3 +26,9 @@ Version 0.1
   * Introducing basic design and logo
   * Introducing simple navigation plugin and macedonian locale
 
+20.12.2009
+==========
+
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Introducing automated deployment with capistrano
+

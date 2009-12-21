@@ -62,8 +62,8 @@ body {
 #header .logo {
   float: left;
 }
-/* line 25, ../../../app/stylesheets/_layout.sass */
-#header .logo h1 {
+/* line 26, ../../../app/stylesheets/_layout.sass */
+#header .logo a h1 {
   text-indent: -9999em;
   overflow: hidden;
   background-image: url('/images/140-mk-logo.png');
@@ -73,7 +73,7 @@ body {
   height: 84px;
 }
 
-/* line 30, ../../../app/stylesheets/_layout.sass */
+/* line 31, ../../../app/stylesheets/_layout.sass */
 #main-content, #sidebar, #footer {
   background: #fff;
   border-radius: 12px;
@@ -81,13 +81,13 @@ body {
   -webkit-border-radius: 12px;
 }
 
-/* line 35, ../../../app/stylesheets/_layout.sass */
+/* line 36, ../../../app/stylesheets/_layout.sass */
 #sidebar .content {
   padding: 10px;
   text-align: right;
 }
 
-/* line 39, ../../../app/stylesheets/_layout.sass */
+/* line 40, ../../../app/stylesheets/_layout.sass */
 #footer {
   padding: 20px;
   margin-top: 10px;

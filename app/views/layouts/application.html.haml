@@ -11,7 +11,9 @@
   %body.two-column
     #header
       .logo
-        %h1= G140[:site_name]
+        - link_to "/" do
+          %h1= G140[:site_name] 
+          
       .navigation
         = render_navigation
         

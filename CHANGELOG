@@ -40,4 +40,5 @@ Version 0.1
   * Updated CSS on the front page
   * Switching to jQuery with jRails plugin
   * Front page: Introducing content tabs on categories (Tweets and Users)
+  * Added link to logo
 

@@ -1,4 +1,4 @@
-<h1><%= current_user.screen_name -%>'s friends timeline</h1>
+<h1><%= current_user.screen_name -%> - <%= t('category.tweets') %></h1>
 
 <% for tweet in @tweets -%>
   <p>

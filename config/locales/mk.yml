@@ -4,7 +4,9 @@ mk:
   global:
     logout: "Одјави се"
     login: "Најави се"
-    
+    delete: "Бриши"
+    back: "Назад"
+
   category:
     users: "Членови"
     tweets: "Твитови"
@@ -26,6 +28,13 @@ mk:
   title:
     last_tweets: "Последни твитови"
     last_members: "Последни членови"
+
+  subscriptions:
+    listing: "Листа на следени категории"
+    new: "Следи друга категорија"
+    
+  lists:
+    title: "Листи"
 
 # Macedonian translations for Ruby on Rails
 # by Dejan Dimić (dejan.dimic@gmail.com)
@@ -140,4 +149,5 @@ mk:
         less_than_or_equal_to: "мора да биде помало или еднакво на {{count}}"
         odd: "мора да биде непарно"
         even: "мора да биде парно"
+
 

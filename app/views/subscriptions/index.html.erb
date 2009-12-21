@@ -1,4 +1,4 @@
-<h1>Listing subscriptions</h1>
+<h1><%= t('subscriptions.listing') %></h1>
 
 <table>
   <tr>
@@ -10,11 +10,11 @@
   <tr>
     <td><%=h subscription.user.screen_name %></td>
     <td><%=h subscription.list.name %></td>
-    <td><%= link_to 'Destroy', subscription, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('global.delete'), subscription, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New subscription', new_subscription_path %>
+<%= link_to t('subscriptions.new'), new_subscription_path %>

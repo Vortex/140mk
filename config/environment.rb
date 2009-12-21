@@ -14,7 +14,7 @@ Rails::Initializer.run do |config|
   config.gem 'compass-960-plugin', :lib => false
   config.gem "simple-navigation", :lib => "simple_navigation"
   config.gem "cyrillizer", :source => 'http://gemcutter.org', :version => '0.0.2'
-  
+  config.gem "jrails"
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.

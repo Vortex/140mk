@@ -30,7 +30,7 @@ Version 0.1
 ==========
 
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
-  * Refactoring in twitter_http_auth class, using singletone instance
+  * Refactoring in twitter_http_auth class, using singleton instance
   * Added new rake tasks (rake twitter:update_lists, rake twitter:update_subscriptions and rake twitter:update that does both)
   * Moved global constants to G140 hash namespace (example: G140[:site_title])
   * Added list show page displaying last tweets and members
@@ -38,4 +38,6 @@ Version 0.1
   Peco Danajlovski <vortexmk@gmail.com>
   * Introducing automated deployment with capistrano
   * Updated CSS on the front page
+  * Switching to jQuery with jRails plugin
+  * Front page: Introducing content tabs on categories (Tweets and Users)
 

@@ -1,6 +1,15 @@
 # Macedonian translation file for 140.mk
 
 mk:
+  global:
+    logout: "Одјави се"
+    login: "Најави се"
+    
+  category:
+    users: "Членови"
+    tweets: "Твитови"
+    subscriptions: "Следени категории"
+    
   navigation:
     home: "Дома"
     users: "Членови"
@@ -131,3 +140,4 @@ mk:
         less_than_or_equal_to: "мора да биде помало или еднакво на {{count}}"
         odd: "мора да биде непарно"
         even: "мора да биде парно"
+

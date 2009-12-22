@@ -17,6 +17,8 @@ class TwitterHttpAuth
 
   def tweets_from_list(list, limit)
     base.list_timeline(username, list.name, :per_page => limit)
+  rescue Twitter::NotFound
+    []
   end
 
   def tweets_from_lists(lists, limit)
@@ -24,11 +26,13 @@ class TwitterHttpAuth
     lists.each do |list|
       lists_tweets[list.name] = tweets_from_list(list, limit)
     end
-    lists_tweets
+    lists_tweets.reject{|k, v| v.empty?}
   end
 
   def members_from_list(list)
     base.list_members(username, list.name, -1).users.compact!
+  rescue Twitter::NotFound
+    []
   end
 
   def members_from_lists(lists)
@@ -36,7 +40,7 @@ class TwitterHttpAuth
     lists.each do |list|
       lists_members[list.name] = members_from_list(list)
     end
-    lists_members
+    lists_members.reject{|k, v| v.empty?}
   end
 
   def update_lists_in_database_from_twitter

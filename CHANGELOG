@@ -39,3 +39,9 @@ Version 0.1
   * Introducing automated deployment with capistrano
   * Updated CSS on the front page
 
+22.12.2009
+==========
+
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Added rescues for Twitter::NotFound in list timeline and list members requests to Twitter API
+

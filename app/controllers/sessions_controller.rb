@@ -22,17 +22,14 @@ class SessionsController < ApplicationController
     session['rsecret'] = nil
     
     profile = Twitter::Base.new(oauth).verify_credentials
-    user = User.find_or_initialize_by_screen_name(profile.screen_name)
-    user.twitter_id = profile.id
-    user.save
-    
-    user.update_attributes({
-      :atoken => oauth.access_token.token, 
-      :asecret => oauth.access_token.secret,
-    })
+    user = User.create_or_update(profile, oauth)
     
     sign_in(user)
     redirect_back_or root_path
+  rescue Twitter::Unavailable
+    #TODO design for error_page
+    flash[:error] = "Twitter API problems. Please try again later"
+    redirect_to error_path
   end
 
   private

@@ -1,5 +1,3 @@
-ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
-
 class TwitterHttpAuth
   def initialize
     @username = ConsumerConfig['user']['username']
@@ -53,6 +51,14 @@ class TwitterHttpAuth
         user = User.find_or_create_by_screen_name(u.screen_name)
         Subscription.find_or_create_by_user_id_and_list_id(user.id, list.id)
       end
+    end
+  end
+
+  def method_missing(m, *args, &block)
+    if base.respond_to? m.to_sym
+      base.send m, *args, &block
+    else
+      raise NoMethodError
     end
   end
 

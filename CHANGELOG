@@ -1,3 +1,17 @@
+Version 0.2
+===========
+
+05.01.2010
+==========
+
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Added lists as seed data (run rake db:seed after rake db:migrate)
+  * Added location, url, description, photo, name, twitter_account_created_at, is_active fields to users table
+  * User gets followed automatically by 140.mk twitter user after successful registration
+  * User can deactivate his account, and activate back again the same account (after he logins again)
+  * Removed previous implementation of lists on 140.mk twitter account
+  * Changed previous subscriptions interface with one form and 5 select boxes to subscribe to 5 categories at once.
+
 Version 0.1
 ===========
 

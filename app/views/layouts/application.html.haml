@@ -32,6 +32,8 @@
           = link_to t('category.subscriptions'), subscriptions_path
           |
           = link_to t('global.logout'), session_path, :method => :delete
+          |
+          = link_to t('user.deactivate'), user_path(:current), :method => :delete
 
     #footer
       %b 140.mk

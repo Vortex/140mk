@@ -6,11 +6,12 @@ mk:
     login: "Најави се"
     delete: "Бриши"
     back: "Назад"
+    edit: "Измени"
 
   category:
     users: "Членови"
     tweets: "Твитови"
-    subscriptions: "Следени категории"
+    subscriptions: "Мои категории"
     
   navigation:
     home: "Дома"
@@ -24,6 +25,8 @@ mk:
     created_at: "регистриран пред {{time}}"
     has_written: "има напишано"
     tweet: 'твит'
+    activate: 'Активирај'
+    deactivate: 'Деактивирај'
 
   title:
     last_tweets: "Последни твитови"
@@ -31,10 +34,14 @@ mk:
 
   subscriptions:
     listing: "Листа на следени категории"
-    new: "Следи друга категорија"
+    edit: "Измени листа на категории"
+    create:
+      notice: "Успешно креирана категорија."
+      error: "Не се дозволени повеќе од {{count}} категории!"
     
   lists:
     title: "Листи"
+    select: "Избери листа"
 
 # Macedonian translations for Ruby on Rails
 # by Dejan Dimić (dejan.dimic@gmail.com)

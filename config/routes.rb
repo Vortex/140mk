@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-
+  map.error '/error', :controller => "welcome", :action => "error"
 
   map.root :controller => "welcome"
   map.resources :users

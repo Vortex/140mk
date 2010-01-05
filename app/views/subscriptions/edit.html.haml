@@ -1,0 +1,10 @@
+= t('subscriptions.edit')
+- form_tag subscriptions_path do
+  - G140[:max_lists].times do |i|
+    %p
+      = label_tag :"lists_[id#{i}]", t('lists.select')
+      %br
+      = select_tag :"lists[id#{i}]", options_for_select(@lists, @selected_lists[i])
+  %p
+    = submit_tag t('global.edit')
+= link_to t('global.back'), subscriptions_path

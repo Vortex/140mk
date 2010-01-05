@@ -1,7 +1,7 @@
 #categories
   - @lists_tweets.each_pair do |list_name, tweets|
     .category{:id => "category_#{list_name.underscore}"}
-      %h2= link_to translate_list_name(list_name), list_path(list_name)
+      %h2= link_to list_name, list_path(list_name)
       .tabs
         = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list_name.underscore}')", :class => 'tweets_link selected'
         = link_to_function t('category.users'), "switch_to_users('category_#{list_name.underscore}')", :class => 'users_link'

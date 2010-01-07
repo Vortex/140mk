@@ -26,3 +26,15 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
+
+# Include needed gems
+config.gem "rspec", :lib => false, :version => ">=1.2.2"
+config.gem "rspec-rails", :lib => false, :version => ">=1.2.2"
+config.gem "webrat", :version => ">=0.4.4"
+config.gem "cucumber", :lib => false, :version => ">=0.3.0"
+config.gem "cucumber-rails", :lib => false
+config.gem 'shoulda', :lib => 'shoulda'
+config.gem "factory_girl", :lib => "factory_girl"
+config.gem 'email_spec', :lib => 'email_spec'
+config.gem "spork"
+config.gem "database_cleaner"

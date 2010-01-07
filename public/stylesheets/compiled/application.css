@@ -186,3 +186,6 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   width: 260px; }
+  /* line 88, ../../../app/stylesheets/application.sass */
+  #hashtag_filter .tweets {
+    margin: 5px 5px 5px 5px; }

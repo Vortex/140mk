@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
     user = User.find_by_screen_name(profile.screen_name) || User.new
     user.screen_name = profile.screen_name
     user.twitter_id = profile.id
-    user.twitter_account_created = profile.created_at
+    user.twitter_account_created_at = profile.created_at
     user.name = profile.name
     user.location = profile.location
     user.url = profile.url

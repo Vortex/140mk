@@ -22,6 +22,3 @@ Rails::Initializer.run do |config|
   # Default locale
   config.i18n.default_locale = :mk
 end
-
-ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
-

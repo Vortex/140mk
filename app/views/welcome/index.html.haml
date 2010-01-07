@@ -1,3 +1,9 @@
+- content_for(:sidebar) do
+  #hashtag_filter
+    %h2 #Fail
+    = render :partial => 'tweets', :object => @filtered_tweets
+
+
 #categories
   - @lists.each do |list|
     .category{:id => "category_#{list.name.underscore}"}

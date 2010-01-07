@@ -18,7 +18,8 @@ Version 0.2
   * When user has not subscribed to any category, redirect him to subscriptions page
 
   Peco Danajlovski <vortexmk@gmail.com>
-  * Introduced RSpec
+  * Introduced RSpec & Cucumber for testing
+  * Added tweets with fail tags to sidebar
   
   
 

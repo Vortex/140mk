@@ -1,4 +1,7 @@
 class WelcomeController < ApplicationController
+
+  before_filter :get_filtered_tweets, :only => :index
+
   def index
     @lists = List.most_subscribed_lists(G140[:front_page_lists_count])
     @lists_tweets = {}
@@ -19,4 +22,12 @@ class WelcomeController < ApplicationController
 
   def error
   end
+
+  private
+
+  def get_filtered_tweets
+    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"])
+  end
+
+
 end

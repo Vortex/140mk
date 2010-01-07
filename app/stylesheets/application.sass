@@ -18,70 +18,72 @@
     margin: 5px
     +border-radius(12px)
 
-  .category
-    background: #E1F3FD
-    margin-top: 10px
-    +grid(8,24)
+.category, #hashtag_filter
+  background: #E1F3FD
+  margin-top: 10px
+  +grid(8,24)
+  +border-radius(12px)
+  margin-right: 0px
+  margin-left: 7px
+  position: relative
+
+  h2
+    background: #0094DA
+    color: #fff
+    font-size: 1.4em
+    margin: 5px
+    text-align: center
     +border-radius(12px)
-    margin-right: 0px
-    margin-left: 7px
-    position: relative
 
-    h2
-      background: #0094DA
+    a
       color: #fff
-      font-size: 1.4em
-      margin: 5px
-      text-align: center
-      +border-radius(12px)
+      font-weight: bold
+      +hover-link
 
-      a
-        color: #fff
-        font-weight: bold
-        +hover-link
+  .tabs
+    position: absolute
+    top: 40px
+    right: 20px
 
-    .tabs
-      position: absolute
-      top: 40px
-      right: 20px
+    a
+      color: #666
+      font-weight: bold
+      +hover-link
 
-      a
-        color: #666
-        font-weight: bold
-        +hover-link
-
-      .selected
-        background: #fff
-        padding: 4px
-        +border-radius(6px)
-
-    .users
-      display: none
-
-    .tweets, .users
+    .selected
       background: #fff
-      margin: 27px 5px 5px 5px
-      padding: 5px
-      +border-radius(12px)
+      padding: 4px
+      +border-radius(6px)
 
-      .tweet
-        padding: 10px 5px
-        border-bottom: 1px dashed #999
-        min-height: 45px
+  .users
+    display: none
 
-        .body
-          color: #666
-          font-size: 0.9em          
-          padding-left: 55px
+  .tweets, .users
+    background: #fff
+    margin: 27px 5px 5px 5px
+    padding: 5px
+    +border-radius(12px)
 
-          .when
-            font-weight: bold
+    .tweet
+      padding: 10px 5px
+      border-bottom: 1px dashed #999
+      min-height: 45px
 
-        img
-          float: left
-          width: 48px
-          height: 48px
+      .body
+        color: #666
+        font-size: 0.9em
+        padding-left: 55px
 
-    
+        .when
+          font-weight: bold
+
+      img
+        float: left
+        width: 48px
+        height: 48px
+
+#hashtag_filter
+  +grid(7,24)
+
     
 

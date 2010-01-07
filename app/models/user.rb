@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def has_subscriptions?
+    subscriptions.count > 0
+  end
+
   def set_attributes_from_twitter_account(account)
     self.twitter_id = account.id
     self.twitter_account_created_at = account.created_at

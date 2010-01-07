@@ -15,6 +15,7 @@ Version 0.2
   * Changed front page to new DB design structure
   * Simlified categories select with one page interface
   * Removed friends timeline from current user
+  * When user has not subscribed to any category, redirect him to subscriptions page
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Introduced RSpec

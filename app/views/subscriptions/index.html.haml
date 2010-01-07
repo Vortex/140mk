@@ -1,20 +1,22 @@
-%h1>
-  = t('subscriptions.listing')
+%h1
+  = t('category.subscriptions')
 
-%table
-  %tr
-    %th
-      User
-    %th
-      List
-  - @subscriptions.each do |subscription|
-    %tr
-      %td
-        =h subscription.user.screen_name
-      %td
-        =h subscription.list.name
-      %td
-        = link_to t('global.delete'), subscription, :confirm => 'Are you sure?', :method => :delete
-%br
+%p
+  - if @subscriptions.empty?
+    = t('subscriptions.subscribe_message')
+  - else
+    = t('subscriptions.subscribed_message')
+    - @subscriptions.each do |subscription|
+      = link_to subscription.list.name, subscription.list
+      (
+      = link_to t('global.delete'), subscription, :confirm => t('messages.confirm'), :method => :delete
+      )
 
-= link_to t('global.edit'), edit_subscription_path(:all)
+= t('subscriptions.edit')
+  - form_tag subscriptions_path do
+    - G140[:max_lists].times do |i|
+    %p
+      = select_tag :"lists[id#{i}]", options_for_select(@lists, @selected_lists[i])
+  %p
+    = submit_tag t('global.edit')
+

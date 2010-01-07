@@ -12,6 +12,9 @@ Version 0.2
   * Added rake task (rake twitter:get_users) for collecting users that are followed by 140mk twitter account (useful in development mode)
   * Added rake task (rake twitter:get_tweets) for collecting newest tweets of 140mk friends timeline
   * Added rake task (rake app:reset) for clean start in development mode (db:drop, db:create, db:migrate, db:seed, twitter:get_users, twitter:get_tweets)
+  * Changed front page to new DB design structure
+  * Simlified categories select with one page interface
+  * Removed friends timeline from current user
 
 05.01.2010
 ==========

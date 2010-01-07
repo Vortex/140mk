@@ -1,0 +1,11 @@
+%h1
+  = t('category.title')
+
+- for list in @lists
+  %p
+    = link_to list.name, list
+    (
+    = t('category.created_at', :time => time_ago_in_words(list.created_at))
+    )
+%p
+  = will_paginate @lists

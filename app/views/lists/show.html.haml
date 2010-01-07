@@ -5,7 +5,7 @@
       %h2= t('title.last_tweets')
       - @tweets.each do |tweet|
         .tweet
-          = link_to image_tag(tweet.user.profile_image_url), user_url(tweet.user.screen_name)
+          = link_to image_tag(tweet.user.photo), user_url(tweet.user.screen_name)
           .body
             = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
             %span.when= t('tweet.created_at', :time => time_ago_in_words(tweet.created_at))
@@ -13,11 +13,9 @@
   .category
     .tweets
       %h2= t('title.last_members')
-      - @members.each do |member|
+      - @users.each do |user|
         .tweet
-          = link_to image_tag(member.profile_image_url), user_url(member.screen_name)
+          = link_to image_tag(user.photo), user_url(user.screen_name)
           .body
-            = link_to h(member.screen_name), user_url(member.screen_name)
-            %span.when= t('user.created_at', :time => time_ago_in_words(member.created_at))
-            = t('user.has_written')
-            = pluralize(member.statuses_count, t('user.tweet'))
+            = link_to h(user.screen_name), user_url(user.screen_name)
+            %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))

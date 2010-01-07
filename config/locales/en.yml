@@ -5,15 +5,17 @@ en:
   navigation:
     home: "Home"
     users: "Users"
-    lists: "Lists"
+    categories: "Categories"
 
   tweet:
     created_at: "{{time}} ago"
+    my_timeline: "Мy timeline"
+    all_timeline: "All timeline"
 
   user:
     created_at: "registered {{time}} ago"
-    has_written: "has written"
     tweet: 'tweet'
+    title: "List of registered users"
     errors:
       private_account: "Your tweets are private. You have to follow {{user}} or have public account in order to allow us access to your tweets. When you fix this login again to this application."
 
@@ -21,13 +23,19 @@ en:
     last_tweets: "Last tweets"
     last_members: "Last members"
 
-  lists:
-    title: "Lists"
-    select: "Select list"
+  category:
+    users: "Users"
+    tweets: "Tweets"
+    subscriptions: "My categories"
+    title: "Categories"
+    created_at: "{{time}} ago"
 
   subscriptions:
-    listing: "List of followed categories"
-    edit: "Edit list of categories"
+    subscribe_message: "You haven't subscribed to any categories yet. Please subscribe."
+    subscribed_message: "You are subscribed to:"
     create:
-      notice: "Subscription was successfully created."
+      notice: "Subscriptions successfully edited."
       error: "No more than {{count}} categories allowed!"
+
+  messages:
+    confirm: "Are you sure?"

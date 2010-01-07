@@ -12,21 +12,25 @@ mk:
     users: "Членови"
     tweets: "Твитови"
     subscriptions: "Мои категории"
+    title: "Категории"
+    created_at: "пред {{time}}"
     
   navigation:
     home: "Дома"
     users: "Членови"
-    lists: "Листи"
+    categories: "Категории"
 
   tweet:
     created_at: "пред {{time}}"
+    my_timeline: "Мои твитови"
+    all_timeline: "Сите твитови"
 
   user:
     created_at: "регистриран пред {{time}}"
-    has_written: "има напишано"
     tweet: 'твит'
     activate: 'Активирај'
     deactivate: 'Деактивирај'
+    title: "Листа на регистрирани корисници"
     errors:
       private_account: "Вашите твитови се приватни. Треба да го следите {{user}} или вашата сметка да биде јавна за да имаме пристап до вашите твитови. Штом тоа го средите најавете се повторно."
 
@@ -35,15 +39,14 @@ mk:
     last_members: "Последни членови"
 
   subscriptions:
-    listing: "Листа на следени категории"
-    edit: "Измени листа на категории"
+    subscribe_message: "Немате избрано категори. Ве молиме изберете."
+    subscribed_message: "Избрани категори:"
     create:
-      notice: "Успешно креирана категорија."
+      notice: "Успешно измената листа на категории."
       error: "Не се дозволени повеќе од {{count}} категории!"
-    
-  lists:
-    title: "Листи"
-    select: "Избери листа"
+
+  messages:
+    confirm: "Дали си сигурен?"
 
 # Macedonian translations for Ruby on Rails
 # by Dejan Dimić (dejan.dimic@gmail.com)

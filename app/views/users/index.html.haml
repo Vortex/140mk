@@ -1,0 +1,12 @@
+%h1
+  = t('user.title')
+
+- for user in @users
+  %p
+    = link_to user.screen_name, "http://www.twitter.com/#{user.screen_name}"
+    (
+    = time_ago_in_words(user.created_at)
+    ago
+    )
+  %p
+    = will_paginate @users

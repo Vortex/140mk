@@ -1,6 +1,0 @@
-<h1>List of registered users</h1>
-
-<% for user in @users -%>
-  <p><%= link_to user.screen_name, "http://www.twitter.com/#{user.screen_name}" -%> (<%= time_ago_in_words(user.created_at) -%> ago)</p>
-  <p><%= will_paginate @users %></p>
-<% end -%>

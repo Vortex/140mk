@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate, :except => :index
 
   def index
-    @users = User.paginate :per_page => 1, :page => params[:page], :order => 'created_at DESC'
+    @users = User.paginate :per_page => G140[:users_per_page], :page => params[:page], :order => 'id DESC'
   end
 
   def destroy

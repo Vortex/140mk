@@ -1,12 +1,7 @@
 .users
-  / FIXME: Ugly hack
-  - list = List.find_by_name(list_name)
-  - members = TWITTER_HTTP_AUTH.members_from_list(list)
-  - members.each do |member|
+  - users.each do |user|
     .tweet
-      = link_to image_tag(member.profile_image_url), user_url(member.screen_name)
+      = link_to image_tag(user.photo), user
       .body
-        = link_to h(member.screen_name), user_url(member.screen_name)
-        %span.when= t('user.created_at', :time => time_ago_in_words(member.created_at))
-        = t('user.has_written')
-        = pluralize(member.statuses_count, t('user.tweet'))
+        = link_to h(user.screen_name), user_url(user.screen_name)
+        %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))

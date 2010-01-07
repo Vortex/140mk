@@ -1,0 +1,11 @@
+%h1
+  = t('tweet.all_timeline')
+- for tweet in @tweets
+  %p
+    = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
+    (
+    = t('tweet.created_at', :time => time_ago_in_words(tweet.created_at))
+    )
+    = auto_link tweet.text
+%p
+  = will_paginate @tweets

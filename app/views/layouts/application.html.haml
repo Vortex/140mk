@@ -33,8 +33,6 @@
         - else
           = "Yo #{link_to current_user.screen_name, my_tweets_path}!"
           %br
-          = link_to t('category.tweets'), tweets_path
-          |
           = link_to t('category.subscriptions'), subscriptions_path
           |
           = link_to t('global.logout'), session_path, :method => :delete
@@ -44,4 +42,4 @@
     #footer
       %b 140.mk
       |
-      (Верзија 0.0.1)
+      (Верзија 0.0.2)

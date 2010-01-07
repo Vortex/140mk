@@ -26,7 +26,7 @@ class WelcomeController < ApplicationController
   private
 
   def get_filtered_tweets
-    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"], :order => 'twitter_id DESC')
+    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"], :order => 'tweet_id DESC')
   end
 
 

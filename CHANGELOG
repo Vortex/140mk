@@ -6,6 +6,12 @@ Version 0.2
 
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
   * Renamed field twitter_account_created to twitter_account_created_at in users table
+  * Renamed field is_active to status in users table (status = 1 => active, status = 0 => not active, status = 2 => protected)
+  * Added notification when user has protected his account, he has to follow 140mk user or make his account public in order to collect his tweets
+  * Removed old rake tasks
+  * Added rake task (rake twitter:get_users) for collecting users that are followed by 140mk twitter account (useful in development mode)
+  * Added rake task (rake twitter:get_tweets) for collecting newest tweets of 140mk friends timeline
+  * Added rake task (rake app:reset) for clean start in development mode (db:drop, db:create, db:migrate, db:seed, twitter:get_users, twitter:get_tweets)
 
 05.01.2010
 ==========

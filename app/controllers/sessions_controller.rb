@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     
     profile = Twitter::Base.new(oauth).verify_credentials
     user = User.create_or_update(profile, oauth)
-    
+
     sign_in(user)
     redirect_back_or root_path
   rescue Twitter::Unavailable

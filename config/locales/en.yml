@@ -14,6 +14,8 @@ en:
     created_at: "registered {{time}} ago"
     has_written: "has written"
     tweet: 'tweet'
+    errors:
+      private_account: "Your tweets are private. You have to follow {{user}} or have public account in order to allow us access to your tweets. When you fix this login again to this application."
 
   title:
     last_tweets: "Last tweets"

@@ -18,6 +18,12 @@
         = render_navigation
         
     #main-content
+      - unless flash[:error].blank?
+        %div#flash.error
+          = flash[:error]
+      - unless flash[:notice].blank?
+        %div#flash.notice
+          = flash[:notice]
       = yield
 
     #sidebar

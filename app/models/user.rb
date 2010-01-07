@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def deactivate!
-    self.is_active = 0 # not active
+    self.status = 0 # not active
     self.save!
     unfollow_user
   end

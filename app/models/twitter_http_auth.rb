@@ -1,5 +1,3 @@
-ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
-
 class TwitterHttpAuth
   def initialize
     @username = ConsumerConfig['user']['username']

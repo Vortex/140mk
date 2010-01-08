@@ -11,7 +11,7 @@ class List < ActiveRecord::Base
       :joins => :subscriptions,
       :group => "subscriptions.list_id",
       :limit => lists_limit,
-      :order => 'count ASC'
+      :order => 'count DESC'
   end
 
   def to_param

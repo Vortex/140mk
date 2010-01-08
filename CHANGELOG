@@ -16,6 +16,7 @@ Version 0.2
   * Simlified categories select with one page interface
   * Removed friends timeline from current user
   * When user has not subscribed to any category, redirect him to subscriptions page
+  * Added config.gem rails-footnotes in development mode
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Introduced RSpec & Cucumber for testing

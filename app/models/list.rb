@@ -1,6 +1,6 @@
 class List < ActiveRecord::Base
-  CAPITALS = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ"
-  DOWNCASE = "абвгдѓежзѕијклљмнњопрстќуфхцчџш"
+  CAPITALS = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ" + ('A'..'Z').to_a.join('')
+  DOWNCASE = "абвгдѓежзѕијклљмнњопрстќуфхцчџш" + ('a'..'z').to_a.join('')
 
   has_many :subscriptions, :dependent => :destroy
   has_many :users, :through => :subscriptions

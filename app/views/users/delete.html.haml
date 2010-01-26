@@ -1,0 +1,3 @@
+%p= t('user.deactivate_account')
+- form_tag user_path(:current), :method => :delete do
+  = submit_tag t('buttons.yes')

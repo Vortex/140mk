@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @users = User.paginate :per_page => G140[:users_per_page], :page => params[:page], :order => 'id DESC'
   end
 
+  def delete
+    
+  end
+
   def destroy
     current_user.deactivate!
     reset_session

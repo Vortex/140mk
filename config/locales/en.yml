@@ -15,6 +15,9 @@ en:
   user:
     created_at: "registered {{time}} ago"
     tweet: 'tweet'
+    activate: 'Activate'
+    deactivate: 'Deactivate'
+    deactivate_account: 'Are you sure you want to deactive your account?'
     title: "List of registered users"
     errors:
       private_account: "Your tweets are private. You have to follow {{user}} or have public account in order to allow us access to your tweets. When you fix this login again to this application."
@@ -42,6 +45,7 @@ en:
 
   buttons:
     create: "Create"
+    "yes": "Yes"
 
   twitter:
     list:

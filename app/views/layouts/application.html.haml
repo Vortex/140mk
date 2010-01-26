@@ -37,7 +37,7 @@
           |
           = link_to t('global.logout'), session_path, :method => :delete
           |
-          = link_to t('user.deactivate'), user_path(:current), :method => :delete
+          = link_to t('user.deactivate'), delete_user_path(:current)
 
         = yield(:sidebar)
 

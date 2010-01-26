@@ -1,5 +1,9 @@
 $(document).ready(function() {
-
+  $('#twitter_create_list').click(function() {
+    $('#twitter_create_list_form').slideToggle('slow', function() {
+      // Animation complete.
+    });
+  });
 });
 
 function switch_to_tweets(category_id) {
@@ -15,3 +19,4 @@ function switch_to_users(category_id) {
     $("#" + category_id + " .tweets").hide('slow');
     $("#" + category_id + " .users").show('slow');
 }
+

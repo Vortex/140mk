@@ -1,5 +1,15 @@
 #categories
   %h1= @list.name 
+  - if signed_in?
+    %p#twitter_create_list Create list to your twitter account from this category
+    #twitter_create_list_form
+      - form_tag create_on_twitter_list_path(@list) do
+        = label_tag :mode, t('twitter.list.private')
+        = check_box_tag :mode
+        = label_tag :name
+        = text_field_tag :name, @list.name
+        = submit_tag t('buttons.create')
+
   .category
     .tweets
       %h2= t('title.last_tweets')

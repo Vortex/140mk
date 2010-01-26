@@ -48,6 +48,17 @@ mk:
   messages:
     confirm: "Дали си сигурен?"
 
+  buttons:
+    create: "Креирај"
+
+  twitter:
+    list:
+      private: "Приватна"
+      name: "{{name}} - креаирана од 140.mk"
+      create:
+        notice: "Успешно креиравте листа од оваа категорија"
+        error: "Се појави грешка при креирање на листа од оваа категорија"
+
 # Macedonian translations for Ruby on Rails
 # by Dejan Dimić (dejan.dimic@gmail.com)
  

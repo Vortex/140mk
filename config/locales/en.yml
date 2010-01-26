@@ -39,3 +39,14 @@ en:
 
   messages:
     confirm: "Are you sure?"
+
+  buttons:
+    create: "Create"
+
+  twitter:
+    list:
+      private: "Private"
+      name: "{{name}} - created from 140.mk"
+      create:
+        notice: "You have successfully created list from this category"
+        error: "Error while creating list from this category"

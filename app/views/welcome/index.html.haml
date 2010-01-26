@@ -6,10 +6,10 @@
 
 #categories
   - @lists.each do |list|
-    .category{:id => "category_#{list.name.underscore}"}
+    .category{:id => "category_#{list.id}"}
       %h2= link_to list.name, list
       .tabs
-        = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.name.underscore}')", :class => 'tweets_link selected'
-        = link_to_function t('category.users'), "switch_to_users('category_#{list.name.underscore}')", :class => 'users_link'
+        = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.id}')", :class => 'tweets_link selected'
+        = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link'
       = render :partial => 'tweets', :object => @lists_tweets[list.name]
       = render :partial => 'users', :object => @lists_users[list.name]

@@ -2,6 +2,24 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  global:
+    logout: "Logout"
+    login: "Login"
+    delete: "Delete"
+    back: "Back"
+    edit: "Edit"
+    settings: "Settings"
+
+  category:
+    users: "Users"
+    tweets: "Tweets"
+    title: "Categories"
+    created_at: "{{time}} ago"
+
+  settings:
+    my_categories: "Edit categories"
+    deactivate: "Account deactivation"
+
   navigation:
     home: "Home"
     users: "Users"
@@ -25,13 +43,6 @@ en:
   title:
     last_tweets: "Last tweets"
     last_members: "Last members"
-
-  category:
-    users: "Users"
-    tweets: "Tweets"
-    subscriptions: "My categories"
-    title: "Categories"
-    created_at: "{{time}} ago"
 
   subscriptions:
     subscribe_message: "You haven't subscribed to any categories yet. Please subscribe."

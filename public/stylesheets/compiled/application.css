@@ -18,7 +18,7 @@ body {
     padding: 5px;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 320px;
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
@@ -49,9 +49,45 @@ body {
         #header .navigation ul li.last {
           padding-right: 0px; }
   /* line 22, ../../../app/stylesheets/_layout.sass */
+  #header .user {
+    background: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+    /* line 30, ../../../app/stylesheets/_layout.sass */
+    #header .user ul {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      overflow: hidden;
+      display: inline-block; }
+      /* line 5, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+      #header .user ul {
+        display: block; }
+      /* line 50, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+      #header .user ul li {
+        list-style-type: none;
+        margin-left: 0px;
+        white-space: nowrap;
+        display: inline;
+        float: left;
+        padding-left: 4px;
+        padding-right: 4px; }
+        /* line 40, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+        #header .user ul li.first {
+          padding-left: 0px; }
+        /* line 42, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+        #header .user ul li.last {
+          padding-right: 0px; }
+  /* line 33, ../../../app/stylesheets/_layout.sass */
   #header .logo {
     float: left; }
-    /* line 26, ../../../app/stylesheets/_layout.sass */
+    /* line 37, ../../../app/stylesheets/_layout.sass */
     #header .logo a h1 {
       text-indent: -9999em;
       overflow: hidden;
@@ -61,19 +97,18 @@ body {
       width: 200px;
       height: 84px; }
 
-/* line 31, ../../../app/stylesheets/_layout.sass */
+/* line 42, ../../../app/stylesheets/_layout.sass */
 #main-content, #sidebar, #footer {
   background: #fff;
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
 
-/* line 36, ../../../app/stylesheets/_layout.sass */
+/* line 47, ../../../app/stylesheets/_layout.sass */
 #sidebar .content {
-  padding: 10px;
   text-align: right; }
 
-/* line 40, ../../../app/stylesheets/_layout.sass */
+/* line 50, ../../../app/stylesheets/_layout.sass */
 #footer {
   padding: 20px;
   margin-top: 10px; }
@@ -191,7 +226,7 @@ body {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 260px; }
+  width: 272.174px; }
   /* line 94, ../../../app/stylesheets/application.sass */
   #hashtag_filter .tweets {
     margin: 5px 5px 5px 5px; }

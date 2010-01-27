@@ -7,13 +7,17 @@ mk:
     delete: "Бриши"
     back: "Назад"
     edit: "Измени"
+    settings: "Подесувања"
 
   category:
     users: "Членови"
     tweets: "Твитови"
-    subscriptions: "Мои категории"
     title: "Категории"
     created_at: "пред {{time}}"
+
+  settings:
+    my_categories: "Измена на категории"
+    deactivate: "Деактивирање на сметка"
     
   navigation:
     home: "Дома"

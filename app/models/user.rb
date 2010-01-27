@@ -59,6 +59,10 @@ class User < ActiveRecord::Base
     unfollow_user
   end
 
+  def to_param
+    screen_name
+  end
+
   private
 
   def follow_user

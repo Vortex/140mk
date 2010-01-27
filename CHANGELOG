@@ -1,6 +1,14 @@
 Version 0.3
 ===========
 
+27.01.2010
+==========
+
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Added /login, /logout, /settings, /deactivate /username routes
+  * Changed layout (user div box is top-right)
+  * Moved all user settings into one place /settings
+
 26.01.2010
 ==========
 

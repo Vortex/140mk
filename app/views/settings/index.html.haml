@@ -1,5 +1,4 @@
-%h1
-  = t('category.subscriptions')
+%h2= t('settings.my_categories')
 
 %p
   - if @subscriptions.empty?
@@ -20,3 +19,5 @@
   %p
     = submit_tag t('global.edit')
 
+%h2= t('settings.deactivate')
+= link_to t('user.deactivate'), deactivate_path

@@ -3,7 +3,7 @@
 
 - for user in @users
   %p
-    = link_to user.screen_name, "http://www.twitter.com/#{user.screen_name}"
+    = link_to user.screen_name, user.screen_name
     (
     = time_ago_in_words(user.created_at)
     ago

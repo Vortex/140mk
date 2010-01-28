@@ -8,6 +8,7 @@ mk:
     back: "Назад"
     edit: "Измени"
     settings: "Подесувања"
+    time_ago: "пред {{time}}"
 
   pagination:
     previous: "Предходна"
@@ -29,7 +30,6 @@ mk:
     categories: "Категории"
 
   tweet:
-    created_at: "пред {{time}}"
     my_timeline: "Мои твитови"
     all_timeline: "Сите твитови"
 

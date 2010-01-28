@@ -5,8 +5,7 @@
   %p
     = link_to user.screen_name, user.screen_name
     (
-    = time_ago_in_words(user.created_at)
-    ago
+    = t('global.time_ago', :time => time_ago_in_words(user.created_at))
     )
   %p
     = will_paginate @users

@@ -18,7 +18,7 @@
           = link_to image_tag(tweet.user.photo), user_url(tweet.user.screen_name)
           .body
             = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
-            %span.when= t('tweet.created_at', :time => time_ago_in_words(tweet.created_at))
+            %span.when= t('global.time_ago', :time => time_ago_in_words(tweet.created_at))
             = auto_link(tweet.text)
   .category
     .tweets

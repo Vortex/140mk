@@ -5,7 +5,7 @@
   %p
     = link_to list.name, list
     (
-    = t('category.created_at', :time => time_ago_in_words(list.created_at))
+    = t('category.time_ago', :time => time_ago_in_words(list.created_at))
     )
 %p
   = will_paginate @lists

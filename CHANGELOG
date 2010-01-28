@@ -8,6 +8,7 @@ Version 0.3
   * Added /login, /logout, /settings, /deactivate /username routes
   * Changed layout (user div box is top-right)
   * Moved all user settings into one place /settings
+  * Added localization for pagination links
 
 26.01.2010
 ==========

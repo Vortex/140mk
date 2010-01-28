@@ -9,6 +9,10 @@ mk:
     edit: "Измени"
     settings: "Подесувања"
 
+  pagination:
+    previous: "Предходна"
+    next: "Следна"
+
   category:
     users: "Членови"
     tweets: "Твитови"

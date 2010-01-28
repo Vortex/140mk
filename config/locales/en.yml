@@ -10,6 +10,10 @@ en:
     edit: "Edit"
     settings: "Settings"
 
+  pagination:
+    previous: "Previous"
+    next: "Next"
+
   category:
     users: "Users"
     tweets: "Tweets"

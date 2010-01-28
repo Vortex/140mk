@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   after_create :follow_user
-  
+
   def authorized?
     atoken.present? && asecret.present?
   end

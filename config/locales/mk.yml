@@ -18,7 +18,6 @@ mk:
     users: "Членови"
     tweets: "Твитови"
     title: "Категории"
-    created_at: "пред {{time}}"
 
   settings:
     my_categories: "Измена на категории"

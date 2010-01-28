@@ -18,7 +18,6 @@ en:
     users: "Users"
     tweets: "Tweets"
     title: "Categories"
-    created_at: "{{time}} ago"
 
   settings:
     my_categories: "Edit categories"

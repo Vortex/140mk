@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     user = User.create_or_update(profile, oauth)
 
     sign_in(user)
-    redirect_to current_user.has_subscriptions? ? root_url : subscriptions_url
+    redirect_to current_user.has_subscriptions? ? root_url : settings_url
   rescue Twitter::Unavailable
     #TODO design for error_page
     flash[:error] = "Twitter API problems. Please try again later"

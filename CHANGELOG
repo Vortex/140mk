@@ -10,6 +10,8 @@ Version 0.3
   * Moved all user settings into one place /settings
   * Bugfix: localization of pagination links
   * Bugfix: localization of time_ago_in_words
+  * Bugfix: display only active users
+  * Bugfix: redirect to settings url when user logins but haven't selected any categories previously
 
 26.01.2010
 ==========

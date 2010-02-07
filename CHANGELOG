@@ -1,6 +1,12 @@
 Version 0.3
 ===========
 
+07.02.2010
+==========
+
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Added drag and drop functionality for categories select
+
 27.01.2010
 ==========
 
@@ -19,7 +25,6 @@ Version 0.3
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
   * Implemented category to list functionality (every user can create a list on his twitter account from users in category at 140.mk site)
   * Added one more step for deactivating account
-
 
   Peco Danajlovski <vortexmk@gmail.com>
   * Bugfix: Tabs now work for categories with spaces in the title

@@ -2,8 +2,7 @@ class SettingsController < ApplicationController
   before_filter :authenticate
 
   def index
-    @subscriptions = current_user.subscriptions.paginate :per_page => 10, :page => params[:page], :include => [:user, :list]
-    @lists = List.find(:all, :order => 'name ASC').map{|l| [l.name, l.id]}.unshift(['Select category', ''])
-    @selected_lists = current_user.subscriptions.map{|s| s.list_id}
+    @selected_lists = current_user.lists.find(:all, :select => "lists.id, lists.name", :order => 'name ASC')
+    @not_selected_lists = List.find(:all, :select => "lists.id, lists.name", :order => 'name ASC', :conditions => ["lists.id NOT IN (?)", @selected_lists.map(&:id)])
   end
 end

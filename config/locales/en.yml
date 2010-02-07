@@ -20,7 +20,8 @@ en:
     title: "Categories"
 
   settings:
-    my_categories: "Edit categories"
+    select_categories: "Select categories"
+    select_categories_info: "You can select maximum 5 categories. Select with drag and drop to the down area. De-sellect with drop back."
     deactivate: "Account deactivation"
 
   navigation:

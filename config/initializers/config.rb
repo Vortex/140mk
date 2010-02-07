@@ -9,5 +9,6 @@ G140 = {
   :my_tweets_per_page => 10,
   :tweets_per_page => 10,
   :categories_per_page => 10,
-  :users_per_page => 10
+  :users_per_page => 10,
+  :subscriptions_per_user => 5
 }

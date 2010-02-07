@@ -230,3 +230,14 @@ body {
   /* line 94, ../../../app/stylesheets/application.sass */
   #hashtag_filter .tweets {
     margin: 5px 5px 5px 5px; }
+
+/* line 98, ../../../app/stylesheets/application.sass */
+#draggable, #droppable {
+  border: 1px dashed #FF0000;
+  min-height: 50px;
+  margin: 5px; }
+
+/* line 102, ../../../app/stylesheets/application.sass */
+#draggable span, #droppable span {
+  padding: 2px;
+  cursor: move; }

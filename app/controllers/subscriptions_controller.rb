@@ -2,24 +2,20 @@ class SubscriptionsController < ApplicationController
   before_filter :authenticate
 
   def create
-    categories = params[:lists].reject{|k, v| v.blank? }
+    @list = List.find(params[:list_id])
+    @subscription = current_user.subscriptions.new(:list => @list)
+    @subscription.save
 
-    if categories.length <= G140[:max_lists]
-      current_user.subscriptions = categories.map do |k, v|
-        current_user.subscriptions.find_or_create_by_list_id(v)
-      end
-      flash[:notice] = t('subscriptions.create.notice')
-    else
-      flash[:error] = t('subscriptions.create.error', :count => G140[:max_lists]) 
+    respond_to do |format|
+      format.js { render :text => "ok"}
     end
-
-    redirect_to settings_url
   end
 
   def destroy
-    @subscription = current_user.subscriptions.find(params[:id])
+    @subscription = current_user.subscriptions.first(:conditions => ["list_id = ?", params[:id]])
     @subscription.destroy
-    flash[:notice] = "Your subscriptions was successfully removed."
-    redirect_to settings_url
+    respond_to do |format|
+      format.js { render :text => "ok"}
+    end
   end
 end

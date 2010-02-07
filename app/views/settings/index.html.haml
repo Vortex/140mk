@@ -1,23 +1,17 @@
-%h2= t('settings.my_categories')
+%script
+  = "var _subscriptions_per_user = #{G140[:subscriptions_per_user]};"
 
-%p
-  - if @subscriptions.empty?
-    = t('subscriptions.subscribe_message')
-  - else
-    = t('subscriptions.subscribed_message')
-    - @subscriptions.each do |subscription|
-      = link_to subscription.list.name, subscription.list
-      (
-      = link_to t('global.delete'), subscription, :confirm => t('messages.confirm'), :method => :delete
-      )
+%h2= t('settings.select_categories')
 
-= t('subscriptions.edit')
-  - form_tag subscriptions_path do
-    - G140[:max_lists].times do |i|
-    %p
-      = select_tag :"lists[id#{i}]", options_for_select(@lists, @selected_lists[i])
-  %p
-    = submit_tag t('global.edit')
+%p= t('settings.select_categories_info')
+
+%div#draggable
+  - @not_selected_lists.each do |list|
+    %span{:id => "list_#{list.id}"}= list.name
+
+%div#droppable
+  - @selected_lists.each do |list|
+    %span{:id => "list_#{list.id}"}= list.name
 
 %h2= t('settings.deactivate')
 = link_to t('user.deactivate'), deactivate_path

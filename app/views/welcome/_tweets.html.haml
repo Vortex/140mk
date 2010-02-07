@@ -1,8 +1,8 @@
 .tweets
   - tweets.each do |tweet|
     .tweet
-      = link_to image_tag(tweet.user.photo), tweet.user
+      = link_to image_tag(tweet.user.photo), tweet.user.screen_name
       .body
-        = link_to h(tweet.user.screen_name), tweet.user
+        = link_to h(tweet.user.screen_name), tweet.user.screen_name
         %span.when= t('global.time_ago', :time => time_ago_in_words(tweet.created_at))
         = auto_link(tweet.text)

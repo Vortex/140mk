@@ -14,6 +14,7 @@ Version 0.3
   * Added lists_tweets table for tweets categorization
   * Query optimizations in welcome controller
   * Changed number of users / tweets per category to 5 on welcome page
+  * Fixed user links on front page (/users/username -> /username)
 
 27.01.2010
 ==========

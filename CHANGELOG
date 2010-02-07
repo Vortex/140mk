@@ -7,6 +7,7 @@ Version 0.3
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
   * Added drag and drop functionality for categories select
   * Fixed bug when there is no subscription draggable box was empty
+  * Added clear both after every second category tweets/members display in welcome page
 
 27.01.2010
 ==========

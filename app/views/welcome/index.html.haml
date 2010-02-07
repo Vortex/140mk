@@ -5,7 +5,7 @@
 
 
 #categories
-  - @lists.each do |list|
+  - @lists.each_with_index do |list, index|
     .category{:id => "category_#{list.id}"}
       %h2= link_to list.name, list
       .tabs
@@ -13,3 +13,5 @@
         = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link'
       = render :partial => 'tweets', :object => @lists_tweets[list.name]
       = render :partial => 'users', :object => @lists_users[list.name]
+    - if (index + 1) % 2 == 0
+      %div{:style => "clear:both"}

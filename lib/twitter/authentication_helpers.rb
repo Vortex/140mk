@@ -58,7 +58,8 @@ module Twitter
         def deny_access(flash_message = nil, opts = {})
           store_location
           flash[:failure] = flash_message if flash_message
-          render :template => "/sessions/new", :status => :unauthorized
+          #render :template => "/sessions/new", :status => :unauthorized
+          redirect_to_root
         end
     end
   end

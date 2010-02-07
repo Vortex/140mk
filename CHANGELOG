@@ -8,6 +8,7 @@ Version 0.3
   * Added drag and drop functionality for categories select
   * Fixed bug when there is no subscription draggable box was empty
   * Added clear both after every second category tweets/members display in welcome page
+  * Redirect to welcome page when user is not logged in and tries to access protected page
 
 27.01.2010
 ==========

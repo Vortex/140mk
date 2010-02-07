@@ -6,13 +6,14 @@ module TwitterAccess
   end
 
   def save_tweets(tweets)
-    tweets.each do |tweet|
-      Tweet.create(
-        :user => User.find_by_twitter_id(tweet.user.id),
-        :tweet_id => tweet.id,
-        :text => tweet.text,
-        :created_at => tweet.created_at
-      )
+    Tweet.transaction do
+      tweets.each do |tweet|
+        user = User.find_by_twitter_id(tweet.user.id, :select => "users.id, lists.id, subscriptions.user_id, subscriptions.list_id", :include => :lists)
+        tweet = Tweet.create(:user => user, :tweet_id => tweet.id, :text => tweet.text, :created_at => tweet.created_at)
+        user.lists.each do |list|
+          list.tweets << tweet
+        end
+      end
     end
   end
 

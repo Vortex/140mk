@@ -5,13 +5,10 @@ class WelcomeController < ApplicationController
     @lists = List.most_subscribed_lists(G140[:front_page_lists_count])
     @lists_tweets = {}
     @lists_users = {}
+
     @lists.each do |list|
       @lists_users[list.name] = list.users.find :all, :limit => G140[:users_per_list], :conditions => "status = 1", :order => "id DESC"
-      @lists_tweets[list.name] = Tweet.find :all, :limit => G140[:tweets_per_list], :order => "tweet_id DESC", 
-        :conditions => ["user_id IN (SELECT `users`.id FROM `users`
-          INNER JOIN `subscriptions` ON `users`.id = `subscriptions`.user_id AND users.status = 1
-          WHERE ((`subscriptions`.list_id = ?)))", list.id],
-        :include => :user
+      @lists_tweets[list.name] = list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.tweet_id DESC", :include => :user
     end
 
     if current_user && current_user.status == 2 # notify user that has protected his account
@@ -24,6 +21,6 @@ class WelcomeController < ApplicationController
 
   private
   def get_filtered_tweets
-    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"], :order => 'tweet_id DESC')
+    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"], :order => 'tweet_id DESC', :include => :user)
   end
 end

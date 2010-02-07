@@ -31,8 +31,7 @@ en:
 
   tweet:
     created_at: "{{time}} ago"
-    my_timeline: "Мy timeline"
-    all_timeline: "All timeline"
+    timeline: "{{user}}'s tweets"
 
   user:
     created_at: "registered {{time}} ago"

@@ -1,8 +1,8 @@
 %h1
-  = t('tweet.my_timeline')
+  = t('tweet.timeline', :user => @user.screen_name)
 - for tweet in @tweets
   %p
-    = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
+    = link_to h(@user.screen_name), user_url(@user.screen_name)
     (
     = t('global.time_ago', :time => time_ago_in_words(tweet.created_at))
     )

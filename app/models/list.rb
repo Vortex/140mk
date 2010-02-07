@@ -4,6 +4,7 @@ class List < ActiveRecord::Base
 
   has_many :subscriptions, :dependent => :destroy
   has_many :users, :through => :subscriptions
+  has_and_belongs_to_many :tweets
 
   def self.most_subscribed_lists(lists_limit)
     find :all,

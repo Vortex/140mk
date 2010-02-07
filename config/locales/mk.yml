@@ -30,8 +30,7 @@ mk:
     categories: "Категории"
 
   tweet:
-    my_timeline: "Мои твитови"
-    all_timeline: "Сите твитови"
+    timeline: "Твитови од {{user}}"
 
   user:
     created_at: "регистриран пред {{time}}"

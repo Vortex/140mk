@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
     end
 
     if current_user && current_user.status == 2 # notify user that has protected his account
-      flash[:error] = t("user.errors.private_account", :user => TWITTER_HTTP_AUTH.username)
+      flash[:error] = t("user.errors.private_account", :user => ConsumerConfig['user']['username'])
     end
   end
 

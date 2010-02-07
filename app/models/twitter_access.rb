@@ -1,16 +1,8 @@
-class TwitterHttpAuth
-  def initialize
-    @username = ConsumerConfig['user']['username']
-    @password = ConsumerConfig['user']['password']
-    @base = authenticate
-  end
+module TwitterAccess
+  extend self
 
   def base
-    @base
-  end
-
-  def username
-    @username
+    @base ||= authenticate(ConsumerConfig['user']['username'], ConsumerConfig['user']['password'])
   end
 
   def save_tweets(tweets)
@@ -57,27 +49,9 @@ class TwitterHttpAuth
     end while cursor > 0
   end
 
-  def method_missing(m, *args, &block)
-    if base.respond_to? m.to_sym
-      base.send m, *args, &block
-    else
-      raise NoMethodError
-    end
-  end
-
   private
-  def authenticate
-    httpauth = Twitter::HTTPAuth.new(@username, @password)
+  def authenticate(username, password)
+    httpauth = Twitter::HTTPAuth.new(username, password)
     Twitter::Base.new(httpauth)
   end
-
-  public
-  @@instance = TwitterHttpAuth.new
-
-  def self.instance
-    return @@instance
-  end
-  private_class_method :new
 end
-
-TWITTER_HTTP_AUTH = TwitterHttpAuth.instance

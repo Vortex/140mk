@@ -66,8 +66,8 @@ class User < ActiveRecord::Base
   private
 
   def follow_user
-    unless TWITTER_HTTP_AUTH.friendship_exists?(TWITTER_HTTP_AUTH.username, screen_name)
-      TWITTER_HTTP_AUTH.friendship_create(twitter_id, true)
+    unless TwitterAccess.base.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
+      TwitterAccess.base.friendship_create(twitter_id, true)
     end
   rescue Twitter::General => e
     if e.message =~ /\(403\): Forbidden .*/
@@ -79,8 +79,8 @@ class User < ActiveRecord::Base
   end
 
   def unfollow_user
-    if TWITTER_HTTP_AUTH.friendship_exists?(TWITTER_HTTP_AUTH.username, screen_name)
-      TWITTER_HTTP_AUTH.friendship_destroy(twitter_id)
+    if TwitterAccess.base.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
+      TwitterAccess.base.friendship_destroy(twitter_id)
     end
   end
 end

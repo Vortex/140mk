@@ -12,5 +12,4 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "/logout", :controller => "sessions", :action => "destroy"
   map.settings "/settings", :controller => "settings", :action => "index"
   map.deactivate "/deactivate", :controller => "users", :action => "deactivate"
-  map.connect "/:id", :controller => "users", :action => "show"
 end

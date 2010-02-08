@@ -3,7 +3,7 @@
 
 - for user in @users
   %p
-    = link_to user.screen_name, user.screen_name
+    = link_to user.screen_name, twitter_path(user.screen_name), :target => "_blank"
     (
     = t('global.time_ago', :time => time_ago_in_words(user.created_at))
     )

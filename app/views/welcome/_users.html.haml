@@ -1,7 +1,7 @@
 .users
   - users.each do |user|
     .tweet
-      = link_to image_tag(user.photo), user.screen_name
+      = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"
       .body
-        = link_to h(user.screen_name), user.screen_name
+        = link_to h(user.screen_name), twitter_path(user.screen_name), :target => "_blank"
         %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))

@@ -18,9 +18,4 @@ class WelcomeController < ApplicationController
 
   def error
   end
-
-  private
-  def get_filtered_tweets
-    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#fail%"], :order => 'tweet_id DESC', :include => :user)
-  end
 end

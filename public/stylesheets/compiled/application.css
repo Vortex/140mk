@@ -241,3 +241,52 @@ body {
 #draggable span, #droppable span {
   padding: 2px;
   cursor: move; }
+
+/* line 106, ../../../app/stylesheets/application.sass */
+.users_list {
+  background: #E1F3FD;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+  /* line 112, ../../../app/stylesheets/application.sass */
+  .users_list h2 {
+    background: #0094DA;
+    color: #fff;
+    font-size: 1.4em;
+    margin: 5px;
+    text-align: center;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+  /* line 120, ../../../app/stylesheets/application.sass */
+  .users_list .users {
+    background: #fff;
+    margin: 10px 5px 5px 5px;
+    padding: 5px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+    /* line 126, ../../../app/stylesheets/application.sass */
+    .users_list .users .tweet {
+      padding: 10px 5px;
+      border-bottom: 1px dashed #999;
+      min-height: 45px; }
+      /* line 131, ../../../app/stylesheets/application.sass */
+      .users_list .users .tweet .body {
+        color: #666;
+        font-size: 0.9em;
+        padding-left: 55px; }
+        /* line 136, ../../../app/stylesheets/application.sass */
+        .users_list .users .tweet .body .when {
+          font-weight: bold; }
+      /* line 139, ../../../app/stylesheets/application.sass */
+      .users_list .users .tweet img {
+        float: left;
+        width: 48px;
+        height: 48px; }
+
+/* line 144, ../../../app/stylesheets/application.sass */
+.pagination {
+  text-align: center; }

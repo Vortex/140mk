@@ -104,24 +104,25 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
 
-/* line 47, ../../../app/stylesheets/_layout.sass */
-#sidebar .content {
-  text-align: right; }
-
-/* line 50, ../../../app/stylesheets/_layout.sass */
+/* line 46, ../../../app/stylesheets/_layout.sass */
 #footer {
   padding: 20px;
   margin-top: 10px; }
 
 /* line 7, ../../../app/stylesheets/application.sass */
+#flash {
+  text-align: center;
+  padding: 5px; }
+
+/* line 11, ../../../app/stylesheets/application.sass */
 #flash.error {
   color: red; }
 
-/* line 10, ../../../app/stylesheets/application.sass */
+/* line 14, ../../../app/stylesheets/application.sass */
 #flash.notice {
   color: green; }
 
-/* line 14, ../../../app/stylesheets/application.sass */
+/* line 18, ../../../app/stylesheets/application.sass */
 #categories h1 {
   background: #0094DA;
   color: #fff;
@@ -130,14 +131,14 @@ body {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
-/* line 21, ../../../app/stylesheets/application.sass */
+/* line 25, ../../../app/stylesheets/application.sass */
 #categories #twitter_create_list {
   cursor: pointer; }
-/* line 24, ../../../app/stylesheets/application.sass */
+/* line 28, ../../../app/stylesheets/application.sass */
 #categories #twitter_create_list_form {
   display: none; }
 
-/* line 27, ../../../app/stylesheets/application.sass */
+/* line 31, ../../../app/stylesheets/application.sass */
 .category, #hashtag_filter {
   background: #E1F3FD;
   margin-top: 10px;
@@ -152,7 +153,7 @@ body {
   margin-right: 0px;
   margin-left: 7px;
   position: relative; }
-  /* line 36, ../../../app/stylesheets/application.sass */
+  /* line 40, ../../../app/stylesheets/application.sass */
   .category h2, #hashtag_filter h2 {
     background: #0094DA;
     color: #fff;
@@ -162,7 +163,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 44, ../../../app/stylesheets/application.sass */
+    /* line 48, ../../../app/stylesheets/application.sass */
     .category h2 a, #hashtag_filter h2 a {
       color: #fff;
       font-weight: bold;
@@ -170,12 +171,12 @@ body {
       /* line 4, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_hover_link.sass */
       .category h2 a:hover, #hashtag_filter h2 a:hover {
         text-decoration: underline; }
-  /* line 49, ../../../app/stylesheets/application.sass */
+  /* line 53, ../../../app/stylesheets/application.sass */
   .category .tabs, #hashtag_filter .tabs {
     position: absolute;
     top: 40px;
     right: 20px; }
-    /* line 54, ../../../app/stylesheets/application.sass */
+    /* line 58, ../../../app/stylesheets/application.sass */
     .category .tabs a, #hashtag_filter .tabs a {
       color: #666;
       font-weight: bold;
@@ -183,17 +184,17 @@ body {
       /* line 4, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_hover_link.sass */
       .category .tabs a:hover, #hashtag_filter .tabs a:hover {
         text-decoration: underline; }
-    /* line 59, ../../../app/stylesheets/application.sass */
+    /* line 63, ../../../app/stylesheets/application.sass */
     .category .tabs .selected, #hashtag_filter .tabs .selected {
       background: #fff;
       padding: 4px;
       border-radius: 6px;
       -moz-border-radius: 6px;
       -webkit-border-radius: 6px; }
-  /* line 64, ../../../app/stylesheets/application.sass */
+  /* line 68, ../../../app/stylesheets/application.sass */
   .category .users, #hashtag_filter .users {
     display: none; }
-  /* line 67, ../../../app/stylesheets/application.sass */
+  /* line 71, ../../../app/stylesheets/application.sass */
   .category .tweets, .category .users, #hashtag_filter .tweets, #hashtag_filter .users {
     background: #fff;
     margin: 27px 5px 5px 5px;
@@ -201,48 +202,71 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 73, ../../../app/stylesheets/application.sass */
+    /* line 77, ../../../app/stylesheets/application.sass */
     .category .tweets .tweet, .category .users .tweet, #hashtag_filter .tweets .tweet, #hashtag_filter .users .tweet {
       padding: 10px 5px;
       border-bottom: 1px dashed #999;
       min-height: 45px; }
-      /* line 78, ../../../app/stylesheets/application.sass */
+      /* line 82, ../../../app/stylesheets/application.sass */
       .category .tweets .tweet .body, .category .users .tweet .body, #hashtag_filter .tweets .tweet .body, #hashtag_filter .users .tweet .body {
         color: #666;
         font-size: 0.9em;
         padding-left: 55px; }
-        /* line 83, ../../../app/stylesheets/application.sass */
+        /* line 87, ../../../app/stylesheets/application.sass */
         .category .tweets .tweet .body .when, .category .users .tweet .body .when, #hashtag_filter .tweets .tweet .body .when, #hashtag_filter .users .tweet .body .when {
           font-weight: bold; }
-      /* line 86, ../../../app/stylesheets/application.sass */
+      /* line 90, ../../../app/stylesheets/application.sass */
       .category .tweets .tweet img, .category .users .tweet img, #hashtag_filter .tweets .tweet img, #hashtag_filter .users .tweet img {
         float: left;
         width: 48px;
         height: 48px; }
 
-/* line 91, ../../../app/stylesheets/application.sass */
+/* line 97, ../../../app/stylesheets/application.sass */
+#category_show h2 {
+  background: #0094DA;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 5px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+/* line 105, ../../../app/stylesheets/application.sass */
+#category_show #twitter_create_list {
+  cursor: pointer; }
+/* line 108, ../../../app/stylesheets/application.sass */
+#category_show #twitter_create_list_form {
+  display: none; }
+/* line 111, ../../../app/stylesheets/application.sass */
+#category_show .category {
+  margin-top: 5px; }
+  /* line 114, ../../../app/stylesheets/application.sass */
+  #category_show .category .tweets {
+    margin-top: 5px; }
+
+/* line 117, ../../../app/stylesheets/application.sass */
 #hashtag_filter {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 272.174px; }
-  /* line 94, ../../../app/stylesheets/application.sass */
+  /* line 120, ../../../app/stylesheets/application.sass */
   #hashtag_filter .tweets {
     margin: 5px 5px 5px 5px; }
 
-/* line 98, ../../../app/stylesheets/application.sass */
+/* line 124, ../../../app/stylesheets/application.sass */
 #draggable, #droppable {
   border: 1px dashed #FF0000;
   min-height: 50px;
   margin: 5px; }
 
-/* line 102, ../../../app/stylesheets/application.sass */
+/* line 128, ../../../app/stylesheets/application.sass */
 #draggable span, #droppable span {
   padding: 2px;
   cursor: move; }
 
-/* line 106, ../../../app/stylesheets/application.sass */
+/* line 132, ../../../app/stylesheets/application.sass */
 .users_list {
   background: #E1F3FD;
   margin: 10px;
@@ -250,7 +274,7 @@ body {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
-  /* line 112, ../../../app/stylesheets/application.sass */
+  /* line 138, ../../../app/stylesheets/application.sass */
   .users_list h2 {
     background: #0094DA;
     color: #fff;
@@ -260,7 +284,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-  /* line 120, ../../../app/stylesheets/application.sass */
+  /* line 146, ../../../app/stylesheets/application.sass */
   .users_list .users {
     background: #fff;
     margin: 10px 5px 5px 5px;
@@ -268,25 +292,113 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 126, ../../../app/stylesheets/application.sass */
+    /* line 152, ../../../app/stylesheets/application.sass */
     .users_list .users .tweet {
       padding: 10px 5px;
       border-bottom: 1px dashed #999;
       min-height: 45px; }
-      /* line 131, ../../../app/stylesheets/application.sass */
+      /* line 157, ../../../app/stylesheets/application.sass */
       .users_list .users .tweet .body {
         color: #666;
         font-size: 0.9em;
         padding-left: 55px; }
-        /* line 136, ../../../app/stylesheets/application.sass */
+        /* line 162, ../../../app/stylesheets/application.sass */
         .users_list .users .tweet .body .when {
           font-weight: bold; }
-      /* line 139, ../../../app/stylesheets/application.sass */
+      /* line 166, ../../../app/stylesheets/application.sass */
       .users_list .users .tweet img {
         float: left;
         width: 48px;
         height: 48px; }
 
-/* line 144, ../../../app/stylesheets/application.sass */
+/* line 172, ../../../app/stylesheets/application.sass */
+.lists_list {
+  background: #E1F3FD;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+  /* line 178, ../../../app/stylesheets/application.sass */
+  .lists_list h2 {
+    background: #0094DA;
+    color: #fff;
+    font-size: 1.4em;
+    margin: 5px;
+    text-align: center;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+  /* line 186, ../../../app/stylesheets/application.sass */
+  .lists_list .lists {
+    background: #fff;
+    margin: 10px 5px 5px 5px;
+    padding: 5px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+    /* line 192, ../../../app/stylesheets/application.sass */
+    .lists_list .lists .body {
+      padding: 10px 5px;
+      border-bottom: 1px dashed #999;
+      height: 30px;
+      color: #666;
+      font-size: 0.9em;
+      padding-left: 15px; }
+      /* line 200, ../../../app/stylesheets/application.sass */
+      .lists_list .lists .body .when {
+        font-weight: bold; }
+
+/* line 203, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center; }
+
+/* line 206, ../../../app/stylesheets/application.sass */
+#create_list_from_category {
+  background: #E1F3FD;
+  margin: 10px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 272.174px; }
+  /* line 213, ../../../app/stylesheets/application.sass */
+  #create_list_from_category p {
+    margin: 10px;
+    text-align: center; }
+  /* line 217, ../../../app/stylesheets/application.sass */
+  #create_list_from_category label {
+    margin-left: 5px;
+    width: 70px;
+    display: inline-block; }
+  /* line 222, ../../../app/stylesheets/application.sass */
+  #create_list_from_category input {
+    margin: 3px; }
+  /* line 225, ../../../app/stylesheets/application.sass */
+  #create_list_from_category input[type=text] {
+    width: 120px; }
+  /* line 228, ../../../app/stylesheets/application.sass */
+  #create_list_from_category input[type=submit] {
+    margin-left: 83px; }
+  /* line 231, ../../../app/stylesheets/application.sass */
+  #create_list_from_category h2 {
+    background: #0094DA;
+    color: #fff;
+    font-size: 1.4em;
+    margin: 5px;
+    text-align: center;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; }
+    /* line 239, ../../../app/stylesheets/application.sass */
+    #create_list_from_category h2 a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none; }
+      /* line 4, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_hover_link.sass */
+      #create_list_from_category h2 a:hover {
+        text-decoration: underline; }

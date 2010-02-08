@@ -1,11 +1,17 @@
-%h1
-  = t('category.title')
+- content_for(:sidebar) do
+  #hashtag_filter
+    %h2 #Fail
+    = render :partial => 'welcome/tweets', :object => @filtered_tweets
 
-- for list in @lists
-  %p
-    = link_to list.name, list
-    (
-    = t('global.time_ago', :time => time_ago_in_words(list.created_at))
-    )
-%p
-  = will_paginate @lists
+.lists_list
+  %h2
+    = t('category.title')
+
+  .lists
+    - @lists.each do |list|
+      .body
+        = link_to list.name, list
+        %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
+        %br= "#{t('category.total')}: #{pluralize(list.subscriptions.size, t('global.member'))}"
+    %p
+      = will_paginate @lists

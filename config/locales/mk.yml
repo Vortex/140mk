@@ -9,6 +9,8 @@ mk:
     edit: "Измени"
     settings: "Подесувања"
     time_ago: "пред {{time}}"
+    tweet: 'твит'
+    member: 'член'
 
   pagination:
     previous: "Предходна"
@@ -17,7 +19,10 @@ mk:
   category:
     users: "Членови"
     tweets: "Твитови"
-    title: "Категории"
+    title: "Листа на категории"
+    total: "Вкупно"
+    create_list: "{{login}} за да креираш листа од оваа категорија"
+    create_list_title: "Креирај листа од категорија"
 
   settings:
     select_categories: "Изберете категории"

@@ -9,4 +9,5 @@ ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.uncountable %w( fish sheep )
 
   inflect.plural 'твит', 'твитови'
+  inflect.plural 'член', 'членови'
 end

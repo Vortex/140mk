@@ -1,14 +1,22 @@
-#categories
-  %h1= @list.name 
-  - if signed_in?
-    %p#twitter_create_list Create list to your twitter account from this category
-    #twitter_create_list_form
+- content_for(:sidebar) do
+  #create_list_from_category
+    %h2= t('category.create_list_title')
+
+    - if signed_in?
       - form_tag create_on_twitter_list_path(@list) do
-        = label_tag :mode, t('twitter.list.private')
-        = check_box_tag :mode
-        = label_tag :name
-        = text_field_tag :name, @list.name
-        = submit_tag t('buttons.create')
+        %div
+          = label_tag :mode, t('twitter.list.private')
+          = check_box_tag :mode
+        %div
+          = label_tag :name
+          = text_field_tag :name, @list.name
+        %div
+          = submit_tag t('buttons.create')
+    - else
+      %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
+
+#category_show
+  %h2= @list.name 
 
   .category
     .tweets

@@ -1,10 +1,4 @@
 $(document).ready(function() {
-  $('#twitter_create_list').click(function() {
-    $('#twitter_create_list_form').slideToggle('slow', function() {
-      // Animation complete.
-    });
-  });
-
   if ($("#draggable").length > 0 && $("#droppable").length > 0) {
     /**
      * Checks if we can drop more items to droppable

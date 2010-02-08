@@ -3,7 +3,6 @@
     %h2 #Fail
     = render :partial => 'tweets', :object => @filtered_tweets
 
-
 #categories
   - @lists.each_with_index do |list, index|
     .category{:id => "category_#{list.id}"}

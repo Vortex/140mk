@@ -4,6 +4,10 @@
 @import compass/utilities.sass
 @import layout.sass
 
+#flash
+  text-align: center
+  padding: 5px
+
 #flash.error
   color: red
 
@@ -88,6 +92,28 @@
         width: 48px
         height: 48px
 
+#category_show
+
+  h2
+    background: #0094DA
+    color: #fff
+    text-align: center
+    font-size: 1.4em
+    margin: 5px
+    +border-radius(12px)
+
+  #twitter_create_list
+    cursor: pointer
+
+  #twitter_create_list_form
+    display: none
+
+  .category
+    margin-top: 5px
+
+    .tweets
+      margin-top: 5px
+
 #hashtag_filter
   +grid(7,23)
 
@@ -136,10 +162,81 @@
         .when
           font-weight: bold
 
+
       img
         float: left
         width: 48px
         height: 48px
 
+
+.lists_list
+  background: #E1F3FD
+  margin: 10px
+  padding: 2px
+  +border-radius(12px)
+
+  h2
+    background: #0094DA
+    color: #fff
+    font-size: 1.4em
+    margin: 5px
+    text-align: center
+    +border-radius(12px)
+
+  .lists
+    background: #fff
+    margin: 10px 5px 5px 5px
+    padding: 5px
+    +border-radius(12px)
+
+    .body
+      padding: 10px 5px
+      border-bottom: 1px dashed #999
+      height: 30px
+      color: #666
+      font-size: 0.9em
+      padding-left: 15px
+
+      .when
+        font-weight: bold
+
 .pagination
   text-align: center
+
+#create_list_from_category
+  background: #E1F3FD
+  margin: 10px
+  +border-radius(12px)
+  position: relative
+  +grid(7,23)
+
+  p
+    margin: 10px
+    text-align: center
+
+  label
+    margin-left: 5px
+    width: 70px
+    display: inline-block
+
+  input
+    margin: 3px
+
+  input[type=text]
+    width: 120px
+
+  input[type=submit]
+    margin-left: 83px
+
+  h2
+    background: #0094DA
+    color: #fff
+    font-size: 1.4em
+    margin: 5px
+    text-align: center
+    +border-radius(12px)
+
+    a
+      color: #fff
+      font-weight: bold
+      +hover-link

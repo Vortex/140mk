@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_filter :authenticate, :only => :create_on_twitter
+  before_filter :get_filtered_tweets, :only => :index
 
   def index
     @lists = List.paginate :per_page => G140[:categories_per_page], :page => params[:page], :order => 'created_at DESC'

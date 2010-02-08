@@ -1,6 +1,6 @@
 class Subscription < ActiveRecord::Base
   belongs_to :user
-  belongs_to :list
+  belongs_to :list, :counter_cache => true
 
   validates_uniqueness_of :user_id, :scope => :list_id
   validate :number_of_subscriptions

@@ -9,6 +9,8 @@ en:
     back: "Back"
     edit: "Edit"
     settings: "Settings"
+    tweet: 'tweet'
+    member: 'member'
 
   pagination:
     previous: "Previous"
@@ -17,7 +19,10 @@ en:
   category:
     users: "Users"
     tweets: "Tweets"
-    title: "Categories"
+    title: "Categories list"
+    total: "Total"
+    create_list: "{{login}} to create list from this category"
+    create_list_title: "Create list from category"
 
   settings:
     select_categories: "Select categories"

@@ -8,7 +8,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @tweets = Tweet.find :all, :limit => G140[:tweets_per_list], :order => 'tweet_id DESC', :include => :user
+    @tweets = @list.tweets.find :all, :limit => G140[:tweets_per_list], :order => 'tweets.tweet_id DESC', :include => :user
     @users = @list.users.find :all, :limit => G140[:users_per_list]
   end
 

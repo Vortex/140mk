@@ -10,6 +10,7 @@ Version 0.3
   * Implemented design for categories page
   * Added counter_cache subscriptions_count in lists table
   * Moved create list to right area, added notification when user is not logged in
+  * Bugfix: In category show display only tweets from that category
 
 07.02.2010
 ==========

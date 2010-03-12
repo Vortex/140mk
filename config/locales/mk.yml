@@ -9,13 +9,15 @@ mk:
     edit: "Измени"
     settings: "Подесувања"
     time_ago: "пред {{time}}"
-    tweet: 'твит'
+    tweet: "Твитај"
     member: 'член'
 
+    send: "Испрати"
   pagination:
     previous: "Предходна"
     next: "Следна"
 
+    tweet: "Твитај"
   category:
     users: "Членови"
     tweets: "Твитови"

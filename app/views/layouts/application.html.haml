@@ -3,8 +3,9 @@
   %head
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/text.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'    
     = javascript_include_tag :defaults
+    = javascript_include_tag 'jquery.tools.min'
     %link(rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico")
     %title
       = G140[:site_name]
@@ -22,8 +23,11 @@
           = link_to t('global.login'), login_path, :method => :post
         - else
           = "Yo #{link_to current_user.screen_name, twitter_path(current_user.screen_name), :target => "_blank"}!"
+          = link_to t('global.tweet'), nil, :id => "tweet_link", :class => "modalInput", :rel => "#tweet"
           = link_to t('global.settings'), settings_path
           = link_to t('global.logout'), logout_path
+
+
         
     #main-content
       - unless flash[:error].blank?
@@ -36,10 +40,12 @@
 
     #sidebar
       .content
-        &nbsp;
         = yield(:sidebar)
 
     #footer
       %b 140.mk
       |
-      (Верзија 0.0.2)
+      (Верзија 0.3.0)
+
+    = render :partial => "shared/tweet_box"
+

@@ -18,16 +18,6 @@
       .navigation
         = render_navigation
 
-      .user
-        - unless signed_in?
-          = link_to t('global.login'), login_path, :method => :post
-        - else
-          = "Yo #{link_to current_user.screen_name, twitter_path(current_user.screen_name), :target => "_blank"}!"
-          = link_to t('global.tweet'), nil, :id => "tweet_link", :class => "modalInput", :rel => "#tweet"
-          = link_to t('global.settings'), settings_path
-          = link_to t('global.logout'), logout_path
-
-
         
     #main-content
       - unless flash[:error].blank?

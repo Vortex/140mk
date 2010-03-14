@@ -19,6 +19,8 @@
 // But most compass users prefer to construct semantic layouts like so (two column layout with header and footer):
 
 !ninesixty_columns = 24
+!ninesixty_grid_width = 985px
+
 .two-column
   +grid-container
   #header,
@@ -29,6 +31,8 @@
   #header, #footer
     +grid-width(24)
   #sidebar
-    +grid-width(8)
+    +grid-width(7)
+    margin-left: 0
   #main-content
-    +grid-width(16)
+    +grid-width(17)
+    margin-right: 0

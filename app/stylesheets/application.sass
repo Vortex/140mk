@@ -15,6 +15,9 @@
 #flash.notice
   color: green
 
+#main-content
+  margin-right: 0
+
 #categories
   h1
     background: #0094DA
@@ -30,66 +33,97 @@
     display: none
 
 .category, #hashtag_filter
-  background: #E1F3FD
+  background: #bfd9e6
   margin-top: 10px
-  +grid(8,24)
-  +border-radius(12px)
-  margin-right: 0px
-  margin-left: 7px
+  float: left
+  width: 325px
+  margin-right: 12px
+  margin-left: 0px
   position: relative
 
   h2
-    background: #0094DA
+    background: url(../../images/category-bg.png) no-repeat
     color: #fff
     font-size: 1.4em
-    margin: 5px
-    text-align: center
-    +border-radius(12px)
+    font-family: "Lucida Grande"
+    height: 46px
+    margin-bottom: 0
+    padding-left: 10px
+    padding-top: 5px
+    position: relative
+    text-shadow: 1px 1px 2px #666
+    width: 315px
 
     a
       color: #fff
       font-weight: bold
       +hover-link
 
-  .tabs
-    position: absolute
-    top: 40px
-    right: 20px
+    .tabs
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 40px
 
-    a
-      color: #666
-      font-weight: bold
-      +hover-link
+      a
+        display: block
+        float: left
+        margin-left: 2px
+        padding: 3px        
+        width: 10px
+        height: 12px
+        +hover-link
 
-    .selected
-      background: #fff
-      padding: 4px
-      +border-radius(6px)
+      .selected
+        background: #fff
+
+      a.users_link
+        +replace-text("icon-user-unselected.png")
+
+      a.users_link.selected
+
+        +replace-text("icon-user-selected.png")
+
+      a.tweets_link
+        +replace-text("icon-tweet-unselected.png")
+
+      a.tweets_link.selected
+        +replace-text("icon-tweet-selected.png")
 
   .users
     display: none
 
   .tweets, .users
-    background: #fff
-    margin: 27px 5px 5px 5px
+    margin: 0 5px 5px 5px
     padding: 5px
-    +border-radius(12px)
 
     .tweet
-      padding: 10px 5px
-      border-bottom: 1px dashed #999
+      background: #fff
+      padding: 10px 10px      
       min-height: 45px
+      margin-bottom: 10px
+      box-shadow: 0 0 10px #9dc2d5
+      -moz-box-shadow: 0 0 10px #9dc2d5
+      -webkit-box-shadow: 0 0 10px #9dc2d5
+      +border-radius(4px)
 
       .body
         color: #666
         font-size: 0.9em
-        padding-left: 55px
+        padding-left: 65px
+
+        .who
+          a
+            color: #000
+            +hover-link
 
         .when
-          font-weight: bold
+          color: #bbb          
 
       img
+        border: 1px dotted #9dc2d5
         float: left
+        padding: 1px
         width: 48px
         height: 48px
 
@@ -241,3 +275,6 @@
       color: #fff
       font-weight: bold
       +hover-link
+
+.clear
+  clear: both

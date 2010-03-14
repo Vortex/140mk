@@ -335,12 +335,12 @@ img a {
   .container_16 .omega {
     margin-right: 0; }
 
-/* line 22, ../../../app/stylesheets/grid.sass */
+/* line 24, ../../../app/stylesheets/grid.sass */
 .two-column {
   margin-left: auto;
   margin-right: auto;
-  width: 960px; }
-  /* line 24, ../../../app/stylesheets/grid.sass */
+  width: 985px; }
+  /* line 26, ../../../app/stylesheets/grid.sass */
   .two-column #header,
   .two-column #footer,
   .two-column #sidebar,
@@ -349,12 +349,14 @@ img a {
     float: left;
     margin-left: 10px;
     margin-right: 10px; }
-  /* line 29, ../../../app/stylesheets/grid.sass */
-  .two-column #header, .two-column #footer {
-    width: 940px; }
   /* line 31, ../../../app/stylesheets/grid.sass */
-  .two-column #sidebar {
-    width: 300px; }
+  .two-column #header, .two-column #footer {
+    width: 965px; }
   /* line 33, ../../../app/stylesheets/grid.sass */
+  .two-column #sidebar {
+    width: 267.292px;
+    margin-left: 0; }
+  /* line 36, ../../../app/stylesheets/grid.sass */
   .two-column #main-content {
-    width: 620px; }
+    width: 677.708px;
+    margin-right: 0; }

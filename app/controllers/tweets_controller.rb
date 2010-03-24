@@ -10,7 +10,12 @@ class TweetsController < ApplicationController
   end
 
   def create
-    current_user.client.update("blah blah")
+    content = params[:tweet]
+    # current_user.client.update(content)
+
+    respond_to do |format|
+      format.js
+    end
   end
 
 end

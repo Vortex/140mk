@@ -1,7 +1,6 @@
 #tweet.modal
   %div
     %h2= t('global.tweet')
-    %p
-      - form_tag tweets_path do
-        = text_area_tag :tweet
-        = submit_tag t('global.send')
+    - remote_form_for Tweet.new do
+      = text_area_tag :tweet
+      = submit_tag t('global.send')

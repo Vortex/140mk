@@ -85,3 +85,10 @@ function switch_to_users(category_id) {
     $("#" + category_id + " .users").show('slow');
 }
 
+function closeOverlays() {
+    jQuery("a.modalInput").each(function() {
+        jQuery(this).overlay().close();
+    });
+}
+
+

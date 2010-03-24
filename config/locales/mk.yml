@@ -13,6 +13,7 @@ mk:
     member: 'член'
 
     send: "Испрати"
+    failtag: "#fail"
   pagination:
     previous: "Предходна"
     next: "Следна"

@@ -289,7 +289,45 @@ body {
         width: 48px;
         height: 48px; }
 
-/* line 132, ../../../app/stylesheets/application.sass */
+/* line 130, ../../../app/stylesheets/application.sass */
+#hashtag_filter {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 272.174px;
+  margin-left: 0; }
+  /* line 134, ../../../app/stylesheets/application.sass */
+  #hashtag_filter h2 {
+    background: #373d44;
+    border-bottom: 1px solid #f6fbfe;
+    color: #fff;
+    font-size: 1.4em;
+    font-family: "Lucida Grande";
+    height: 36px;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-top: 5px;
+    position: relative;
+    text-shadow: 1px 1px 2px #666;
+    width: 262px; }
+    /* line 148, ../../../app/stylesheets/application.sass */
+    #hashtag_filter h2 a {
+      display: block;
+      float: left;
+      margin-left: 2px;
+      padding: 3px;
+      width: 10px;
+      height: 12px;
+      text-decoration: none; }
+      /* line 4, ../../../../../../../var/lib/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_hover_link.sass */
+      #hashtag_filter h2 a:hover {
+        text-decoration: underline; }
+  /* line 157, ../../../app/stylesheets/application.sass */
+  #hashtag_filter .tweets {
+    margin: 5px 5px 5px 5px; }
+
+/* line 162, ../../../app/stylesheets/application.sass */
 #category_show h2 {
   background: #0094DA;
   color: #fff;
@@ -299,42 +337,31 @@ body {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
-/* line 140, ../../../app/stylesheets/application.sass */
+/* line 170, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list {
   cursor: pointer; }
-/* line 143, ../../../app/stylesheets/application.sass */
+/* line 173, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list_form {
   display: none; }
-/* line 146, ../../../app/stylesheets/application.sass */
+/* line 176, ../../../app/stylesheets/application.sass */
 #category_show .category {
   margin-top: 5px; }
-  /* line 149, ../../../app/stylesheets/application.sass */
+  /* line 179, ../../../app/stylesheets/application.sass */
   #category_show .category .tweets {
     margin-top: 5px; }
 
-/* line 152, ../../../app/stylesheets/application.sass */
-#hashtag_filter {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 272.174px; }
-  /* line 155, ../../../app/stylesheets/application.sass */
-  #hashtag_filter .tweets {
-    margin: 5px 5px 5px 5px; }
-
-/* line 159, ../../../app/stylesheets/application.sass */
+/* line 185, ../../../app/stylesheets/application.sass */
 #draggable, #droppable {
   border: 1px dashed #FF0000;
   min-height: 50px;
   margin: 5px; }
 
-/* line 163, ../../../app/stylesheets/application.sass */
+/* line 189, ../../../app/stylesheets/application.sass */
 #draggable span, #droppable span {
   padding: 2px;
   cursor: move; }
 
-/* line 167, ../../../app/stylesheets/application.sass */
+/* line 193, ../../../app/stylesheets/application.sass */
 .users_list {
   background: #E1F3FD;
   margin: 10px;
@@ -342,7 +369,7 @@ body {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
-  /* line 173, ../../../app/stylesheets/application.sass */
+  /* line 199, ../../../app/stylesheets/application.sass */
   .users_list h2 {
     background: #0094DA;
     color: #fff;
@@ -352,7 +379,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-  /* line 181, ../../../app/stylesheets/application.sass */
+  /* line 207, ../../../app/stylesheets/application.sass */
   .users_list .users {
     background: #fff;
     margin: 10px 5px 5px 5px;
@@ -360,26 +387,26 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 187, ../../../app/stylesheets/application.sass */
+    /* line 213, ../../../app/stylesheets/application.sass */
     .users_list .users .tweet {
       padding: 10px 5px;
       border-bottom: 1px dashed #999;
       min-height: 45px; }
-      /* line 192, ../../../app/stylesheets/application.sass */
+      /* line 218, ../../../app/stylesheets/application.sass */
       .users_list .users .tweet .body {
         color: #666;
         font-size: 0.9em;
         padding-left: 55px; }
-        /* line 197, ../../../app/stylesheets/application.sass */
+        /* line 223, ../../../app/stylesheets/application.sass */
         .users_list .users .tweet .body .when {
           font-weight: bold; }
-      /* line 201, ../../../app/stylesheets/application.sass */
+      /* line 227, ../../../app/stylesheets/application.sass */
       .users_list .users .tweet img {
         float: left;
         width: 48px;
         height: 48px; }
 
-/* line 207, ../../../app/stylesheets/application.sass */
+/* line 233, ../../../app/stylesheets/application.sass */
 .lists_list {
   background: #E1F3FD;
   margin: 10px;
@@ -387,7 +414,7 @@ body {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px; }
-  /* line 213, ../../../app/stylesheets/application.sass */
+  /* line 239, ../../../app/stylesheets/application.sass */
   .lists_list h2 {
     background: #0094DA;
     color: #fff;
@@ -397,7 +424,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-  /* line 221, ../../../app/stylesheets/application.sass */
+  /* line 247, ../../../app/stylesheets/application.sass */
   .lists_list .lists {
     background: #fff;
     margin: 10px 5px 5px 5px;
@@ -405,7 +432,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 227, ../../../app/stylesheets/application.sass */
+    /* line 253, ../../../app/stylesheets/application.sass */
     .lists_list .lists .body {
       padding: 10px 5px;
       border-bottom: 1px dashed #999;
@@ -413,15 +440,15 @@ body {
       color: #666;
       font-size: 0.9em;
       padding-left: 15px; }
-      /* line 235, ../../../app/stylesheets/application.sass */
+      /* line 261, ../../../app/stylesheets/application.sass */
       .lists_list .lists .body .when {
         font-weight: bold; }
 
-/* line 238, ../../../app/stylesheets/application.sass */
+/* line 264, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center; }
 
-/* line 241, ../../../app/stylesheets/application.sass */
+/* line 267, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #E1F3FD;
   margin: 10px;
@@ -434,25 +461,25 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   width: 272.174px; }
-  /* line 248, ../../../app/stylesheets/application.sass */
+  /* line 274, ../../../app/stylesheets/application.sass */
   #create_list_from_category p {
     margin: 10px;
     text-align: center; }
-  /* line 252, ../../../app/stylesheets/application.sass */
+  /* line 278, ../../../app/stylesheets/application.sass */
   #create_list_from_category label {
     margin-left: 5px;
     width: 70px;
     display: inline-block; }
-  /* line 257, ../../../app/stylesheets/application.sass */
+  /* line 283, ../../../app/stylesheets/application.sass */
   #create_list_from_category input {
     margin: 3px; }
-  /* line 260, ../../../app/stylesheets/application.sass */
+  /* line 286, ../../../app/stylesheets/application.sass */
   #create_list_from_category input[type=text] {
     width: 120px; }
-  /* line 263, ../../../app/stylesheets/application.sass */
+  /* line 289, ../../../app/stylesheets/application.sass */
   #create_list_from_category input[type=submit] {
     margin-left: 83px; }
-  /* line 266, ../../../app/stylesheets/application.sass */
+  /* line 292, ../../../app/stylesheets/application.sass */
   #create_list_from_category h2 {
     background: #0094DA;
     color: #fff;
@@ -462,7 +489,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 274, ../../../app/stylesheets/application.sass */
+    /* line 300, ../../../app/stylesheets/application.sass */
     #create_list_from_category h2 a {
       color: #fff;
       font-weight: bold;
@@ -471,6 +498,39 @@ body {
       #create_list_from_category h2 a:hover {
         text-decoration: underline; }
 
-/* line 279, ../../../app/stylesheets/application.sass */
+/* line 307, ../../../app/stylesheets/application.sass */
+#sidebar .content .user {
+  background: #bfd9e6;
+  margin-top: 10px;
+  padding: 15px;
+  width: 242px; }
+  /* line 313, ../../../app/stylesheets/application.sass */
+  #sidebar .content .user .options {
+    background: #fff;
+    padding: 5px; }
+    /* line 317, ../../../app/stylesheets/application.sass */
+    #sidebar .content .user .options img {
+      border: 1px dotted #9dc2d5;
+      float: left;
+      padding: 1px;
+      width: 48px;
+      height: 48px; }
+    /* line 324, ../../../app/stylesheets/application.sass */
+    #sidebar .content .user .options .greeting {
+      color: #04abe2;
+      font-weight: bold;
+      padding-left: 60px; }
+      /* line 329, ../../../app/stylesheets/application.sass */
+      #sidebar .content .user .options .greeting a {
+        color: #04abe2; }
+    /* line 332, ../../../app/stylesheets/application.sass */
+    #sidebar .content .user .options .links {
+      font-size: 0.85em;
+      padding-left: 60px; }
+      /* line 336, ../../../app/stylesheets/application.sass */
+      #sidebar .content .user .options .links a {
+        color: #000; }
+
+/* line 339, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both; }

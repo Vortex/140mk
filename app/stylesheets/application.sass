@@ -127,6 +127,36 @@
         width: 48px
         height: 48px
 
+#hashtag_filter
+  +grid(7,23)
+  margin-left: 0
+
+  h2
+    background: #373d44
+    border-bottom: 1px solid #f6fbfe
+    color: #fff
+    font-size: 1.4em
+    font-family: "Lucida Grande"
+    height: 36px
+    margin-bottom: 0
+    padding-left: 10px
+    padding-top: 5px
+    position: relative
+    text-shadow: 1px 1px 2px #666
+    width: 262px
+    
+    a
+      display: block
+      float: left
+      margin-left: 2px
+      padding: 3px
+      width: 10px
+      height: 12px
+      +hover-link
+
+  .tweets
+    margin: 5px 5px 5px 5px
+
 #category_show
 
   h2
@@ -149,11 +179,7 @@
     .tweets
       margin-top: 5px
 
-#hashtag_filter
-  +grid(7,23)
 
-  .tweets
-    margin: 5px 5px 5px 5px
 
     
 #draggable, #droppable
@@ -275,6 +301,40 @@
       color: #fff
       font-weight: bold
       +hover-link
+
+#sidebar
+  .content
+    .user
+      background: #bfd9e6
+      margin-top: 10px
+      padding: 15px
+      width: 242px
+
+      .options
+        background: #fff
+        padding: 5px
+
+        img
+          border: 1px dotted #9dc2d5
+          float: left
+          padding: 1px
+          width: 48px
+          height: 48px
+
+        .greeting
+          color: #04abe2
+          font-weight: bold
+          padding-left: 60px
+
+          a
+            color: #04abe2
+
+        .links
+          font-size: 0.85em
+          padding-left: 60px
+
+          a
+            color: #000
 
 .clear
   clear: both

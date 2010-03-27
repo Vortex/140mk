@@ -107,10 +107,14 @@
       -webkit-box-shadow: 0 0 10px #9dc2d5
       +border-radius(4px)
 
+      &:hover
+        background: #fff url(../../images/toggle-arrow.png) right bottom no-repeat
+
       .body
         color: #666
         font-size: 0.9em
         padding-left: 65px
+        padding-bottom: 5px
 
         .who
           a
@@ -118,7 +122,16 @@
             +hover-link
 
         .when
-          color: #bbb          
+          color: #bbb
+
+        .text
+          padding-bottom: 5px
+
+      .info
+        background: #fff url(../../images/tweet-info-bg.png) no-repeat
+        display: none
+        margin-top: 5px
+        padding-top: 5px
 
       img
         border: 1px dotted #9dc2d5

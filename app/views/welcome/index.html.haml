@@ -14,7 +14,7 @@
 
   #hashtag_filter
     %h2= t('global.failtag')
-    = render :partial => 'tweets', :object => @filtered_tweets
+    = render :partial => 'tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
 
 #categories
   - @lists.each_with_index do |list, index|
@@ -24,7 +24,7 @@
         .tabs
           = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.id}')", :class => 'tweets_link selected'
           = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link'
-      = render :partial => 'tweets', :object => @lists_tweets[list.name]
-      = render :partial => 'users', :object => @lists_users[list.name]
+      = render :partial => 'tweets', :locals => { :tweets => @lists_tweets[list.name], :name => list.id }
+      = render :partial => 'users', :locals => { :users => @lists_users[list.name], :name => list.id }
     - if (index + 1) % 2 == 0
       %div{:style => "clear:both"}

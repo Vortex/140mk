@@ -69,6 +69,13 @@ $(document).ready(function() {
         close: 'blah'
     });
 
+    // Attach event on clicking on a tweet
+    $(".tweet").click(function() {
+        var id = $(this).attr("id");
+        var id_number = id.split('_', 3)[1];
+        $("#info_" +id_number).toggle('slow')
+    })
+
 });
 
 function switch_to_tweets(category_id) {

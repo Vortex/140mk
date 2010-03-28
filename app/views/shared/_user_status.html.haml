@@ -1,0 +1,12 @@
+.user
+  .options
+    - unless signed_in?
+      = link_to t('global.login'), login_path, :method => :post
+    - else
+      = link_to image_tag(current_user.photo), twitter_path(current_user.screen_name), :target => "_blank"
+      .greeting= "Yo #{link_to current_user.screen_name, twitter_path(current_user.screen_name), :target => "_blank"}!"
+      .links
+        = link_to t('global.tweet'), nil, :id => "tweet_link", :class => "modalInput", :rel => "#tweet"
+        = link_to t('global.settings'), settings_path
+        = link_to t('global.logout'), logout_path
+      .clear

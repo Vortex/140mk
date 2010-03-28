@@ -1,4 +1,6 @@
 - content_for(:sidebar) do
+  = render :partial => 'shared/user_status'
+
   #hashtag_filter
     %h2 #Fail
     = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }

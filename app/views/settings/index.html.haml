@@ -1,3 +1,6 @@
+- content_for(:sidebar) do
+  = render :partial => 'shared/user_status'
+
 %script
   = "var _subscriptions_per_user = #{G140[:subscriptions_per_user]};"
 

@@ -527,6 +527,21 @@ body {
 .modal {
   display: none; }
 
-/* line 361, ../../../app/stylesheets/application.sass */
+/* line 362, ../../../app/stylesheets/application.sass */
+form .counter {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #666; }
+/* line 370, ../../../app/stylesheets/application.sass */
+form .warning {
+  color: #600; }
+/* line 372, ../../../app/stylesheets/application.sass */
+form .exceeded {
+  color: #e00; }
+
+/* line 375, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both; }

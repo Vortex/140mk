@@ -74,7 +74,7 @@ $(document).ready(function() {
         var id = $("a", this).attr("id");
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
-        $('#tweet textarea').focus()
+        $('#tweet textarea').focus();
         return false;
     })    
 
@@ -94,6 +94,19 @@ $(document).ready(function() {
         var id = $(this).attr("id");
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')
+
+    })
+
+    // Character limiter
+    $("textarea#tweet").charCount();
+
+    // Disable "send" button if over limit
+    $("textarea#tweet").keyup(function() {
+        if ($(this).val().length <= 140) {
+            $('#tweet_submit').attr("disabled", false);
+        } else {
+            $('#tweet_submit').attr("disabled", true);
+        }
 
     })
 

@@ -75,24 +75,26 @@ $(document).ready(function() {
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus()
+        return false;
     })    
 
     // Attach event on reply
     $(".retweet").click(function() {
         var id = $("a", this).attr("id");
         var id_number = id.split('_', 3)[1];
-        alert(id_number);
         var text = $("#tweet_" + id_number + " .text").text();
         var screen_name = $("#tweet_" + id_number + " .who").text();
         $('#tweet textarea').val('RT: @' + screen_name + ': ' + text);
         $('#tweet textarea').focus()
+        return false;
     })
 
     // Attach event on clicking on a tweet
-    $(".body").click(function() {
+    $(".tweet").click(function() {
         var id = $(this).attr("id");
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')
+
     })
 
 });

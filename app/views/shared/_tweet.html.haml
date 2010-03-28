@@ -9,5 +9,16 @@
     %span.retweet= link_to t('global.retweet'), nil, :id => "tweet_#{name}-#{tweet.id}", :class => "modalInput", :rel => "#tweet"
   .clear
   .info{:id => "info_#{name}-#{tweet.id}"}
-    = t('global.categories')
-    = tweet.user.lists.map { |list| link_to list.name }.join(', ')
+    .categories
+      %b= t('global.categories')
+      = tweet.user.lists.map { |list| link_to list.name, list }.join(', ')
+    .bio
+      %b= t('global.bio')
+      = tweet.user.description
+    .location
+      %b= t('global.location')
+      = tweet.user.location
+    .web
+      %b= t('global.web')
+      = link_to tweet.user.url, tweet.user.url
+    .when= t('user.created_at', :time => time_ago_in_words(tweet.user.created_at))

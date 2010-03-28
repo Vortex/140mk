@@ -14,10 +14,13 @@ mk:
 
     send: "Испрати"
     failtag: "#fail"
-    categories: "Категории:"
+    categories: "Категории"
     retweet: "Ретвитај"
     reply: "Реплицирај"
     cancel: "Откажи"
+    bio: "Био"
+    location: "Локација"
+    web: "Сајт"
   pagination:
     previous: "Претходна"
     next: "Следна"

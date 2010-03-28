@@ -109,6 +109,9 @@
       &:hover
         background: #fff url(../../images/toggle-arrow.png) right bottom no-repeat
 
+        .actions
+          display: block
+
       .body
         color: #666
         font-size: 0.9em
@@ -127,6 +130,7 @@
           padding-bottom: 5px
 
       .actions
+        display: none
         float: right
 
         a
@@ -160,8 +164,16 @@
       .info
         background: #fff url(../../images/tweet-info-bg.png) no-repeat
         display: none
+        font-size: 0.9em
         margin-top: 5px
-        padding-top: 5px
+        padding-top: 10px
+
+        div
+          margin-bottom: 3px
+
+        a
+          color: #04ABE2
+          +hover-link
 
       img
         border: 1px dotted #9dc2d5

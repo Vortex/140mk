@@ -21,6 +21,7 @@ mk:
     bio: "Био"
     location: "Локација"
     web: "Сајт"
+    name: "Име"
   pagination:
     previous: "Претходна"
     next: "Следна"

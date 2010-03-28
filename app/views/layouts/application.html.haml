@@ -18,19 +18,23 @@
       .navigation
         = render_navigation
 
+    .clear
 
-    #main-content
-      - unless flash[:error].blank?
-        %div#flash.error
-          = flash[:error]
-      - unless flash[:notice].blank?
-        %div#flash.notice
-          = flash[:notice]
-      = yield
+    .content-wrapper
+      #main-content
+        - unless flash[:error].blank?
+          %div#flash.error
+            = flash[:error]
+        - unless flash[:notice].blank?
+          %div#flash.notice
+            = flash[:notice]
+        = yield
 
-    #sidebar
-      .content
-        = yield(:sidebar)
+      #sidebar
+        .content
+          = yield(:sidebar)
+
+      .clear
 
     .clear
     #footer

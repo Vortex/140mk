@@ -9,7 +9,8 @@ Version 0.3
   * Refactored users and tweets in their own partials
   * Reply and retweet functionality
   * More info for users
-  * Limit tweets 
+  * Limit tweets
+  * Various cosmetic fixes
 
 27.03.2010
 ==========

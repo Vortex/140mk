@@ -113,6 +113,10 @@
         .actions
           display: block
 
+      a
+        color: #04ABE2
+        +hover-link
+          
       .body
         color: #666
         font-size: 0.9em
@@ -174,9 +178,7 @@
         div
           margin-bottom: 3px
 
-        a
-          color: #04ABE2
-          +hover-link
+
 
       img
         border: 1px dotted #9dc2d5
@@ -264,6 +266,12 @@
   .users
     display: block
 
+    .tweet
+      width: 292px
+      float: left
+      margin-right: 10px
+      min-height: 100px
+
   h2
     background: url(../../images/category-bg.png) no-repeat
     width: 655px
@@ -273,6 +281,11 @@
 
   .lists
     .list
+      width: 292px
+      float: left
+      margin-right: 10px
+      min-height: 45px
+          
       &:hover
         background: #fff
         

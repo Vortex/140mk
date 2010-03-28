@@ -22,28 +22,11 @@
     .tweets
       %h2= t('title.last_tweets')
       - @tweets.each do |tweet|
-        .tweet{:id => "tweet_#{@list.id}-#{tweet.id}"}
-          = link_to image_tag(tweet.user.photo), user_url(tweet.user.screen_name)
-          .body
-            = link_to h(tweet.user.screen_name), user_url(tweet.user.screen_name)
-            %span.when= t('global.time_ago', :time => time_ago_in_words(tweet.created_at))
-            = auto_link(tweet.text)
-          .clear
-          .info{:id => "info_#{@list.id}-#{tweet.id}"}
-            = t('global.categories')
-            = tweet.user.lists.map { |list| link_to list.name }.join(', ')
+        = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => @list.id }
 
 
   .category
     .tweets
       %h2= t('title.last_members')
       - @users.each do |user|
-        .tweet{:id => "tweet_user-#{user.id}"}
-          = link_to image_tag(user.photo), user_url(user.screen_name)
-          .body
-            = link_to h(user.screen_name), user_url(user.screen_name)
-            %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
-          .clear
-          .info{:id => "info_user-#{user.id}"}
-            = t('global.categories')
-            = user.lists.map { |list| link_to list.name }.join(', ')
+        = render :partial => 'shared/user', :locals => { :user => user }

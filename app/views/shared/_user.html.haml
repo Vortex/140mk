@@ -1,0 +1,9 @@
+.tweet{:id => "tweet_user-#{user.id}"}
+  = link_to image_tag(user.photo), user_url(user.screen_name)
+  .body
+    = link_to h(user.screen_name), user_url(user.screen_name)
+    %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
+  .clear
+  .info{:id => "info_user-#{user.id}"}
+    = t('global.categories')
+    = user.lists.map { |list| link_to list.name }.join(', ')

@@ -1,15 +1,14 @@
 - content_for(:sidebar) do
   #hashtag_filter
     %h2 #Fail
-    = render :partial => 'welcome/tweets', :object => @filtered_tweets
+    = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
 
 .users_list
-  %h2
-    = t('user.title')
+  %h2= t('user.title')
 
   .users
     - @users.each do |user|
-      .tweet
+      .tweet{:id => "tweet_users-#{user.id}"}
         = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"
         .body
           = link_to h(user.screen_name), twitter_path(user.screen_name), :target => "_blank"
@@ -17,5 +16,9 @@
           %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
           %br= user.location unless user.location.blank?
           %br= link_to user.url, user.url, :target => "_blank" unless user.url.blank?
+        .clear
+        .info{:id => "info_users-#{user.id}"}
+          = t('global.categories')
+          = user.lists.map { |list| link_to list.name }.join(', ')
     %p
       = will_paginate @users

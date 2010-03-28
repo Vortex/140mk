@@ -32,7 +32,7 @@
   #twitter_create_list_form
     display: none
 
-.category, #hashtag_filter, .modal
+.category, #hashtag_filter, .modal, .users_list
   background: #bfd9e6
   margin-top: 10px
   float: left
@@ -213,43 +213,45 @@
   cursor: move
 
 .users_list
-  background: #E1F3FD
-  margin: 10px
-  padding: 2px
-  +border-radius(12px)
-
-  h2
-    background: #0094DA
-    color: #fff
-    font-size: 1.4em
-    margin: 5px
-    text-align: center
-    +border-radius(12px)
+  width: 665px
 
   .users
-    background: #fff
-    margin: 10px 5px 5px 5px
-    padding: 5px
-    +border-radius(12px)
+    display: block
 
-    .tweet
-      padding: 10px 5px
-      border-bottom: 1px dashed #999
-      min-height: 45px
-
-      .body
-        color: #666
-        font-size: 0.9em
-        padding-left: 55px
-
-        .when
-          font-weight: bold
-
-
-      img
-        float: left
-        width: 48px
-        height: 48px
+  h2
+    background: url(../../images/category-bg.png) no-repeat
+    width: 655px
+//    background: #0094DA
+//    color: #fff
+//    font-size: 1.4em
+//    margin: 5px
+//    text-align: center
+//    +border-radius(12px)
+//
+//  .users
+//    background: #fff
+//    margin: 10px 5px 5px 5px
+//    padding: 5px
+//    +border-radius(12px)
+//
+//    .tweet
+//      padding: 10px 5px
+//      border-bottom: 1px dashed #999
+//      min-height: 45px
+//
+//      .body
+//        color: #666
+//        font-size: 0.9em
+//        padding-left: 55px
+//
+//        .when
+//          font-weight: bold
+//
+//
+//      img
+//        float: left
+//        width: 48px
+//        height: 48px
 
 
 .lists_list
@@ -357,6 +359,9 @@
 
           a
             color: #000
+
+.modal
+  display: none
 
 .clear
   clear: both

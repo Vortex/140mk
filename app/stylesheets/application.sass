@@ -32,7 +32,7 @@
   #twitter_create_list_form
     display: none
 
-.category, #hashtag_filter, .modal, .users_list
+.category, #hashtag_filter, .modal, .users_list, .lists_list, #category_show
   background: #bfd9e6
   margin-top: 10px
   float: left
@@ -93,11 +93,11 @@
   .users
     display: none
 
-  .tweets, .users
+  .tweets, .users, .lists
     margin: 0 5px 5px 5px
     padding: 5px
 
-    .tweet
+    .tweet, .list
       background: #fff
       padding: 10px 10px      
       min-height: 45px
@@ -180,14 +180,11 @@
 
 
 #category_show
+  width: 665px
 
   h2
-    background: #0094DA
-    color: #fff
-    text-align: center
-    font-size: 1.4em
-    margin: 5px
-    +border-radius(12px)
+    background: url(../../images/category-bg.png) no-repeat
+    width: 655px
 
   #twitter_create_list
     cursor: pointer
@@ -197,6 +194,10 @@
 
   .category
     margin-top: 5px
+    margin-right: 0
+
+    h2
+      width: 300px
 
     .tweets
       margin-top: 5px
@@ -221,69 +222,21 @@
   h2
     background: url(../../images/category-bg.png) no-repeat
     width: 655px
-//    background: #0094DA
-//    color: #fff
-//    font-size: 1.4em
-//    margin: 5px
-//    text-align: center
-//    +border-radius(12px)
-//
-//  .users
-//    background: #fff
-//    margin: 10px 5px 5px 5px
-//    padding: 5px
-//    +border-radius(12px)
-//
-//    .tweet
-//      padding: 10px 5px
-//      border-bottom: 1px dashed #999
-//      min-height: 45px
-//
-//      .body
-//        color: #666
-//        font-size: 0.9em
-//        padding-left: 55px
-//
-//        .when
-//          font-weight: bold
-//
-//
-//      img
-//        float: left
-//        width: 48px
-//        height: 48px
-
 
 .lists_list
-  background: #E1F3FD
-  margin: 10px
-  padding: 2px
-  +border-radius(12px)
-
-  h2
-    background: #0094DA
-    color: #fff
-    font-size: 1.4em
-    margin: 5px
-    text-align: center
-    +border-radius(12px)
+  width: 665px
 
   .lists
-    background: #fff
-    margin: 10px 5px 5px 5px
-    padding: 5px
-    +border-radius(12px)
+    .list
+      &:hover
+        background: #fff
+        
+      .body
+        padding-left: 10px
 
-    .body
-      padding: 10px 5px
-      border-bottom: 1px dashed #999
-      height: 30px
-      color: #666
-      font-size: 0.9em
-      padding-left: 15px
-
-      .when
-        font-weight: bold
+  h2
+    background: url(../../images/category-bg.png) no-repeat
+    width: 655px
 
 .pagination
   text-align: center

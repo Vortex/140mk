@@ -1,7 +1,7 @@
 - content_for(:sidebar) do
   #hashtag_filter
     %h2 #Fail
-    = render :partial => 'welcome/tweets', :object => @filtered_tweets
+    = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }
 
 .lists_list
   %h2
@@ -9,9 +9,10 @@
 
   .lists
     - @lists.each do |list|
-      .body
-        = link_to list.name, list
-        %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
-        %br= "#{t('category.total')}: #{pluralize(list.subscriptions.size, t('global.member'))}"
+      .list
+        .body
+          = link_to list.name, list
+          %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
+          %br= "#{t('category.total')}: #{pluralize(list.subscriptions.size, t('global.member'))}"
     %p
       = will_paginate @lists

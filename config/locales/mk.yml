@@ -16,7 +16,7 @@ mk:
     failtag: "#fail"
     categories: "Категории:"
   pagination:
-    previous: "Предходна"
+    previous: "Претходна"
     next: "Следна"
 
     tweet: "Твитај"

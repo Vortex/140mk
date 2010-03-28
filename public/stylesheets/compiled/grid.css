@@ -336,27 +336,37 @@ img a {
     margin-right: 0; }
 
 /* line 24, ../../../app/stylesheets/grid.sass */
+html {
+  position: relative; }
+
+/* line 27, ../../../app/stylesheets/grid.sass */
 .two-column {
   margin-left: auto;
   margin-right: auto;
-  width: 985px; }
-  /* line 26, ../../../app/stylesheets/grid.sass */
+  width: 985px;
+  height: auto; }
+  /* line 31, ../../../app/stylesheets/grid.sass */
   .two-column #header,
-  .two-column #footer,
   .two-column #sidebar,
   .two-column #main-content {
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px; }
-  /* line 31, ../../../app/stylesheets/grid.sass */
-  .two-column #header, .two-column #footer {
+  /* line 35, ../../../app/stylesheets/grid.sass */
+  .two-column #header {
     width: 965px; }
-  /* line 33, ../../../app/stylesheets/grid.sass */
+  /* line 37, ../../../app/stylesheets/grid.sass */
+  .two-column #footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+  /* line 42, ../../../app/stylesheets/grid.sass */
   .two-column #sidebar {
     width: 267.292px;
     margin-left: 0; }
-  /* line 36, ../../../app/stylesheets/grid.sass */
+  /* line 45, ../../../app/stylesheets/grid.sass */
   .two-column #main-content {
     width: 677.708px;
     margin-right: 0; }

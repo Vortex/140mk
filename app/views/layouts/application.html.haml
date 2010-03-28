@@ -13,12 +13,12 @@
     #header
       .logo
         - link_to "/" do
-          %h1= G140[:site_name] 
-          
+          %h1= G140[:site_name]
+
       .navigation
         = render_navigation
 
-        
+
     #main-content
       - unless flash[:error].blank?
         %div#flash.error
@@ -32,10 +32,12 @@
       .content
         = yield(:sidebar)
 
+    .clear
     #footer
-      %b 140.mk
-      |
-      (Верзија 0.3.0)
+      .wrapper
+        %b 140.mk
+        |
+        (Верзија 0.3.0)
 
     = render :partial => "shared/tweet_box"
 

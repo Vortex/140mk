@@ -21,15 +21,24 @@
 !ninesixty_columns = 24
 !ninesixty_grid_width = 985px
 
+html
+  position: relative
+
 .two-column
   +grid-container
+  height: auto
+
   #header,
-  #footer,
   #sidebar,
   #main-content
     +grid-unit-base
-  #header, #footer
+  #header
     +grid-width(24)
+  #footer
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
   #sidebar
     +grid-width(7)
     margin-left: 0

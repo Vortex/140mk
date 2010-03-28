@@ -50,7 +50,7 @@ $(document).ready(function() {
         // custom top position
         top: 272,
      
-        // some expose tweaks suitable for facebox-looking dialogs
+        // some expose tweaks
         expose: {
 
             // you might also consider a "transparent" color for the mask
@@ -69,8 +69,27 @@ $(document).ready(function() {
         close: 'blah'
     });
 
+    // Attach event on reply
+    $(".reply").click(function() {
+        var id = $("a", this).attr("id");
+        var screen_name = id.split('_')[1];
+        $('#tweet textarea').val('@' + screen_name + ' ');
+        $('#tweet textarea').focus()
+    })    
+
+    // Attach event on reply
+    $(".retweet").click(function() {
+        var id = $("a", this).attr("id");
+        var id_number = id.split('_', 3)[1];
+        alert(id_number);
+        var text = $("#tweet_" + id_number + " .text").text();
+        var screen_name = $("#tweet_" + id_number + " .who").text();
+        $('#tweet textarea').val('RT: @' + screen_name + ': ' + text);
+        $('#tweet textarea').focus()
+    })
+
     // Attach event on clicking on a tweet
-    $(".tweet").click(function() {
+    $(".body").click(function() {
         var id = $(this).attr("id");
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')
@@ -94,6 +113,7 @@ function switch_to_users(category_id) {
 
 function closeOverlays() {
     jQuery("a.modalInput").each(function() {
+        $('#tweet textarea').val('');
         jQuery(this).overlay().close();
     });
 }

@@ -7,6 +7,7 @@ Version 0.3
   * Updated layout and look for members page
   * Updated layour and look for catgories page
   * Refactored users and tweets in their own partials
+  * Reply and retweet functionality
 
 27.03.2010
 ==========

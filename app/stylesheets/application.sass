@@ -81,7 +81,6 @@
         +replace-text("icon-user-unselected.png")
 
       a.users_link.selected
-
         +replace-text("icon-user-selected.png")
 
       a.tweets_link
@@ -126,6 +125,37 @@
 
         .text
           padding-bottom: 5px
+
+      .actions
+        float: right
+
+        a
+          display: block
+          float: left
+          margin-left: 2px
+          padding: 3px
+          width: 10px
+          height: 10px
+          +hover-link
+
+        .reply
+          a.modalInput
+            +replace-text("icon-reply.png")
+            background-position: left top
+
+
+            &:hover
+              background-position: left bottom 
+
+        .retweet
+          a.modalInput
+            +replace-text("icon-retweet.png")
+            background-position: left top
+
+            &:hover
+              background-position: left bottom
+
+
 
       .info
         background: #fff url(../../images/tweet-info-bg.png) no-repeat

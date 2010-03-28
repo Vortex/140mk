@@ -15,6 +15,9 @@ mk:
     send: "Испрати"
     failtag: "#fail"
     categories: "Категории:"
+    retweet: "Ретвитај"
+    reply: "Реплицирај"
+    cancel: "Откажи"
   pagination:
     previous: "Претходна"
     next: "Следна"

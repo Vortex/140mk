@@ -1,9 +1,12 @@
-.tweet{:id => "tweet_#{name}-#{tweet.id}"}
+.tweet
   = link_to image_tag(tweet.user.photo), twitter_path(tweet.user.screen_name), :target => "_blank"
-  .body
+  .body{:id => "tweet_#{name}-#{tweet.id}"}
     %span.who= link_to h(tweet.user.screen_name), twitter_path(tweet.user.screen_name), :target => "_blank"
     %span.when= t('global.time_ago', :time => time_ago_in_words(tweet.created_at))
     .text= auto_link(tweet.text)
+  .actions
+    %span.reply= link_to t('global.reply'), nil, :id => "user_#{tweet.user.screen_name}", :class => "modalInput", :rel => "#tweet"
+    %span.retweet= link_to t('global.retweet'), nil, :id => "tweet_#{name}-#{tweet.id}", :class => "modalInput", :rel => "#tweet"
   .clear
   .info{:id => "info_#{name}-#{tweet.id}"}
     = t('global.categories')

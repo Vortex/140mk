@@ -111,7 +111,7 @@ $(document).ready(function() {
     })
 
     // Activate the masonry plugin
-    $('#categories').masonry({ singleMode: true });
+    // $('#categories').masonry({ singleMode: true });
 
 });
 

@@ -172,26 +172,24 @@ body {
 
 /* line 18, ../../../app/stylesheets/application.sass */
 #main-content {
-  margin-right: 0; }
-
-/* line 21, ../../../app/stylesheets/application.sass */
-#categories {
+  margin-right: 0;
   margin-bottom: 80px; }
-  /* line 24, ../../../app/stylesheets/application.sass */
-  #categories h1 {
-    background: #0094DA;
-    color: #fff;
-    text-align: center;
-    margin: 5px;
-    border-radius: 12px;
-    -moz-border-radius: 12px;
-    -webkit-border-radius: 12px; }
-  /* line 31, ../../../app/stylesheets/application.sass */
-  #categories #twitter_create_list {
-    cursor: pointer; }
-  /* line 34, ../../../app/stylesheets/application.sass */
-  #categories #twitter_create_list_form {
-    display: none; }
+
+/* line 24, ../../../app/stylesheets/application.sass */
+#categories h1 {
+  background: #0094DA;
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+/* line 31, ../../../app/stylesheets/application.sass */
+#categories #twitter_create_list {
+  cursor: pointer; }
+/* line 34, ../../../app/stylesheets/application.sass */
+#categories #twitter_create_list_form {
+  display: none; }
 
 /* line 37, ../../../app/stylesheets/application.sass */
 .category, #hashtag_filter, .modal, .users_list, .lists_list, #category_show {

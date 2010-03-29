@@ -110,6 +110,9 @@ $(document).ready(function() {
 
     })
 
+    // Activate the masonry plugin
+    $('#categories').masonry({ singleMode: true });
+
 });
 
 function switch_to_tweets(category_id) {

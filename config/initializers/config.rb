@@ -1,7 +1,7 @@
 ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
 
 G140 = {
-  :site_name => "140.mk",
+  :site_name => "140.мк (бета)",
   :front_page_lists_count => 6,
   :tweets_per_list => 5,
   :users_per_list => 5,

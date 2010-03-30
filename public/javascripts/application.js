@@ -66,7 +66,9 @@ $(document).ready(function() {
         // disable this for modal dialog-type of overlays
         closeOnClick: false,
 
-        close: 'blah'
+        onClose: function(event) {
+          $('#tweet textarea').val('');
+        }
     });
 
     // Attach event on reply

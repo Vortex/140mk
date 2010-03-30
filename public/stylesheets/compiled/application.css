@@ -565,21 +565,36 @@ body {
 .modal {
   display: none; }
 
-/* line 359, ../../../app/stylesheets/application.sass */
+/* line 358, ../../../app/stylesheets/application.sass */
+.modal div.close {
+  background-image: url(../../images/close.png);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  z-index: 9999; }
+
+/* line 369, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  left: 15px;
+  bottom: 12px;
   font-size: 1.2em;
   font-weight: bold;
   color: #666; }
-/* line 367, ../../../app/stylesheets/application.sass */
+/* line 377, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #600; }
-/* line 369, ../../../app/stylesheets/application.sass */
+/* line 379, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #e00; }
+/* line 382, ../../../app/stylesheets/application.sass */
+form #tweet_submit {
+  padding: 5px;
+  float: right; }
 
-/* line 372, ../../../app/stylesheets/application.sass */
+/* line 386, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both; }

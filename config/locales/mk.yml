@@ -13,7 +13,7 @@ mk:
     member: 'член'
 
     send: "Испрати"
-    failtag: "#fail"
+    failtag: "#fail и #mkfail"
     categories: "Категории"
     retweet: "RT"
     reply: "Одговори"

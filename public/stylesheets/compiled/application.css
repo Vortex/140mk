@@ -450,67 +450,68 @@ body {
   /* line 252, ../../../app/stylesheets/application.sass */
   #category_show .category {
     margin-top: 5px;
-    margin-right: 0; }
-    /* line 256, ../../../app/stylesheets/application.sass */
+    margin-right: 0;
+    float: left; }
+    /* line 257, ../../../app/stylesheets/application.sass */
     #category_show .category h2 {
       width: 300px; }
-    /* line 259, ../../../app/stylesheets/application.sass */
+    /* line 260, ../../../app/stylesheets/application.sass */
     #category_show .category .tweets {
       margin-top: 5px; }
 
-/* line 265, ../../../app/stylesheets/application.sass */
+/* line 266, ../../../app/stylesheets/application.sass */
 #draggable, #droppable {
   border: 1px dashed #FF0000;
   min-height: 50px;
   margin: 5px; }
 
-/* line 269, ../../../app/stylesheets/application.sass */
+/* line 270, ../../../app/stylesheets/application.sass */
 #draggable span, #droppable span {
   padding: 2px;
   cursor: move; }
 
-/* line 273, ../../../app/stylesheets/application.sass */
+/* line 274, ../../../app/stylesheets/application.sass */
 .users_list {
   width: 665px; }
-  /* line 276, ../../../app/stylesheets/application.sass */
+  /* line 277, ../../../app/stylesheets/application.sass */
   .users_list .users {
     display: block; }
-    /* line 279, ../../../app/stylesheets/application.sass */
+    /* line 280, ../../../app/stylesheets/application.sass */
     .users_list .users .tweet {
       width: 292px;
       float: left;
       margin-right: 10px;
       min-height: 100px; }
-  /* line 285, ../../../app/stylesheets/application.sass */
+  /* line 286, ../../../app/stylesheets/application.sass */
   .users_list h2 {
     background: url(../../images/category-bg.png) no-repeat;
     width: 655px; }
 
-/* line 289, ../../../app/stylesheets/application.sass */
+/* line 290, ../../../app/stylesheets/application.sass */
 .lists_list {
   width: 665px; }
-  /* line 293, ../../../app/stylesheets/application.sass */
+  /* line 294, ../../../app/stylesheets/application.sass */
   .lists_list .lists .list {
     width: 292px;
     float: left;
     margin-right: 10px;
     min-height: 45px; }
-    /* line 299, ../../../app/stylesheets/application.sass */
+    /* line 300, ../../../app/stylesheets/application.sass */
     .lists_list .lists .list:hover {
       background: #fff; }
-    /* line 302, ../../../app/stylesheets/application.sass */
+    /* line 303, ../../../app/stylesheets/application.sass */
     .lists_list .lists .list .body {
       padding-left: 10px; }
-  /* line 305, ../../../app/stylesheets/application.sass */
+  /* line 306, ../../../app/stylesheets/application.sass */
   .lists_list h2 {
     background: url(../../images/category-bg.png) no-repeat;
     width: 655px; }
 
-/* line 309, ../../../app/stylesheets/application.sass */
+/* line 310, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center; }
 
-/* line 312, ../../../app/stylesheets/application.sass */
+/* line 313, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #E1F3FD;
   margin: 10px;
@@ -523,25 +524,25 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   width: 272.174px; }
-  /* line 319, ../../../app/stylesheets/application.sass */
+  /* line 320, ../../../app/stylesheets/application.sass */
   #create_list_from_category p {
     margin: 10px;
     text-align: center; }
-  /* line 323, ../../../app/stylesheets/application.sass */
+  /* line 324, ../../../app/stylesheets/application.sass */
   #create_list_from_category label {
     margin-left: 5px;
     width: 70px;
     display: inline-block; }
-  /* line 328, ../../../app/stylesheets/application.sass */
+  /* line 329, ../../../app/stylesheets/application.sass */
   #create_list_from_category input {
     margin: 3px; }
-  /* line 331, ../../../app/stylesheets/application.sass */
+  /* line 332, ../../../app/stylesheets/application.sass */
   #create_list_from_category input[type=text] {
     width: 120px; }
-  /* line 334, ../../../app/stylesheets/application.sass */
+  /* line 335, ../../../app/stylesheets/application.sass */
   #create_list_from_category input[type=submit] {
     margin-left: 83px; }
-  /* line 337, ../../../app/stylesheets/application.sass */
+  /* line 338, ../../../app/stylesheets/application.sass */
   #create_list_from_category h2 {
     background: #0094DA;
     color: #fff;
@@ -551,7 +552,7 @@ body {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px; }
-    /* line 345, ../../../app/stylesheets/application.sass */
+    /* line 346, ../../../app/stylesheets/application.sass */
     #create_list_from_category h2 a {
       color: #fff;
       font-weight: bold;
@@ -560,11 +561,11 @@ body {
       #create_list_from_category h2 a:hover {
         text-decoration: underline; }
 
-/* line 354, ../../../app/stylesheets/application.sass */
+/* line 355, ../../../app/stylesheets/application.sass */
 .modal {
   display: none; }
 
-/* line 358, ../../../app/stylesheets/application.sass */
+/* line 359, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   right: 20px;
@@ -572,13 +573,13 @@ form .counter {
   font-size: 1.2em;
   font-weight: bold;
   color: #666; }
-/* line 366, ../../../app/stylesheets/application.sass */
+/* line 367, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #600; }
-/* line 368, ../../../app/stylesheets/application.sass */
+/* line 369, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #e00; }
 
-/* line 371, ../../../app/stylesheets/application.sass */
+/* line 372, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both; }

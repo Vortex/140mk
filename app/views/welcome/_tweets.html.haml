@@ -1,5 +1,6 @@
-- tweets.each do |tweet|
-  = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => name }
+- cache "tweets_#{name}", :expires_in => 1.minute do
+  - tweets.each do |tweet|
+    = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => name }
 
 
 

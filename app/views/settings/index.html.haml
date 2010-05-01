@@ -4,19 +4,20 @@
 %script
   = "var _subscriptions_per_user = #{G140[:subscriptions_per_user]};"
 
-%h2= t('settings.select_categories')
+#category_chooser
+  %h2= t('settings.select_categories')
+  #draggable
+    - @not_selected_lists.each do |list|
+      %span{:id => "list_#{list.id}"}= list.name
 
+  .action-area
+    #droppable
+      - @selected_lists.each do |list|
+        %span{:id => "list_#{list.id}"}= list.name
 
+    %p= t('settings.select_categories_info')    
 
-%div#draggable
-  - @not_selected_lists.each do |list|
-    %span{:id => "list_#{list.id}"}= list.name
-
-%div#droppable
-  - @selected_lists.each do |list|
-    %span{:id => "list_#{list.id}"}= list.name
-
-%p= t('settings.select_categories_info')    
-
-%h2= t('settings.deactivate')
-= link_to t('user.deactivate'), deactivate_path
+.box
+  %h2= t('settings.deactivate')
+  .content
+    = link_to t('user.deactivate'), deactivate_path, :class => 'item'

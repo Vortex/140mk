@@ -5,6 +5,9 @@
 @import compass/utilities.sass
 @import layout.sass
 
+!category_list_bg = #bfd9e6
+!category_item_bg = #f7fcfe
+
 #flash
   text-align: center
   padding: 5px
@@ -37,7 +40,7 @@
   .left-column, .right-column
     float: left
 
-.category, #hashtag_filter, .modal, .users_list, .lists_list, #category_show
+.category, #hashtag_filter, .modal, .users_list, .lists_list, #category_show, #category_chooser, .box
   background: #bfd9e6
   margin-top: 10px
   float: left
@@ -261,15 +264,65 @@
       margin-top: 5px
 
 
+#category_chooser
+  background: transparent
+  width: 665px
+
+  h2
+    background: url(../../images/category-bg.png) no-repeat
+    width: 655px
+    height: 40px
 
     
-#draggable, #droppable
-  border: 1px dashed #FF0000
-  min-height: 50px
-  margin: 5px
-#draggable span, #droppable span
-  padding: 2px
-  cursor: move
+  #draggable, .action-area
+    background: $category_list_bg
+    min-height: 50px
+    margin-top: 10px
+    padding: 15px
+    
+  #draggable span, #droppable span
+    background: $category_item_bg
+    padding: 4px
+    margin-right: 5px
+    line-height: 3em
+    cursor: move
+    +border-radius(3px)
+
+  #draggable span.ui-state-disabled
+    color: #999
+    background: #eee
+
+  #draggable
+    margin: 0
+
+  p
+    color: #fff
+    font-weight: bold
+    margin-bottom: 0
+    margin-top: 10px
+
+.box
+  width: 665px
+  h2
+    background: url(../../images/category-bg.png) no-repeat
+    width: 655px
+    height: 40px
+
+  .content
+    padding: 10px
+
+    .item
+      background: $category_item_bg
+      padding: 4px
+      margin-right: 5px
+      line-height: 3em
+      +border-radius(3px)
+
+    a.item
+      color: #000
+      text-decoration: none
+    
+  
 
 .users_list
   width: 665px

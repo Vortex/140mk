@@ -1,0 +1,14 @@
+- lists[start_index, end_index].each_with_index do |list, index|
+  .category{:id => "category_#{list.id}"}
+    %h2
+      = link_to list.name, list
+      .tabs
+        = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link selected'
+        = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.id}')", :class => 'tweets_link'
+
+
+    .tweets{:id => "tweets_#{list.id}"}
+      = render :partial => 'tweets', :locals => { :tweets => @lists_tweets[list.name], :name => list.id }
+    = render :partial => 'users', :locals => { :users => @lists_users[list.name], :name => list.id }
+    
+    = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => list.id }, :update => "tweets_#{list.id}")

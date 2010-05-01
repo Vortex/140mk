@@ -10,30 +10,11 @@
 #categories
   - middle = @lists.size.div(2)
   .left-column
-    - @lists[0, middle].each_with_index do |list, index|
-      .category{:id => "category_#{list.id}"}
-        %h2
-          = link_to list.name, list
-          .tabs
-            = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.id}')", :class => 'tweets_link selected'
-            = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link'
-        .tweets{:id => "tweets_#{list.id}"}
-          = render :partial => 'tweets', :locals => { :tweets => @lists_tweets[list.name], :name => list.id }
-        = render :partial => 'users', :locals => { :users => @lists_users[list.name], :name => list.id }
-        = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => list.id }, :update => "tweets_#{list.id}")
+    = render :partial => 'shared/lists', :locals => { :lists => @lists, :start_index => 0, :end_index => middle }
+
 
   .right-column
-    - @lists[middle, @lists.size].each_with_index do |list, index|
-      .category{:id => "category_#{list.id}"}
-        %h2
-          = link_to list.name, list
-          .tabs
-            = link_to_function t('category.tweets'), "switch_to_tweets('category_#{list.id}')", :class => 'tweets_link selected'
-            = link_to_function t('category.users'), "switch_to_users('category_#{list.id}')", :class => 'users_link'
-        .tweets{:id => "tweets_#{list.id}"}
-          = render :partial => 'tweets', :locals => { :tweets => @lists_tweets[list.name], :name => list.id }
-        = render :partial => 'users', :locals => { :users => @lists_users[list.name], :name => list.id }
-        = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => list.id }, :update => "tweets_#{list.id}")
+    = render :partial => 'shared/lists', :locals => { :lists => @lists, :start_index => middle, :end_index => @lists.size }
         
 -#    - if (index + 1) % 2 == 0
 -#      %div{:style => "clear:both"}

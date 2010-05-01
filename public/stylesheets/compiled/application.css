@@ -343,7 +343,7 @@ body {
   background-position: 50% 50%;
 }
 /* line 97, ../../../app/stylesheets/application.sass */
-.category .users, #hashtag_filter .users, .modal .users, .users_list .users, .lists_list .users, #category_show .users {
+.category .tweets, #hashtag_filter .tweets, .modal .tweets, .users_list .tweets, .lists_list .tweets, #category_show .tweets {
   display: none;
 }
 /* line 100, ../../../app/stylesheets/application.sass */

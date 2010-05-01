@@ -78,7 +78,7 @@ $(document).ready(function() {
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus();
         return false;
-    })    
+    });
 
     // Attach event on reply
     $(".retweet").click(function() {
@@ -89,7 +89,7 @@ $(document).ready(function() {
         $('#tweet textarea').val('RT: @' + screen_name + ': ' + text);
         $('#tweet textarea').focus()
         return false;
-    })
+    });
 
     // Attach event on clicking on a tweet
     $(".tweet").click(function() {
@@ -97,7 +97,7 @@ $(document).ready(function() {
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')
 
-    })
+    });
 
     // Character limiter
     $("textarea#tweet").charCount();
@@ -110,7 +110,7 @@ $(document).ready(function() {
             $('#tweet_submit').attr("disabled", true);
         }
 
-    })
+    });
 
     // Activate the masonry plugin
     // $('#categories').masonry({ singleMode: true });

@@ -7,6 +7,8 @@ Version 0.3
   * Replacing register link with cute image
   * Showing users instead of tweets as default
   * Design for category settings page
+  * Bugfixes
+    - Extended user info is now working after refresh
   
 
 02.04.2010

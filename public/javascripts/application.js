@@ -72,7 +72,7 @@ $(document).ready(function() {
     });
 
     // Attach event on reply
-    $(".reply").click(function() {
+    $(".reply").live('click', function() {
         var id = $("a", this).attr("id");
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
@@ -81,7 +81,7 @@ $(document).ready(function() {
     });
 
     // Attach event on reply
-    $(".retweet").click(function() {
+    $(".retweet").live('click', function() {
         var id = $("a", this).attr("id");
         var id_number = id.split('_', 3)[1];
         var text = $("#tweet_" + id_number + " .text").text();
@@ -92,11 +92,16 @@ $(document).ready(function() {
     });
 
     // Attach event on clicking on a tweet
-    $(".tweet").click(function() {
+    $(".tweet").live('click', function() {
         var id = $(this).attr("id");
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')
+    });
 
+    $('.user').live('click', function() {
+        var id = $(this).attr("id");
+        var id_number = id.split('_', 3)[1];
+        $("#info_" +id_number).toggle('slow')        
     });
 
     // Character limiter

@@ -1,9 +1,20 @@
 .user{:id => "tweet_user-#{user.id}-#{name}"}
-  = link_to image_tag(user.photo), user_url(user.screen_name)
+  = link_to image_tag(user.photo), twitter_path(user.screen_name)
   .body
-    %span.who= link_to h(user.screen_name), user_url(user.screen_name)
+    %span.who= link_to h(user.screen_name), twitter_path(user.screen_name)
     %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
   .clear
   .info{:id => "info_user-#{user.id}-#{name}"}
-    = t('global.categories')
-    = user.lists.map { |list| link_to list.name }.join(', ')
+    .categories
+      %b= t('global.categories')
+      = user.lists.map { |list| link_to list.name, list }.join(', ')
+    .bio
+      %b= t('global.bio')
+      = user.description
+    .location
+      %b= t('global.location')
+      = user.location
+    .web
+      %b= t('global.web')
+      = link_to user.url, user.url
+    .when= t('user.created_at', :time => time_ago_in_words(user.created_at))

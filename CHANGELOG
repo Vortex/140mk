@@ -9,7 +9,8 @@ Version 0.3
   * Design for category settings page
   * Bugfixes
     - Extended user info is now working after refresh
-  
+    - Links on the user tab refer to twitter accounts instead of local ones
+    - Reply and retweet options are off if user is not logged in
 
 02.04.2010
 ==========

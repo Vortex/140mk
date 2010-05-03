@@ -33,4 +33,4 @@
     .tweets
       %h2= t('title.last_members')
       - @users.each do |user|
-        = render :partial => 'shared/user', :locals => { :user => user }
+        = render :partial => 'shared/user', :locals => { :user => user, :name => @list.id }

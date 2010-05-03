@@ -566,22 +566,23 @@ body {
 }
 /* line 267, ../../../app/stylesheets/application.sass */
 #category_show .category .tweets {
+  display: block;
   margin-top: 5px;
 }
 
-/* line 271, ../../../app/stylesheets/application.sass */
+/* line 272, ../../../app/stylesheets/application.sass */
 #category_chooser {
   background: transparent;
   width: 665px;
 }
-/* line 275, ../../../app/stylesheets/application.sass */
+/* line 276, ../../../app/stylesheets/application.sass */
 #category_chooser h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 281, ../../../app/stylesheets/application.sass */
+/* line 282, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable, #category_chooser .action-area {
   background: #bfd9e6;
   font-size: 0.85em;
@@ -589,9 +590,10 @@ body {
   margin-top: 10px;
   padding: 15px;
 }
-/* line 288, ../../../app/stylesheets/application.sass */
+/* line 289, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span, #category_chooser #droppable span {
   background: #f7fcfe;
+  color: #666666;
   padding: 5px;
   margin-right: 8px;
   line-height: 3em;
@@ -606,25 +608,25 @@ body {
   /* CSS3 */
   box-shadow: #9dc2d5 0px 0px 10px;
 }
-/* line 297, ../../../app/stylesheets/application.sass */
+/* line 299, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span.ui-state-disabled {
   color: #999999;
   background: #eeeeee;
 }
-/* line 301, ../../../app/stylesheets/application.sass */
+/* line 303, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable {
   margin: 0;
 }
-/* line 304, ../../../app/stylesheets/application.sass */
+/* line 306, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area {
   padding: 0;
 }
-/* line 307, ../../../app/stylesheets/application.sass */
+/* line 309, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area #droppable {
   min-height: 30px;
   padding: 15px;
 }
-/* line 310, ../../../app/stylesheets/application.sass */
+/* line 312, ../../../app/stylesheets/application.sass */
 #category_chooser p {
   background: #373d44;
   color: white;
@@ -634,22 +636,22 @@ body {
   padding: 15px;
 }
 
-/* line 318, ../../../app/stylesheets/application.sass */
+/* line 320, ../../../app/stylesheets/application.sass */
 .box {
   width: 665px;
 }
-/* line 321, ../../../app/stylesheets/application.sass */
+/* line 323, ../../../app/stylesheets/application.sass */
 .box h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 327, ../../../app/stylesheets/application.sass */
+/* line 329, ../../../app/stylesheets/application.sass */
 .box .content {
   padding: 10px;
 }
-/* line 330, ../../../app/stylesheets/application.sass */
+/* line 332, ../../../app/stylesheets/application.sass */
 .box .content .item {
   background: #f7fcfe;
   padding: 4px;
@@ -659,64 +661,64 @@ body {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
-/* line 337, ../../../app/stylesheets/application.sass */
+/* line 339, ../../../app/stylesheets/application.sass */
 .box .content a.item {
   color: black;
   text-decoration: none;
 }
 
-/* line 343, ../../../app/stylesheets/application.sass */
+/* line 345, ../../../app/stylesheets/application.sass */
 .users_list {
   width: 665px;
 }
-/* line 346, ../../../app/stylesheets/application.sass */
+/* line 348, ../../../app/stylesheets/application.sass */
 .users_list .users {
   display: block;
 }
-/* line 349, ../../../app/stylesheets/application.sass */
+/* line 351, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet {
   width: 292px;
   float: left;
   margin-right: 10px;
   min-height: 100px;
 }
-/* line 355, ../../../app/stylesheets/application.sass */
+/* line 357, ../../../app/stylesheets/application.sass */
 .users_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 359, ../../../app/stylesheets/application.sass */
+/* line 361, ../../../app/stylesheets/application.sass */
 .lists_list {
   width: 665px;
 }
-/* line 363, ../../../app/stylesheets/application.sass */
+/* line 365, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list {
   width: 292px;
   float: left;
   margin-right: 10px;
   min-height: 45px;
 }
-/* line 369, ../../../app/stylesheets/application.sass */
+/* line 371, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list:hover {
   background: white;
 }
-/* line 372, ../../../app/stylesheets/application.sass */
+/* line 374, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body {
   padding-left: 10px;
 }
-/* line 375, ../../../app/stylesheets/application.sass */
+/* line 377, ../../../app/stylesheets/application.sass */
 .lists_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 379, ../../../app/stylesheets/application.sass */
+/* line 381, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center;
 }
 
-/* line 382, ../../../app/stylesheets/application.sass */
+/* line 384, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #e1f3fd;
   margin: 10px;
@@ -730,30 +732,30 @@ body {
   margin-right: 10px;
   width: 272.174px;
 }
-/* line 389, ../../../app/stylesheets/application.sass */
+/* line 391, ../../../app/stylesheets/application.sass */
 #create_list_from_category p {
   margin: 10px;
   text-align: center;
 }
-/* line 393, ../../../app/stylesheets/application.sass */
+/* line 395, ../../../app/stylesheets/application.sass */
 #create_list_from_category label {
   margin-left: 5px;
   width: 70px;
   display: inline-block;
 }
-/* line 398, ../../../app/stylesheets/application.sass */
+/* line 400, ../../../app/stylesheets/application.sass */
 #create_list_from_category input {
   margin: 3px;
 }
-/* line 401, ../../../app/stylesheets/application.sass */
+/* line 403, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=text] {
   width: 120px;
 }
-/* line 404, ../../../app/stylesheets/application.sass */
+/* line 406, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=submit] {
   margin-left: 83px;
 }
-/* line 407, ../../../app/stylesheets/application.sass */
+/* line 409, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 {
   background: #0094da;
   color: white;
@@ -764,7 +766,7 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
 }
-/* line 415, ../../../app/stylesheets/application.sass */
+/* line 417, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 a {
   color: white;
   font-weight: bold;
@@ -775,12 +777,12 @@ body {
   text-decoration: underline;
 }
 
-/* line 424, ../../../app/stylesheets/application.sass */
+/* line 426, ../../../app/stylesheets/application.sass */
 .modal {
   display: none;
 }
 
-/* line 427, ../../../app/stylesheets/application.sass */
+/* line 429, ../../../app/stylesheets/application.sass */
 .modal div.close {
   background-image: url(../../images/close.png);
   position: absolute;
@@ -792,7 +794,7 @@ body {
   z-index: 9999;
 }
 
-/* line 438, ../../../app/stylesheets/application.sass */
+/* line 440, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   left: 15px;
@@ -801,21 +803,21 @@ form .counter {
   font-weight: bold;
   color: #666666;
 }
-/* line 446, ../../../app/stylesheets/application.sass */
+/* line 448, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 448, ../../../app/stylesheets/application.sass */
+/* line 450, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 451, ../../../app/stylesheets/application.sass */
+/* line 453, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 455, ../../../app/stylesheets/application.sass */
+/* line 457, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

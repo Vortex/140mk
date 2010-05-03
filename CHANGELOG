@@ -4,6 +4,7 @@ Version 0.3
 03.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
+  * Added alt text to tweets/users link
   * Bugfixes
     - Fixed the problem with RT and Reply not working after tweet refresh
     - Corrected the broken design in the sidebar

@@ -3,6 +3,7 @@
 @import border_radius.sass
 @import facebox.sass
 @import compass/utilities.sass
+@import compass/css3
 @import layout.sass
 
 !category_list_bg = #bfd9e6
@@ -31,6 +32,7 @@
     margin: 5px              
     +border-radius(12px)
 
+
   #twitter_create_list
     cursor: pointer
 
@@ -53,7 +55,6 @@
     background: url(../../images/category-bg.png) no-repeat
     color: #fff
     font-size: 1.4em
-    font-family: "Lucida Grande"
     height: 46px
     margin-bottom: 0
     padding-left: 10px
@@ -63,6 +64,7 @@
     width: 315px
 
     a
+      font-family: "Lucida Grande"
       color: #fff
       font-weight: bold
       +hover-link
@@ -274,21 +276,23 @@
     background: url(../../images/category-bg.png) no-repeat
     width: 655px
     height: 40px
-
+    font-weight: bold
     
   #draggable, .action-area
     background: $category_list_bg
+    font-size: 0.85em
     min-height: 50px
     margin-top: 10px
     padding: 15px
     
   #draggable span, #droppable span
     background: $category_item_bg
-    padding: 4px
-    margin-right: 5px
+    padding: 5px
+    margin-right: 8px
     line-height: 3em
     cursor: move
     +border-radius(3px)
+    +box-shadow(#9dc2d5, 0px, 0px, 10px)
 
   #draggable span.ui-state-disabled
     color: #999
@@ -298,24 +302,27 @@
     margin: 0
 
   .action-area
+    padding: 0
         
     #droppable
       min-height: 30px
-      border: 1px solid #f7fcfe
-      padding-left: 10px
-      +border-radius(4px)
+      padding: 15px      
   p
+    background: #373D44
     color: #fff
-    font-weight: bold
-    margin-bottom: 0
-    margin-top: 10px
+    font-weight: normal
+    font-size: 0.8em
+    margin: 10px 0 0 0
+    padding: 15px
 
 .box
   width: 665px
+
   h2
     background: url(../../images/category-bg.png) no-repeat
     width: 655px
     height: 40px
+    font-weight: bold
 
   .content
     padding: 10px

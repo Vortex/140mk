@@ -49,6 +49,9 @@ $(document).ready(function() {
     var triggers = $("a.modalInput").overlay({      
         // custom top position
         top: 272,
+
+        // turn on API
+        api: true,
      
         // some expose tweaks
         expose: {
@@ -69,7 +72,7 @@ $(document).ready(function() {
         onClose: function(event) {
           $('#tweet textarea').val('');
         }
-    });
+    }).bind('click', function() { triggers.load() });
 
     // Attach event on reply
     $(".reply").live('click', function() {
@@ -77,6 +80,7 @@ $(document).ready(function() {
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus();
+        triggers.load();
         return false;
     });
 
@@ -87,7 +91,8 @@ $(document).ready(function() {
         var text = $("#tweet_" + id_number + " .text").text();
         var screen_name = $("#tweet_" + id_number + " .who").text();
         $('#tweet textarea').val('RT: @' + screen_name + ': ' + text);
-        $('#tweet textarea').focus()
+        $('#tweet textarea').focus();
+        triggers.load();
         return false;
     });
 

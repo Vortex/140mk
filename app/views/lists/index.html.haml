@@ -2,8 +2,9 @@
   = render :partial => 'shared/user_status'
 
   #hashtag_filter
-    %h2 #Fail
-    = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }
+    %h2= t('global.failtag')
+    .tweets{:id => "tweets_fail"}
+      = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }
 
 .lists_list
   %h2

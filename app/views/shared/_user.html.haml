@@ -4,6 +4,7 @@
     %span.who= link_to h(user.screen_name), twitter_path(user.screen_name)
     %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
   .clear
+
   .info{:id => "info_user-#{user.id}-#{name}"}
     .categories
       %b= t('global.categories')
@@ -18,4 +19,7 @@
       %b= t('global.web')
       = link_to user.url, user.url
     .when= t('user.created_at', :time => time_ago_in_words(user.created_at))
+
+  .handle
+    &nbsp;
    

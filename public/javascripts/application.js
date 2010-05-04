@@ -97,16 +97,18 @@ $(document).ready(function() {
     });
 
     // Attach event on clicking on a tweet
-    $(".tweet").live('click', function() {
-        var id = $(this).attr("id");
+    $(".tweet .handle").live('click', function() {
+        $(this).toggleClass('opened');
+        var id = $(this).parent().attr("id");
         var id_number = id.split('_', 3)[1];
         var id_category = id_number.split('-')[0];
         $("#info_" +id_number).toggle('slow');
         $("#tweets_" + id_category).attr('id', "tweets_" + id_category + "_clicked");
     });
 
-    $('.user').live('click', function() {
-        var id = $(this).attr("id");
+    $('.user .handle').live('click', function() {
+        $(this).toggleClass('opened');
+        var id = $(this).parent().attr("id");
         var id_number = id.split('_', 3)[1];
         $("#info_" +id_number).toggle('slow')        
     });

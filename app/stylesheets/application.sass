@@ -107,8 +107,8 @@
     padding: 5px
 
     .tweet, .list, .user
-      background: #f7fcfe
-      padding: 10px 10px      
+      background: #f7fcfe url(../../images/tweet-bg.png) right bottom no-repeat
+      padding: 10px 10px 0 10px      
       min-height: 45px
       margin-bottom: 10px
       box-shadow: 0 0 10px #9dc2d5
@@ -118,10 +118,16 @@
       +border-radius(4px)
 
       &:hover
-        background: #f7fcfe url(../../images/toggle-arrow.png) right bottom no-repeat
+        background: #f7fcfe url(../../images/tweet-hover-bg.png) right bottom no-repeat
+
+        .opened
+          background: #f7fcfe url(../../images/tweet-opened-hover-bg.png) right bottom no-repeat
 
         .actions
           display: block
+
+      .opened
+        background: #f7fcfe url(../../images/tweet-opened-bg.png) right bottom no-repeat
 
       a
         color: #04ABE2
@@ -130,9 +136,8 @@
       .body
         color: #666
         font-size: 0.9em
-        min-height: 50px
-        padding-left: 65px
-        padding-bottom: 5px
+        min-height: 70px
+        padding-left: 65px        
 
         .who
           a
@@ -145,6 +150,10 @@
         .text
           padding-bottom: 5px
           overflow: hidden
+
+      .handle
+        min-height: 10px
+
 
       .actions
         display: none

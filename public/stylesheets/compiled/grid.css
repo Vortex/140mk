@@ -435,16 +435,22 @@ a img {
 /* line 25, ../../../app/stylesheets/grid.sass */
 html {
   position: relative;
+  min-height: 100%;
 }
 
-/* line 28, ../../../app/stylesheets/grid.sass */
+/* line 29, ../../../app/stylesheets/grid.sass */
+body {
+  min-height: 100%;
+}
+
+/* line 32, ../../../app/stylesheets/grid.sass */
 .two-column {
   margin-left: auto;
   margin-right: auto;
   width: 985px;
   height: auto;
 }
-/* line 32, ../../../app/stylesheets/grid.sass */
+/* line 36, ../../../app/stylesheets/grid.sass */
 .two-column #header,
 .two-column #sidebar,
 .two-column #main-content {
@@ -453,43 +459,25 @@ html {
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 36, ../../../app/stylesheets/grid.sass */
+/* line 40, ../../../app/stylesheets/grid.sass */
 .two-column #header {
   width: 965px;
 }
-/* line 38, ../../../app/stylesheets/grid.sass */
+/* line 42, ../../../app/stylesheets/grid.sass */
 .two-column #sidebar {
   width: 267.292px;
   margin-left: 0;
 }
-/* line 41, ../../../app/stylesheets/grid.sass */
+/* line 45, ../../../app/stylesheets/grid.sass */
 .two-column #main-content {
   width: 677.708px;
   margin-right: 0;
-}
-/* line 10, ../../../../../.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.0.rc3/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-.two-column html, .two-column body {
-  height: 100%;
-}
-/* line 12, ../../../../../.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.0.rc3/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-.two-column .content-wrapper {
-  clear: both;
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -74px;
 }
-/* line 18, ../../../../../.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.0.rc3/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-.two-column .content-wrapper #root-footer {
-  height: 74px;
-}
-/* line 20, ../../../../../.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.0.rc3/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-.two-column #footer {
-  clear: both;
-  position: relative;
-  height: 74px;
-}
-/* line 46, ../../../app/stylesheets/grid.sass */
+/* line 50, ../../../app/stylesheets/grid.sass */
 .two-column #footer {
   width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

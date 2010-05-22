@@ -9,6 +9,8 @@ Version 0.3
 	  - Changed 'denovi' to 'dena'
 	  - Fixed the look of the 'sign in button'
 	  - Fixed the down arrow when user is not logged in
+	  - Bigger text in settings page
+	  - Fixed the sticky footer
 	* Switched category permalinks to latin
 	* User info presents categories
 	* Ordered categories by number of users

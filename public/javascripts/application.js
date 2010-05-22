@@ -72,7 +72,9 @@ $(document).ready(function() {
         onClose: function(event) {
           $('#tweet textarea').val('');
         }
-    }).bind('click', function() { triggers.load() });
+    });
+
+    // .bind('click', function() { triggers.load() });
 
     // Attach event on reply
     $(".reply").live('click', function() {

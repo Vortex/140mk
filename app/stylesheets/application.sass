@@ -123,6 +123,9 @@
       position: relative
       +border-radius(4px)
 
+      .handle
+        cursor: pointer
+
       &:hover
         background: #f7fcfe url(../../images/tweet-hover-bg.png) right bottom no-repeat
 
@@ -364,10 +367,13 @@
     display: block
 
     .tweet
-      width: 292px
+      width: 282px
       float: left
       margin-right: 10px
-      min-height: 100px
+
+      .body
+        min-height: 100px
+
 
   h2
     background: url(../../images/category-bg.png) no-repeat
@@ -378,6 +384,7 @@
 
   .lists
     .list
+      background= $category_item_bg
       width: 292px
       float: left
       margin-right: 10px

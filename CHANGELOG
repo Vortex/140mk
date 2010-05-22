@@ -7,7 +7,8 @@ Version 0.3
   * Bugfixes:
     - Fixed the 'create list from category' option
 	  - Changed 'denovi' to 'dena'
-	  - Fixed the look of the 'sign in button' 
+	  - Fixed the look of the 'sign in button'
+	  - Fixed the down arrow when user is not logged in
 
 04.05.2010
 ==========

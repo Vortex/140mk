@@ -23,5 +23,8 @@
         .info{:id => "info_users-#{user.id}"}
           = t('global.categories')
           = user.lists.map { |list| link_to list.name }.join(', ')
+
+        .handle
+          &nbsp;          
     %p
       = will_paginate @users

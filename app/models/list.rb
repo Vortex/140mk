@@ -1,6 +1,6 @@
 class List < ActiveRecord::Base
-  CAPITALS = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ" + ('A'..'Z').to_a.join('')
-  DOWNCASE = "абвгдѓежзѕијклљмнњопрстќуфхцчџш" + ('a'..'z').to_a.join('')
+  #CAPITALS = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ" + ('A'..'Z').to_a.join('')
+  #DOWNCASE = "абвгдѓежзѕијклљмнњопрстќуфхцчџш" + ('a'..'z').to_a.join('')
 
   has_many :subscriptions, :dependent => :destroy
   has_many :users, :through => :subscriptions
@@ -16,6 +16,7 @@ class List < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}-#{name.gsub(/[^#{CAPITALS}#{DOWNCASE} ]/, '-')}"
+    # "#{id}-#{name.gsub(/[^#{CAPITALS}#{DOWNCASE} ]/, '-')}"
+    "#{id}-#{name.gsub(' ', '-').to_lat.downcase}"    
   end
 end

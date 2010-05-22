@@ -22,3 +22,5 @@ Rails::Initializer.run do |config|
   # Default locale
   config.i18n.default_locale = :mk
 end
+
+require 'cyrillizer'

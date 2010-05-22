@@ -6,6 +6,7 @@
 
 @import compass/utilities/general/reset.sass
 @import 960/grid.sass
+@import compass/layout/sticky-footer
 
 +global-reset
 
@@ -34,14 +35,13 @@ html
     +grid-unit-base
   #header
     +grid-width(24)
-  #footer
-    position: absolute
-    left: 0
-    bottom: 0
-    width: 100%
   #sidebar
     +grid-width(7)
     margin-left: 0
   #main-content
     +grid-width(17)
     margin-right: 0
+
+  @include sticky-footer(74px, ".content-wrapper", "#root-footer", "#footer")
+  #footer
+    width: 100%

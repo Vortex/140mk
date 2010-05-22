@@ -709,22 +709,23 @@ body {
   width: 282px;
   float: left;
   margin-right: 10px;
+  margin-left: 10px;
 }
-/* line 375, ../../../app/stylesheets/application.sass */
+/* line 376, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet .body {
   min-height: 100px;
 }
-/* line 379, ../../../app/stylesheets/application.sass */
+/* line 380, ../../../app/stylesheets/application.sass */
 .users_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 383, ../../../app/stylesheets/application.sass */
+/* line 384, ../../../app/stylesheets/application.sass */
 .lists_list {
   width: 665px;
 }
-/* line 387, ../../../app/stylesheets/application.sass */
+/* line 388, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list {
   background: #f7fcfe;
   width: 292px;
@@ -732,35 +733,35 @@ body {
   margin-right: 10px;
   min-height: 45px;
 }
-/* line 394, ../../../app/stylesheets/application.sass */
+/* line 395, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list:hover {
   background: white;
 }
-/* line 397, ../../../app/stylesheets/application.sass */
+/* line 398, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body {
   padding-left: 10px;
 }
-/* line 400, ../../../app/stylesheets/application.sass */
+/* line 401, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body h3 {
   margin-bottom: 0;
 }
-/* line 403, ../../../app/stylesheets/application.sass */
+/* line 404, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body .members {
   font-size: 1.2em;
   margin-left: 3px;
 }
-/* line 407, ../../../app/stylesheets/application.sass */
+/* line 408, ../../../app/stylesheets/application.sass */
 .lists_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 411, ../../../app/stylesheets/application.sass */
+/* line 412, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center;
 }
 
-/* line 414, ../../../app/stylesheets/application.sass */
+/* line 415, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #e1f3fd;
   margin: 10px;
@@ -774,30 +775,30 @@ body {
   margin-right: 10px;
   width: 272.174px;
 }
-/* line 421, ../../../app/stylesheets/application.sass */
+/* line 422, ../../../app/stylesheets/application.sass */
 #create_list_from_category p {
   margin: 10px;
   text-align: center;
 }
-/* line 425, ../../../app/stylesheets/application.sass */
+/* line 426, ../../../app/stylesheets/application.sass */
 #create_list_from_category label {
   margin-left: 5px;
   width: 70px;
   display: inline-block;
 }
-/* line 430, ../../../app/stylesheets/application.sass */
+/* line 431, ../../../app/stylesheets/application.sass */
 #create_list_from_category input {
   margin: 3px;
 }
-/* line 433, ../../../app/stylesheets/application.sass */
+/* line 434, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=text] {
   width: 120px;
 }
-/* line 436, ../../../app/stylesheets/application.sass */
+/* line 437, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=submit] {
   margin-left: 83px;
 }
-/* line 439, ../../../app/stylesheets/application.sass */
+/* line 440, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 {
   background: #0094da;
   color: white;
@@ -808,7 +809,7 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
 }
-/* line 447, ../../../app/stylesheets/application.sass */
+/* line 448, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 a {
   color: white;
   font-weight: bold;
@@ -819,12 +820,12 @@ body {
   text-decoration: underline;
 }
 
-/* line 456, ../../../app/stylesheets/application.sass */
+/* line 457, ../../../app/stylesheets/application.sass */
 .modal {
   display: none;
 }
 
-/* line 459, ../../../app/stylesheets/application.sass */
+/* line 460, ../../../app/stylesheets/application.sass */
 .modal div.close {
   background-image: url(../../images/close.png);
   position: absolute;
@@ -836,7 +837,7 @@ body {
   z-index: 9999;
 }
 
-/* line 470, ../../../app/stylesheets/application.sass */
+/* line 471, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   left: 15px;
@@ -845,21 +846,21 @@ form .counter {
   font-weight: bold;
   color: #666666;
 }
-/* line 478, ../../../app/stylesheets/application.sass */
+/* line 479, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 480, ../../../app/stylesheets/application.sass */
+/* line 481, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 483, ../../../app/stylesheets/application.sass */
+/* line 484, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 487, ../../../app/stylesheets/application.sass */
+/* line 488, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

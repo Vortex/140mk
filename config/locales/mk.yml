@@ -139,7 +139,7 @@ mk:
         other: 'околу {{count}} часа'
       x_days:
         one: '1 ден'
-        other: '{{count}} денови'
+        other: '{{count}} дена'
       about_x_months:
         one: 'околу 1 месец'
         few: 'околу {{count}} месеци'

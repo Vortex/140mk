@@ -5,18 +5,19 @@
     %h2= t('category.create_list_title')
 
     .tweets
-      - if signed_in?
-        - form_tag create_on_twitter_list_path(@list) do
-          %div
-            = label_tag :name, t('global.name')
-            = text_field_tag :name, @list.name
-          %div
-            = check_box_tag :mode
-            = label_tag :mode, t('twitter.list.private')
-          %div
-            .right= submit_tag t('buttons.create')
-      - else
-        %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
+      .option-box
+        - if signed_in?
+          - form_tag create_on_twitter_list_path(@list) do
+            %div
+              = label_tag :name, t('global.name')
+              = text_field_tag :name, @list.name
+            %div
+              = check_box_tag :mode
+              = label_tag :mode, t('twitter.list.private')
+            %div
+              .right= submit_tag t('buttons.create')
+        - else
+          %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
 
 #category_show
   %h2= @list.name 

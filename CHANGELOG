@@ -4,7 +4,10 @@ Version 0.3
 22.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
-  * Fixed the 'create list from category' option
+  * Bugfixes:
+    - Fixed the 'create list from category' option
+	  - Changed 'denovi' to 'dena'
+	  - Fixed the look of the 'sign in button' 
 
 04.05.2010
 ==========

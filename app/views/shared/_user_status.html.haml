@@ -1,10 +1,9 @@
-.user
-  .options
-    - unless signed_in?
-      .login
-        = link_to image_tag('140priklucisebtn.png'), login_path, :method => :post
-        .clear
-    - else
+- unless signed_in?
+  .login
+    = link_to image_tag('140priklucisebtn.png'), login_path, :method => :post
+- else
+  .user
+    .options
       = link_to image_tag(current_user.photo), twitter_path(current_user.screen_name), :target => "_blank"
       .greeting= "Yo #{link_to current_user.screen_name, twitter_path(current_user.screen_name), :target => "_blank"}!"
       .links

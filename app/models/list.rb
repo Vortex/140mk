@@ -1,10 +1,12 @@
 class List < ActiveRecord::Base
-  #CAPITALS = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ" + ('A'..'Z').to_a.join('')
-  #DOWNCASE = "абвгдѓежзѕијклљмнњопрстќуфхцчџш" + ('a'..'z').to_a.join('')
 
+  # Associations
   has_many :subscriptions, :dependent => :destroy
   has_many :users, :through => :subscriptions
   has_and_belongs_to_many :tweets
+
+  # Named scopes
+  named_scope :ordered_by_subscriptions, :joins => :subscriptions, :group => 'lists.id', :order => 'count(subscriptions.id) desc'
 
   def self.most_subscribed_lists(lists_limit)
     find :all,

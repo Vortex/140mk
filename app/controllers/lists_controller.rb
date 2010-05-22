@@ -3,7 +3,7 @@ class ListsController < ApplicationController
   before_filter :get_filtered_tweets, :only => :index
 
   def index
-    @lists = List.paginate :per_page => G140[:categories_per_page], :page => params[:page], :order => 'created_at DESC'
+    @lists = List.ordered_by_subscriptions.paginate :per_page => G140[:categories_per_page], :page => params[:page]
   end
 
   def show

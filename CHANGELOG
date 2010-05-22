@@ -11,6 +11,7 @@ Version 0.3
 	  - Fixed the down arrow when user is not logged in
 	* Switched category permalinks to latin
 	* User info presents categories
+	* Ordered categories by number of users
 
 04.05.2010
 ==========

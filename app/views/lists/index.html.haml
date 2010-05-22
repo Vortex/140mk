@@ -14,8 +14,8 @@
     - @lists.each do |list|
       .list
         .body
-          = link_to list.name, list
-          %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
-          %br= "#{t('category.total')}: #{pluralize(list.subscriptions.size, t('global.member'))}"
+          %h3= link_to list.name, list
+          // %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
+          .members= "#{pluralize(list.subscriptions.size, t('global.member'))}"
     %p
       = will_paginate @lists

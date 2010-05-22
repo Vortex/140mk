@@ -17,12 +17,22 @@
           = link_to h(user.screen_name), twitter_path(user.screen_name), :target => "_blank"
           = "(#{user.name})"
           %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
-          %br= user.location unless user.location.blank?
-          %br= link_to user.url, user.url, :target => "_blank" unless user.url.blank?
+          //%br= user.location unless user.location.blank?
+          //%br= link_to user.url, user.url, :target => "_blank" unless user.url.blank?
+          .categories
+            %b= t('global.categories')
+            = user.lists.map { |list| link_to list.name, list }.join(', ')
         .clear
         .info{:id => "info_users-#{user.id}"}
-          = t('global.categories')
-          = user.lists.map { |list| link_to list.name }.join(', ')
+          .bio
+            %b= t('global.bio')
+            = user.description
+          .location
+            %b= t('global.location')
+            = user.location
+          .web
+            %b= t('global.web')
+            = link_to user.url, user.url
 
         .handle
           &nbsp;          

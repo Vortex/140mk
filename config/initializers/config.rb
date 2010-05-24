@@ -8,7 +8,7 @@ G140 = {
   :max_lists => 5,
   :my_tweets_per_page => 10,
   :tweets_per_page => 10,
-  :categories_per_page => 16,
+  :categories_per_page => 18,
   :users_per_page => 10,
   :subscriptions_per_user => 6
 }

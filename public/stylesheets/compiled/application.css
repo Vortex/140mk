@@ -210,29 +210,96 @@ body {
   -webkit-border-radius: 6px;
 }
 
-/* line 13, ../../../app/stylesheets/application.sass */
+/* line 3, ../../../app/stylesheets/_pagination.sass */
+.pagination {
+  padding: 2px;
+}
+/* line 5, ../../../app/stylesheets/_pagination.sass */
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  /*Set to "right" to right align pagination interface */
+  font-size: 16px;
+}
+/* line 11, ../../../app/stylesheets/_pagination.sass */
+.pagination li {
+  list-style-type: none;
+  display: inline;
+  padding-bottom: 1px;
+}
+/* line 15, ../../../app/stylesheets/_pagination.sass */
+.pagination a {
+  padding: 0 5px;
+  text-decoration: none;
+  color: #2e6ab1;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+/* line 22, ../../../app/stylesheets/_pagination.sass */
+.pagination a:visited {
+  padding: 0 5px;
+  text-decoration: none;
+  color: #2e6ab1;
+}
+/* line 27, ../../../app/stylesheets/_pagination.sass */
+.pagination a:hover, .pagination a:active {
+  color: black;
+  background-color: #f7fcfe;
+}
+/* line 32, ../../../app/stylesheets/_pagination.sass */
+.pagination .current {
+  background-color: #f7fcfe;
+  color: #04abe2;
+  font-weight: bold;
+  cursor: default;
+  padding: 0 5px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+/* line 40, ../../../app/stylesheets/_pagination.sass */
+.pagination .disabled {
+  cursor: default;
+  color: #aaaaaa;
+  font-weight: normal !important;
+  padding: 0 5px;
+}
+/* line 46, ../../../app/stylesheets/_pagination.sass */
+.pagination .disabled:hover {
+  cursor: default;
+  color: #aaaaaa;
+  font-weight: normal !important;
+}
+/* line 51, ../../../app/stylesheets/_pagination.sass */
+.pagination a.prevnext {
+  font-weight: bold;
+}
+
+/* line 14, ../../../app/stylesheets/application.sass */
 #flash {
   text-align: center;
   padding: 5px;
 }
 
-/* line 17, ../../../app/stylesheets/application.sass */
+/* line 18, ../../../app/stylesheets/application.sass */
 #flash.error {
   color: red;
 }
 
-/* line 20, ../../../app/stylesheets/application.sass */
+/* line 21, ../../../app/stylesheets/application.sass */
 #flash.notice {
   color: green;
 }
 
-/* line 23, ../../../app/stylesheets/application.sass */
+/* line 24, ../../../app/stylesheets/application.sass */
 #main-content {
   margin-right: 0;
   margin-bottom: 100px;
 }
 
-/* line 29, ../../../app/stylesheets/application.sass */
+/* line 30, ../../../app/stylesheets/application.sass */
 #categories h1 {
   background: #0094da;
   color: white;
@@ -242,20 +309,20 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
 }
-/* line 37, ../../../app/stylesheets/application.sass */
+/* line 38, ../../../app/stylesheets/application.sass */
 #categories #twitter_create_list {
   cursor: pointer;
 }
-/* line 40, ../../../app/stylesheets/application.sass */
+/* line 41, ../../../app/stylesheets/application.sass */
 #categories #twitter_create_list_form {
   display: none;
 }
-/* line 43, ../../../app/stylesheets/application.sass */
+/* line 44, ../../../app/stylesheets/application.sass */
 #categories .left-column, #categories .right-column {
   float: left;
 }
 
-/* line 46, ../../../app/stylesheets/application.sass */
+/* line 47, ../../../app/stylesheets/application.sass */
 .category, #hashtag_filter, .modal, .users_list, .lists_list, #category_show, #category_chooser, .box {
   background: #bfd9e6;
   margin-top: 10px;
@@ -265,7 +332,7 @@ body {
   margin-left: 0px;
   position: relative;
 }
-/* line 55, ../../../app/stylesheets/application.sass */
+/* line 56, ../../../app/stylesheets/application.sass */
 .category h2, #hashtag_filter h2, .modal h2, .users_list h2, .lists_list h2, #category_show h2, #category_chooser h2, .box h2 {
   background: url(../../images/category-bg.png) no-repeat;
   font-size: 1.4em;
@@ -280,7 +347,7 @@ body {
   text-shadow: 1px 1px 2px #666666;
   width: 315px;
 }
-/* line 69, ../../../app/stylesheets/application.sass */
+/* line 70, ../../../app/stylesheets/application.sass */
 .category h2 a, #hashtag_filter h2 a, .modal h2 a, .users_list h2 a, .lists_list h2 a, #category_show h2 a, #category_chooser h2 a, .box h2 a {
   color: white;
   text-decoration: none;
@@ -289,14 +356,14 @@ body {
 .category h2 a:hover, #hashtag_filter h2 a:hover, .modal h2 a:hover, .users_list h2 a:hover, .lists_list h2 a:hover, #category_show h2 a:hover, #category_chooser h2 a:hover, .box h2 a:hover {
   text-decoration: underline;
 }
-/* line 73, ../../../app/stylesheets/application.sass */
+/* line 74, ../../../app/stylesheets/application.sass */
 .category h2 .tabs, #hashtag_filter h2 .tabs, .modal h2 .tabs, .users_list h2 .tabs, .lists_list h2 .tabs, #category_show h2 .tabs, #category_chooser h2 .tabs, .box h2 .tabs {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 40px;
 }
-/* line 79, ../../../app/stylesheets/application.sass */
+/* line 80, ../../../app/stylesheets/application.sass */
 .category h2 .tabs a, #hashtag_filter h2 .tabs a, .modal h2 .tabs a, .users_list h2 .tabs a, .lists_list h2 .tabs a, #category_show h2 .tabs a, #category_chooser h2 .tabs a, .box h2 .tabs a {
   display: block;
   float: left;
@@ -310,11 +377,11 @@ body {
 .category h2 .tabs a:hover, #hashtag_filter h2 .tabs a:hover, .modal h2 .tabs a:hover, .users_list h2 .tabs a:hover, .lists_list h2 .tabs a:hover, #category_show h2 .tabs a:hover, #category_chooser h2 .tabs a:hover, .box h2 .tabs a:hover {
   text-decoration: underline;
 }
-/* line 88, ../../../app/stylesheets/application.sass */
+/* line 89, ../../../app/stylesheets/application.sass */
 .category h2 .tabs .selected, #hashtag_filter h2 .tabs .selected, .modal h2 .tabs .selected, .users_list h2 .tabs .selected, .lists_list h2 .tabs .selected, #category_show h2 .tabs .selected, #category_chooser h2 .tabs .selected, .box h2 .tabs .selected {
   background: white;
 }
-/* line 91, ../../../app/stylesheets/application.sass */
+/* line 92, ../../../app/stylesheets/application.sass */
 .category h2 .tabs a.users_link, #hashtag_filter h2 .tabs a.users_link, .modal h2 .tabs a.users_link, .users_list h2 .tabs a.users_link, .lists_list h2 .tabs a.users_link, #category_show h2 .tabs a.users_link, #category_chooser h2 .tabs a.users_link, .box h2 .tabs a.users_link {
   text-indent: -9999em;
   overflow: hidden;
@@ -323,7 +390,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 94, ../../../app/stylesheets/application.sass */
+/* line 95, ../../../app/stylesheets/application.sass */
 .category h2 .tabs a.users_link.selected, #hashtag_filter h2 .tabs a.users_link.selected, .modal h2 .tabs a.users_link.selected, .users_list h2 .tabs a.users_link.selected, .lists_list h2 .tabs a.users_link.selected, #category_show h2 .tabs a.users_link.selected, #category_chooser h2 .tabs a.users_link.selected, .box h2 .tabs a.users_link.selected {
   text-indent: -9999em;
   overflow: hidden;
@@ -332,7 +399,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 97, ../../../app/stylesheets/application.sass */
+/* line 98, ../../../app/stylesheets/application.sass */
 .category h2 .tabs a.tweets_link, #hashtag_filter h2 .tabs a.tweets_link, .modal h2 .tabs a.tweets_link, .users_list h2 .tabs a.tweets_link, .lists_list h2 .tabs a.tweets_link, #category_show h2 .tabs a.tweets_link, #category_chooser h2 .tabs a.tweets_link, .box h2 .tabs a.tweets_link {
   text-indent: -9999em;
   overflow: hidden;
@@ -341,7 +408,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 100, ../../../app/stylesheets/application.sass */
+/* line 101, ../../../app/stylesheets/application.sass */
 .category h2 .tabs a.tweets_link.selected, #hashtag_filter h2 .tabs a.tweets_link.selected, .modal h2 .tabs a.tweets_link.selected, .users_list h2 .tabs a.tweets_link.selected, .lists_list h2 .tabs a.tweets_link.selected, #category_show h2 .tabs a.tweets_link.selected, #category_chooser h2 .tabs a.tweets_link.selected, .box h2 .tabs a.tweets_link.selected {
   text-indent: -9999em;
   overflow: hidden;
@@ -350,21 +417,21 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 103, ../../../app/stylesheets/application.sass */
+/* line 104, ../../../app/stylesheets/application.sass */
 .category .tweets, #hashtag_filter .tweets, .modal .tweets, .users_list .tweets, .lists_list .tweets, #category_show .tweets, #category_chooser .tweets, .box .tweets {
   display: none;
 }
-/* line 106, ../../../app/stylesheets/application.sass */
+/* line 107, ../../../app/stylesheets/application.sass */
 .category .tweets, .category .users, .category .lists, #hashtag_filter .tweets, #hashtag_filter .users, #hashtag_filter .lists, .modal .tweets, .modal .users, .modal .lists, .users_list .tweets, .users_list .users, .users_list .lists, .lists_list .tweets, .lists_list .users, .lists_list .lists, #category_show .tweets, #category_show .users, #category_show .lists, #category_chooser .tweets, #category_chooser .users, #category_chooser .lists, .box .tweets, .box .users, .box .lists {
   margin: 0 5px 5px 5px;
   padding: 5px;
 }
-/* line 110, ../../../app/stylesheets/application.sass */
+/* line 111, ../../../app/stylesheets/application.sass */
 .category .tweets .right, .category .users .right, .category .lists .right, #hashtag_filter .tweets .right, #hashtag_filter .users .right, #hashtag_filter .lists .right, .modal .tweets .right, .modal .users .right, .modal .lists .right, .users_list .tweets .right, .users_list .users .right, .users_list .lists .right, .lists_list .tweets .right, .lists_list .users .right, .lists_list .lists .right, #category_show .tweets .right, #category_show .users .right, #category_show .lists .right, #category_chooser .tweets .right, #category_chooser .users .right, #category_chooser .lists .right, .box .tweets .right, .box .users .right, .box .lists .right {
   margin: 10px 0 10px 0;
   text-align: right;
 }
-/* line 115, ../../../app/stylesheets/application.sass */
+/* line 116, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet, .category .tweets .list, .category .tweets .user, .category .users .tweet, .category .users .list, .category .users .user, .category .lists .tweet, .category .lists .list, .category .lists .user, #hashtag_filter .tweets .tweet, #hashtag_filter .tweets .list, #hashtag_filter .tweets .user, #hashtag_filter .users .tweet, #hashtag_filter .users .list, #hashtag_filter .users .user, #hashtag_filter .lists .tweet, #hashtag_filter .lists .list, #hashtag_filter .lists .user, .modal .tweets .tweet, .modal .tweets .list, .modal .tweets .user, .modal .users .tweet, .modal .users .list, .modal .users .user, .modal .lists .tweet, .modal .lists .list, .modal .lists .user, .users_list .tweets .tweet, .users_list .tweets .list, .users_list .tweets .user, .users_list .users .tweet, .users_list .users .list, .users_list .users .user, .users_list .lists .tweet, .users_list .lists .list, .users_list .lists .user, .lists_list .tweets .tweet, .lists_list .tweets .list, .lists_list .tweets .user, .lists_list .users .tweet, .lists_list .users .list, .lists_list .users .user, .lists_list .lists .tweet, .lists_list .lists .list, .lists_list .lists .user, #category_show .tweets .tweet, #category_show .tweets .list, #category_show .tweets .user, #category_show .users .tweet, #category_show .users .list, #category_show .users .user, #category_show .lists .tweet, #category_show .lists .list, #category_show .lists .user, #category_chooser .tweets .tweet, #category_chooser .tweets .list, #category_chooser .tweets .user, #category_chooser .users .tweet, #category_chooser .users .list, #category_chooser .users .user, #category_chooser .lists .tweet, #category_chooser .lists .list, #category_chooser .lists .user, .box .tweets .tweet, .box .tweets .list, .box .tweets .user, .box .users .tweet, .box .users .list, .box .users .user, .box .lists .tweet, .box .lists .list, .box .lists .user {
   background: #f7fcfe url(../../images/tweet-bg.png) center bottom no-repeat;
   padding: 10px 10px 0 10px;
@@ -378,27 +445,27 @@ body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-/* line 126, ../../../app/stylesheets/application.sass */
+/* line 127, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .handle, .category .tweets .list .handle, .category .tweets .user .handle, .category .users .tweet .handle, .category .users .list .handle, .category .users .user .handle, .category .lists .tweet .handle, .category .lists .list .handle, .category .lists .user .handle, #hashtag_filter .tweets .tweet .handle, #hashtag_filter .tweets .list .handle, #hashtag_filter .tweets .user .handle, #hashtag_filter .users .tweet .handle, #hashtag_filter .users .list .handle, #hashtag_filter .users .user .handle, #hashtag_filter .lists .tweet .handle, #hashtag_filter .lists .list .handle, #hashtag_filter .lists .user .handle, .modal .tweets .tweet .handle, .modal .tweets .list .handle, .modal .tweets .user .handle, .modal .users .tweet .handle, .modal .users .list .handle, .modal .users .user .handle, .modal .lists .tweet .handle, .modal .lists .list .handle, .modal .lists .user .handle, .users_list .tweets .tweet .handle, .users_list .tweets .list .handle, .users_list .tweets .user .handle, .users_list .users .tweet .handle, .users_list .users .list .handle, .users_list .users .user .handle, .users_list .lists .tweet .handle, .users_list .lists .list .handle, .users_list .lists .user .handle, .lists_list .tweets .tweet .handle, .lists_list .tweets .list .handle, .lists_list .tweets .user .handle, .lists_list .users .tweet .handle, .lists_list .users .list .handle, .lists_list .users .user .handle, .lists_list .lists .tweet .handle, .lists_list .lists .list .handle, .lists_list .lists .user .handle, #category_show .tweets .tweet .handle, #category_show .tweets .list .handle, #category_show .tweets .user .handle, #category_show .users .tweet .handle, #category_show .users .list .handle, #category_show .users .user .handle, #category_show .lists .tweet .handle, #category_show .lists .list .handle, #category_show .lists .user .handle, #category_chooser .tweets .tweet .handle, #category_chooser .tweets .list .handle, #category_chooser .tweets .user .handle, #category_chooser .users .tweet .handle, #category_chooser .users .list .handle, #category_chooser .users .user .handle, #category_chooser .lists .tweet .handle, #category_chooser .lists .list .handle, #category_chooser .lists .user .handle, .box .tweets .tweet .handle, .box .tweets .list .handle, .box .tweets .user .handle, .box .users .tweet .handle, .box .users .list .handle, .box .users .user .handle, .box .lists .tweet .handle, .box .lists .list .handle, .box .lists .user .handle {
   cursor: pointer;
 }
-/* line 129, ../../../app/stylesheets/application.sass */
+/* line 130, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet:hover, .category .tweets .list:hover, .category .tweets .user:hover, .category .users .tweet:hover, .category .users .list:hover, .category .users .user:hover, .category .lists .tweet:hover, .category .lists .list:hover, .category .lists .user:hover, #hashtag_filter .tweets .tweet:hover, #hashtag_filter .tweets .list:hover, #hashtag_filter .tweets .user:hover, #hashtag_filter .users .tweet:hover, #hashtag_filter .users .list:hover, #hashtag_filter .users .user:hover, #hashtag_filter .lists .tweet:hover, #hashtag_filter .lists .list:hover, #hashtag_filter .lists .user:hover, .modal .tweets .tweet:hover, .modal .tweets .list:hover, .modal .tweets .user:hover, .modal .users .tweet:hover, .modal .users .list:hover, .modal .users .user:hover, .modal .lists .tweet:hover, .modal .lists .list:hover, .modal .lists .user:hover, .users_list .tweets .tweet:hover, .users_list .tweets .list:hover, .users_list .tweets .user:hover, .users_list .users .tweet:hover, .users_list .users .list:hover, .users_list .users .user:hover, .users_list .lists .tweet:hover, .users_list .lists .list:hover, .users_list .lists .user:hover, .lists_list .tweets .tweet:hover, .lists_list .tweets .list:hover, .lists_list .tweets .user:hover, .lists_list .users .tweet:hover, .lists_list .users .list:hover, .lists_list .users .user:hover, .lists_list .lists .tweet:hover, .lists_list .lists .list:hover, .lists_list .lists .user:hover, #category_show .tweets .tweet:hover, #category_show .tweets .list:hover, #category_show .tweets .user:hover, #category_show .users .tweet:hover, #category_show .users .list:hover, #category_show .users .user:hover, #category_show .lists .tweet:hover, #category_show .lists .list:hover, #category_show .lists .user:hover, #category_chooser .tweets .tweet:hover, #category_chooser .tweets .list:hover, #category_chooser .tweets .user:hover, #category_chooser .users .tweet:hover, #category_chooser .users .list:hover, #category_chooser .users .user:hover, #category_chooser .lists .tweet:hover, #category_chooser .lists .list:hover, #category_chooser .lists .user:hover, .box .tweets .tweet:hover, .box .tweets .list:hover, .box .tweets .user:hover, .box .users .tweet:hover, .box .users .list:hover, .box .users .user:hover, .box .lists .tweet:hover, .box .lists .list:hover, .box .lists .user:hover {
   background: #f7fcfe url(../../images/tweet-hover-bg.png) center bottom no-repeat;
 }
-/* line 132, ../../../app/stylesheets/application.sass */
+/* line 133, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet:hover .opened, .category .tweets .list:hover .opened, .category .tweets .user:hover .opened, .category .users .tweet:hover .opened, .category .users .list:hover .opened, .category .users .user:hover .opened, .category .lists .tweet:hover .opened, .category .lists .list:hover .opened, .category .lists .user:hover .opened, #hashtag_filter .tweets .tweet:hover .opened, #hashtag_filter .tweets .list:hover .opened, #hashtag_filter .tweets .user:hover .opened, #hashtag_filter .users .tweet:hover .opened, #hashtag_filter .users .list:hover .opened, #hashtag_filter .users .user:hover .opened, #hashtag_filter .lists .tweet:hover .opened, #hashtag_filter .lists .list:hover .opened, #hashtag_filter .lists .user:hover .opened, .modal .tweets .tweet:hover .opened, .modal .tweets .list:hover .opened, .modal .tweets .user:hover .opened, .modal .users .tweet:hover .opened, .modal .users .list:hover .opened, .modal .users .user:hover .opened, .modal .lists .tweet:hover .opened, .modal .lists .list:hover .opened, .modal .lists .user:hover .opened, .users_list .tweets .tweet:hover .opened, .users_list .tweets .list:hover .opened, .users_list .tweets .user:hover .opened, .users_list .users .tweet:hover .opened, .users_list .users .list:hover .opened, .users_list .users .user:hover .opened, .users_list .lists .tweet:hover .opened, .users_list .lists .list:hover .opened, .users_list .lists .user:hover .opened, .lists_list .tweets .tweet:hover .opened, .lists_list .tweets .list:hover .opened, .lists_list .tweets .user:hover .opened, .lists_list .users .tweet:hover .opened, .lists_list .users .list:hover .opened, .lists_list .users .user:hover .opened, .lists_list .lists .tweet:hover .opened, .lists_list .lists .list:hover .opened, .lists_list .lists .user:hover .opened, #category_show .tweets .tweet:hover .opened, #category_show .tweets .list:hover .opened, #category_show .tweets .user:hover .opened, #category_show .users .tweet:hover .opened, #category_show .users .list:hover .opened, #category_show .users .user:hover .opened, #category_show .lists .tweet:hover .opened, #category_show .lists .list:hover .opened, #category_show .lists .user:hover .opened, #category_chooser .tweets .tweet:hover .opened, #category_chooser .tweets .list:hover .opened, #category_chooser .tweets .user:hover .opened, #category_chooser .users .tweet:hover .opened, #category_chooser .users .list:hover .opened, #category_chooser .users .user:hover .opened, #category_chooser .lists .tweet:hover .opened, #category_chooser .lists .list:hover .opened, #category_chooser .lists .user:hover .opened, .box .tweets .tweet:hover .opened, .box .tweets .list:hover .opened, .box .tweets .user:hover .opened, .box .users .tweet:hover .opened, .box .users .list:hover .opened, .box .users .user:hover .opened, .box .lists .tweet:hover .opened, .box .lists .list:hover .opened, .box .lists .user:hover .opened {
   background: #f7fcfe url(../../images/tweet-opened-hover-bg.png) center bottom no-repeat;
 }
-/* line 135, ../../../app/stylesheets/application.sass */
+/* line 136, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet:hover .actions, .category .tweets .list:hover .actions, .category .tweets .user:hover .actions, .category .users .tweet:hover .actions, .category .users .list:hover .actions, .category .users .user:hover .actions, .category .lists .tweet:hover .actions, .category .lists .list:hover .actions, .category .lists .user:hover .actions, #hashtag_filter .tweets .tweet:hover .actions, #hashtag_filter .tweets .list:hover .actions, #hashtag_filter .tweets .user:hover .actions, #hashtag_filter .users .tweet:hover .actions, #hashtag_filter .users .list:hover .actions, #hashtag_filter .users .user:hover .actions, #hashtag_filter .lists .tweet:hover .actions, #hashtag_filter .lists .list:hover .actions, #hashtag_filter .lists .user:hover .actions, .modal .tweets .tweet:hover .actions, .modal .tweets .list:hover .actions, .modal .tweets .user:hover .actions, .modal .users .tweet:hover .actions, .modal .users .list:hover .actions, .modal .users .user:hover .actions, .modal .lists .tweet:hover .actions, .modal .lists .list:hover .actions, .modal .lists .user:hover .actions, .users_list .tweets .tweet:hover .actions, .users_list .tweets .list:hover .actions, .users_list .tweets .user:hover .actions, .users_list .users .tweet:hover .actions, .users_list .users .list:hover .actions, .users_list .users .user:hover .actions, .users_list .lists .tweet:hover .actions, .users_list .lists .list:hover .actions, .users_list .lists .user:hover .actions, .lists_list .tweets .tweet:hover .actions, .lists_list .tweets .list:hover .actions, .lists_list .tweets .user:hover .actions, .lists_list .users .tweet:hover .actions, .lists_list .users .list:hover .actions, .lists_list .users .user:hover .actions, .lists_list .lists .tweet:hover .actions, .lists_list .lists .list:hover .actions, .lists_list .lists .user:hover .actions, #category_show .tweets .tweet:hover .actions, #category_show .tweets .list:hover .actions, #category_show .tweets .user:hover .actions, #category_show .users .tweet:hover .actions, #category_show .users .list:hover .actions, #category_show .users .user:hover .actions, #category_show .lists .tweet:hover .actions, #category_show .lists .list:hover .actions, #category_show .lists .user:hover .actions, #category_chooser .tweets .tweet:hover .actions, #category_chooser .tweets .list:hover .actions, #category_chooser .tweets .user:hover .actions, #category_chooser .users .tweet:hover .actions, #category_chooser .users .list:hover .actions, #category_chooser .users .user:hover .actions, #category_chooser .lists .tweet:hover .actions, #category_chooser .lists .list:hover .actions, #category_chooser .lists .user:hover .actions, .box .tweets .tweet:hover .actions, .box .tweets .list:hover .actions, .box .tweets .user:hover .actions, .box .users .tweet:hover .actions, .box .users .list:hover .actions, .box .users .user:hover .actions, .box .lists .tweet:hover .actions, .box .lists .list:hover .actions, .box .lists .user:hover .actions {
   display: block;
 }
-/* line 138, ../../../app/stylesheets/application.sass */
+/* line 139, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .opened, .category .tweets .list .opened, .category .tweets .user .opened, .category .users .tweet .opened, .category .users .list .opened, .category .users .user .opened, .category .lists .tweet .opened, .category .lists .list .opened, .category .lists .user .opened, #hashtag_filter .tweets .tweet .opened, #hashtag_filter .tweets .list .opened, #hashtag_filter .tweets .user .opened, #hashtag_filter .users .tweet .opened, #hashtag_filter .users .list .opened, #hashtag_filter .users .user .opened, #hashtag_filter .lists .tweet .opened, #hashtag_filter .lists .list .opened, #hashtag_filter .lists .user .opened, .modal .tweets .tweet .opened, .modal .tweets .list .opened, .modal .tweets .user .opened, .modal .users .tweet .opened, .modal .users .list .opened, .modal .users .user .opened, .modal .lists .tweet .opened, .modal .lists .list .opened, .modal .lists .user .opened, .users_list .tweets .tweet .opened, .users_list .tweets .list .opened, .users_list .tweets .user .opened, .users_list .users .tweet .opened, .users_list .users .list .opened, .users_list .users .user .opened, .users_list .lists .tweet .opened, .users_list .lists .list .opened, .users_list .lists .user .opened, .lists_list .tweets .tweet .opened, .lists_list .tweets .list .opened, .lists_list .tweets .user .opened, .lists_list .users .tweet .opened, .lists_list .users .list .opened, .lists_list .users .user .opened, .lists_list .lists .tweet .opened, .lists_list .lists .list .opened, .lists_list .lists .user .opened, #category_show .tweets .tweet .opened, #category_show .tweets .list .opened, #category_show .tweets .user .opened, #category_show .users .tweet .opened, #category_show .users .list .opened, #category_show .users .user .opened, #category_show .lists .tweet .opened, #category_show .lists .list .opened, #category_show .lists .user .opened, #category_chooser .tweets .tweet .opened, #category_chooser .tweets .list .opened, #category_chooser .tweets .user .opened, #category_chooser .users .tweet .opened, #category_chooser .users .list .opened, #category_chooser .users .user .opened, #category_chooser .lists .tweet .opened, #category_chooser .lists .list .opened, #category_chooser .lists .user .opened, .box .tweets .tweet .opened, .box .tweets .list .opened, .box .tweets .user .opened, .box .users .tweet .opened, .box .users .list .opened, .box .users .user .opened, .box .lists .tweet .opened, .box .lists .list .opened, .box .lists .user .opened {
   background: #f7fcfe url(../../images/tweet-opened-bg.png) center bottom no-repeat;
 }
-/* line 141, ../../../app/stylesheets/application.sass */
+/* line 142, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet a, .category .tweets .list a, .category .tweets .user a, .category .users .tweet a, .category .users .list a, .category .users .user a, .category .lists .tweet a, .category .lists .list a, .category .lists .user a, #hashtag_filter .tweets .tweet a, #hashtag_filter .tweets .list a, #hashtag_filter .tweets .user a, #hashtag_filter .users .tweet a, #hashtag_filter .users .list a, #hashtag_filter .users .user a, #hashtag_filter .lists .tweet a, #hashtag_filter .lists .list a, #hashtag_filter .lists .user a, .modal .tweets .tweet a, .modal .tweets .list a, .modal .tweets .user a, .modal .users .tweet a, .modal .users .list a, .modal .users .user a, .modal .lists .tweet a, .modal .lists .list a, .modal .lists .user a, .users_list .tweets .tweet a, .users_list .tweets .list a, .users_list .tweets .user a, .users_list .users .tweet a, .users_list .users .list a, .users_list .users .user a, .users_list .lists .tweet a, .users_list .lists .list a, .users_list .lists .user a, .lists_list .tweets .tweet a, .lists_list .tweets .list a, .lists_list .tweets .user a, .lists_list .users .tweet a, .lists_list .users .list a, .lists_list .users .user a, .lists_list .lists .tweet a, .lists_list .lists .list a, .lists_list .lists .user a, #category_show .tweets .tweet a, #category_show .tweets .list a, #category_show .tweets .user a, #category_show .users .tweet a, #category_show .users .list a, #category_show .users .user a, #category_show .lists .tweet a, #category_show .lists .list a, #category_show .lists .user a, #category_chooser .tweets .tweet a, #category_chooser .tweets .list a, #category_chooser .tweets .user a, #category_chooser .users .tweet a, #category_chooser .users .list a, #category_chooser .users .user a, #category_chooser .lists .tweet a, #category_chooser .lists .list a, #category_chooser .lists .user a, .box .tweets .tweet a, .box .tweets .list a, .box .tweets .user a, .box .users .tweet a, .box .users .list a, .box .users .user a, .box .lists .tweet a, .box .lists .list a, .box .lists .user a {
   color: #04abe2;
   text-decoration: none;
@@ -407,14 +474,14 @@ body {
 .category .tweets .tweet a:hover, .category .tweets .list a:hover, .category .tweets .user a:hover, .category .users .tweet a:hover, .category .users .list a:hover, .category .users .user a:hover, .category .lists .tweet a:hover, .category .lists .list a:hover, .category .lists .user a:hover, #hashtag_filter .tweets .tweet a:hover, #hashtag_filter .tweets .list a:hover, #hashtag_filter .tweets .user a:hover, #hashtag_filter .users .tweet a:hover, #hashtag_filter .users .list a:hover, #hashtag_filter .users .user a:hover, #hashtag_filter .lists .tweet a:hover, #hashtag_filter .lists .list a:hover, #hashtag_filter .lists .user a:hover, .modal .tweets .tweet a:hover, .modal .tweets .list a:hover, .modal .tweets .user a:hover, .modal .users .tweet a:hover, .modal .users .list a:hover, .modal .users .user a:hover, .modal .lists .tweet a:hover, .modal .lists .list a:hover, .modal .lists .user a:hover, .users_list .tweets .tweet a:hover, .users_list .tweets .list a:hover, .users_list .tweets .user a:hover, .users_list .users .tweet a:hover, .users_list .users .list a:hover, .users_list .users .user a:hover, .users_list .lists .tweet a:hover, .users_list .lists .list a:hover, .users_list .lists .user a:hover, .lists_list .tweets .tweet a:hover, .lists_list .tweets .list a:hover, .lists_list .tweets .user a:hover, .lists_list .users .tweet a:hover, .lists_list .users .list a:hover, .lists_list .users .user a:hover, .lists_list .lists .tweet a:hover, .lists_list .lists .list a:hover, .lists_list .lists .user a:hover, #category_show .tweets .tweet a:hover, #category_show .tweets .list a:hover, #category_show .tweets .user a:hover, #category_show .users .tweet a:hover, #category_show .users .list a:hover, #category_show .users .user a:hover, #category_show .lists .tweet a:hover, #category_show .lists .list a:hover, #category_show .lists .user a:hover, #category_chooser .tweets .tweet a:hover, #category_chooser .tweets .list a:hover, #category_chooser .tweets .user a:hover, #category_chooser .users .tweet a:hover, #category_chooser .users .list a:hover, #category_chooser .users .user a:hover, #category_chooser .lists .tweet a:hover, #category_chooser .lists .list a:hover, #category_chooser .lists .user a:hover, .box .tweets .tweet a:hover, .box .tweets .list a:hover, .box .tweets .user a:hover, .box .users .tweet a:hover, .box .users .list a:hover, .box .users .user a:hover, .box .lists .tweet a:hover, .box .lists .list a:hover, .box .lists .user a:hover {
   text-decoration: underline;
 }
-/* line 145, ../../../app/stylesheets/application.sass */
+/* line 146, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .body, .category .tweets .list .body, .category .tweets .user .body, .category .users .tweet .body, .category .users .list .body, .category .users .user .body, .category .lists .tweet .body, .category .lists .list .body, .category .lists .user .body, #hashtag_filter .tweets .tweet .body, #hashtag_filter .tweets .list .body, #hashtag_filter .tweets .user .body, #hashtag_filter .users .tweet .body, #hashtag_filter .users .list .body, #hashtag_filter .users .user .body, #hashtag_filter .lists .tweet .body, #hashtag_filter .lists .list .body, #hashtag_filter .lists .user .body, .modal .tweets .tweet .body, .modal .tweets .list .body, .modal .tweets .user .body, .modal .users .tweet .body, .modal .users .list .body, .modal .users .user .body, .modal .lists .tweet .body, .modal .lists .list .body, .modal .lists .user .body, .users_list .tweets .tweet .body, .users_list .tweets .list .body, .users_list .tweets .user .body, .users_list .users .tweet .body, .users_list .users .list .body, .users_list .users .user .body, .users_list .lists .tweet .body, .users_list .lists .list .body, .users_list .lists .user .body, .lists_list .tweets .tweet .body, .lists_list .tweets .list .body, .lists_list .tweets .user .body, .lists_list .users .tweet .body, .lists_list .users .list .body, .lists_list .users .user .body, .lists_list .lists .tweet .body, .lists_list .lists .list .body, .lists_list .lists .user .body, #category_show .tweets .tweet .body, #category_show .tweets .list .body, #category_show .tweets .user .body, #category_show .users .tweet .body, #category_show .users .list .body, #category_show .users .user .body, #category_show .lists .tweet .body, #category_show .lists .list .body, #category_show .lists .user .body, #category_chooser .tweets .tweet .body, #category_chooser .tweets .list .body, #category_chooser .tweets .user .body, #category_chooser .users .tweet .body, #category_chooser .users .list .body, #category_chooser .users .user .body, #category_chooser .lists .tweet .body, #category_chooser .lists .list .body, #category_chooser .lists .user .body, .box .tweets .tweet .body, .box .tweets .list .body, .box .tweets .user .body, .box .users .tweet .body, .box .users .list .body, .box .users .user .body, .box .lists .tweet .body, .box .lists .list .body, .box .lists .user .body {
   color: #666666;
   font-size: 0.9em;
   min-height: 70px;
   padding-left: 65px;
 }
-/* line 152, ../../../app/stylesheets/application.sass */
+/* line 153, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .body .who a, .category .tweets .list .body .who a, .category .tweets .user .body .who a, .category .users .tweet .body .who a, .category .users .list .body .who a, .category .users .user .body .who a, .category .lists .tweet .body .who a, .category .lists .list .body .who a, .category .lists .user .body .who a, #hashtag_filter .tweets .tweet .body .who a, #hashtag_filter .tweets .list .body .who a, #hashtag_filter .tweets .user .body .who a, #hashtag_filter .users .tweet .body .who a, #hashtag_filter .users .list .body .who a, #hashtag_filter .users .user .body .who a, #hashtag_filter .lists .tweet .body .who a, #hashtag_filter .lists .list .body .who a, #hashtag_filter .lists .user .body .who a, .modal .tweets .tweet .body .who a, .modal .tweets .list .body .who a, .modal .tweets .user .body .who a, .modal .users .tweet .body .who a, .modal .users .list .body .who a, .modal .users .user .body .who a, .modal .lists .tweet .body .who a, .modal .lists .list .body .who a, .modal .lists .user .body .who a, .users_list .tweets .tweet .body .who a, .users_list .tweets .list .body .who a, .users_list .tweets .user .body .who a, .users_list .users .tweet .body .who a, .users_list .users .list .body .who a, .users_list .users .user .body .who a, .users_list .lists .tweet .body .who a, .users_list .lists .list .body .who a, .users_list .lists .user .body .who a, .lists_list .tweets .tweet .body .who a, .lists_list .tweets .list .body .who a, .lists_list .tweets .user .body .who a, .lists_list .users .tweet .body .who a, .lists_list .users .list .body .who a, .lists_list .users .user .body .who a, .lists_list .lists .tweet .body .who a, .lists_list .lists .list .body .who a, .lists_list .lists .user .body .who a, #category_show .tweets .tweet .body .who a, #category_show .tweets .list .body .who a, #category_show .tweets .user .body .who a, #category_show .users .tweet .body .who a, #category_show .users .list .body .who a, #category_show .users .user .body .who a, #category_show .lists .tweet .body .who a, #category_show .lists .list .body .who a, #category_show .lists .user .body .who a, #category_chooser .tweets .tweet .body .who a, #category_chooser .tweets .list .body .who a, #category_chooser .tweets .user .body .who a, #category_chooser .users .tweet .body .who a, #category_chooser .users .list .body .who a, #category_chooser .users .user .body .who a, #category_chooser .lists .tweet .body .who a, #category_chooser .lists .list .body .who a, #category_chooser .lists .user .body .who a, .box .tweets .tweet .body .who a, .box .tweets .list .body .who a, .box .tweets .user .body .who a, .box .users .tweet .body .who a, .box .users .list .body .who a, .box .users .user .body .who a, .box .lists .tweet .body .who a, .box .lists .list .body .who a, .box .lists .user .body .who a {
   color: black;
   text-decoration: none;
@@ -423,20 +490,20 @@ body {
 .category .tweets .tweet .body .who a:hover, .category .tweets .list .body .who a:hover, .category .tweets .user .body .who a:hover, .category .users .tweet .body .who a:hover, .category .users .list .body .who a:hover, .category .users .user .body .who a:hover, .category .lists .tweet .body .who a:hover, .category .lists .list .body .who a:hover, .category .lists .user .body .who a:hover, #hashtag_filter .tweets .tweet .body .who a:hover, #hashtag_filter .tweets .list .body .who a:hover, #hashtag_filter .tweets .user .body .who a:hover, #hashtag_filter .users .tweet .body .who a:hover, #hashtag_filter .users .list .body .who a:hover, #hashtag_filter .users .user .body .who a:hover, #hashtag_filter .lists .tweet .body .who a:hover, #hashtag_filter .lists .list .body .who a:hover, #hashtag_filter .lists .user .body .who a:hover, .modal .tweets .tweet .body .who a:hover, .modal .tweets .list .body .who a:hover, .modal .tweets .user .body .who a:hover, .modal .users .tweet .body .who a:hover, .modal .users .list .body .who a:hover, .modal .users .user .body .who a:hover, .modal .lists .tweet .body .who a:hover, .modal .lists .list .body .who a:hover, .modal .lists .user .body .who a:hover, .users_list .tweets .tweet .body .who a:hover, .users_list .tweets .list .body .who a:hover, .users_list .tweets .user .body .who a:hover, .users_list .users .tweet .body .who a:hover, .users_list .users .list .body .who a:hover, .users_list .users .user .body .who a:hover, .users_list .lists .tweet .body .who a:hover, .users_list .lists .list .body .who a:hover, .users_list .lists .user .body .who a:hover, .lists_list .tweets .tweet .body .who a:hover, .lists_list .tweets .list .body .who a:hover, .lists_list .tweets .user .body .who a:hover, .lists_list .users .tweet .body .who a:hover, .lists_list .users .list .body .who a:hover, .lists_list .users .user .body .who a:hover, .lists_list .lists .tweet .body .who a:hover, .lists_list .lists .list .body .who a:hover, .lists_list .lists .user .body .who a:hover, #category_show .tweets .tweet .body .who a:hover, #category_show .tweets .list .body .who a:hover, #category_show .tweets .user .body .who a:hover, #category_show .users .tweet .body .who a:hover, #category_show .users .list .body .who a:hover, #category_show .users .user .body .who a:hover, #category_show .lists .tweet .body .who a:hover, #category_show .lists .list .body .who a:hover, #category_show .lists .user .body .who a:hover, #category_chooser .tweets .tweet .body .who a:hover, #category_chooser .tweets .list .body .who a:hover, #category_chooser .tweets .user .body .who a:hover, #category_chooser .users .tweet .body .who a:hover, #category_chooser .users .list .body .who a:hover, #category_chooser .users .user .body .who a:hover, #category_chooser .lists .tweet .body .who a:hover, #category_chooser .lists .list .body .who a:hover, #category_chooser .lists .user .body .who a:hover, .box .tweets .tweet .body .who a:hover, .box .tweets .list .body .who a:hover, .box .tweets .user .body .who a:hover, .box .users .tweet .body .who a:hover, .box .users .list .body .who a:hover, .box .users .user .body .who a:hover, .box .lists .tweet .body .who a:hover, .box .lists .list .body .who a:hover, .box .lists .user .body .who a:hover {
   text-decoration: underline;
 }
-/* line 156, ../../../app/stylesheets/application.sass */
+/* line 157, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .body .when, .category .tweets .list .body .when, .category .tweets .user .body .when, .category .users .tweet .body .when, .category .users .list .body .when, .category .users .user .body .when, .category .lists .tweet .body .when, .category .lists .list .body .when, .category .lists .user .body .when, #hashtag_filter .tweets .tweet .body .when, #hashtag_filter .tweets .list .body .when, #hashtag_filter .tweets .user .body .when, #hashtag_filter .users .tweet .body .when, #hashtag_filter .users .list .body .when, #hashtag_filter .users .user .body .when, #hashtag_filter .lists .tweet .body .when, #hashtag_filter .lists .list .body .when, #hashtag_filter .lists .user .body .when, .modal .tweets .tweet .body .when, .modal .tweets .list .body .when, .modal .tweets .user .body .when, .modal .users .tweet .body .when, .modal .users .list .body .when, .modal .users .user .body .when, .modal .lists .tweet .body .when, .modal .lists .list .body .when, .modal .lists .user .body .when, .users_list .tweets .tweet .body .when, .users_list .tweets .list .body .when, .users_list .tweets .user .body .when, .users_list .users .tweet .body .when, .users_list .users .list .body .when, .users_list .users .user .body .when, .users_list .lists .tweet .body .when, .users_list .lists .list .body .when, .users_list .lists .user .body .when, .lists_list .tweets .tweet .body .when, .lists_list .tweets .list .body .when, .lists_list .tweets .user .body .when, .lists_list .users .tweet .body .when, .lists_list .users .list .body .when, .lists_list .users .user .body .when, .lists_list .lists .tweet .body .when, .lists_list .lists .list .body .when, .lists_list .lists .user .body .when, #category_show .tweets .tweet .body .when, #category_show .tweets .list .body .when, #category_show .tweets .user .body .when, #category_show .users .tweet .body .when, #category_show .users .list .body .when, #category_show .users .user .body .when, #category_show .lists .tweet .body .when, #category_show .lists .list .body .when, #category_show .lists .user .body .when, #category_chooser .tweets .tweet .body .when, #category_chooser .tweets .list .body .when, #category_chooser .tweets .user .body .when, #category_chooser .users .tweet .body .when, #category_chooser .users .list .body .when, #category_chooser .users .user .body .when, #category_chooser .lists .tweet .body .when, #category_chooser .lists .list .body .when, #category_chooser .lists .user .body .when, .box .tweets .tweet .body .when, .box .tweets .list .body .when, .box .tweets .user .body .when, .box .users .tweet .body .when, .box .users .list .body .when, .box .users .user .body .when, .box .lists .tweet .body .when, .box .lists .list .body .when, .box .lists .user .body .when {
   color: #bbbbbb;
 }
-/* line 159, ../../../app/stylesheets/application.sass */
+/* line 160, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .body .text, .category .tweets .list .body .text, .category .tweets .user .body .text, .category .users .tweet .body .text, .category .users .list .body .text, .category .users .user .body .text, .category .lists .tweet .body .text, .category .lists .list .body .text, .category .lists .user .body .text, #hashtag_filter .tweets .tweet .body .text, #hashtag_filter .tweets .list .body .text, #hashtag_filter .tweets .user .body .text, #hashtag_filter .users .tweet .body .text, #hashtag_filter .users .list .body .text, #hashtag_filter .users .user .body .text, #hashtag_filter .lists .tweet .body .text, #hashtag_filter .lists .list .body .text, #hashtag_filter .lists .user .body .text, .modal .tweets .tweet .body .text, .modal .tweets .list .body .text, .modal .tweets .user .body .text, .modal .users .tweet .body .text, .modal .users .list .body .text, .modal .users .user .body .text, .modal .lists .tweet .body .text, .modal .lists .list .body .text, .modal .lists .user .body .text, .users_list .tweets .tweet .body .text, .users_list .tweets .list .body .text, .users_list .tweets .user .body .text, .users_list .users .tweet .body .text, .users_list .users .list .body .text, .users_list .users .user .body .text, .users_list .lists .tweet .body .text, .users_list .lists .list .body .text, .users_list .lists .user .body .text, .lists_list .tweets .tweet .body .text, .lists_list .tweets .list .body .text, .lists_list .tweets .user .body .text, .lists_list .users .tweet .body .text, .lists_list .users .list .body .text, .lists_list .users .user .body .text, .lists_list .lists .tweet .body .text, .lists_list .lists .list .body .text, .lists_list .lists .user .body .text, #category_show .tweets .tweet .body .text, #category_show .tweets .list .body .text, #category_show .tweets .user .body .text, #category_show .users .tweet .body .text, #category_show .users .list .body .text, #category_show .users .user .body .text, #category_show .lists .tweet .body .text, #category_show .lists .list .body .text, #category_show .lists .user .body .text, #category_chooser .tweets .tweet .body .text, #category_chooser .tweets .list .body .text, #category_chooser .tweets .user .body .text, #category_chooser .users .tweet .body .text, #category_chooser .users .list .body .text, #category_chooser .users .user .body .text, #category_chooser .lists .tweet .body .text, #category_chooser .lists .list .body .text, #category_chooser .lists .user .body .text, .box .tweets .tweet .body .text, .box .tweets .list .body .text, .box .tweets .user .body .text, .box .users .tweet .body .text, .box .users .list .body .text, .box .users .user .body .text, .box .lists .tweet .body .text, .box .lists .list .body .text, .box .lists .user .body .text {
   padding-bottom: 5px;
   overflow: hidden;
 }
-/* line 163, ../../../app/stylesheets/application.sass */
+/* line 164, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .handle, .category .tweets .list .handle, .category .tweets .user .handle, .category .users .tweet .handle, .category .users .list .handle, .category .users .user .handle, .category .lists .tweet .handle, .category .lists .list .handle, .category .lists .user .handle, #hashtag_filter .tweets .tweet .handle, #hashtag_filter .tweets .list .handle, #hashtag_filter .tweets .user .handle, #hashtag_filter .users .tweet .handle, #hashtag_filter .users .list .handle, #hashtag_filter .users .user .handle, #hashtag_filter .lists .tweet .handle, #hashtag_filter .lists .list .handle, #hashtag_filter .lists .user .handle, .modal .tweets .tweet .handle, .modal .tweets .list .handle, .modal .tweets .user .handle, .modal .users .tweet .handle, .modal .users .list .handle, .modal .users .user .handle, .modal .lists .tweet .handle, .modal .lists .list .handle, .modal .lists .user .handle, .users_list .tweets .tweet .handle, .users_list .tweets .list .handle, .users_list .tweets .user .handle, .users_list .users .tweet .handle, .users_list .users .list .handle, .users_list .users .user .handle, .users_list .lists .tweet .handle, .users_list .lists .list .handle, .users_list .lists .user .handle, .lists_list .tweets .tweet .handle, .lists_list .tweets .list .handle, .lists_list .tweets .user .handle, .lists_list .users .tweet .handle, .lists_list .users .list .handle, .lists_list .users .user .handle, .lists_list .lists .tweet .handle, .lists_list .lists .list .handle, .lists_list .lists .user .handle, #category_show .tweets .tweet .handle, #category_show .tweets .list .handle, #category_show .tweets .user .handle, #category_show .users .tweet .handle, #category_show .users .list .handle, #category_show .users .user .handle, #category_show .lists .tweet .handle, #category_show .lists .list .handle, #category_show .lists .user .handle, #category_chooser .tweets .tweet .handle, #category_chooser .tweets .list .handle, #category_chooser .tweets .user .handle, #category_chooser .users .tweet .handle, #category_chooser .users .list .handle, #category_chooser .users .user .handle, #category_chooser .lists .tweet .handle, #category_chooser .lists .list .handle, #category_chooser .lists .user .handle, .box .tweets .tweet .handle, .box .tweets .list .handle, .box .tweets .user .handle, .box .users .tweet .handle, .box .users .list .handle, .box .users .user .handle, .box .lists .tweet .handle, .box .lists .list .handle, .box .lists .user .handle {
   min-height: 10px;
 }
-/* line 167, ../../../app/stylesheets/application.sass */
+/* line 168, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions, .category .tweets .list .actions, .category .tweets .user .actions, .category .users .tweet .actions, .category .users .list .actions, .category .users .user .actions, .category .lists .tweet .actions, .category .lists .list .actions, .category .lists .user .actions, #hashtag_filter .tweets .tweet .actions, #hashtag_filter .tweets .list .actions, #hashtag_filter .tweets .user .actions, #hashtag_filter .users .tweet .actions, #hashtag_filter .users .list .actions, #hashtag_filter .users .user .actions, #hashtag_filter .lists .tweet .actions, #hashtag_filter .lists .list .actions, #hashtag_filter .lists .user .actions, .modal .tweets .tweet .actions, .modal .tweets .list .actions, .modal .tweets .user .actions, .modal .users .tweet .actions, .modal .users .list .actions, .modal .users .user .actions, .modal .lists .tweet .actions, .modal .lists .list .actions, .modal .lists .user .actions, .users_list .tweets .tweet .actions, .users_list .tweets .list .actions, .users_list .tweets .user .actions, .users_list .users .tweet .actions, .users_list .users .list .actions, .users_list .users .user .actions, .users_list .lists .tweet .actions, .users_list .lists .list .actions, .users_list .lists .user .actions, .lists_list .tweets .tweet .actions, .lists_list .tweets .list .actions, .lists_list .tweets .user .actions, .lists_list .users .tweet .actions, .lists_list .users .list .actions, .lists_list .users .user .actions, .lists_list .lists .tweet .actions, .lists_list .lists .list .actions, .lists_list .lists .user .actions, #category_show .tweets .tweet .actions, #category_show .tweets .list .actions, #category_show .tweets .user .actions, #category_show .users .tweet .actions, #category_show .users .list .actions, #category_show .users .user .actions, #category_show .lists .tweet .actions, #category_show .lists .list .actions, #category_show .lists .user .actions, #category_chooser .tweets .tweet .actions, #category_chooser .tweets .list .actions, #category_chooser .tweets .user .actions, #category_chooser .users .tweet .actions, #category_chooser .users .list .actions, #category_chooser .users .user .actions, #category_chooser .lists .tweet .actions, #category_chooser .lists .list .actions, #category_chooser .lists .user .actions, .box .tweets .tweet .actions, .box .tweets .list .actions, .box .tweets .user .actions, .box .users .tweet .actions, .box .users .list .actions, .box .users .user .actions, .box .lists .tweet .actions, .box .lists .list .actions, .box .lists .user .actions {
   background: #dcecf4;
   display: none;
@@ -448,7 +515,7 @@ body {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
 }
-/* line 176, ../../../app/stylesheets/application.sass */
+/* line 177, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions a, .category .tweets .list .actions a, .category .tweets .user .actions a, .category .users .tweet .actions a, .category .users .list .actions a, .category .users .user .actions a, .category .lists .tweet .actions a, .category .lists .list .actions a, .category .lists .user .actions a, #hashtag_filter .tweets .tweet .actions a, #hashtag_filter .tweets .list .actions a, #hashtag_filter .tweets .user .actions a, #hashtag_filter .users .tweet .actions a, #hashtag_filter .users .list .actions a, #hashtag_filter .users .user .actions a, #hashtag_filter .lists .tweet .actions a, #hashtag_filter .lists .list .actions a, #hashtag_filter .lists .user .actions a, .modal .tweets .tweet .actions a, .modal .tweets .list .actions a, .modal .tweets .user .actions a, .modal .users .tweet .actions a, .modal .users .list .actions a, .modal .users .user .actions a, .modal .lists .tweet .actions a, .modal .lists .list .actions a, .modal .lists .user .actions a, .users_list .tweets .tweet .actions a, .users_list .tweets .list .actions a, .users_list .tweets .user .actions a, .users_list .users .tweet .actions a, .users_list .users .list .actions a, .users_list .users .user .actions a, .users_list .lists .tweet .actions a, .users_list .lists .list .actions a, .users_list .lists .user .actions a, .lists_list .tweets .tweet .actions a, .lists_list .tweets .list .actions a, .lists_list .tweets .user .actions a, .lists_list .users .tweet .actions a, .lists_list .users .list .actions a, .lists_list .users .user .actions a, .lists_list .lists .tweet .actions a, .lists_list .lists .list .actions a, .lists_list .lists .user .actions a, #category_show .tweets .tweet .actions a, #category_show .tweets .list .actions a, #category_show .tweets .user .actions a, #category_show .users .tweet .actions a, #category_show .users .list .actions a, #category_show .users .user .actions a, #category_show .lists .tweet .actions a, #category_show .lists .list .actions a, #category_show .lists .user .actions a, #category_chooser .tweets .tweet .actions a, #category_chooser .tweets .list .actions a, #category_chooser .tweets .user .actions a, #category_chooser .users .tweet .actions a, #category_chooser .users .list .actions a, #category_chooser .users .user .actions a, #category_chooser .lists .tweet .actions a, #category_chooser .lists .list .actions a, #category_chooser .lists .user .actions a, .box .tweets .tweet .actions a, .box .tweets .list .actions a, .box .tweets .user .actions a, .box .users .tweet .actions a, .box .users .list .actions a, .box .users .user .actions a, .box .lists .tweet .actions a, .box .lists .list .actions a, .box .lists .user .actions a {
   display: block;
   float: left;
@@ -462,7 +529,7 @@ body {
 .category .tweets .tweet .actions a:hover, .category .tweets .list .actions a:hover, .category .tweets .user .actions a:hover, .category .users .tweet .actions a:hover, .category .users .list .actions a:hover, .category .users .user .actions a:hover, .category .lists .tweet .actions a:hover, .category .lists .list .actions a:hover, .category .lists .user .actions a:hover, #hashtag_filter .tweets .tweet .actions a:hover, #hashtag_filter .tweets .list .actions a:hover, #hashtag_filter .tweets .user .actions a:hover, #hashtag_filter .users .tweet .actions a:hover, #hashtag_filter .users .list .actions a:hover, #hashtag_filter .users .user .actions a:hover, #hashtag_filter .lists .tweet .actions a:hover, #hashtag_filter .lists .list .actions a:hover, #hashtag_filter .lists .user .actions a:hover, .modal .tweets .tweet .actions a:hover, .modal .tweets .list .actions a:hover, .modal .tweets .user .actions a:hover, .modal .users .tweet .actions a:hover, .modal .users .list .actions a:hover, .modal .users .user .actions a:hover, .modal .lists .tweet .actions a:hover, .modal .lists .list .actions a:hover, .modal .lists .user .actions a:hover, .users_list .tweets .tweet .actions a:hover, .users_list .tweets .list .actions a:hover, .users_list .tweets .user .actions a:hover, .users_list .users .tweet .actions a:hover, .users_list .users .list .actions a:hover, .users_list .users .user .actions a:hover, .users_list .lists .tweet .actions a:hover, .users_list .lists .list .actions a:hover, .users_list .lists .user .actions a:hover, .lists_list .tweets .tweet .actions a:hover, .lists_list .tweets .list .actions a:hover, .lists_list .tweets .user .actions a:hover, .lists_list .users .tweet .actions a:hover, .lists_list .users .list .actions a:hover, .lists_list .users .user .actions a:hover, .lists_list .lists .tweet .actions a:hover, .lists_list .lists .list .actions a:hover, .lists_list .lists .user .actions a:hover, #category_show .tweets .tweet .actions a:hover, #category_show .tweets .list .actions a:hover, #category_show .tweets .user .actions a:hover, #category_show .users .tweet .actions a:hover, #category_show .users .list .actions a:hover, #category_show .users .user .actions a:hover, #category_show .lists .tweet .actions a:hover, #category_show .lists .list .actions a:hover, #category_show .lists .user .actions a:hover, #category_chooser .tweets .tweet .actions a:hover, #category_chooser .tweets .list .actions a:hover, #category_chooser .tweets .user .actions a:hover, #category_chooser .users .tweet .actions a:hover, #category_chooser .users .list .actions a:hover, #category_chooser .users .user .actions a:hover, #category_chooser .lists .tweet .actions a:hover, #category_chooser .lists .list .actions a:hover, #category_chooser .lists .user .actions a:hover, .box .tweets .tweet .actions a:hover, .box .tweets .list .actions a:hover, .box .tweets .user .actions a:hover, .box .users .tweet .actions a:hover, .box .users .list .actions a:hover, .box .users .user .actions a:hover, .box .lists .tweet .actions a:hover, .box .lists .list .actions a:hover, .box .lists .user .actions a:hover {
   text-decoration: underline;
 }
-/* line 186, ../../../app/stylesheets/application.sass */
+/* line 187, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions .reply a.modalInput, .category .tweets .list .actions .reply a.modalInput, .category .tweets .user .actions .reply a.modalInput, .category .users .tweet .actions .reply a.modalInput, .category .users .list .actions .reply a.modalInput, .category .users .user .actions .reply a.modalInput, .category .lists .tweet .actions .reply a.modalInput, .category .lists .list .actions .reply a.modalInput, .category .lists .user .actions .reply a.modalInput, #hashtag_filter .tweets .tweet .actions .reply a.modalInput, #hashtag_filter .tweets .list .actions .reply a.modalInput, #hashtag_filter .tweets .user .actions .reply a.modalInput, #hashtag_filter .users .tweet .actions .reply a.modalInput, #hashtag_filter .users .list .actions .reply a.modalInput, #hashtag_filter .users .user .actions .reply a.modalInput, #hashtag_filter .lists .tweet .actions .reply a.modalInput, #hashtag_filter .lists .list .actions .reply a.modalInput, #hashtag_filter .lists .user .actions .reply a.modalInput, .modal .tweets .tweet .actions .reply a.modalInput, .modal .tweets .list .actions .reply a.modalInput, .modal .tweets .user .actions .reply a.modalInput, .modal .users .tweet .actions .reply a.modalInput, .modal .users .list .actions .reply a.modalInput, .modal .users .user .actions .reply a.modalInput, .modal .lists .tweet .actions .reply a.modalInput, .modal .lists .list .actions .reply a.modalInput, .modal .lists .user .actions .reply a.modalInput, .users_list .tweets .tweet .actions .reply a.modalInput, .users_list .tweets .list .actions .reply a.modalInput, .users_list .tweets .user .actions .reply a.modalInput, .users_list .users .tweet .actions .reply a.modalInput, .users_list .users .list .actions .reply a.modalInput, .users_list .users .user .actions .reply a.modalInput, .users_list .lists .tweet .actions .reply a.modalInput, .users_list .lists .list .actions .reply a.modalInput, .users_list .lists .user .actions .reply a.modalInput, .lists_list .tweets .tweet .actions .reply a.modalInput, .lists_list .tweets .list .actions .reply a.modalInput, .lists_list .tweets .user .actions .reply a.modalInput, .lists_list .users .tweet .actions .reply a.modalInput, .lists_list .users .list .actions .reply a.modalInput, .lists_list .users .user .actions .reply a.modalInput, .lists_list .lists .tweet .actions .reply a.modalInput, .lists_list .lists .list .actions .reply a.modalInput, .lists_list .lists .user .actions .reply a.modalInput, #category_show .tweets .tweet .actions .reply a.modalInput, #category_show .tweets .list .actions .reply a.modalInput, #category_show .tweets .user .actions .reply a.modalInput, #category_show .users .tweet .actions .reply a.modalInput, #category_show .users .list .actions .reply a.modalInput, #category_show .users .user .actions .reply a.modalInput, #category_show .lists .tweet .actions .reply a.modalInput, #category_show .lists .list .actions .reply a.modalInput, #category_show .lists .user .actions .reply a.modalInput, #category_chooser .tweets .tweet .actions .reply a.modalInput, #category_chooser .tweets .list .actions .reply a.modalInput, #category_chooser .tweets .user .actions .reply a.modalInput, #category_chooser .users .tweet .actions .reply a.modalInput, #category_chooser .users .list .actions .reply a.modalInput, #category_chooser .users .user .actions .reply a.modalInput, #category_chooser .lists .tweet .actions .reply a.modalInput, #category_chooser .lists .list .actions .reply a.modalInput, #category_chooser .lists .user .actions .reply a.modalInput, .box .tweets .tweet .actions .reply a.modalInput, .box .tweets .list .actions .reply a.modalInput, .box .tweets .user .actions .reply a.modalInput, .box .users .tweet .actions .reply a.modalInput, .box .users .list .actions .reply a.modalInput, .box .users .user .actions .reply a.modalInput, .box .lists .tweet .actions .reply a.modalInput, .box .lists .list .actions .reply a.modalInput, .box .lists .user .actions .reply a.modalInput {
   text-indent: -9999em;
   overflow: hidden;
@@ -472,11 +539,11 @@ body {
   background-position: 50% 50%;
   background-position: left top;
 }
-/* line 191, ../../../app/stylesheets/application.sass */
+/* line 192, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions .reply a.modalInput:hover, .category .tweets .list .actions .reply a.modalInput:hover, .category .tweets .user .actions .reply a.modalInput:hover, .category .users .tweet .actions .reply a.modalInput:hover, .category .users .list .actions .reply a.modalInput:hover, .category .users .user .actions .reply a.modalInput:hover, .category .lists .tweet .actions .reply a.modalInput:hover, .category .lists .list .actions .reply a.modalInput:hover, .category .lists .user .actions .reply a.modalInput:hover, #hashtag_filter .tweets .tweet .actions .reply a.modalInput:hover, #hashtag_filter .tweets .list .actions .reply a.modalInput:hover, #hashtag_filter .tweets .user .actions .reply a.modalInput:hover, #hashtag_filter .users .tweet .actions .reply a.modalInput:hover, #hashtag_filter .users .list .actions .reply a.modalInput:hover, #hashtag_filter .users .user .actions .reply a.modalInput:hover, #hashtag_filter .lists .tweet .actions .reply a.modalInput:hover, #hashtag_filter .lists .list .actions .reply a.modalInput:hover, #hashtag_filter .lists .user .actions .reply a.modalInput:hover, .modal .tweets .tweet .actions .reply a.modalInput:hover, .modal .tweets .list .actions .reply a.modalInput:hover, .modal .tweets .user .actions .reply a.modalInput:hover, .modal .users .tweet .actions .reply a.modalInput:hover, .modal .users .list .actions .reply a.modalInput:hover, .modal .users .user .actions .reply a.modalInput:hover, .modal .lists .tweet .actions .reply a.modalInput:hover, .modal .lists .list .actions .reply a.modalInput:hover, .modal .lists .user .actions .reply a.modalInput:hover, .users_list .tweets .tweet .actions .reply a.modalInput:hover, .users_list .tweets .list .actions .reply a.modalInput:hover, .users_list .tweets .user .actions .reply a.modalInput:hover, .users_list .users .tweet .actions .reply a.modalInput:hover, .users_list .users .list .actions .reply a.modalInput:hover, .users_list .users .user .actions .reply a.modalInput:hover, .users_list .lists .tweet .actions .reply a.modalInput:hover, .users_list .lists .list .actions .reply a.modalInput:hover, .users_list .lists .user .actions .reply a.modalInput:hover, .lists_list .tweets .tweet .actions .reply a.modalInput:hover, .lists_list .tweets .list .actions .reply a.modalInput:hover, .lists_list .tweets .user .actions .reply a.modalInput:hover, .lists_list .users .tweet .actions .reply a.modalInput:hover, .lists_list .users .list .actions .reply a.modalInput:hover, .lists_list .users .user .actions .reply a.modalInput:hover, .lists_list .lists .tweet .actions .reply a.modalInput:hover, .lists_list .lists .list .actions .reply a.modalInput:hover, .lists_list .lists .user .actions .reply a.modalInput:hover, #category_show .tweets .tweet .actions .reply a.modalInput:hover, #category_show .tweets .list .actions .reply a.modalInput:hover, #category_show .tweets .user .actions .reply a.modalInput:hover, #category_show .users .tweet .actions .reply a.modalInput:hover, #category_show .users .list .actions .reply a.modalInput:hover, #category_show .users .user .actions .reply a.modalInput:hover, #category_show .lists .tweet .actions .reply a.modalInput:hover, #category_show .lists .list .actions .reply a.modalInput:hover, #category_show .lists .user .actions .reply a.modalInput:hover, #category_chooser .tweets .tweet .actions .reply a.modalInput:hover, #category_chooser .tweets .list .actions .reply a.modalInput:hover, #category_chooser .tweets .user .actions .reply a.modalInput:hover, #category_chooser .users .tweet .actions .reply a.modalInput:hover, #category_chooser .users .list .actions .reply a.modalInput:hover, #category_chooser .users .user .actions .reply a.modalInput:hover, #category_chooser .lists .tweet .actions .reply a.modalInput:hover, #category_chooser .lists .list .actions .reply a.modalInput:hover, #category_chooser .lists .user .actions .reply a.modalInput:hover, .box .tweets .tweet .actions .reply a.modalInput:hover, .box .tweets .list .actions .reply a.modalInput:hover, .box .tweets .user .actions .reply a.modalInput:hover, .box .users .tweet .actions .reply a.modalInput:hover, .box .users .list .actions .reply a.modalInput:hover, .box .users .user .actions .reply a.modalInput:hover, .box .lists .tweet .actions .reply a.modalInput:hover, .box .lists .list .actions .reply a.modalInput:hover, .box .lists .user .actions .reply a.modalInput:hover {
   background-position: left bottom;
 }
-/* line 195, ../../../app/stylesheets/application.sass */
+/* line 196, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions .retweet a.modalInput, .category .tweets .list .actions .retweet a.modalInput, .category .tweets .user .actions .retweet a.modalInput, .category .users .tweet .actions .retweet a.modalInput, .category .users .list .actions .retweet a.modalInput, .category .users .user .actions .retweet a.modalInput, .category .lists .tweet .actions .retweet a.modalInput, .category .lists .list .actions .retweet a.modalInput, .category .lists .user .actions .retweet a.modalInput, #hashtag_filter .tweets .tweet .actions .retweet a.modalInput, #hashtag_filter .tweets .list .actions .retweet a.modalInput, #hashtag_filter .tweets .user .actions .retweet a.modalInput, #hashtag_filter .users .tweet .actions .retweet a.modalInput, #hashtag_filter .users .list .actions .retweet a.modalInput, #hashtag_filter .users .user .actions .retweet a.modalInput, #hashtag_filter .lists .tweet .actions .retweet a.modalInput, #hashtag_filter .lists .list .actions .retweet a.modalInput, #hashtag_filter .lists .user .actions .retweet a.modalInput, .modal .tweets .tweet .actions .retweet a.modalInput, .modal .tweets .list .actions .retweet a.modalInput, .modal .tweets .user .actions .retweet a.modalInput, .modal .users .tweet .actions .retweet a.modalInput, .modal .users .list .actions .retweet a.modalInput, .modal .users .user .actions .retweet a.modalInput, .modal .lists .tweet .actions .retweet a.modalInput, .modal .lists .list .actions .retweet a.modalInput, .modal .lists .user .actions .retweet a.modalInput, .users_list .tweets .tweet .actions .retweet a.modalInput, .users_list .tweets .list .actions .retweet a.modalInput, .users_list .tweets .user .actions .retweet a.modalInput, .users_list .users .tweet .actions .retweet a.modalInput, .users_list .users .list .actions .retweet a.modalInput, .users_list .users .user .actions .retweet a.modalInput, .users_list .lists .tweet .actions .retweet a.modalInput, .users_list .lists .list .actions .retweet a.modalInput, .users_list .lists .user .actions .retweet a.modalInput, .lists_list .tweets .tweet .actions .retweet a.modalInput, .lists_list .tweets .list .actions .retweet a.modalInput, .lists_list .tweets .user .actions .retweet a.modalInput, .lists_list .users .tweet .actions .retweet a.modalInput, .lists_list .users .list .actions .retweet a.modalInput, .lists_list .users .user .actions .retweet a.modalInput, .lists_list .lists .tweet .actions .retweet a.modalInput, .lists_list .lists .list .actions .retweet a.modalInput, .lists_list .lists .user .actions .retweet a.modalInput, #category_show .tweets .tweet .actions .retweet a.modalInput, #category_show .tweets .list .actions .retweet a.modalInput, #category_show .tweets .user .actions .retweet a.modalInput, #category_show .users .tweet .actions .retweet a.modalInput, #category_show .users .list .actions .retweet a.modalInput, #category_show .users .user .actions .retweet a.modalInput, #category_show .lists .tweet .actions .retweet a.modalInput, #category_show .lists .list .actions .retweet a.modalInput, #category_show .lists .user .actions .retweet a.modalInput, #category_chooser .tweets .tweet .actions .retweet a.modalInput, #category_chooser .tweets .list .actions .retweet a.modalInput, #category_chooser .tweets .user .actions .retweet a.modalInput, #category_chooser .users .tweet .actions .retweet a.modalInput, #category_chooser .users .list .actions .retweet a.modalInput, #category_chooser .users .user .actions .retweet a.modalInput, #category_chooser .lists .tweet .actions .retweet a.modalInput, #category_chooser .lists .list .actions .retweet a.modalInput, #category_chooser .lists .user .actions .retweet a.modalInput, .box .tweets .tweet .actions .retweet a.modalInput, .box .tweets .list .actions .retweet a.modalInput, .box .tweets .user .actions .retweet a.modalInput, .box .users .tweet .actions .retweet a.modalInput, .box .users .list .actions .retweet a.modalInput, .box .users .user .actions .retweet a.modalInput, .box .lists .tweet .actions .retweet a.modalInput, .box .lists .list .actions .retweet a.modalInput, .box .lists .user .actions .retweet a.modalInput {
   text-indent: -9999em;
   overflow: hidden;
@@ -486,11 +553,11 @@ body {
   background-position: 50% 50%;
   background-position: left top;
 }
-/* line 199, ../../../app/stylesheets/application.sass */
+/* line 200, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .actions .retweet a.modalInput:hover, .category .tweets .list .actions .retweet a.modalInput:hover, .category .tweets .user .actions .retweet a.modalInput:hover, .category .users .tweet .actions .retweet a.modalInput:hover, .category .users .list .actions .retweet a.modalInput:hover, .category .users .user .actions .retweet a.modalInput:hover, .category .lists .tweet .actions .retweet a.modalInput:hover, .category .lists .list .actions .retweet a.modalInput:hover, .category .lists .user .actions .retweet a.modalInput:hover, #hashtag_filter .tweets .tweet .actions .retweet a.modalInput:hover, #hashtag_filter .tweets .list .actions .retweet a.modalInput:hover, #hashtag_filter .tweets .user .actions .retweet a.modalInput:hover, #hashtag_filter .users .tweet .actions .retweet a.modalInput:hover, #hashtag_filter .users .list .actions .retweet a.modalInput:hover, #hashtag_filter .users .user .actions .retweet a.modalInput:hover, #hashtag_filter .lists .tweet .actions .retweet a.modalInput:hover, #hashtag_filter .lists .list .actions .retweet a.modalInput:hover, #hashtag_filter .lists .user .actions .retweet a.modalInput:hover, .modal .tweets .tweet .actions .retweet a.modalInput:hover, .modal .tweets .list .actions .retweet a.modalInput:hover, .modal .tweets .user .actions .retweet a.modalInput:hover, .modal .users .tweet .actions .retweet a.modalInput:hover, .modal .users .list .actions .retweet a.modalInput:hover, .modal .users .user .actions .retweet a.modalInput:hover, .modal .lists .tweet .actions .retweet a.modalInput:hover, .modal .lists .list .actions .retweet a.modalInput:hover, .modal .lists .user .actions .retweet a.modalInput:hover, .users_list .tweets .tweet .actions .retweet a.modalInput:hover, .users_list .tweets .list .actions .retweet a.modalInput:hover, .users_list .tweets .user .actions .retweet a.modalInput:hover, .users_list .users .tweet .actions .retweet a.modalInput:hover, .users_list .users .list .actions .retweet a.modalInput:hover, .users_list .users .user .actions .retweet a.modalInput:hover, .users_list .lists .tweet .actions .retweet a.modalInput:hover, .users_list .lists .list .actions .retweet a.modalInput:hover, .users_list .lists .user .actions .retweet a.modalInput:hover, .lists_list .tweets .tweet .actions .retweet a.modalInput:hover, .lists_list .tweets .list .actions .retweet a.modalInput:hover, .lists_list .tweets .user .actions .retweet a.modalInput:hover, .lists_list .users .tweet .actions .retweet a.modalInput:hover, .lists_list .users .list .actions .retweet a.modalInput:hover, .lists_list .users .user .actions .retweet a.modalInput:hover, .lists_list .lists .tweet .actions .retweet a.modalInput:hover, .lists_list .lists .list .actions .retweet a.modalInput:hover, .lists_list .lists .user .actions .retweet a.modalInput:hover, #category_show .tweets .tweet .actions .retweet a.modalInput:hover, #category_show .tweets .list .actions .retweet a.modalInput:hover, #category_show .tweets .user .actions .retweet a.modalInput:hover, #category_show .users .tweet .actions .retweet a.modalInput:hover, #category_show .users .list .actions .retweet a.modalInput:hover, #category_show .users .user .actions .retweet a.modalInput:hover, #category_show .lists .tweet .actions .retweet a.modalInput:hover, #category_show .lists .list .actions .retweet a.modalInput:hover, #category_show .lists .user .actions .retweet a.modalInput:hover, #category_chooser .tweets .tweet .actions .retweet a.modalInput:hover, #category_chooser .tweets .list .actions .retweet a.modalInput:hover, #category_chooser .tweets .user .actions .retweet a.modalInput:hover, #category_chooser .users .tweet .actions .retweet a.modalInput:hover, #category_chooser .users .list .actions .retweet a.modalInput:hover, #category_chooser .users .user .actions .retweet a.modalInput:hover, #category_chooser .lists .tweet .actions .retweet a.modalInput:hover, #category_chooser .lists .list .actions .retweet a.modalInput:hover, #category_chooser .lists .user .actions .retweet a.modalInput:hover, .box .tweets .tweet .actions .retweet a.modalInput:hover, .box .tweets .list .actions .retweet a.modalInput:hover, .box .tweets .user .actions .retweet a.modalInput:hover, .box .users .tweet .actions .retweet a.modalInput:hover, .box .users .list .actions .retweet a.modalInput:hover, .box .users .user .actions .retweet a.modalInput:hover, .box .lists .tweet .actions .retweet a.modalInput:hover, .box .lists .list .actions .retweet a.modalInput:hover, .box .lists .user .actions .retweet a.modalInput:hover {
   background-position: left bottom;
 }
-/* line 204, ../../../app/stylesheets/application.sass */
+/* line 205, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .info, .category .tweets .list .info, .category .tweets .user .info, .category .users .tweet .info, .category .users .list .info, .category .users .user .info, .category .lists .tweet .info, .category .lists .list .info, .category .lists .user .info, #hashtag_filter .tweets .tweet .info, #hashtag_filter .tweets .list .info, #hashtag_filter .tweets .user .info, #hashtag_filter .users .tweet .info, #hashtag_filter .users .list .info, #hashtag_filter .users .user .info, #hashtag_filter .lists .tweet .info, #hashtag_filter .lists .list .info, #hashtag_filter .lists .user .info, .modal .tweets .tweet .info, .modal .tweets .list .info, .modal .tweets .user .info, .modal .users .tweet .info, .modal .users .list .info, .modal .users .user .info, .modal .lists .tweet .info, .modal .lists .list .info, .modal .lists .user .info, .users_list .tweets .tweet .info, .users_list .tweets .list .info, .users_list .tweets .user .info, .users_list .users .tweet .info, .users_list .users .list .info, .users_list .users .user .info, .users_list .lists .tweet .info, .users_list .lists .list .info, .users_list .lists .user .info, .lists_list .tweets .tweet .info, .lists_list .tweets .list .info, .lists_list .tweets .user .info, .lists_list .users .tweet .info, .lists_list .users .list .info, .lists_list .users .user .info, .lists_list .lists .tweet .info, .lists_list .lists .list .info, .lists_list .lists .user .info, #category_show .tweets .tweet .info, #category_show .tweets .list .info, #category_show .tweets .user .info, #category_show .users .tweet .info, #category_show .users .list .info, #category_show .users .user .info, #category_show .lists .tweet .info, #category_show .lists .list .info, #category_show .lists .user .info, #category_chooser .tweets .tweet .info, #category_chooser .tweets .list .info, #category_chooser .tweets .user .info, #category_chooser .users .tweet .info, #category_chooser .users .list .info, #category_chooser .users .user .info, #category_chooser .lists .tweet .info, #category_chooser .lists .list .info, #category_chooser .lists .user .info, .box .tweets .tweet .info, .box .tweets .list .info, .box .tweets .user .info, .box .users .tweet .info, .box .users .list .info, .box .users .user .info, .box .lists .tweet .info, .box .lists .list .info, .box .lists .user .info {
   background: #f7fcfe url(../../images/tweet-info-bg.png) no-repeat;
   display: none;
@@ -498,11 +565,11 @@ body {
   margin-top: 5px;
   padding-top: 10px;
 }
-/* line 211, ../../../app/stylesheets/application.sass */
+/* line 212, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet .info div, .category .tweets .list .info div, .category .tweets .user .info div, .category .users .tweet .info div, .category .users .list .info div, .category .users .user .info div, .category .lists .tweet .info div, .category .lists .list .info div, .category .lists .user .info div, #hashtag_filter .tweets .tweet .info div, #hashtag_filter .tweets .list .info div, #hashtag_filter .tweets .user .info div, #hashtag_filter .users .tweet .info div, #hashtag_filter .users .list .info div, #hashtag_filter .users .user .info div, #hashtag_filter .lists .tweet .info div, #hashtag_filter .lists .list .info div, #hashtag_filter .lists .user .info div, .modal .tweets .tweet .info div, .modal .tweets .list .info div, .modal .tweets .user .info div, .modal .users .tweet .info div, .modal .users .list .info div, .modal .users .user .info div, .modal .lists .tweet .info div, .modal .lists .list .info div, .modal .lists .user .info div, .users_list .tweets .tweet .info div, .users_list .tweets .list .info div, .users_list .tweets .user .info div, .users_list .users .tweet .info div, .users_list .users .list .info div, .users_list .users .user .info div, .users_list .lists .tweet .info div, .users_list .lists .list .info div, .users_list .lists .user .info div, .lists_list .tweets .tweet .info div, .lists_list .tweets .list .info div, .lists_list .tweets .user .info div, .lists_list .users .tweet .info div, .lists_list .users .list .info div, .lists_list .users .user .info div, .lists_list .lists .tweet .info div, .lists_list .lists .list .info div, .lists_list .lists .user .info div, #category_show .tweets .tweet .info div, #category_show .tweets .list .info div, #category_show .tweets .user .info div, #category_show .users .tweet .info div, #category_show .users .list .info div, #category_show .users .user .info div, #category_show .lists .tweet .info div, #category_show .lists .list .info div, #category_show .lists .user .info div, #category_chooser .tweets .tweet .info div, #category_chooser .tweets .list .info div, #category_chooser .tweets .user .info div, #category_chooser .users .tweet .info div, #category_chooser .users .list .info div, #category_chooser .users .user .info div, #category_chooser .lists .tweet .info div, #category_chooser .lists .list .info div, #category_chooser .lists .user .info div, .box .tweets .tweet .info div, .box .tweets .list .info div, .box .tweets .user .info div, .box .users .tweet .info div, .box .users .list .info div, .box .users .user .info div, .box .lists .tweet .info div, .box .lists .list .info div, .box .lists .user .info div {
   margin-bottom: 3px;
 }
-/* line 216, ../../../app/stylesheets/application.sass */
+/* line 217, ../../../app/stylesheets/application.sass */
 .category .tweets .tweet img, .category .tweets .list img, .category .tweets .user img, .category .users .tweet img, .category .users .list img, .category .users .user img, .category .lists .tweet img, .category .lists .list img, .category .lists .user img, #hashtag_filter .tweets .tweet img, #hashtag_filter .tweets .list img, #hashtag_filter .tweets .user img, #hashtag_filter .users .tweet img, #hashtag_filter .users .list img, #hashtag_filter .users .user img, #hashtag_filter .lists .tweet img, #hashtag_filter .lists .list img, #hashtag_filter .lists .user img, .modal .tweets .tweet img, .modal .tweets .list img, .modal .tweets .user img, .modal .users .tweet img, .modal .users .list img, .modal .users .user img, .modal .lists .tweet img, .modal .lists .list img, .modal .lists .user img, .users_list .tweets .tweet img, .users_list .tweets .list img, .users_list .tweets .user img, .users_list .users .tweet img, .users_list .users .list img, .users_list .users .user img, .users_list .lists .tweet img, .users_list .lists .list img, .users_list .lists .user img, .lists_list .tweets .tweet img, .lists_list .tweets .list img, .lists_list .tweets .user img, .lists_list .users .tweet img, .lists_list .users .list img, .lists_list .users .user img, .lists_list .lists .tweet img, .lists_list .lists .list img, .lists_list .lists .user img, #category_show .tweets .tweet img, #category_show .tweets .list img, #category_show .tweets .user img, #category_show .users .tweet img, #category_show .users .list img, #category_show .users .user img, #category_show .lists .tweet img, #category_show .lists .list img, #category_show .lists .user img, #category_chooser .tweets .tweet img, #category_chooser .tweets .list img, #category_chooser .tweets .user img, #category_chooser .users .tweet img, #category_chooser .users .list img, #category_chooser .users .user img, #category_chooser .lists .tweet img, #category_chooser .lists .list img, #category_chooser .lists .user img, .box .tweets .tweet img, .box .tweets .list img, .box .tweets .user img, .box .users .tweet img, .box .users .list img, .box .users .user img, .box .lists .tweet img, .box .lists .list img, .box .lists .user img {
   border: 1px dotted #9dc2d5;
   float: left;
@@ -511,12 +578,12 @@ body {
   height: 48px;
 }
 
-/* line 223, ../../../app/stylesheets/application.sass */
+/* line 224, ../../../app/stylesheets/application.sass */
 .category {
   float: none;
 }
 
-/* line 227, ../../../app/stylesheets/application.sass */
+/* line 228, ../../../app/stylesheets/application.sass */
 #hashtag_filter {
   display: inline;
   float: left;
@@ -526,22 +593,23 @@ body {
   margin-left: 0;
   margin-bottom: 120px;
 }
-/* line 232, ../../../app/stylesheets/application.sass */
+/* line 233, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2 {
   background: #373d44;
   border-bottom: 1px solid #f6fbfe;
   color: white;
   font-size: 1.4em;
-  font-family: "Lucida Grande";
+  font-family: "Arial";
   height: 36px;
+  letter-spacing: 2px;
   margin-bottom: 0;
   padding-left: 10px;
   padding-top: 5px;
   position: relative;
-  text-shadow: 1px 1px 2px #666666;
   width: 262px;
+  text-shadow: black 1px 1px 2px;
 }
-/* line 246, ../../../app/stylesheets/application.sass */
+/* line 248, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2 a {
   display: block;
   float: left;
@@ -555,68 +623,68 @@ body {
 #hashtag_filter h2 a:hover {
   text-decoration: underline;
 }
-/* line 255, ../../../app/stylesheets/application.sass */
+/* line 257, ../../../app/stylesheets/application.sass */
 #hashtag_filter .tweets {
   display: block;
   margin: 5px 5px 5px 5px;
 }
 
-/* line 259, ../../../app/stylesheets/application.sass */
+/* line 261, ../../../app/stylesheets/application.sass */
 .modal {
   padding: 10px;
 }
-/* line 263, ../../../app/stylesheets/application.sass */
+/* line 265, ../../../app/stylesheets/application.sass */
 .modal form textarea {
   height: 130px;
   width: 320px;
 }
 
-/* line 268, ../../../app/stylesheets/application.sass */
+/* line 270, ../../../app/stylesheets/application.sass */
 #category_show {
   width: 665px;
 }
-/* line 271, ../../../app/stylesheets/application.sass */
+/* line 273, ../../../app/stylesheets/application.sass */
 #category_show h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
-/* line 275, ../../../app/stylesheets/application.sass */
+/* line 277, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list {
   cursor: pointer;
 }
-/* line 278, ../../../app/stylesheets/application.sass */
+/* line 280, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list_form {
   display: none;
 }
-/* line 281, ../../../app/stylesheets/application.sass */
+/* line 283, ../../../app/stylesheets/application.sass */
 #category_show .category {
   margin-top: 5px;
   margin-right: 0;
   float: left;
 }
-/* line 286, ../../../app/stylesheets/application.sass */
+/* line 288, ../../../app/stylesheets/application.sass */
 #category_show .category h2 {
   width: 300px;
 }
-/* line 289, ../../../app/stylesheets/application.sass */
+/* line 291, ../../../app/stylesheets/application.sass */
 #category_show .category .tweets {
   display: block;
   margin-top: 5px;
 }
 
-/* line 294, ../../../app/stylesheets/application.sass */
+/* line 296, ../../../app/stylesheets/application.sass */
 #category_chooser {
   background: transparent;
   width: 665px;
 }
-/* line 298, ../../../app/stylesheets/application.sass */
+/* line 300, ../../../app/stylesheets/application.sass */
 #category_chooser h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 304, ../../../app/stylesheets/application.sass */
+/* line 306, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable, #category_chooser .action-area {
   background: #bfd9e6;
   font-size: 0.85em;
@@ -624,7 +692,7 @@ body {
   margin-top: 10px;
   padding: 15px;
 }
-/* line 311, ../../../app/stylesheets/application.sass */
+/* line 313, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span, #category_chooser #droppable span {
   background: #f7fcfe;
   color: #666666;
@@ -642,25 +710,25 @@ body {
   /* CSS3 */
   box-shadow: #9dc2d5 0px 0px 10px;
 }
-/* line 321, ../../../app/stylesheets/application.sass */
+/* line 323, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span.ui-state-disabled {
   color: #999999;
   background: #eeeeee;
 }
-/* line 325, ../../../app/stylesheets/application.sass */
+/* line 327, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable {
   margin: 0;
 }
-/* line 328, ../../../app/stylesheets/application.sass */
+/* line 330, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area {
   padding: 0;
 }
-/* line 331, ../../../app/stylesheets/application.sass */
+/* line 333, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area #droppable {
   min-height: 30px;
   padding: 15px;
 }
-/* line 334, ../../../app/stylesheets/application.sass */
+/* line 336, ../../../app/stylesheets/application.sass */
 #category_chooser p {
   background: #373d44;
   color: white;
@@ -670,22 +738,22 @@ body {
   padding: 15px;
 }
 
-/* line 342, ../../../app/stylesheets/application.sass */
+/* line 344, ../../../app/stylesheets/application.sass */
 .box {
   width: 665px;
 }
-/* line 345, ../../../app/stylesheets/application.sass */
+/* line 347, ../../../app/stylesheets/application.sass */
 .box h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 351, ../../../app/stylesheets/application.sass */
+/* line 353, ../../../app/stylesheets/application.sass */
 .box .content {
   padding: 10px;
 }
-/* line 354, ../../../app/stylesheets/application.sass */
+/* line 356, ../../../app/stylesheets/application.sass */
 .box .content .item {
   background: #f7fcfe;
   padding: 4px;
@@ -695,42 +763,42 @@ body {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
-/* line 361, ../../../app/stylesheets/application.sass */
+/* line 363, ../../../app/stylesheets/application.sass */
 .box .content a.item {
   color: black;
   text-decoration: none;
 }
 
-/* line 367, ../../../app/stylesheets/application.sass */
+/* line 369, ../../../app/stylesheets/application.sass */
 .users_list {
   width: 665px;
 }
-/* line 370, ../../../app/stylesheets/application.sass */
+/* line 372, ../../../app/stylesheets/application.sass */
 .users_list .users {
   display: block;
 }
-/* line 373, ../../../app/stylesheets/application.sass */
+/* line 375, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet {
   width: 282px;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
 }
-/* line 379, ../../../app/stylesheets/application.sass */
+/* line 381, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet .body {
   min-height: 100px;
 }
-/* line 383, ../../../app/stylesheets/application.sass */
+/* line 385, ../../../app/stylesheets/application.sass */
 .users_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 387, ../../../app/stylesheets/application.sass */
+/* line 389, ../../../app/stylesheets/application.sass */
 .lists_list {
   width: 665px;
 }
-/* line 391, ../../../app/stylesheets/application.sass */
+/* line 393, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list {
   background: #f7fcfe;
   width: 292px;
@@ -738,35 +806,35 @@ body {
   margin-right: 10px;
   min-height: 45px;
 }
-/* line 398, ../../../app/stylesheets/application.sass */
+/* line 400, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list:hover {
   background: white;
 }
-/* line 401, ../../../app/stylesheets/application.sass */
+/* line 403, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body {
   padding-left: 10px;
 }
-/* line 404, ../../../app/stylesheets/application.sass */
+/* line 406, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body h3 {
   margin-bottom: 0;
 }
-/* line 407, ../../../app/stylesheets/application.sass */
+/* line 409, ../../../app/stylesheets/application.sass */
 .lists_list .lists .list .body .members {
   font-size: 1.2em;
   margin-left: 3px;
 }
-/* line 411, ../../../app/stylesheets/application.sass */
+/* line 413, ../../../app/stylesheets/application.sass */
 .lists_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 415, ../../../app/stylesheets/application.sass */
+/* line 417, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center;
 }
 
-/* line 418, ../../../app/stylesheets/application.sass */
+/* line 420, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #e1f3fd;
   margin: 10px;
@@ -780,30 +848,30 @@ body {
   margin-right: 10px;
   width: 272.174px;
 }
-/* line 425, ../../../app/stylesheets/application.sass */
+/* line 427, ../../../app/stylesheets/application.sass */
 #create_list_from_category p {
   margin: 10px;
   text-align: center;
 }
-/* line 429, ../../../app/stylesheets/application.sass */
+/* line 431, ../../../app/stylesheets/application.sass */
 #create_list_from_category label {
   margin-left: 5px;
   width: 70px;
   display: inline-block;
 }
-/* line 434, ../../../app/stylesheets/application.sass */
+/* line 436, ../../../app/stylesheets/application.sass */
 #create_list_from_category input {
   margin: 3px;
 }
-/* line 437, ../../../app/stylesheets/application.sass */
+/* line 439, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=text] {
   width: 120px;
 }
-/* line 440, ../../../app/stylesheets/application.sass */
+/* line 442, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=submit] {
   margin-left: 83px;
 }
-/* line 443, ../../../app/stylesheets/application.sass */
+/* line 445, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 {
   background: #0094da;
   color: white;
@@ -814,7 +882,7 @@ body {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
 }
-/* line 451, ../../../app/stylesheets/application.sass */
+/* line 453, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 a {
   color: white;
   font-weight: bold;
@@ -825,12 +893,12 @@ body {
   text-decoration: underline;
 }
 
-/* line 460, ../../../app/stylesheets/application.sass */
+/* line 462, ../../../app/stylesheets/application.sass */
 .modal {
   display: none;
 }
 
-/* line 463, ../../../app/stylesheets/application.sass */
+/* line 465, ../../../app/stylesheets/application.sass */
 .modal div.close {
   background-image: url(../../images/close.png);
   position: absolute;
@@ -842,7 +910,7 @@ body {
   z-index: 9999;
 }
 
-/* line 474, ../../../app/stylesheets/application.sass */
+/* line 476, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   left: 15px;
@@ -851,21 +919,21 @@ form .counter {
   font-weight: bold;
   color: #666666;
 }
-/* line 482, ../../../app/stylesheets/application.sass */
+/* line 484, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 484, ../../../app/stylesheets/application.sass */
+/* line 486, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 487, ../../../app/stylesheets/application.sass */
+/* line 489, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 491, ../../../app/stylesheets/application.sass */
+/* line 493, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

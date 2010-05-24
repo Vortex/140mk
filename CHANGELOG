@@ -7,6 +7,8 @@ Version 0.3
   * Changed the color of the logo
   * Changed the font in the headings
   * Adjusted the position of Reply and RT buttons
+  * Bugfixes:
+    - The pagination works as it should now
 
 22.05.2010
 ==========

@@ -3,6 +3,8 @@ var overlayOptions = {
         // custom top position
         top: 272,
 
+        target: '#tweet',
+
         // turn on API
         api: true,
 
@@ -85,6 +87,7 @@ $(document).ready(function() {
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus();
+        // reBindOverlays();
         return false;
     });
 
@@ -156,6 +159,7 @@ function closeOverlays() {
 }
 
 function reBindOverlays() {
+    console.log('Overlay rebind');
     overlayObject = $("a.modalInput").overlay(overlayOptions);
 }
 

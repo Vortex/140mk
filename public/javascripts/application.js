@@ -1,3 +1,32 @@
+var overlayObject;
+var overlayOptions = {
+        // custom top position
+        top: 272,
+
+        // turn on API
+        api: true,
+
+        // some expose tweaks
+        expose: {
+
+            // you might also consider a "transparent" color for the mask
+            color: '#fff',
+
+            // load mask a little faster
+            loadSpeed: 200,
+
+            // highly transparent
+            opacity: 0.5
+        },
+
+        // disable this for modal dialog-type of overlays
+        closeOnClick: false,
+
+        onClose: function(event) {
+          $('#tweet textarea').val('');
+        }
+    }
+
 $(document).ready(function() {
     if ($("#draggable").length > 0 && $("#droppable").length > 0) {
     /**
@@ -46,33 +75,7 @@ $(document).ready(function() {
     }
 
     // Overlay for tweeting
-    var triggers = $("a.modalInput").overlay({      
-        // custom top position
-        top: 272,
-
-        // turn on API
-        api: true,
-     
-        // some expose tweaks
-        expose: {
-
-            // you might also consider a "transparent" color for the mask
-            color: '#fff',
-
-            // load mask a little faster
-            loadSpeed: 200,
-
-            // highly transparent
-            opacity: 0.5
-        },
-
-        // disable this for modal dialog-type of overlays
-        closeOnClick: false,
-
-        onClose: function(event) {
-          $('#tweet textarea').val('');
-        }
-    });
+    overlayObject = $("a.modalInput").overlay(overlayOptions);
 
     // .bind('click', function() { triggers.load() });
 
@@ -82,19 +85,17 @@ $(document).ready(function() {
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus();
-        triggers.load();
         return false;
     });
 
     // Attach event on reply
-    $(".retweet").live('click', function() {
+    $(".retweet").live('click', function(event) {
         var id = $("a", this).attr("id");
         var id_number = id.split('_', 3)[1];
         var text = $("#tweet_" + id_number + " .text").text();
         var screen_name = $("#tweet_" + id_number + " .who").text();
         $('#tweet textarea').val('RT: @' + screen_name + ': ' + text);
         $('#tweet textarea').focus();
-        triggers.load();
         return false;
     });
 
@@ -154,4 +155,7 @@ function closeOverlays() {
     });
 }
 
+function reBindOverlays() {
+    overlayObject = $("a.modalInput").overlay(overlayOptions);
+}
 

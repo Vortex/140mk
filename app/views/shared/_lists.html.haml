@@ -11,4 +11,4 @@
       = render :partial => 'tweets', :locals => { :tweets => @lists_tweets[list.name], :name => list.id }
     = render :partial => 'users', :locals => { :users => @lists_users[list.name], :name => list.id }
     
-    = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => list.id }, :update => "tweets_#{list.id}")
+    = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => list.id }, :update => "tweets_#{list.id}", :complete => "reBindOverlays()")

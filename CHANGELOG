@@ -1,6 +1,12 @@
 Version 0.3
 ===========
 
+26.05.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Bugfixes:
+    - Fixed the issue with RT and Reply not responding properly
+
 24.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

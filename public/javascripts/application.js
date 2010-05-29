@@ -159,7 +159,7 @@ function closeOverlays() {
 }
 
 function reBindOverlays() {
-    console.log('Overlay rebind');
+    // console.log('Overlay rebind');
     overlayObject = $("a.modalInput").overlay(overlayOptions);
 }
 

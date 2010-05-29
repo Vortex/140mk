@@ -1,6 +1,13 @@
 Version 0.3
 ===========
 
+29.05.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Changed consumer token to use the new application (140_mk_bot)
+  * Bugfixes:
+    - Tweet overlay is now closing properly
+
 26.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

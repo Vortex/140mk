@@ -9,7 +9,7 @@
     %link(rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico")
     %title
       = G140[:site_name]
-  %body.two-column
+  %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
     #header
       .logo
         - link_to "/" do

@@ -9,8 +9,18 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @tweets = @list.tweets.find :all, :limit => G140[:tweets_per_list], :order => 'tweets.tweet_id DESC', :include => :user
-    @users = @list.users.find :all, :limit => G140[:users_per_list]
+    @tweets = @list.tweets.paginate :page => params[:page], :per_page => G140[:tweets_per_list], :order => 'tweets.tweet_id DESC', :include => :user
+    @users = @list.users.paginate :page => params[:page], :per_page => G140[:users_per_list]
+
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {
+          :tweets => render_to_string(:partial => 'shared/tweet', :collection => @tweets, :locals => { :name => @list.id }),
+          :users => render_to_string(:partial => 'shared/user', :collection => @users, :locals => { :name => @list.id })
+        }.to_json
+      end
+    end
   end
 
   def create_on_twitter

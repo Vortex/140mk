@@ -29,7 +29,65 @@ var overlayOptions = {
         }
     }
 
-$(document).ready(function() {
+// Endless page
+var current_page = 2;
+
+var nearBottomOfPage = function (){
+  return scrollDistanceFromBottom() < 150;
+}
+
+var scrollDistanceFromBottom = function (argument){
+  return pageHeight() - (window.pageYOffset + self.innerHeight);
+}
+
+var pageHeight = function(){
+  return Math.max(document.body.scrollHeight, document.body.offsetHeight);
+}
+
+var checkScroll = function () {
+  if (nearBottomOfPage()) {
+    $.ajax({
+      type: "GET",
+      url: '/categories/' + _category + '.js',
+      //beforeSend: function (xhr) { xhr.setRequestHeader('Accept', 'text/javascript') },
+      //dataType: "script",
+      data: "page=" + current_page,
+      success: function(text){
+        //$('#loading').hide()
+
+        result = eval('(' + text + ')');
+        var divs = $("#category_show .tweets");
+
+        // append tweets
+        if (result.tweets.length > 1) {
+          $(divs[0]).append(result.tweets);
+        }
+
+        // append users
+        if (result.users.length > 1) {
+          $(divs[1]).append(result.users);
+        }
+
+        // continue checking scroll position if of tweets or users is not blank
+        if (result.tweets.length > 1 || result.users.length > 1) {
+          current_page += 1;
+          checkScroll();
+        }
+      },
+      loading: function(){
+        //$('#loading').show()
+      }
+    });
+  } else {
+    setTimeout("checkScroll()", 250);
+  }
+}
+
+$(document).ready( function () {
+    if ($('body').attr('id') === "lists_show") {
+      checkScroll(); // start checking scroll position
+    }
+
     if ($("#draggable").length > 0 && $("#droppable").length > 0) {
     /**
      * Checks if we can drop more items to droppable

@@ -8,6 +8,9 @@ Version 0.3
   * Bugfixes:
     - Tweet overlay is now closing properly
 
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Implemented endless page for tweets/users on category show page
+
 26.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

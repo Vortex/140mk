@@ -36,7 +36,7 @@ module TwitterAccess
   def save_users(profiles)
     profiles.each do |profile|
       user = User.find_or_initialize_by_screen_name(profile.screen_name)
-      user.set_attributes_from_twitter_account(profile)
+      user.set_profile_data(profile)
       user.save
     end
   end

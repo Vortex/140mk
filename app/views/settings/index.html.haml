@@ -16,8 +16,13 @@
         %span{:id => "list_#{list.id}"}= list.name
 
     %p= t('settings.select_categories_info')    
-
-.box
-  %h2= t('settings.deactivate')
-  .content
-    = link_to t('user.deactivate'), deactivate_path, :class => 'item'
+- if params[:new_user] == 'true'
+  .box
+    %h2= t('settings.next_action')
+    .rounded_box
+      = link_to t('user.to_tweet_area'), root_path, :class => 'item'
+- else
+  .box
+    %h2= t('settings.deactivate')
+    .rounded_box
+      = link_to t('user.deactivate'), deactivate_path, :class => 'item'

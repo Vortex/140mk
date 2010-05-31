@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
     subscriptions.count > 0
   end
 
-  def set_attributes_from_twitter_account(account)
+  def set_profile_data(account)
     self.twitter_id = account.id
     self.twitter_account_created_at = account.created_at
     self.name = account.name
@@ -38,13 +38,11 @@ class User < ActiveRecord::Base
     self.description = account.description
   end
 
-  def self.create_or_update(profile, oauth)
-    user = User.find_or_initialize_by_screen_name(profile.screen_name)
-    user.set_attributes_from_twitter_account(profile)
-    user.atoken = oauth.access_token.token
-    user.asecret = oauth.access_token.secret
-    user.status == 1 ? user.save : user.activate!
-    user
+  def save_with_profile_and_oauth(profile, oauth)
+    self.set_profile_data(profile)
+    self.atoken = oauth.access_token.token
+    self.asecret = oauth.access_token.secret
+    self.status == 1 ? self.save : self.activate!
   end
 
   def activate!

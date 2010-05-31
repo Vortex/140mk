@@ -28,6 +28,7 @@ en:
     select_categories: "Select categories"
     select_categories_info: "You can select maximum 5 categories. Select with drag and drop to the down area. De-sellect with drop back."
     deactivate: "Account deactivation"
+    next_action: "Next action"
 
   navigation:
     home: "Home"
@@ -45,6 +46,7 @@ en:
     deactivate: 'Deactivate'
     deactivate_account: 'Are you sure you want to deactive your account?'
     title: "List of registered users"
+    to_tweet_area: "Back to tweet area"
     errors:
       private_account: "Your tweets are private. You have to follow {{user}} or have public account in order to allow us access to your tweets. When you fix this login again to this application."
 

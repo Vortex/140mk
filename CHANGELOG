@@ -7,6 +7,11 @@ Version 0.3
   * Switched to Rails 2.3.8
   * Added 'about service' page
 
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * When user for the first time comes to settings page, do not display deactivate link, but link to tweet area
+  * Changed style of deactivate link to be same as back to tweet area link
+  * Cut text of select categories description to fit the whole line
+
 30.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

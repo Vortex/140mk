@@ -9,7 +9,7 @@
 .users_list
   %h2= t('user.title')
 
-  .tweets
+  .users
     - @users.each do |user|
       .tweet{:id => "tweet_users-#{user.id}"}
         = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"

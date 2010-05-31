@@ -1,0 +1,8 @@
+- content_for(:sidebar) do
+  = render :partial => 'shared/user_status'
+
+.users_list
+  %h2= t('global.about_title')
+
+  .users
+    = render :partial => 'welcome/tweets', :locals => { :tweets => @tweets, :name => 'njah' }

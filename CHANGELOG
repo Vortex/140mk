@@ -1,6 +1,12 @@
 Version 0.3
 ===========
 
+31.05.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Switched to Rails 2.3.8
+  * Added 'about service' page
+
 30.05.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

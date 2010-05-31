@@ -1,8 +1,9 @@
 - unless signed_in?
   .login
     = link_to image_tag('140priklucisebtn.png'), login_path, :method => :post
-    .description= t('global.login_description')
-    .signup= link_to t('global.no_account'), 'https://twitter.com/signup'
+    .description
+      = t('global.login_description')
+      = link_to t('global.no_account'), 'https://twitter.com/signup'
 - else
   .user
     .options

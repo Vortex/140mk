@@ -23,8 +23,8 @@ mk:
     web: "Сајт"
     name: "Име"
     about_title: "Што е 140.mk во 6 твита:"
-    login_description: "со твојата Twitter сметка."
-    no_account: "Немаш сметка?"
+    login_description: "...со твојата Twitter сметка."
+    no_account: "Немаш?"
   pagination:
     previous: "Претходна"
     next: "Следна"

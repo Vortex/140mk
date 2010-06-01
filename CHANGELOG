@@ -5,6 +5,7 @@ Version 0.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Changed trending topic to #140mk
+  * Moved the menu to the right
 
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
   * Always redirect to twitter site on https protocol for safe entering of credentials

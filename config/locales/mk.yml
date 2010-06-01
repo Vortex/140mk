@@ -25,6 +25,7 @@ mk:
     about_title: "Што е 140.mk во 6 твита:"
     login_description: "...со твојата Twitter сметка."
     no_account: "Немаш?"
+    trending_tag: "#140mk"
   pagination:
     previous: "Претходна"
     next: "Следна"

@@ -945,20 +945,24 @@ form .counter {
   color: #666666;
 }
 /* line 499, ../../../app/stylesheets/application.sass */
+form textarea {
+  resize: none;
+}
+/* line 502, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 501, ../../../app/stylesheets/application.sass */
+/* line 504, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 504, ../../../app/stylesheets/application.sass */
+/* line 507, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 508, ../../../app/stylesheets/application.sass */
+/* line 511, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

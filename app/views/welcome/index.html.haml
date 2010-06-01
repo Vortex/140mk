@@ -2,7 +2,7 @@
   = render :partial => 'shared/user_status'
 
   #hashtag_filter
-    %h2= t('global.failtag')
+    %h2= t('global.trending_tag')
     .tweets{:id => "tweets_fail"}
       = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
       = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => 'fail' }, :update => "tweets_fail", :complete => "reBindOverlays()")

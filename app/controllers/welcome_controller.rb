@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
 
     @lists.each do |list|
       @lists_users[list.name] = list.users.find :all, :limit => G140[:users_per_list], :conditions => "status = 1", :order => "id DESC"
-      @lists_tweets[list.name] = list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.tweet_id DESC", :include => :user
+      @lists_tweets[list.name] = list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.original_tweet_id DESC", :include => :user
     end
 
     if current_user && current_user.status == 2 # notify user that has protected his account

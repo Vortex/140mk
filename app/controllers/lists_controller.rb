@@ -9,7 +9,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @tweets = @list.tweets.paginate :page => params[:page], :per_page => G140[:tweets_per_list], :order => 'tweets.tweet_id DESC', :include => :user
+    @tweets = @list.tweets.paginate :page => params[:page], :per_page => G140[:tweets_per_list], :order => 'tweets.original_tweet_id DESC', :include => :user
     @users = @list.users.paginate :page => params[:page], :per_page => G140[:users_per_list]
 
     respond_to do |format|

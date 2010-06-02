@@ -11,4 +11,8 @@ module ApplicationHelper
   def twitter_path screen_name
     "http://twitter.com/#{screen_name}"
   end
+
+  def tweet_url(tweet)
+    "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.original_tweet_id}"
+  end
 end

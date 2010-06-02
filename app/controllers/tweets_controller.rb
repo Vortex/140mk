@@ -27,12 +27,12 @@ class TweetsController < ApplicationController
     @param = params[:list_id]
     if  @param == "fail"
       unless fragment_exist? "tweets_#{@param}"
-        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#140mk%"], :order => 'tweet_id DESC', :limit => 8, :include => :user)
+        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#140mk%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
       end
     else
       unless fragment_exist? "tweets_#{@param}"
         @list = List.find(params[:list_id])
-        @tweets = @list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.tweet_id DESC", :include => :user
+        @tweets = @list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.original_tweet_id DESC", :include => :user
       end
     end
 

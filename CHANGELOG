@@ -1,6 +1,12 @@
 Version 0.3
 ===========
 
+02.06.2010
+==========
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Implemented: Permalink to tweet
+  * Renamed column tweet_id to original_tweet_id in tweets table (list_tweets table has column with same name and there was a problem in habtm relation)
+
 01.06.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

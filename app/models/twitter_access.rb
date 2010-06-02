@@ -9,7 +9,7 @@ module TwitterAccess
     Tweet.transaction do
       tweets.each do |tweet|
         user = User.find_by_twitter_id(tweet.user.id, :select => "users.id, lists.id, subscriptions.user_id, subscriptions.list_id", :include => :lists)
-        tweet = Tweet.create(:user => user, :tweet_id => tweet.id, :text => tweet.text, :created_at => tweet.created_at)
+        tweet = Tweet.create(:user => user, :original_tweet_id => tweet.id, :text => tweet.text, :created_at => tweet.created_at)
         user.lists.each do |list|
           list.tweets << tweet
         end
@@ -18,12 +18,12 @@ module TwitterAccess
   end
 
   def get_tweets
-    last_tweet = Tweet.find(:first, :order => "tweet_id DESC")
+    last_tweet = Tweet.find(:first, :order => "original_tweet_id DESC")
 
     if last_tweet # when there are tweets in the database collect only new ones
       page = 1
       begin
-        tweets = base.friends_timeline({:count => 200, :page => page, :since_id => last_tweet.tweet_id})
+        tweets = base.friends_timeline({:count => 200, :page => page, :since_id => last_tweet.original_tweet_id})
         save_tweets(tweets)
         page += 1
       end while tweets.length > 0

@@ -28,9 +28,9 @@ SimpleNavigation::Configuration.run do |navigation|
     # url - the address that the generated item links to. You can also use url_helpers (named routes, restful routes helper, url_for etc.)
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #
-    primary.item :home, t('navigation.about_service'), about_path
-    primary.item :users, t('navigation.users'), users_path
     primary.item :lists, t('navigation.categories'), lists_path
+    primary.item :users, t('navigation.users'), users_path
+    primary.item :home, t('navigation.about_service'), about_path    
     
     # Add an item which has a sub navigation (same params, but with block)
     #    primary.item :key_2, 'name', url, options do |sub_nav|

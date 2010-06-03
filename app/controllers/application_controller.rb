@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
 
   private
   def get_filtered_tweets
-    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#140mk%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
+    @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
   end
 end

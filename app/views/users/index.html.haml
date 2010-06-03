@@ -2,7 +2,7 @@
   = render :partial => 'shared/user_status'
 
   #hashtag_filter
-    %h2= t('global.trending_tag')
+    %h2= G140[:today_topic]
     .tweets{:id => "tweets_fail"}
       = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
 

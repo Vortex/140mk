@@ -11,5 +11,6 @@ G140 = {
   :categories_per_page => 18,
   :users_per_page => 10,
   :subscriptions_per_user => 6,
-  :prod_account => '140mk'
+  :prod_account => '140mk',
+  :today_topic => '#rmsmk'
 }

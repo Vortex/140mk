@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "welcome"
   map.resources :users
   map.resources :tweets, :collection => {:my => :get, :refresh => :post}
-  map.resources :lists, :as => :categories, :member => {:create_on_twitter => :post}
+  map.resources :categories, :as => :categories, :member => {:create_on_twitter => :post}
   map.resources :subscriptions
   map.resource :session, :collection => {:callback => :get}
   

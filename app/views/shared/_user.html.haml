@@ -5,7 +5,7 @@
     %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
     .categories
       %b= t('global.categories')
-      = user.lists.map { |list| link_to list.name, list }.join(', ')
+      = user.categories.map { |category| link_to category.name, category }.join(', ')
   .clear
 
   .info{:id => "info_user-#{user.id}-#{name}"}

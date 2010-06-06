@@ -2,8 +2,8 @@ class SubscriptionsController < ApplicationController
   before_filter :authenticate
 
   def create
-    @list = List.find(params[:list_id])
-    @subscription = current_user.subscriptions.new(:list => @list)
+    @category = Category.find(params[:category_id])
+    @subscription = current_user.subscriptions.new(:category => @category)
     @subscription.save
 
     respond_to do |format|
@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def destroy
-    @subscription = current_user.subscriptions.first(:conditions => ["list_id = ?", params[:id]])
+    @subscription = current_user.subscriptions.first(:conditions => ["category_id = ?", params[:id]])
     @subscription.destroy
     respond_to do |format|
       format.js { render :text => "ok"}

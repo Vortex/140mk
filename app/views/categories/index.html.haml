@@ -6,16 +6,16 @@
     .tweets{:id => "tweets_fail"}
       = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }
 
-.lists_list
+.categories_list
   %h2
     = t('category.title')
 
-  .lists
-    - @lists.each do |list|
+  .categories
+    - @categories.each do |category|
       .list
         .body
-          %h3= link_to list.name, list
+          %h3= link_to category.name, category
           // %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
-          .members= "#{pluralize(list.subscriptions.size, t('global.member'))}"
+          .members= "#{pluralize(category.subscriptions.size, t('global.member'))}"
     %p
-      = will_paginate @lists
+      = will_paginate @categories

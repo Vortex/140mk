@@ -5,16 +5,13 @@
     %h2= G140[:today_topic]
     .tweets{:id => "tweets_fail"}
       = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
-      = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :list_id => 'fail' }, :update => "tweets_fail", :complete => "reBindOverlays()")
+      = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :category_id => 'fail' }, :update => "tweets_fail", :complete => "reBindOverlays()")
 
 #categories
-  - middle = @lists.size.div(2)
+  - middle = @categories.size.div(2)
   .left-column
-    = render :partial => 'shared/lists', :locals => { :lists => @lists, :start_index => 0, :end_index => middle }
+    = render :partial => 'shared/categories', :locals => { :categories => @categories, :start_index => 0, :end_index => middle }
 
 
   .right-column
-    = render :partial => 'shared/lists', :locals => { :lists => @lists, :start_index => middle, :end_index => @lists.size }
-        
--#    - if (index + 1) % 2 == 0
--#      %div{:style => "clear:both"}
+    = render :partial => 'shared/categories', :locals => { :categories => @categories, :start_index => middle, :end_index => @categories.size }

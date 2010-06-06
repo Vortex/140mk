@@ -2,10 +2,10 @@ class SettingsController < ApplicationController
   before_filter :authenticate
 
   def index
-    @selected_lists = current_user.lists.find(:all, :select => "lists.id, lists.name", :order => 'name ASC')
-    @not_selected_lists = List.find(:all, 
-                                    :select => "lists.id, lists.name", 
+    @selected_categories = current_user.categories.find(:all, :select => "categories.id, categories.name", :order => 'name ASC')
+    @unselected_categories = Category.find(:all,
+                                    :select => "categories.id, categories.name", 
                                     :order => 'name ASC', 
-                                    :conditions => @selected_lists.empty? ? nil : ["lists.id NOT IN (?)", @selected_lists.map(&:id)])
+                                    :conditions => @selected_categories.empty? ? nil : ["categories.id NOT IN (?)", @selected_categories.map(&:id)])
   end
 end

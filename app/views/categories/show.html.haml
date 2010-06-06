@@ -1,5 +1,5 @@
 :javascript
-  var _category = "#{@list.to_param}"
+  var _category = "#{@category.to_param}"
 
 - content_for(:sidebar) do
   = render :partial => 'shared/user_status'
@@ -10,10 +10,10 @@
     .tweets
       .option-box
         - if signed_in?
-          - form_tag create_on_twitter_list_path(@list) do
+          - form_tag create_on_twitter_list_path(@category) do
             %div
               = label_tag :name, t('global.name')
-              = text_field_tag :name, @list.name
+              = text_field_tag :name, @category.name
             %div
               = check_box_tag :mode
               = label_tag :mode, t('twitter.list.private')
@@ -23,17 +23,17 @@
           %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
 
 #category_show
-  %h2= @list.name 
+  %h2= @category.name
 
   .category
     .tweets
       %h2= t('title.last_tweets')
       - @tweets.each do |tweet|
-        = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => @list.id }
+        = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => @category.id }
 
 
   .category
     .tweets
       %h2= t('title.last_members')
       - @users.each do |user|
-        = render :partial => 'shared/user', :locals => { :user => user, :name => @list.id }
+        = render :partial => 'shared/user', :locals => { :user => user, :name => @category.id }

@@ -2,13 +2,13 @@ class WelcomeController < ApplicationController
   before_filter :get_filtered_tweets, :only => :index
 
   def index
-    @lists = List.most_subscribed_lists(G140[:front_page_lists_count])
-    @lists_tweets = {}
-    @lists_users = {}
+    @categories = Category.most_subscribed_categories(G140[:front_page_categories_count])
+    @categories_tweets = {}
+    @categories_users = {}
 
-    @lists.each do |list|
-      @lists_users[list.name] = list.users.find :all, :limit => G140[:users_per_list], :conditions => "status = 1", :order => "id DESC"
-      @lists_tweets[list.name] = list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.original_tweet_id DESC", :include => :user
+    @categories.each do |category|
+      @categories_users[category.name] = category.users.find :all, :limit => G140[:users_per_category], :conditions => "status = 1", :order => "id DESC"
+      @categories_tweets[category.name] = category.tweets.find :all, :limit => G140[:tweets_per_category], :order => "tweets.original_tweet_id DESC", :include => :user
     end
 
     if current_user && current_user.status == 2 # notify user that has protected his account

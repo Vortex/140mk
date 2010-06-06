@@ -84,7 +84,7 @@ var checkScroll = function () {
 }
 
 $(document).ready( function () {
-    if ($('body').attr('id') === "lists_show") {
+    if ($('body').attr('id') === "categories_show") {
       checkScroll(); // start checking scroll position
     }
 
@@ -114,8 +114,8 @@ $(document).ready( function () {
           if (is_draggable_active()) {
             $("#draggable span").draggable("enable").css({"cursor": "move"});
           }
-         var list_id = Number(ui.draggable.attr("id").match(/\d+/)[0], 10)
-         $.post("subscriptions/" + list_id + ".js", { _method: "delete" });
+         var category_id = Number(ui.draggable.attr("id").match(/\d+/)[0], 10)
+         $.post("subscriptions/" + category_id + ".js", { _method: "delete" });
         }
     });
 
@@ -128,8 +128,8 @@ $(document).ready( function () {
             $("#draggable span").draggable("disable").css({"cursor": "text"});
           }
           //alert("drop save");
-         var list_id = Number(ui.draggable.attr("id").match(/\d+/)[0], 10)
-         $.post("subscriptions.js", { list_id: list_id });
+         var category_id = Number(ui.draggable.attr("id").match(/\d+/)[0], 10)
+         $.post("subscriptions.js", { list_id: category_id });
         }
     });
     }

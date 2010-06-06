@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :atoken, :asecret
 
   has_many :subscriptions, :dependent => :destroy
-  has_many :lists, :through => :subscriptions
+  has_many :categories, :through => :subscriptions
   has_many :tweets
 
   after_create :follow_user

@@ -1,11 +1,11 @@
 class CreateListsTweetsTable < ActiveRecord::Migration
   def self.up
     create_table :lists_tweets, :id => false do |t|
-      t.integer :list_id
+      t.integer :category_id
       t.integer :tweet_id
     end
 
-    add_index :lists_tweets, [:list_id, :tweet_id]
+    add_index :lists_tweets, [:category_id, :tweet_id]
 
     # For existing test database
     # Link all tweets with the lists to which user is subscribed to

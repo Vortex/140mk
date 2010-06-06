@@ -11,7 +11,7 @@
   .info{:id => "info_#{name}-#{tweet.id}"}
     .categories
       %b= t('global.categories')
-      = tweet.user.lists.map { |list| link_to list.name, list }.join(', ')
+      = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
     .bio
       %b= t('global.bio')
       = tweet.user.description

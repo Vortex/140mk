@@ -24,15 +24,15 @@ class TweetsController < ApplicationController
   end
 
   def refresh
-    @param = params[:list_id]
+    @param = params[:category_id]
     if  @param == "fail"
       unless fragment_exist? "tweets_#{@param}"
         @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
       end
     else
       unless fragment_exist? "tweets_#{@param}"
-        @list = List.find(params[:list_id])
-        @tweets = @list.tweets.find :all, :limit => G140[:tweets_per_list], :order => "tweets.original_tweet_id DESC", :include => :user
+        @category = Category.find(params[:category_id])
+        @tweets = @category.tweets.find :all, :limit => G140[:tweets_per_category], :order => "tweets.original_tweet_id DESC", :include => :user
       end
     end
 

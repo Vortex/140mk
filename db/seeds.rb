@@ -1,4 +1,4 @@
-lists = %w(
+categories = %w(
   Автомобили
   Економија/Бизнис
   Занимливости
@@ -33,8 +33,8 @@ lists = %w(
   Слободен\ софтвер
 )
 
-lists.each do |category|
-  List.find_or_create_by_name(category)
+categories.each do |category|
+  Category.find_or_create_by_name(category)
 end
 
-List.delete_all(["name NOT IN (?)", lists]) # remove old categories
+Category.delete_all(["name NOT IN (?)", categories]) # remove old categories

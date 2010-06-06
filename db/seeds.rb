@@ -50,3 +50,10 @@ User.transaction do
     end
   end
 end
+
+# Update category counters
+Category.reset_column_information
+
+Category.all.each do |list|
+  Category.update_counters list.id, :subscriptions_count => list.subscriptions.length # size uses counter cache column
+end

@@ -12,6 +12,5 @@
   .left-column
     = render :partial => 'shared/categories', :locals => { :categories => @categories, :start_index => 0, :end_index => middle }
 
-
   .right-column
     = render :partial => 'shared/categories', :locals => { :categories => @categories, :start_index => middle, :end_index => @categories.size }

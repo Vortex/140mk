@@ -1,6 +1,11 @@
 # Application
 set :application, "140mk"
-set :deploy_to, "/home/blitzkrieg/apps/#{application}"
+#set :deploy_to, "/home/blitzkrieg/apps/#{application}"
+
+# Stages
+set :stages, %w(staging production)
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
 
 # Settings
 default_run_options[:pty] = true
@@ -14,7 +19,7 @@ role :db, domain, :primary => true
 
 # Git
 set :scm, :git
-set :repository,  "ssh://git@blitzkrieg.mk/home/git/140mk.git"
+set :repository,  "git://github.com/Vortex/140mk.git"
 
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"

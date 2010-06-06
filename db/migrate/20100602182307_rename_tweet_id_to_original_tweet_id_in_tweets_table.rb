@@ -4,5 +4,6 @@ class RenameTweetIdToOriginalTweetIdInTweetsTable < ActiveRecord::Migration
   end
 
   def self.down
+    rename_column :tweets, :original_tweet_id, :tweet_id
   end
 end

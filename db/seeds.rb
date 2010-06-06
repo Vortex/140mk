@@ -38,3 +38,15 @@ categories.each do |category|
 end
 
 Category.delete_all(["name NOT IN (?)", categories]) # remove old categories
+
+# For existing test database
+# Link all tweets with the lists to which user is subscribed to
+User.transaction do
+  User.find(:all, :select => "users.id, categories.id, subscriptions.user_id, subscriptions.category_id", :include => :categories).each do |user|
+    user.tweets.each do |tweet|
+      user.categories.each do |category|
+        category.tweets << tweet
+      end
+    end
+  end
+end

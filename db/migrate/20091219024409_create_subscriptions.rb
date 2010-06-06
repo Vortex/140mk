@@ -2,7 +2,7 @@ class CreateSubscriptions < ActiveRecord::Migration
   def self.up
     create_table :subscriptions do |t|
       t.references :user
-      t.references :category
+      t.references :list
 
       t.timestamps
     end

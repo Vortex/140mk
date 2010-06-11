@@ -26,6 +26,7 @@ mk:
     login_description: "...со твојата Twitter сметка."
     no_account: "Немаш?"
     trending_tag: "#140mk"
+    members: "членови"
   pagination:
     previous: "Претходна"
     next: "Следна"

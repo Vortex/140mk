@@ -210,15 +210,6 @@ body {
   text-align: left;
 }
 
-/* line 1, ../../../app/stylesheets/_elements.sass */
-.option-box {
-  background: white;
-  padding: 8px;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
 /* line 3, ../../../app/stylesheets/_pagination.sass */
 .pagination {
   padding: 2px;
@@ -283,6 +274,42 @@ body {
 }
 /* line 51, ../../../app/stylesheets/_pagination.sass */
 .pagination a.prevnext {
+  font-weight: bold;
+}
+
+/* line 1, ../../../app/stylesheets/_elements.sass */
+.option-box {
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+/* line 7, ../../../app/stylesheets/_elements.sass */
+.sidebox {
+  background: white;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  text-align: center;
+  width: 50px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+/* line 17, ../../../app/stylesheets/_elements.sass */
+.sidebox a {
+  color: black;
+}
+/* line 20, ../../../app/stylesheets/_elements.sass */
+.sidebox a:hover {
+  color: #666666;
+}
+/* line 23, ../../../app/stylesheets/_elements.sass */
+.sidebox .counter {
+  font-size: 2em;
   font-weight: bold;
 }
 

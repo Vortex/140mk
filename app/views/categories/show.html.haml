@@ -3,6 +3,7 @@
 
 - content_for(:sidebar) do
   = render :partial => 'shared/user_status'
+  = render :partial => 'shared/member_counter'
 
   #hashtag_filter
     %h2.smaller= t('category.create_list_title')
@@ -10,7 +11,7 @@
     .tweets
       .option-box
         - if signed_in?
-          - form_tag create_on_twitter_list_path(@category) do
+          - form_tag create_on_twitter_category_path(@category) do
             %div
               = label_tag :name, t('global.name')
               = text_field_tag :name, @category.name

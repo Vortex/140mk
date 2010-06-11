@@ -129,7 +129,7 @@ $(document).ready( function () {
           }
           //alert("drop save");
          var category_id = Number(ui.draggable.attr("id").match(/\d+/)[0], 10)
-         $.post("subscriptions.js", { list_id: category_id });
+         $.post("subscriptions.js", { category_id: category_id });
         }
     });
     }

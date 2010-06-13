@@ -5,6 +5,10 @@ Version 0.3.1
 ==========
   Dalibor Nasevic <dalibor.nasevic@gmail.com>
   * Updated test environment, improved README and initial setup for it
+  * Removed tests dir (spec (RSpec) and features (Cucumber) are used instead
+  * Added factory_girl factories for models
+  * Added associations and validations specs for models
+  * Added Tag and Tagging models for Trending topics (#hashtag) feature
 
 11.06.2010
 ==========

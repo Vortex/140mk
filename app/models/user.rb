@@ -1,10 +1,16 @@
 class User < ActiveRecord::Base
+
   attr_accessible :atoken, :asecret
 
+  # Associations
   has_many :subscriptions, :dependent => :destroy
   has_many :categories, :through => :subscriptions
   has_many :tweets
 
+  # Validations
+  validates_presence_of :screen_name
+
+  # Callbacks
   after_create :follow_user
 
   def authorized?
@@ -64,6 +70,8 @@ class User < ActiveRecord::Base
   private
 
   def follow_user
+    return if Rails.env == "test" # don't follow users when in test environment
+
     unless TwitterAccess.base.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
       TwitterAccess.base.friendship_create(twitter_id, true)
     end

@@ -5,6 +5,9 @@ class Category < ActiveRecord::Base
   has_many :users, :through => :subscriptions
   has_and_belongs_to_many :tweets
 
+  # Validations
+  validates_presence_of :name
+
   # Named scopes
   named_scope :ordered_by_subscriptions, :joins => :subscriptions, :group => 'categories.id', :order => 'count(subscriptions.id) desc'
 

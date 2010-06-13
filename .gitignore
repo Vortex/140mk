@@ -13,3 +13,4 @@ db/schema.rb
 .idea
 .sass-cache
 mkmf.log
+.rvmrc

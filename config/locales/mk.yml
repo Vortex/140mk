@@ -11,6 +11,7 @@ mk:
     time_ago: "пред {{time}}"
     tweet: "Твитај"
     member: 'член'
+    trends: "Трендови"
 
     send: "Испрати"
     failtag: "#fail и #mkfail"

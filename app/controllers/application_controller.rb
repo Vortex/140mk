@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def get_filtered_tweets
     @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
   end
+
+  def get_trending_topics
+    @trends = Tag.trends
+  end
 end

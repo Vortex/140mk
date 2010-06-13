@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   before_filter :get_filtered_tweets, :only => :index
+  before_filter :get_trending_topics, :only => :index
 
   def index
     @categories = Category.most_subscribed_categories(G140[:front_page_categories_count])

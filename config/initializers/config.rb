@@ -12,5 +12,6 @@ G140 = {
   :users_per_page => 10,
   :subscriptions_per_user => 6,
   :prod_account => '140mk',
-  :today_topic => '#svecko'
+  :today_topic => '#svecko',
+  :trends_count => 10
 }

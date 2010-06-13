@@ -8,10 +8,14 @@ module TwitterAccess
   def save_tweets(tweets)
     Tweet.transaction do
       tweets.each do |tweet|
-        user = User.find_by_twitter_id(tweet.user.id, :select => "users.id, categories.id, subscriptions.user_id, subscriptions.category_id", :include => :categories)
-        tweet = Tweet.create(:user => user, :original_tweet_id => tweet.id, :text => tweet.text, :created_at => tweet.created_at)
-        user.categories.each do |category|
-          category.tweets << tweet
+        if (user = User.find_by_twitter_id(tweet.user.id, :select => "users.id"))
+          tweet = Tweet.create(:user => user, :original_tweet_id => tweet.id, :text => tweet.text, :created_at => tweet.created_at)
+          user.categories.each { |category| category.tweets << tweet } # connect tweet with category
+          hashtags = tweet.text.scan(/#\w+/) # get all hashtags from tweet
+          hashtags.each do |hashtag|
+            tag = Tag.find_or_create_by_name(hashtag[1..-1])
+            tag.tweets << tweet
+          end
         end
       end
     end

@@ -44,7 +44,7 @@
   .left-column, .right-column
     float: left
 
-.category, #hashtag_filter, .modal, .users_list, .categories_list, #category_show, #category_chooser, .box
+.category, #hashtag_filter, #trends, .modal, .users_list, .categories_list, #category_show, #category_chooser, .box
   background: #bfd9e6
   margin-top: 10px
   float: left
@@ -103,6 +103,11 @@
 
   .tweets
     display: none
+
+  .topics
+    padding: 5px
+    margin: 5px
+    display: block
 
   .tweets, .users, .categories
     margin: 0 5px 5px 5px
@@ -225,7 +230,7 @@
   float: none
   
 
-#hashtag_filter
+#hashtag_filter, #trends
   +grid(7,23)
   margin-left: 0
   margin-bottom: 120px
@@ -260,6 +265,10 @@
   .tweets
     display: block
     margin: 5px 5px 5px 5px
+
+#trends
+  margin-bottom: 20px
+
 
 .modal
   padding: 10px

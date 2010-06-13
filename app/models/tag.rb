@@ -6,4 +6,13 @@ class Tag < ActiveRecord::Base
 
   # Validations
   validates_presence_of :name
+
+  def self.trends
+    Tag.find(:all, 
+             :select => 'tags.id, tags.name, COUNT(*) as count', 
+             :joins => :taggings, 
+             :group => 'tags.name',
+             :order => 'count DESC',
+             :limit => G140[:trends_count])
+  end
 end

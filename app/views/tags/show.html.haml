@@ -1,0 +1,24 @@
+:javascript
+  var _current_id = "#{@tag.to_param}"
+
+- content_for(:sidebar) do
+  = render :partial => 'shared/user_status'
+  = render :partial => 'shared/member_counter'
+
+  = render :partial => 'shared/trending_tags'
+
+#category_show
+  %h2= @tag.name
+
+  .category
+    .tweets
+      %h2= t('title.last_tweets')
+      - @tweets.each do |tweet|
+        = render :partial => 'shared/tweet', :locals => { :tweet => tweet, :name => @tag.id }
+
+
+  .category
+    .tweets
+      %h2= t('title.last_members')
+      - @users.each do |user|
+        = render :partial => 'shared/user', :locals => { :user => user, :name => @tag.id }

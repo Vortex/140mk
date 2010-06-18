@@ -11,7 +11,7 @@ mk:
     time_ago: "пред {{time}}"
     tweet: "Твитај"
     member: 'член'
-    trends: "Трендови"
+    tag: 'таг'
 
     send: "Испрати"
     failtag: "#fail и #mkfail"
@@ -40,8 +40,13 @@ mk:
     total: "Вкупно"
     create_list: "{{login}} за да креираш листа од оваа категорија"
     create_list_title: "Креирај листа од категорија"
-
     last_tweets: "Последни твитови"
+  tags:
+    title: "Листа на налепници"
+    tagging: "налепница"
+  trends:
+    title: "Популарни налепници"
+    view_all: "Погледај ги сите налепници"
   settings:
     select_categories: "Изберете категории"
     select_categories_info: "Изберете најмногу 6 категории со влечење од првото во второто поле. Доколку се предомислите, повлечете назад."

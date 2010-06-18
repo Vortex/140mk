@@ -44,19 +44,19 @@ var pageHeight = function(){
   return Math.max(document.body.scrollHeight, document.body.offsetHeight);
 }
 
-var checkScroll = function () {
+var checkScroll = function (url) {
   if (nearBottomOfPage()) {
     $.ajax({
       type: "GET",
-      url: '/categories/' + _category + '.js',
+      url: url + _current_id + '.js',
       //beforeSend: function (xhr) { xhr.setRequestHeader('Accept', 'text/javascript') },
       //dataType: "script",
       data: "page=" + current_page,
-      success: function(text){
+      success: function (result) {
         //$('#loading').hide()
 
-        result = eval('(' + text + ')');
-        var divs = $("#category_show .tweets");
+        //result = eval('(' + text + ')');
+        var divs = $('#category_show .tweets');
 
         // append tweets
         if (result.tweets.length > 1) {
@@ -71,7 +71,7 @@ var checkScroll = function () {
         // continue checking scroll position if of tweets or users is not blank
         if (result.tweets.length > 1 || result.users.length > 1) {
           current_page += 1;
-          checkScroll();
+          checkScroll(url);
         }
       },
       loading: function(){
@@ -79,13 +79,17 @@ var checkScroll = function () {
       }
     });
   } else {
-    setTimeout("checkScroll()", 250);
+    setTimeout(function () {checkScroll(url)}, 250);
   }
 }
 
 $(document).ready( function () {
-    if ($('body').attr('id') === "categories_show") {
-      checkScroll(); // start checking scroll position
+    if ($('body').attr('id') === 'categories_show') {
+      checkScroll('/categories/'); // start checking scroll position
+    }
+
+    if ($('body').attr('id') === "tags_show") {
+      checkScroll('/tags/'); // start checking scroll position
     }
 
     if ($("#draggable").length > 0 && $("#droppable").length > 0) {

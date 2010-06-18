@@ -11,14 +11,14 @@
 
 .categories_list
   %h2
-    = t('category.title')
+    = t('tags.title')
 
   .categories
-    - @categories.each do |category|
+    - @tags.each do |tag|
       .list
         .body
-          %h3= link_to category.name, category
+          %h3= link_to tag.name, tag 
           // %span.when= t('global.time_ago', :time => time_ago_in_words(list.created_at))
-          .members= "#{pluralize(category.subscriptions.size, t('global.member'))}"
+          .members= "#{pluralize(tag.count, t('tags.tagging'))}"
     %p
-      = will_paginate @categories
+      = will_paginate @tags

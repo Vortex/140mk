@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :tweets, :collection => {:my => :get, :refresh => :post}
   map.resources :categories, :as => :categories, :member => {:create_on_twitter => :post}
   map.resources :subscriptions
+  map.resources :tags, :only => [:index, :show]
   map.resource :session, :collection => {:callback => :get}
   
   map.login "/login", :controller => "sessions", :action => "create"

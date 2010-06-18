@@ -10,4 +10,6 @@ ActiveSupport::Inflector.inflections do |inflect|
 
   inflect.plural 'твит', 'твитови'
   inflect.plural 'член', 'членови'
+  inflect.plural 'таг', 'тагови'
+  inflect.plural 'налепница', 'напепници'
 end

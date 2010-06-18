@@ -1,0 +1,9 @@
+#trends
+  %h2= t('trends.title')
+  .topics
+    - @trending_tags.each_with_index do |tag, index|
+      = "#{'%02d' % (index + 1)}. #{link_to(tag.name, tag_path(tag))} (#{tag.count})"
+      %br/
+  .all_trends
+    .option-box
+      = link_to t('trends.view_all'), tags_path

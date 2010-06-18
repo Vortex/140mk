@@ -1,6 +1,15 @@
 Version 0.3.1
 =============
 
+18.06.2010
+==========
+  Dalibor Nasevic <dalibor.nasevic@gmail.com>
+  * Implemented tags list and tag show pages
+  * Customized endless page pagination to be used for categories and tags
+  * Fixed bug with last registered used for category
+  * Fixed design issue with pagination div
+  * Renamed trends to trending_tags
+
 13.06.2010
 ==========
   Dalibor Nasevic <dalibor.nasevic@gmail.com>

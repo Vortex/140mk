@@ -1,6 +1,0 @@
-#trends
-  %h2= t('global.trends')
-  .topics
-    - @trends.each_with_index do |trend, index|
-      = "#{'%02d' % (index + 1)}. #{trend.name} (#{trend.count})"
-      %br/

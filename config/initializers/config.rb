@@ -1,7 +1,7 @@
 ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
 
 G140 = {
-  :site_name => "140.мк (бета)",
+  :site_name => " | 140.mk (бета)",
   :front_page_categories_count => 6,
   :tweets_per_category => 5,
   :users_per_category => 5,
@@ -16,5 +16,6 @@ G140 = {
   :subscriptions_per_user => 6,
   :prod_account => '140mk',
   :today_topic => '#svecko',
-  :trends_count => 10
+  :trends_count => 10,
+  :seo_keywords => 'Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории'
 }

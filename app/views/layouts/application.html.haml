@@ -9,7 +9,9 @@
     = javascript_include_tag 'jrails', 'application'
     %link(rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico")
     %title
-      = G140[:site_name]
+      = "#{yield(:title)} #{G140[:site_name]}"
+    %meta(name="keywords" content="#{yield(:seo_keywords)}")
+    %meta(name="description" content="#{yield(:seo_description)}")
   %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
     #header
       .logo

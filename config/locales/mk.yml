@@ -52,7 +52,9 @@ mk:
     select_categories_info: "Изберете најмногу 6 категории со влечење од првото во второто поле. Доколку се предомислите, повлечете назад."
     deactivate: "Деактивирање на сметка"
     next_action: "Следна акција"
-    
+
+    index:
+      page_title: "Подесувања"
   navigation:
     home: "Дома"
     users: "Членови"
@@ -214,3 +216,25 @@ mk:
         even: "мора да биде парно"
 
 
+  welcome:
+    index:
+      page_title: "Mакедонската твитер сфера на едно место"
+      seo_description: "Слушни ја македонската твитерсфера. Следи ги локалните трндови.  140.mk е референтно место за сите македонски твитерџии."
+      seo_keywords: "Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории"
+  about:
+    index:
+      page_title: "Што е 140.mk?"
+      seo_description: "140.mk e Тwitter сервис кој ги промовира и собира локалните Twitter корисници и локалните трендови на едно место."
+      seo_keywords: "Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории, трендови"
+  users:
+    index:
+      page_title: "Mакедонски корисници на Twitter"
+      seo_description: "Следи ја македонската твитерсфера на едно место. Приклучи се во дебатата на македонската твитер заедница."
+      seo_keywords: "Twitter, Ruby on Rails, директориум, twitter сметка, мк твитер, корисници, категории, трендови"
+  categories:
+    index:
+      page_title: "Категории на 140.mk"
+      seo_description: "Следи ги категориите со твитови и корисници релевантни на твоите интереси: Интернет,  Технологија, Музика, Занимливости, Медиуми, Linux и многу други."
+      seo_keywords: "Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории"
+    show:
+      page_title: "{{name}} | Kатегории на 140.mk"

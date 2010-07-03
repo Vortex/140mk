@@ -1,0 +1,16 @@
+#hashtag_filter
+  %h2= G140[:today_topic]
+  .nav
+    .link.left{"data-hashtag" => G140[:today_topic], "data-offset" => 0}= link_to t('global.newer')
+    .link.right{"data-hashtag" => G140[:today_topic], "data-offset" => 0}= link_to t('global.older')
+    .clear
+
+  .tweets{:id => "tweets_hashtag"}
+    = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
+
+  .nav
+    .link.left{"data-hashtag" => G140[:today_topic], "data-offset" => 0}= link_to t('global.newer')
+    .link.right{"data-hashtag" => G140[:today_topic], "data-offset" => 0}= link_to t('global.older')
+    .clear
+
+  = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :category_id => 'hashtag' }, :frequency => G140[:periodic_update_frequency], :update => "tweets_hashtag", :complete => "reBindOverlays()")

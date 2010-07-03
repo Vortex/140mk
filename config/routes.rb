@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "welcome"
   map.resources :users
-  map.resources :tweets, :collection => {:my => :get, :refresh => :post}
+  map.resources :tweets, :collection => {:my => :get, :refresh => :post, :by_hashtag => :get}
   map.resources :categories, :as => :categories, :member => {:create_on_twitter => :post}
   map.resources :subscriptions
   map.resources :tags, :only => [:index, :show]

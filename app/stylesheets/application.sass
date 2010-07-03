@@ -266,6 +266,28 @@
     display: block
     margin: 5px 5px 5px 5px
 
+  .nav
+    background: #fff
+    margin: 5px auto
+    text-align: center
+    width: 250px
+    +border-radius(3px)
+
+    .link
+      padding: 5px
+      cursor: pointer
+
+    .link.disabled
+      a
+        color: #999
+        text-decoration: none
+        cursor: default
+
+    .left
+      float: left
+    .right
+      float: right
+
 #trends
   margin-bottom: 20px
 

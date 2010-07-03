@@ -17,5 +17,6 @@ G140 = {
   :prod_account => '140mk',
   :today_topic => '#svecko',
   :trends_count => 10,
-  :seo_keywords => 'Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории'
+  :tweets_per_hashtag => 5,
+  :periodic_update_frequency => 30
 }

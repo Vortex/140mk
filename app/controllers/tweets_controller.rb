@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_filter :authenticate, :except => :refresh
+  before_filter :authenticate, :except => [:refresh, :by_hashtag]
   
   def index
     @tweets = Tweet.paginate :per_page => G140[:tweets_per_page], :page => params[:page]
@@ -25,9 +25,10 @@ class TweetsController < ApplicationController
 
   def refresh
     @param = params[:category_id]
-    if  @param == "fail"
+    # TODO: PD: Fix this mess
+    if  @param == "hashtag"
       unless fragment_exist? "tweets_#{@param}"
-        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => 8, :include => :user)
+        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => G140[:tweets_per_hashtag], :include => :user)
       end
     else
       unless fragment_exist? "tweets_#{@param}"
@@ -39,6 +40,22 @@ class TweetsController < ApplicationController
     respond_to do |format|
       format.js { render :layout => false}
     end
+  end
+
+  def by_hashtag
+    @hashtag = params[:hashtag]
+
+    if params[:offset]
+      @offset = params[:offset]
+    else
+      @offset = 5
+    end
+
+    # TODO: PD: Extract named scope from this
+    @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{@hashtag}%"], :order => 'original_tweet_id DESC', :offset => @offset, :limit => G140[:tweets_per_hashtag], :include => :user)
+
+    response = render_to_string :partial => 'welcome/tweets', :locals => { :tweets => @tweets, :name => "hashtag" }
+    render :text => response
   end
 
 end

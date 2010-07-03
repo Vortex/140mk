@@ -197,6 +197,47 @@ $(document).ready( function () {
     // Activate the masonry plugin
     // $('#categories').masonry({ singleMode: true });
 
+    // Initialize pagination for trending tags
+    $('#hashtag_filter .left').attr('disabled', true);
+    $('#hashtag_filter .left').addClass("disabled");
+
+    $('#hashtag_filter .left').live('click', function() {
+        var hashtagVal = $(this).attr('data-hashtag');
+        var offsetVal = $(this).attr('data-offset');
+        offsetVal =  parseInt(offsetVal) - 5;
+
+        if (offsetVal < 0) { offsetVal = 0 }
+
+        $(this).attr('data-offset', offsetVal);
+        $('#hashtag_filter .right').attr('data-offset', offsetVal);
+        $.get('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data) {
+            if (offsetVal == 0) {
+                $('#tweets_hashtag_clicked').attr('id', 'tweets_hashtag');
+                $('#tweets_hashtag').html(data);
+                $('#hashtag_filter .left').attr('disabled', true);
+                $('#hashtag_filter .left').addClass("disabled")
+            } else {
+                $('#tweets_hashtag_clicked').html(data);
+            }
+        });
+        return false;
+    });
+
+    $('#hashtag_filter .right').live('click', function() {
+        var hashtagVal = $(this).attr('data-hashtag');
+        var offsetVal = $(this).attr('data-offset');
+        offsetVal =  parseInt(offsetVal) + 5;
+        $(this).attr('data-offset', offsetVal);
+        $('#hashtag_filter .left').attr('data-offset', offsetVal);
+        $.get('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data) {
+            $('#tweets_hashtag').attr('id', 'tweets_hashtag_clicked');
+            $('#tweets_hashtag_clicked').html(data);
+            $('#hashtag_filter .left').attr('disabled', false);
+            $('#hashtag_filter .left').removeClass("disabled")
+        });
+        return false;
+    });
+
 });
 
 function switch_to_tweets(category_id) {

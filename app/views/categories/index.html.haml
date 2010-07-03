@@ -6,13 +6,8 @@
 - content_for(:sidebar) do
   = render :partial => 'shared/user_status'
   = render :partial => 'shared/member_counter'  
-
   = render :partial => 'shared/trending_tags'
-
-  #hashtag_filter
-    %h2= G140[:today_topic]
-    .tweets{:id => "tweets_fail"}
-      = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "category" }
+  = render :partial => 'shared/hashtag_filter'
 
 .categories_list
   %h2

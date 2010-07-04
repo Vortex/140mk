@@ -672,7 +672,6 @@ body {
   margin-right: 10px;
   width: 272.174px;
   margin-left: 0;
-  margin-bottom: 120px;
 }
 /* line 246, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2, #trends h2 {
@@ -716,7 +715,7 @@ body {
 /* line 277, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav, #trends .nav {
   background: white;
-  margin: 5px auto;
+  margin: 0 auto 10px auto;
   text-align: center;
   width: 250px;
   -moz-border-radius: 3px;
@@ -771,7 +770,7 @@ body {
 
 /* line 314, ../../../app/stylesheets/application.sass */
 #trends {
-  margin-bottom: 20px;
+  margin-bottom: 120px;
 }
 
 /* line 317, ../../../app/stylesheets/application.sass */

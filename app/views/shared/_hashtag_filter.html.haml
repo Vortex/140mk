@@ -6,11 +6,6 @@
     - else
       = @configuration.today_topic
 
-  .nav
-    .link.left{"data-hashtag" => @configuration.today_topic, "data-offset" => 0}= link_to t('global.newer')
-    .link.right{"data-hashtag" => @configuration.today_topic, "data-offset" => 0}= link_to t('global.older')
-    .clear
-
   .tweets{:id => "tweets_hashtag"}
     = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }
 

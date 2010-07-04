@@ -12,7 +12,7 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
 
     @tweets = @tag.tweets.paginate :page => params[:page], :per_page => G140[:tweets_per_tag], :order => 'tweets.original_tweet_id DESC', :include => :user
-    @users = User.paginate :page => params[:page], :per_page => G140[:users_per_tag], :joins => {:tweets => {:taggings => :tag}}, :conditions => ["tags.name = ?", @tag.name], :group => "users.screen_name", :order => "tweets.original_tweet_id DESC"
+    @users = User.paginate :page => params[:page], :per_page => G140[:users_per_tag], :joins => {:tweets => {:taggings => :tag}}, :conditions => ["tags.name = ?", @tag.name], :group => "users.screen_name", :order => "users.id DESC"
 
     respond_to do |format|
       format.html

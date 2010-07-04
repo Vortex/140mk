@@ -1,12 +1,16 @@
 Version 0.3.1
 =============
 
+04.07.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Relabeled some tag related strings, improved CSS, fixed some bugs
+
 03.07.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Introducing descriptions and keywords for better SEO
-  * Simple pagination for the sidebar trending topic
-  
+  * Simple pagination for the sidebar trending topic  
 
 18.06.2010
 ==========

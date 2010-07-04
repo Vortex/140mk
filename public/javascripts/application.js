@@ -149,7 +149,6 @@ $(document).ready( function () {
         var screen_name = id.split('_')[1];
         $('#tweet textarea').val('@' + screen_name + ' ');
         $('#tweet textarea').focus();
-        // reBindOverlays();
         return false;
     });
 
@@ -210,7 +209,7 @@ $(document).ready( function () {
 
         $(this).attr('data-offset', offsetVal);
         $('#hashtag_filter .right').attr('data-offset', offsetVal);
-        $.get('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data) {
+        $.post('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data) {
             if (offsetVal == 0) {
                 $('#tweets_hashtag_clicked').attr('id', 'tweets_hashtag');
                 $('#tweets_hashtag').html(data);
@@ -219,6 +218,7 @@ $(document).ready( function () {
             } else {
                 $('#tweets_hashtag_clicked').html(data);
             }
+            reBindOverlays();
         });
         return false;
     });
@@ -229,12 +229,14 @@ $(document).ready( function () {
         offsetVal =  parseInt(offsetVal) + 5;
         $(this).attr('data-offset', offsetVal);
         $('#hashtag_filter .left').attr('data-offset', offsetVal);
-        $.get('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data) {
+        $.post('/tweets/by_hashtag', { hashtag: hashtagVal, offset: offsetVal}, function(data, statusText) {
             $('#tweets_hashtag').attr('id', 'tweets_hashtag_clicked');
             $('#tweets_hashtag_clicked').html(data);
             $('#hashtag_filter .left').attr('disabled', false);
-            $('#hashtag_filter .left').removeClass("disabled")
+            $('#hashtag_filter .left').removeClass("disabled");
+            reBindOverlays();
         });
+
         return false;
     });
 

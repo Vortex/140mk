@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
     # TODO: PD: Fix this mess
     if  @param == "hashtag"
       unless fragment_exist? "tweets_#{@param}"
-        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{G140[:today_topic]}%"], :order => 'original_tweet_id DESC', :limit => G140[:tweets_per_hashtag], :include => :user)
+        @tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{@configuration.today_topic}%"], :order => 'original_tweet_id DESC', :limit => G140[:tweets_per_hashtag], :include => :user)
       end
     else
       unless fragment_exist? "tweets_#{@param}"

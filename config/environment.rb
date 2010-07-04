@@ -14,7 +14,11 @@ Rails::Initializer.run do |config|
   config.gem 'compass-960-plugin', :lib => false
   config.gem "simple-navigation", :lib => "simple_navigation"
   config.gem "jrails"
-
+  config.gem 'formtastic'
+  config.gem 'jintastic'
+  config.gem 'responders', :version => "= 0.4.2"
+  config.gem 'inherited_resources', :version => "= 1.0.2"
+  
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'

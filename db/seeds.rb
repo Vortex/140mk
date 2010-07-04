@@ -57,3 +57,8 @@ Category.reset_column_information
 Category.all.each do |category|
   Category.update_counters category.id, :subscriptions_count => category.subscriptions.length # size uses counter cache column
 end
+
+# Create default configuration if not present
+if Configuration.first.nil?
+  Configuration.create(:today_topic => '#140mk')
+end

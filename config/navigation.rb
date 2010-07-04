@@ -30,6 +30,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :categories, t('navigation.categories'), categories_path
     primary.item :users, t('navigation.users'), users_path
+    primary.item :blog, t('navigation.blog'), "http://blog.140.mk"
     primary.item :home, t('navigation.about_service'), about_path    
     
     # Add an item which has a sub navigation (same params, but with block)

@@ -63,6 +63,7 @@ mk:
     categories: "Категории"
 
     about_service: "За сервисот"
+    blog: "Блог"
   tweet:
     timeline: "Твитови од {{user}}"
 

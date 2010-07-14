@@ -9,15 +9,21 @@
   .clear
 
   .info{:id => "info_user-#{user.id}-#{name}"}
-    .bio
-      %b= t('global.bio')
-      = user.description
-    .location
-      %b= t('global.location')
-      = user.location
-    .web
-      %b= t('global.web')
-      = link_to user.url, user.url
+
+    - unless user.description.empty?
+      .bio
+        %b= t('global.bio')
+        = user.description
+
+    - if user.location
+      .location
+        %b= t('global.location')
+        = user.location
+
+    - if user.url
+      .web
+        %b= t('global.web')
+        = link_to user.url, user.url
     //.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
 
   .handle

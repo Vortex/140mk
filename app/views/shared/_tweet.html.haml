@@ -12,15 +12,21 @@
     .categories
       %b= t('global.categories')
       = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
-    .bio
-      %b= t('global.bio')
-      = tweet.user.description
-    .location
-      %b= t('global.location')
-      = tweet.user.location
-    .web
-      %b= t('global.web')
-      = link_to tweet.user.url, tweet.user.url
+
+    - unless tweet.user.description.empty?
+      .bio
+        %b= t('global.bio')
+        = tweet.user.description
+
+    - if tweet.user.location
+      .location
+        %b= t('global.location')
+        = tweet.user.location
+
+    - if tweet.user.url
+      .web
+        %b= t('global.web')
+        = link_to tweet.user.url, tweet.user.url
     .when= t('user.created_at', :time => time_ago_in_words(tweet.user.created_at))
 
   .handle

@@ -16,6 +16,11 @@ class Tag < ActiveRecord::Base
              :limit => G140[:trends_count])
   end
 
+  def users
+    User.find(:all,
+              :joins => {:tweets => {:taggings => :tag}}, :conditions => ["tags.name = ?", self.name], :group => "users.screen_name", :order => "users.id DESC")
+  end
+
   def to_param
     "#{id}-#{name.parameterize}"
   end

@@ -44,6 +44,7 @@ mk:
     create_list: "{{login}} за да креираш листа од оваа категорија"
     create_list_title: "Креирај листа од категорија"
     last_tweets: "Последни твитови"
+    subscribed_users_count: "{{count}} членови"
   tags:
     title: "Листа на тагови"
     tagging: "таг"
@@ -83,6 +84,7 @@ mk:
     last_tweets: "Последни твитови"
     last_members: "Последни членови"
 
+    tweeted: "Твитале"
   subscriptions:
     subscribe_message: "Немате избрано категори. Ве молиме изберете."
     subscribed_message: "Избрани категори:"

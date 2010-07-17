@@ -7,6 +7,7 @@ Version 0.3.2
   * Proper HTML codes instead of '<' and '>' chars
   * Moved the user counter to navigation menu
   * Selected tabs are now remembered (using cookies)
+  * Added number of users per category and tag
 
 14.07.2010
 ==========

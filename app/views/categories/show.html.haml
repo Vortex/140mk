@@ -10,6 +10,7 @@
   #hashtag_filter
     %h2.smaller= t('category.create_list_title')
 
+
     .tweets
       .option-box
         - if signed_in?
@@ -26,7 +27,9 @@
           %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
 
 #category_show
-  %h2= @category.name
+  %h2
+    = @category.name
+    .counter= t('category.subscribed_users_count', :count => @category.users.count)
 
   .category
     .tweets

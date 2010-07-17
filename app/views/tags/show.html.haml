@@ -7,7 +7,9 @@
   //= render :partial => 'shared/hashtag_filter'
 
 #category_show
-  %h2= @tag.name
+  %h2
+    = @tag.name
+    .counter= t('category.subscribed_users_count', :count => @tag.users.size)
 
   .category
     .tweets
@@ -18,6 +20,6 @@
 
   .category
     .tweets
-      %h2= t('title.last_members')
+      %h2= t('title.tweeted')
       - @users.each do |user|
         = render :partial => 'shared/user', :locals => { :user => user, :name => @tag.id }

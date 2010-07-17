@@ -5,6 +5,7 @@ Version 0.3.2
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Proper HTML codes instead of '<' and '>' chars
+  * Moved the user counter to navigation menu
 
 14.07.2010
 ==========

@@ -3,12 +3,12 @@ body a {
   color: black;
 }
 
-/* line 1, ../../../app/stylesheets/_layout.sass */
+/* line 5, ../../../app/stylesheets/_layout.sass */
 body {
   background: #ddeef6 url(../../images/background.png) repeat-x;
 }
 
-/* line 5, ../../../app/stylesheets/_layout.sass */
+/* line 9, ../../../app/stylesheets/_layout.sass */
 #header a, #sidebar a {
   text-decoration: none;
 }
@@ -17,14 +17,14 @@ body {
   text-decoration: underline;
 }
 
-/* line 8, ../../../app/stylesheets/_layout.sass */
+/* line 12, ../../../app/stylesheets/_layout.sass */
 #header {
   background: url(../../images/header-bg.png) no-repeat 150px 0;
   height: 80px;
   margin-top: 70px;
   position: relative;
 }
-/* line 15, ../../../app/stylesheets/_layout.sass */
+/* line 19, ../../../app/stylesheets/_layout.sass */
 #header .navigation {
   color: #474e55;
   padding: 5px;
@@ -32,8 +32,9 @@ body {
   bottom: 10px;
   right: 20px;
 }
-/* line 22, ../../../app/stylesheets/_layout.sass */
+/* line 26, ../../../app/stylesheets/_layout.sass */
 #header .navigation ul {
+  position: relative;
   margin: 0;
   padding: 0;
   border: 0;
@@ -64,18 +65,35 @@ body {
 #header .navigation ul li:last-child, #header .navigation ul li.last {
   padding-right: 0px;
 }
-/* line 25, ../../../app/stylesheets/_layout.sass */
+/* line 30, ../../../app/stylesheets/_layout.sass */
 #header .navigation ul li {
   padding-right: 15px;
 }
-/* line 28, ../../../app/stylesheets/_layout.sass */
+/* line 33, ../../../app/stylesheets/_layout.sass */
 #header .navigation ul a {
   color: #474e55;
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 35, ../../../app/stylesheets/_layout.sass */
+/* line 39, ../../../app/stylesheets/_layout.sass */
+#header .navigation .counter {
+  background-color: white;
+  border: 1px solid #bfd9e6;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 1px 2px;
+  position: absolute;
+  bottom: 22px;
+  right: 160px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 50, ../../../app/stylesheets/_layout.sass */
 #header .user {
   background: white;
   padding: 5px;
@@ -89,7 +107,7 @@ body {
   -khtml-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 43, ../../../app/stylesheets/_layout.sass */
+/* line 58, ../../../app/stylesheets/_layout.sass */
 #header .user ul {
   margin: 0;
   padding: 0;
@@ -121,13 +139,13 @@ body {
 #header .user ul li:last-child, #header .user ul li.last {
   padding-right: 0px;
 }
-/* line 46, ../../../app/stylesheets/_layout.sass */
+/* line 61, ../../../app/stylesheets/_layout.sass */
 #header .logo {
   float: left;
   margin-left: 20px;
   height: 100px;
 }
-/* line 52, ../../../app/stylesheets/_layout.sass */
+/* line 67, ../../../app/stylesheets/_layout.sass */
 #header .logo a h1 {
   text-indent: -9999em;
   overflow: hidden;
@@ -139,37 +157,37 @@ body {
   height: 84px;
 }
 
-/* line 57, ../../../app/stylesheets/_layout.sass */
+/* line 72, ../../../app/stylesheets/_layout.sass */
 .content-wrapper {
   background: url(../../images/main-content-bg.png) top no-repeat;
 }
 
-/* line 60, ../../../app/stylesheets/_layout.sass */
+/* line 75, ../../../app/stylesheets/_layout.sass */
 #main-content {
   margin-top: 20px;
 }
 
-/* line 65, ../../../app/stylesheets/_layout.sass */
+/* line 80, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .login {
   margin-top: 30px;
 }
-/* line 68, ../../../app/stylesheets/_layout.sass */
+/* line 83, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .login .description {
   font-size: 1.1em;
 }
-/* line 71, ../../../app/stylesheets/_layout.sass */
+/* line 86, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user {
   background: #bfd9e6;
   margin-top: 30px;
   padding: 15px;
   width: 242px;
 }
-/* line 77, ../../../app/stylesheets/_layout.sass */
+/* line 92, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options {
   background: white;
   padding: 5px;
 }
-/* line 81, ../../../app/stylesheets/_layout.sass */
+/* line 96, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options img {
   border: 1px dotted #9dc2d5;
   float: left;
@@ -177,32 +195,32 @@ body {
   width: 48px;
   height: 48px;
 }
-/* line 90, ../../../app/stylesheets/_layout.sass */
+/* line 105, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options .greeting {
   color: #04abe2;
   font-weight: bold;
   padding-left: 60px;
 }
-/* line 95, ../../../app/stylesheets/_layout.sass */
+/* line 110, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options .greeting a {
   color: #04abe2;
 }
-/* line 98, ../../../app/stylesheets/_layout.sass */
+/* line 113, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options .links {
   font-size: 0.85em;
   padding-left: 60px;
 }
-/* line 102, ../../../app/stylesheets/_layout.sass */
+/* line 117, ../../../app/stylesheets/_layout.sass */
 #sidebar .content .user .options .links a {
   color: black;
 }
 
-/* line 112, ../../../app/stylesheets/_layout.sass */
+/* line 127, ../../../app/stylesheets/_layout.sass */
 #footer {
   background: #bfd9e6;
   min-height: 60px;
 }
-/* line 116, ../../../app/stylesheets/_layout.sass */
+/* line 131, ../../../app/stylesheets/_layout.sass */
 #footer .wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -212,7 +230,7 @@ body {
   width: 960px;
   .right-float: right;
 }
-/* line 124, ../../../app/stylesheets/_layout.sass */
+/* line 139, ../../../app/stylesheets/_layout.sass */
 #footer .wrapper .left {
   float: left;
   text-align: left;

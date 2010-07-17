@@ -1,3 +1,7 @@
+$navigation_counter_bgcolor   : #fff
+$navigation_counter_border    : 1px solid #BFD9E6
+
+
 body
   background: #ddeef6 url(../../images/background.png) repeat-x
 
@@ -20,6 +24,7 @@ body
     right: 20px
 
     ul
+      position: relative
       +horizontal-list
 
       li
@@ -31,6 +36,16 @@ body
         font-weight: bold
         text-transform: uppercase
 
+    .counter
+      background-color: $navigation_counter_bgcolor
+      border: $navigation_counter_border 
+      font-size: 0.7em
+      font-weight: bold
+      padding: 1px 2px
+      position: absolute
+      bottom: 22px
+      right: 160px
+      +border-radius(4px)
 
   .user
     background: #fff

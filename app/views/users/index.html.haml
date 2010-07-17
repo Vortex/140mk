@@ -25,15 +25,20 @@
             = user.categories.map { |category| link_to category.name, category }.join(', ')
         .clear
         .info{:id => "info_users-#{user.id}"}
-          .bio
-            %b= t('global.bio')
-            = user.description
-          .location
-            %b= t('global.location')
-            = user.location
-          .web
-            %b= t('global.web')
-            = link_to user.url, user.url
+          - unless user.description.empty?
+            .bio
+              %b= t('global.bio')
+              = user.description
+
+          - if user.location
+            .location
+              %b= t('global.location')
+              = user.location
+
+          - if user.url
+            .web
+              %b= t('global.web')
+              = link_to user.url, user.url
 
         .handle
           &nbsp;          

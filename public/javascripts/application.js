@@ -83,6 +83,7 @@ var checkScroll = function (url) {
   }
 }
 
+
 $(document).ready( function () {
     if ($('body').attr('id') === 'categories_show') {
       checkScroll('/categories/'); // start checking scroll position
@@ -240,6 +241,20 @@ $(document).ready( function () {
         return false;
     });
 
+    // Check the cookies and preselect the tabs
+    var cookies = getCookies();
+    for(var name in cookies) {            
+            if (name.indexOf('selected_tab') >= 0) {
+                // Get the category id
+                var categoryId = name.split('_')[3];
+
+                // Update selected tabs
+                $("#category_" + categoryId + " .users_link").removeClass("selected");
+                $("#category_" + categoryId + " .tweets_link").addClass("selected");
+                $("#category_" + categoryId + " .tweets").show();
+                $("#category_" + categoryId + " .users").hide();
+            }
+    }
 });
 
 function switch_to_tweets(category_id) {
@@ -247,6 +262,7 @@ function switch_to_tweets(category_id) {
     $("#" + category_id + " .tweets_link").addClass("selected");
     $("#" + category_id + " .tweets").show('slow');
     $("#" + category_id + " .users").hide('slow');
+    $.cookie('selected_tab_' + category_id, '1', 90);
 }
 
 function switch_to_users(category_id) {
@@ -254,6 +270,7 @@ function switch_to_users(category_id) {
     $("#" + category_id + " .tweets_link").removeClass("selected");
     $("#" + category_id + " .tweets").hide('slow');
     $("#" + category_id + " .users").show('slow');
+    $.cookie('selected_tab_' + category_id, null);
 }
 
 function closeOverlays() {
@@ -267,4 +284,20 @@ function reBindOverlays() {
     // console.log('Overlay rebind');
     overlayObject = $("a.modalInput").overlay(overlayOptions);
 }
+
+function getCookies() {
+    var cookies = { };
+
+    if (document.cookie && document.cookie != '') {
+        var split = document.cookie.split(';');
+        for (var i = 0; i < split.length; i++) {
+            var name_value = split[i].split("=");
+            name_value[0] = name_value[0].replace(/^ /, '');
+            cookies[decodeURIComponent(name_value[0])] = decodeURIComponent(name_value[1]);
+        }
+    }
+
+    return cookies;
+}
+
 

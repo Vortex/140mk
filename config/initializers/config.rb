@@ -18,5 +18,6 @@ G140 = {
   :today_topic => '#svecko',
   :trends_count => 10,
   :tweets_per_hashtag => 5,
-  :periodic_update_frequency => 30
+  :periodic_update_frequency => 30,
+  :latest_version => "0.3.2"
 }

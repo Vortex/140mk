@@ -28,8 +28,9 @@ mk:
     no_account: "Немаш?"
     trending_tag: "#140mk"
     members: "членови"
-    newer: "<< понови"
-    older: "постари >>"
+    newer: "&laquo; понови"
+    older: "постари &raquo;"
+    latest_version: "(Верзија {{version}})"
   pagination:
     previous: "Претходна"
     next: "Следна"

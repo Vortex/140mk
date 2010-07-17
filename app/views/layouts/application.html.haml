@@ -62,7 +62,7 @@
         .right
           %b= link_to '@140mk', 'http://twitter.com/140mk'
           |
-          (Верзија 0.3.1)
+          = t('global.latest_version', :version => G140[:latest_version])
         .clear
 
     = render :partial => "shared/tweet_box"

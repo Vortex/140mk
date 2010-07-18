@@ -31,6 +31,7 @@ mk:
     newer: "&laquo; понови"
     older: "постари &raquo;"
     latest_version: "(Верзија {{version}})"
+    update: "Ажурирај"
   pagination:
     previous: "Претходна"
     next: "Следна"
@@ -244,3 +245,7 @@ mk:
       seo_keywords: "Twitter, Ruby on Rails, директориум, local trends, twitter сметка, мк твитер, корисници, категории"
     show:
       page_title: "{{name}} | Kатегории на 140.mk"
+  formtastic:
+    actions:
+      update: "Ажурирај"
+      cancel: "Откажи"

@@ -1,0 +1,4 @@
+- if current_user && (current_user.screen_name == '140mk')
+  = in_place_editor_for configuration, :today_topic
+- else
+  = configuration.today_topic

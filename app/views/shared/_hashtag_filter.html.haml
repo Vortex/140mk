@@ -1,10 +1,6 @@
 #hashtag_filter
   %h2
-    //= G140[:today_topic]
-    - if current_user && (current_user.screen_name == '140mk')
-      = in_place_editor_for @configuration, :today_topic
-    - else
-      = @configuration.today_topic
+    = render :partial => 'configurations/edit_today_topic', :locals => { :configuration => @configuration }
 
   .tweets{:id => "tweets_hashtag"}
     = render :partial => 'welcome/tweets', :locals => { :tweets => @filtered_tweets, :name => "fail" }

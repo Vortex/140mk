@@ -15,7 +15,7 @@
       .tweet{:id => "tweet_users-#{user.id}"}
         = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"
         .body
-          = link_to h(user.screen_name), twitter_path(user.screen_name), :target => "_blank"
+          = "@#{user.screen_name}"
           = "(#{user.name})"
           %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
           //%br= user.location unless user.location.blank?

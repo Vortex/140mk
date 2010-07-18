@@ -12,6 +12,7 @@
       = "#{yield(:title)} #{G140[:site_name]}"
     %meta(name="keywords" content="#{yield(:seo_keywords)}")
     %meta(name="description" content="#{yield(:seo_description)}")
+    = render :partial => 'shared/anywhere'
     
   %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
     #error
@@ -64,7 +65,7 @@
             %b Beta testing:
             @zuberot, @turpis
         .right
-          %b= link_to '@140mk', 'http://twitter.com/140mk'
+          %b= '@140mk'
           |
           = t('global.latest_version', :version => G140[:latest_version])
         .clear

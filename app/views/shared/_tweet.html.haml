@@ -1,7 +1,7 @@
 .tweet{:id => "tweet_#{name}-#{tweet.id}"}
   = link_to image_tag(tweet.user.photo), twitter_path(tweet.user.screen_name), :target => "_blank"
   .body
-    %span.who= link_to h(tweet.user.screen_name), twitter_path(tweet.user.screen_name), :target => "_blank"
+    %span.who= "@#{tweet.user.screen_name}"
     %span.when= link_to(t('global.time_ago', :time => time_ago_in_words(tweet.created_at)), tweet_url(tweet), :target => '_blank')
     .text= auto_link(tweet.text)
   - if signed_in?

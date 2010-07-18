@@ -110,7 +110,8 @@ mk:
 
 # Macedonian translations for Ruby on Rails
 # by Dejan Dimić (dejan.dimic@gmail.com)
- 
+
+    flash_error: "Твитер не реагира во моментов, пробај подоцна."
   date:
     formats:
       default: "%d/%m/%Y"

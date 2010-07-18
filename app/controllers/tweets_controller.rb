@@ -21,6 +21,10 @@ class TweetsController < ApplicationController
     respond_to do |format|
       format.js
     end
+
+  rescue NoMethodError
+    @error = true
+
   end
 
   def refresh

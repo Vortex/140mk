@@ -351,6 +351,20 @@ body {
   font-weight: bold;
 }
 
+/* line 27, ../../../app/stylesheets/_elements.sass */
+#error {
+  border: 2px solid white;
+  background: red;
+  color: white;
+  font-weight: bold;
+  display: none;
+  padding: 3px;
+  position: fixed;
+  right: 20px;
+  top: 25px;
+  z-index: 99999;
+}
+
 /* line 14, ../../../app/stylesheets/application.sass */
 #flash {
   text-align: center;

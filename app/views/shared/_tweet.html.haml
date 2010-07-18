@@ -13,17 +13,17 @@
       %b= t('global.categories')
       = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
 
-    - unless tweet.user.description.empty?
+    - unless tweet.user.try(:description).empty?
       .bio
         %b= t('global.bio')
         = tweet.user.description
 
-    - if tweet.user.location
+    - if tweet.user.try(:location)
       .location
         %b= t('global.location')
         = tweet.user.location
 
-    - if tweet.user.url
+    - if tweet.user.try(:url)
       .web
         %b= t('global.web')
         = link_to tweet.user.url, tweet.user.url

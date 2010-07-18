@@ -10,17 +10,17 @@
 
   .info{:id => "info_user-#{user.id}-#{name}"}
 
-    - unless user.description.empty?
+    - unless user.try(:description).empty?
       .bio
         %b= t('global.bio')
         = user.description
 
-    - if user.location
+    - if user.try(:location)
       .location
         %b= t('global.location')
         = user.location
 
-    - if user.url
+    - if user.try(:url)
       .web
         %b= t('global.web')
         = link_to user.url, user.url

@@ -283,6 +283,9 @@ function closeOverlays() {
 function reBindOverlays() {
     // console.log('Overlay rebind');
     overlayObject = $("a.modalInput").overlay(overlayOptions);
+    twttr.anywhere(function(twitter) {
+        twitter.hovercards();
+    });
 }
 
 function getCookies() {

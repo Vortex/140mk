@@ -6,7 +6,8 @@ Version 0.3.2
   Peco Danajlovski <vortexmk@gmail.com>
   * Fixed the issue with edit today topic
   * Error message when twitter fails to respond
-  * Introducing twitter's @anywhere script
+  * Introduced twitter's @anywhere script
+  * Some bugfixes
 
 17.07.2010
 ==========

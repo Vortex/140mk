@@ -1,4 +1,5 @@
 - if current_user && (current_user.screen_name == '140mk')
   = in_place_editor_for configuration, :today_topic
 - else
-  = configuration.today_topic
+  - tag = Tag.find_by_name(configuration.today_topic.delete('#'))
+  = link_to "#{configuration.today_topic}", tag_path(tag), :target => 'blank'

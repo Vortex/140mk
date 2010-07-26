@@ -262,7 +262,7 @@ function switch_to_tweets(category_id) {
     $("#" + category_id + " .tweets_link").addClass("selected");
     $("#" + category_id + " .tweets").show('slow');
     $("#" + category_id + " .users").hide('slow');
-    $.cookie('selected_tab_' + category_id, '1', 90);
+    $.cookie('selected_tab_' + category_id, '1', { expires: 365 });
 }
 
 function switch_to_users(category_id) {

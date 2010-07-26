@@ -1,6 +1,11 @@
 Version 0.3.2
 =============
 
+26.07.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Corrected the wrong syntax for cookie expiration (set to 365 days)
+
 18.07.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

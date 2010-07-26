@@ -5,6 +5,7 @@ Version 0.3.2
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Corrected the wrong syntax for cookie expiration (set to 365 days)
+  * Bringing back the @anywhere script
 
 18.07.2010
 ==========

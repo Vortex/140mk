@@ -12,7 +12,7 @@
       = "#{yield(:title)} #{G140[:site_name]}"
     %meta(name="keywords" content="#{yield(:seo_keywords)}")
     %meta(name="description" content="#{yield(:seo_description)}")
-    //= render :partial => 'shared/anywhere'
+    = render :partial => 'shared/anywhere'
     
   %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
     #error

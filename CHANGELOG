@@ -5,6 +5,8 @@ Version 0.3.2
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Integration with Newrelic RPM
+  * Removed 'Cyrillizer' from vendor, loading it as a gem
+
 
 26.07.2010
 ==========

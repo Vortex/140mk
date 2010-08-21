@@ -18,6 +18,7 @@ Rails::Initializer.run do |config|
   config.gem 'jintastic'
   config.gem 'responders', :version => "= 0.4.2"
   config.gem 'inherited_resources', :version => "= 1.0.2"
+  config.gem 'cyrillizer'
   config.gem 'newrelic_rpm'
   
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.

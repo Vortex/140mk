@@ -1,4 +1,4 @@
-Version 0.3.2
+Version 0.3.3
 =============
 
 22.08.2010
@@ -12,6 +12,8 @@ Version 0.3.2
   * Integration with Newrelic RPM
   * Removed 'Cyrillizer' from vendor, loading it as a gem
 
+Version 0.3.2
+=============
 
 26.07.2010
 ==========

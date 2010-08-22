@@ -3,7 +3,7 @@
   .body
     %span.who= "@#{tweet.user.screen_name}"
     %span.when= link_to(t('global.time_ago', :time => time_ago_in_words(tweet.created_at)), tweet_url(tweet), :target => '_blank')
-    .text= auto_link(tweet.text)
+    .text= auto_link_hashtags(auto_link(tweet.text))
   - if signed_in?
     .actions
       %span.reply= link_to t('global.reply'), nil, :title => t('global.reply'), :id => "user_#{tweet.user.screen_name}", :class => "modalInput", :rel => "#tweet"
@@ -13,17 +13,17 @@
       %b= t('global.categories')
       = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
 
-    - unless tweet.user.try(:description).empty?
+    - if tweet.user.description
       .bio
         %b= t('global.bio')
         = tweet.user.description
 
-    - if tweet.user.try(:location)
+    - if tweet.user.location
       .location
         %b= t('global.location')
         = tweet.user.location
 
-    - if tweet.user.try(:url)
+    - if tweet.user.url
       .web
         %b= t('global.web')
         = link_to tweet.user.url, tweet.user.url

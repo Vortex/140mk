@@ -21,6 +21,8 @@ Version 0.3.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Removed the @anywhere script
+  * Introduced method for checking if user is followed
+  
 
 22.08.2010
 ==========

@@ -22,4 +22,26 @@ describe User do
     end
   end
 
+  describe "following check" do
+
+    it "should return false if user is not followed" do
+      user1 = Factory.create(:user, :screen_name => "VortexDNR")
+      user2 = Factory.create(:user, :screen_name => "unknown_user")
+
+      result = user1.follows_user? user2
+
+      assert_equal result, false
+    end
+
+    it "should return true if user is followed" do
+      user1 = Factory.create(:user, :screen_name => "VortexDNR")
+      user2 = Factory.create(:user, :screen_name => "140mk")
+
+      result = user1.follows_user? user2
+
+      assert_equal result, true      
+    end
+
+  end
+
 end

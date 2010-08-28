@@ -34,6 +34,12 @@ class User < ActiveRecord::Base
     subscriptions.count > 0
   end
 
+  def follows_user?(some_user)
+    logger.info screen_name
+    logger.info some_user.screen_name
+    return TwitterAccess.base.friendship_exists?(screen_name, some_user.screen_name)
+  end
+
   def set_profile_data(account)
     self.twitter_id = account.id
     self.twitter_account_created_at = account.created_at

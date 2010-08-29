@@ -6,6 +6,11 @@ Version 0.3.3
   Peco Danajlovski <vortexmk@gmail.com>
   * Switched from httpauth to OAuth
 
+29.08.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Defined scopes and methods for filtering tags
+
 28.08.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

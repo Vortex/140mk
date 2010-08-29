@@ -7,6 +7,15 @@ class Tag < ActiveRecord::Base
   # Validations
   validates_presence_of :name
 
+  # Named scopes
+  named_scope :trending_from, lambda { |from|
+              { :select => 'tags.id, tags.name, COUNT(*) as count',
+                :joins => :taggings,
+                :conditions => ["taggings.created_at BETWEEN ? and ?", from, Time.now],
+                :group => 'tags.name',
+                :order => 'count DESC',
+                :limit => G140[:trends_count] }}
+
   def self.trending_tags
     Tag.find(:all, 
              :select => 'tags.id, tags.name, COUNT(*) as count', 

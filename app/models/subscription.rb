@@ -11,9 +11,11 @@ class Subscription < ActiveRecord::Base
   validate :number_of_subscriptions
 
   private
+
   def number_of_subscriptions
     if user_id? && user.subscriptions.length >= G140[:subscriptions_per_user]
       errors.add(:base, "Error") # we don't dispay error message it in UI
     end
   end
+  
 end

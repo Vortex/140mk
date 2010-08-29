@@ -24,4 +24,21 @@ class TagsController < ApplicationController
       end
     end
   end
+
+  def by_period
+    period = params[:period]
+
+    unless (period == "archive") or (period.nil?)
+      from_when = period.to_i
+      @trending_tags = Tag.trending_from(from_when.days.ago)
+      session[:trending_from] = from_when.days.ago
+    else
+      @trending_tags = Tag.trending_tags
+      session[:trending_from] = 0
+    end
+
+    response = render_to_string :partial => 'shared/trending_topics'
+    render :text => response
+  end
+
 end

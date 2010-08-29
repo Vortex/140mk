@@ -1,8 +1,16 @@
 #trends
-  %h2= t('trends.title')
+  %h2
+    .title= t('trends.title')
+    .filters
+      = link_to t('global.trend_filters.today_short'), nil, "data-period" => '1'
+      = link_to t('global.trend_filters.this_week_short'), nil, "data-period" => '7'
+      = link_to t('global.trend_filters.this_month_short'), nil, "data-period" => '30'
+      = link_to t('global.trend_filters.archive_short'), nil, "data-period" => 'archive'
+      .clear
+        
   .topics
-    - @trending_tags.each_with_index do |tag, index|
-      .item= link_to "##{tag.name}", tag_path(tag)
+    = render :partial => 'shared/trending_topics'
+
   .all_trends
     .option-box
       = link_to t('trends.view_all'), tags_path

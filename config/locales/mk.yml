@@ -32,6 +32,11 @@ mk:
     older: "постари &raquo;"
     latest_version: "(Верзија {{version}})"
     update: "Ажурирај"
+    trend_filters:
+      today_short: "Д"
+      this_week_short: "Н"
+      this_month_short: "M"
+      archive_short: "A"
   pagination:
     previous: "Претходна"
     next: "Следна"

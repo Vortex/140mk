@@ -14,6 +14,7 @@
     %meta(name="description" content="#{yield(:seo_description)}")    
     
   %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
+    // = debug session
     #error
       = t('twitter.flash_error')
     #header

@@ -8,8 +8,11 @@
 @import pagination
 @import elements
 
-!category_list_bg = #bfd9e6
-!category_item_bg = #f7fcfe
+$category_list_bg               : #bfd9e6
+$category_item_bg               : #f7fcfe
+$trending_tag_filters_bg        : #9dc2d5
+$trending_tag_button_bg         : #f7fcfe
+$trending_tag_button_hover_bg   : #bfd9e6
 
 #flash
   text-align: center
@@ -545,9 +548,34 @@
       font-weight: bold
       +hover-link
 
+#trends
 
+  .title
+    float: left
 
+  .filters
+    // background: $trending_tag_filters_bg
+    // padding: 5px 5px 5px 160px
+    float: right
 
+    a
+      background: $trending_tag_button_bg
+      color: #000
+      font-size: 0.6em
+      font-weight: normal
+      display: block
+      float: left
+      margin-right: 3px
+      // padding: 4px 4px
+      padding-left: 2px
+      +border-radius(6px)
+      +text-shadow(#000, 0, 0, 0)
+
+      &:hover
+        background: #fff
+
+    a.selected
+      background: #fff  
 
 .modal
   display: none

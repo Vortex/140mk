@@ -10,6 +10,8 @@ Version 0.3.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Defined scopes and methods for filtering tags
+  * Implemented the functionality for switching between filters
+  * Created simple interface for switching between filters
 
 28.08.2010
 ==========

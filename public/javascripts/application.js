@@ -241,6 +241,20 @@ $(document).ready( function () {
         return false;
     });
 
+    // Trending tags chronological filter
+    $('#trends .filters > a').live('click', function(event) {
+        var filterPeriod = $(this).attr('data-period');
+        // console.log("Filter period: " + filterPeriod);
+
+        $('#trends .filters > a').removeClass('selected');
+        $(this).addClass('selected');
+
+        $.post('/tags/by_period', { period: filterPeriod}, function(data) {
+            $('#trends .topics').html(data);
+        });
+        event.preventDefault();
+    });
+
     // Check the cookies and preselect the tabs
     var cookies = getCookies();
     for(var name in cookies) {            

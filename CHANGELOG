@@ -1,6 +1,11 @@
 Version 0.3.3
 =============
 
+31.08.2010
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Switched from httpauth to OAuth
+
 28.08.2010
 ==========
   Peco Danajlovski <vortexmk@gmail.com>

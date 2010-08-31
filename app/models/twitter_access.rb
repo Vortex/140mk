@@ -56,7 +56,11 @@ module TwitterAccess
 
   private
   def authenticate(username, password)
-    httpauth = Twitter::HTTPAuth.new(username, password)
-    Twitter::Base.new(httpauth)
+    # httpauth = Twitter::HTTPAuth.new(username, password)
+    oauth = Twitter::OAuth.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'])
+    oauth.authorize_from_access(ConsumerConfig['consumer']['atoken'], ConsumerConfig['consumer']['asecret'])
+    
+    # Twitter::Base.new(httpauth)
+    Twitter::Base.new(oauth) 
   end
 end

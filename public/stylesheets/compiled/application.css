@@ -365,6 +365,47 @@ body {
   z-index: 99999;
 }
 
+/* line 39, ../../../app/stylesheets/_elements.sass */
+.tipsy {
+  padding: 5px;
+  font-size: 10px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  background-repeat: no-repeat;
+  background-image: url(../../images/tipsy.gif);
+}
+
+/* line 47, ../../../app/stylesheets/_elements.sass */
+.tipsy-inner {
+  padding: 5px 8px 4px 8px;
+  background-color: black;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/* line 56, ../../../app/stylesheets/_elements.sass */
+.tipsy-north {
+  background-position: top center;
+}
+
+/* line 59, ../../../app/stylesheets/_elements.sass */
+.tipsy-south {
+  background-position: bottom center;
+}
+
+/* line 62, ../../../app/stylesheets/_elements.sass */
+.tipsy-east {
+  background-position: right center;
+}
+
+/* line 65, ../../../app/stylesheets/_elements.sass */
+.tipsy-west {
+  background-position: left center;
+}
+
 /* line 17, ../../../app/stylesheets/application.sass */
 #flash {
   text-align: center;
@@ -1130,19 +1171,26 @@ body {
   float: left;
 }
 /* line 556, ../../../app/stylesheets/application.sass */
-#trends .filters {
-  float: right;
+#trends h2 {
+  position: relative;
 }
-/* line 561, ../../../app/stylesheets/application.sass */
-#trends .filters a {
-  background: #f7fcfe;
+/* line 559, ../../../app/stylesheets/application.sass */
+#trends h2 .filters {
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+/* line 566, ../../../app/stylesheets/application.sass */
+#trends h2 .filters a {
+  background: #aaaaaa;
   color: black;
+  font-family: sans-serif;
   font-size: 0.6em;
   font-weight: normal;
   display: block;
   float: left;
-  margin-right: 3px;
-  padding-left: 2px;
+  padding-left: 5px;
+  padding-bottom: 5px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   -o-border-radius: 6px;
@@ -1151,21 +1199,21 @@ body {
   border-radius: 6px;
   text-shadow: black 0 0 0;
 }
-/* line 574, ../../../app/stylesheets/application.sass */
-#trends .filters a:hover {
+/* line 580, ../../../app/stylesheets/application.sass */
+#trends h2 .filters a:hover {
   background: white;
 }
-/* line 577, ../../../app/stylesheets/application.sass */
-#trends .filters a.selected {
+/* line 583, ../../../app/stylesheets/application.sass */
+#trends h2 .filters a.selected {
   background: white;
 }
 
-/* line 580, ../../../app/stylesheets/application.sass */
+/* line 586, ../../../app/stylesheets/application.sass */
 .modal {
   display: none;
 }
 
-/* line 583, ../../../app/stylesheets/application.sass */
+/* line 589, ../../../app/stylesheets/application.sass */
 .modal div.close {
   background-image: url(../../images/close.png);
   position: absolute;
@@ -1177,7 +1225,7 @@ body {
   z-index: 9999;
 }
 
-/* line 594, ../../../app/stylesheets/application.sass */
+/* line 600, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   left: 15px;
@@ -1186,25 +1234,25 @@ form .counter {
   font-weight: bold;
   color: #666666;
 }
-/* line 602, ../../../app/stylesheets/application.sass */
+/* line 608, ../../../app/stylesheets/application.sass */
 form textarea {
   resize: none;
 }
-/* line 605, ../../../app/stylesheets/application.sass */
+/* line 611, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 607, ../../../app/stylesheets/application.sass */
+/* line 613, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 610, ../../../app/stylesheets/application.sass */
+/* line 616, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 614, ../../../app/stylesheets/application.sass */
+/* line 620, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

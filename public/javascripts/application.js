@@ -269,6 +269,9 @@ $(document).ready( function () {
                 $("#category_" + categoryId + " .users").hide();
             }
     }
+
+    // Tooltips for trending topics filters
+    $('#trends .filters > a').tipsy({gravity: 's'});
 });
 
 function switch_to_tweets(category_id) {

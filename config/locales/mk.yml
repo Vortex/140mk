@@ -37,6 +37,10 @@ mk:
       this_week_short: "Н"
       this_month_short: "M"
       archive_short: "A"
+      today: "Денес"
+      this_week: "Оваа недела"
+      this_month: "Овој месец"
+      archive: "Архива"
   pagination:
     previous: "Претходна"
     next: "Следна"

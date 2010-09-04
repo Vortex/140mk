@@ -4,6 +4,7 @@
 @import facebox
 @import compass/utilities
 @import compass/css3
+@import fancy_buttons
 @import layout
 @import pagination
 @import elements
@@ -231,13 +232,19 @@ $trending_tag_button_hover_bg   : #bfd9e6
           margin-bottom: 3px
 
 
-
-      img
-        border: 1px dotted #9dc2d5
+      .left-section
         float: left
-        padding: 1px
-        width: 48px
-        height: 48px
+
+        img
+          border: 1px dotted #9dc2d5
+          padding: 1px
+          width: 48px
+          height: 48px
+
+        .follow
+          a
+            +fancy-button(#25C9FF, 10px, 4px)
+  
 
 .category
   float: none

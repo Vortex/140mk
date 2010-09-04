@@ -13,6 +13,8 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'compass'
   config.gem 'compass-960-plugin', :lib => false
+  config.gem 'compass-colors'
+  config.gem 'fancy-buttons'  
   config.gem "simple-navigation", :lib => "simple_navigation"
   config.gem "jrails"
   config.gem 'formtastic'

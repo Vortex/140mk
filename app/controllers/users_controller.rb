@@ -9,6 +9,16 @@ class UsersController < ApplicationController
 
   def follow
     followed_user = User.find_by_screen_name(params[:username])
+
+    # Fetch from the followings cache
+    following = Following.find(Following.find(:first, :conditions => { :follower_id => current_user.id, :followed_user_id => followed_user.id }))
+
+    # Update status and save
+    if following
+      following.status = true
+      following.save
+    end
+
     current_user.follow(followed_user)
 
     response = render_to_string :partial => 'shared/you_follow'

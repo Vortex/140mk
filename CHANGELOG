@@ -9,6 +9,7 @@ Version 0.3.3
   * Bugfixes:
     - Fixed the bug which prevented creating lists
     - Initialize the selected filter for trending topics on refresh
+    - Update user status when following
 
 04.09.2010
 ==========

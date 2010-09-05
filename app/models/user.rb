@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
   # TODO: refactor this code to escape this confusion
   def follow(user)
     unless TwitterAccess.base.friendship_exists?(self.screen_name, user.screen_name)
-      TwitterAccess.base.friendship_create(user.twitter_id, true)
+      client.friendship_create(user.twitter_id, true)
     end
   end
 

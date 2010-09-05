@@ -11,6 +11,7 @@ Version 0.3.3
     - Fixed the bug which prevented creating lists
     - Initialize the selected filter for trending topics on refresh
     - Update user status when following
+    - Additional error handling for following user check
 
 04.09.2010
 ==========

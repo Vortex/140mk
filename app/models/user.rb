@@ -43,9 +43,12 @@ class User < ActiveRecord::Base
     else
       # Create cached value
       status = TwitterAccess.base.friendship_exists?(screen_name, some_user.screen_name)
-      Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)
+      Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)      
+
       return status
     end
+  rescue Exception
+    return true
   end
 
   def set_profile_data(account)

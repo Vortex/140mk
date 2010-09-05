@@ -6,6 +6,8 @@ Version 0.3.3
   Peco Danajlovski <vortexmk@gmail.com>
   * Introduced ajax action for following users
   * Cached and optimized user followings
+  * Bugfixes:
+    - Fixed the bug which prevented creating lists
 
 04.09.2010
 ==========

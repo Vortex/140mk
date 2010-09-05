@@ -198,10 +198,10 @@ $(document).ready( function () {
     // $('#categories').masonry({ singleMode: true });
 
     // Initialize pagination for trending tags
-    $('#hashtag_filter .left').attr('disabled', true);
-    $('#hashtag_filter .left').addClass("disabled");
+    $('#hashtag_filter .nav .left').attr('disabled', true);
+    $('#hashtag_filter .nav .left').addClass("disabled");
 
-    $('#hashtag_filter .left').live('click', function() {
+    $('#hashtag_filter .nav .left').live('click', function() {
         var hashtagVal = $(this).attr('data-hashtag');
         var offsetVal = $(this).attr('data-offset');
         offsetVal =  parseInt(offsetVal) - 5;
@@ -224,7 +224,7 @@ $(document).ready( function () {
         return false;
     });
 
-    $('#hashtag_filter .right').live('click', function() {
+    $('#hashtag_filter .nav .right').live('click', function() {
         var hashtagVal = $(this).attr('data-hashtag');
         var offsetVal = $(this).attr('data-offset');
         offsetVal =  parseInt(offsetVal) + 5;

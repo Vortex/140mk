@@ -26,10 +26,13 @@ class CategoriesController < ApplicationController
   def create_on_twitter
     redirect_to :back if params[:name].blank?
     mode = params[:mode] == "1" ? "private" : "public"
-
     category = Category.find(params[:id])
+
+    # convert the name to latin (twitter doesn't support non-latin names yet)
+    name = params[:name].to_lat
+
     # create new list
-    tlist = current_user.client.list_create(current_user.screen_name, {:name => params[:name], :mode => mode, :description => "#{params[:name]} (#{G140[:site_name]})"})
+    tlist = current_user.client.list_create(current_user.screen_name, {:name => name, :mode => mode, :description => "140.mk: #{params[:name]}"})
 
     users = category.users.find(:all, :select => "twitter_id")
     # add people to that list

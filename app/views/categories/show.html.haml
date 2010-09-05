@@ -5,11 +5,9 @@
 
 - content_for(:sidebar) do
   = render :partial => 'shared/user_status'
-  = render :partial => 'shared/trending_tags' 
 
   #hashtag_filter
     %h2.smaller= t('category.create_list_title')
-
 
     .tweets
       .option-box
@@ -25,6 +23,8 @@
               .right= submit_tag t('buttons.create')
         - else
           %p= t("category.create_list", :login => link_to(t('global.login'), login_path))
+          
+  = render :partial => 'shared/trending_tags'
 
 #category_show
   %h2

@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
     end
 
     unless from_when == 0
-      @trending_tags = Tag.trending_from(from_when)
+      @trending_tags = Tag.trending_from(from_when.day.ago)
     else
       @trending_tags = Tag.trending_tags
     end

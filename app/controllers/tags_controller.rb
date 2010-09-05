@@ -31,7 +31,7 @@ class TagsController < ApplicationController
     unless (period == "archive") or (period.nil?)
       from_when = period.to_i
       @trending_tags = Tag.trending_from(from_when.days.ago)
-      session[:trending_from] = from_when.days.ago
+      session[:trending_from] = from_when
     else
       @trending_tags = Tag.trending_tags
       session[:trending_from] = 0

@@ -36,6 +36,16 @@ module ApplicationHelper
     return result
   end
 
+  def is_trending_filter_selected(days_count)
+    saved_count = session[:trending_from]
+    if saved_count == days_count
+      return "selected"
+    else
+      return ""
+    end
+  end
+
+
 #  def auto_link_urls(text, html_options = {})
 #    link_attributes = html_options.stringify_keys
 #    text.gsub(AUTO_LINK_RE) do

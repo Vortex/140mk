@@ -2,10 +2,10 @@
   %h2
     .title= t('trends.title')
     .filters
-      = link_to t('global.trend_filters.today_short'), nil, "data-period" => '1', :title => t('global.trend_filters.today') 
-      = link_to t('global.trend_filters.this_week_short'), nil, "data-period" => '7', :title => t('global.trend_filters.this_week')
-      = link_to t('global.trend_filters.this_month_short'), nil, "data-period" => '30', :title => t('global.trend_filters.this_month')
-      = link_to t('global.trend_filters.archive_short'), nil, "data-period" => 'archive', :title => t('global.trend_filters.archive')
+      = link_to t('global.trend_filters.today_short'), nil, "data-period" => '1', :title => t('global.trend_filters.today'), :class => is_trending_filter_selected(1)
+      = link_to t('global.trend_filters.this_week_short'), nil, "data-period" => '7', :title => t('global.trend_filters.this_week'), :class => is_trending_filter_selected(7)
+      = link_to t('global.trend_filters.this_month_short'), nil, "data-period" => '30', :title => t('global.trend_filters.this_month'), :class => is_trending_filter_selected(30)
+      = link_to t('global.trend_filters.archive_short'), nil, "data-period" => 'archive', :title => t('global.trend_filters.archive'), :class => is_trending_filter_selected(0)
       .clear
         
   .topics

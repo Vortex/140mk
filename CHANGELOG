@@ -8,6 +8,7 @@ Version 0.3.3
   * Cached and optimized user followings
   * Bugfixes:
     - Fixed the bug which prevented creating lists
+    - Initialize the selected filter for trending topics on refresh
 
 04.09.2010
 ==========

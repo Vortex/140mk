@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :subscriptions, :dependent => :destroy
   has_many :categories, :through => :subscriptions
   has_many :tweets
+  has_many :followings
 
   # Validations
   validates_presence_of :screen_name
@@ -35,9 +36,16 @@ class User < ActiveRecord::Base
   end
 
   def follows_user?(some_user)
-    logger.info screen_name
-    logger.info some_user.screen_name
-    return TwitterAccess.base.friendship_exists?(screen_name, some_user.screen_name)
+    # check the cache first
+    following = Following.find(:first, :conditions => { :follower_id => self.id, :followed_user_id => some_user.id })
+    if following
+      return following.status
+    else
+      # Create cached value
+      status = TwitterAccess.base.friendship_exists?(screen_name, some_user.screen_name)
+      Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)
+      return status
+    end
   end
 
   def set_profile_data(account)

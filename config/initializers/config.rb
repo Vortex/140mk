@@ -20,5 +20,5 @@ G140 = {
   :tweets_per_hashtag => 5,
   :periodic_update_frequency => 30,
   :default_trending_filter => 1.day.ago,
-  :latest_version => "0.3.2"
+  :latest_version => "0.3.3"
 }

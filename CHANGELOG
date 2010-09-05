@@ -6,6 +6,7 @@ Version 0.3.3
   Peco Danajlovski <vortexmk@gmail.com>
   * Introduced ajax action for following users
   * Cached and optimized user followings
+  * Usernames in tweets are now linked
   * Bugfixes:
     - Fixed the bug which prevented creating lists
     - Initialize the selected filter for trending topics on refresh

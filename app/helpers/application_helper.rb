@@ -36,6 +36,27 @@ module ApplicationHelper
     return result
   end
 
+  def auto_link_screen_names(text)
+    return '' if text.blank?
+
+    result = text
+    screen_names = text.gsub(/ ?@(\w+)/)
+    screen_names.each do |entry|
+      stripped_entry = entry.strip.gsub(/#|@/, "")
+
+      unless entry.nil?
+        link = link_to '@' + stripped_entry, "http://twitter.com/#{stripped_entry}", :target => '_blank'
+        result = result.gsub(entry.strip, link)
+      end
+    end
+
+    return result
+  end
+
+  def auto_link_resources(text)
+    auto_link_screen_names(auto_link_hashtags(text))
+  end
+
   def is_trending_filter_selected(days_count)
     saved_count = session[:trending_from]
     if saved_count == days_count

@@ -585,7 +585,7 @@ body {
 .category .tweets .tweet, .category .tweets .list, .category .tweets .user, .category .users .tweet, .category .users .list, .category .users .user, .category .categories .tweet, .category .categories .list, .category .categories .user, #hashtag_filter .tweets .tweet, #hashtag_filter .tweets .list, #hashtag_filter .tweets .user, #hashtag_filter .users .tweet, #hashtag_filter .users .list, #hashtag_filter .users .user, #hashtag_filter .categories .tweet, #hashtag_filter .categories .list, #hashtag_filter .categories .user, #trends .tweets .tweet, #trends .tweets .list, #trends .tweets .user, #trends .users .tweet, #trends .users .list, #trends .users .user, #trends .categories .tweet, #trends .categories .list, #trends .categories .user, .modal .tweets .tweet, .modal .tweets .list, .modal .tweets .user, .modal .users .tweet, .modal .users .list, .modal .users .user, .modal .categories .tweet, .modal .categories .list, .modal .categories .user, .users_list .tweets .tweet, .users_list .tweets .list, .users_list .tweets .user, .users_list .users .tweet, .users_list .users .list, .users_list .users .user, .users_list .categories .tweet, .users_list .categories .list, .users_list .categories .user, .categories_list .tweets .tweet, .categories_list .tweets .list, .categories_list .tweets .user, .categories_list .users .tweet, .categories_list .users .list, .categories_list .users .user, .categories_list .categories .tweet, .categories_list .categories .list, .categories_list .categories .user, #category_show .tweets .tweet, #category_show .tweets .list, #category_show .tweets .user, #category_show .users .tweet, #category_show .users .list, #category_show .users .user, #category_show .categories .tweet, #category_show .categories .list, #category_show .categories .user, #category_chooser .tweets .tweet, #category_chooser .tweets .list, #category_chooser .tweets .user, #category_chooser .users .tweet, #category_chooser .users .list, #category_chooser .users .user, #category_chooser .categories .tweet, #category_chooser .categories .list, #category_chooser .categories .user, .box .tweets .tweet, .box .tweets .list, .box .tweets .user, .box .users .tweet, .box .users .list, .box .users .user, .box .categories .tweet, .box .categories .list, .box .categories .user {
   background: #f7fcfe url(../../images/tweet-bg.png) center bottom no-repeat;
   padding: 10px 10px 0 10px;
-  min-height: 45px;
+  min-height: 100px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px #9dc2d5;
   -moz-box-shadow: 0 0 10px #9dc2d5;
@@ -632,7 +632,7 @@ body {
 .category .tweets .tweet .body, .category .tweets .list .body, .category .tweets .user .body, .category .users .tweet .body, .category .users .list .body, .category .users .user .body, .category .categories .tweet .body, .category .categories .list .body, .category .categories .user .body, #hashtag_filter .tweets .tweet .body, #hashtag_filter .tweets .list .body, #hashtag_filter .tweets .user .body, #hashtag_filter .users .tweet .body, #hashtag_filter .users .list .body, #hashtag_filter .users .user .body, #hashtag_filter .categories .tweet .body, #hashtag_filter .categories .list .body, #hashtag_filter .categories .user .body, #trends .tweets .tweet .body, #trends .tweets .list .body, #trends .tweets .user .body, #trends .users .tweet .body, #trends .users .list .body, #trends .users .user .body, #trends .categories .tweet .body, #trends .categories .list .body, #trends .categories .user .body, .modal .tweets .tweet .body, .modal .tweets .list .body, .modal .tweets .user .body, .modal .users .tweet .body, .modal .users .list .body, .modal .users .user .body, .modal .categories .tweet .body, .modal .categories .list .body, .modal .categories .user .body, .users_list .tweets .tweet .body, .users_list .tweets .list .body, .users_list .tweets .user .body, .users_list .users .tweet .body, .users_list .users .list .body, .users_list .users .user .body, .users_list .categories .tweet .body, .users_list .categories .list .body, .users_list .categories .user .body, .categories_list .tweets .tweet .body, .categories_list .tweets .list .body, .categories_list .tweets .user .body, .categories_list .users .tweet .body, .categories_list .users .list .body, .categories_list .users .user .body, .categories_list .categories .tweet .body, .categories_list .categories .list .body, .categories_list .categories .user .body, #category_show .tweets .tweet .body, #category_show .tweets .list .body, #category_show .tweets .user .body, #category_show .users .tweet .body, #category_show .users .list .body, #category_show .users .user .body, #category_show .categories .tweet .body, #category_show .categories .list .body, #category_show .categories .user .body, #category_chooser .tweets .tweet .body, #category_chooser .tweets .list .body, #category_chooser .tweets .user .body, #category_chooser .users .tweet .body, #category_chooser .users .list .body, #category_chooser .users .user .body, #category_chooser .categories .tweet .body, #category_chooser .categories .list .body, #category_chooser .categories .user .body, .box .tweets .tweet .body, .box .tweets .list .body, .box .tweets .user .body, .box .users .tweet .body, .box .users .list .body, .box .users .user .body, .box .categories .tweet .body, .box .categories .list .body, .box .categories .user .body {
   color: #666666;
   font-size: 0.9em;
-  min-height: 70px;
+  min-height: 80px;
   padding-left: 65px;
 }
 /* line 172, ../../../app/stylesheets/application.sass */
@@ -838,13 +838,19 @@ body {
 .category .tweets .tweet .left-section .follow a:active, .category .tweets .tweet .left-section .follow a:active:visited, .category .tweets .list .left-section .follow a:active, .category .tweets .list .left-section .follow a:active:visited, .category .tweets .user .left-section .follow a:active, .category .tweets .user .left-section .follow a:active:visited, .category .users .tweet .left-section .follow a:active, .category .users .tweet .left-section .follow a:active:visited, .category .users .list .left-section .follow a:active, .category .users .list .left-section .follow a:active:visited, .category .users .user .left-section .follow a:active, .category .users .user .left-section .follow a:active:visited, .category .categories .tweet .left-section .follow a:active, .category .categories .tweet .left-section .follow a:active:visited, .category .categories .list .left-section .follow a:active, .category .categories .list .left-section .follow a:active:visited, .category .categories .user .left-section .follow a:active, .category .categories .user .left-section .follow a:active:visited, #hashtag_filter .tweets .tweet .left-section .follow a:active, #hashtag_filter .tweets .tweet .left-section .follow a:active:visited, #hashtag_filter .tweets .list .left-section .follow a:active, #hashtag_filter .tweets .list .left-section .follow a:active:visited, #hashtag_filter .tweets .user .left-section .follow a:active, #hashtag_filter .tweets .user .left-section .follow a:active:visited, #hashtag_filter .users .tweet .left-section .follow a:active, #hashtag_filter .users .tweet .left-section .follow a:active:visited, #hashtag_filter .users .list .left-section .follow a:active, #hashtag_filter .users .list .left-section .follow a:active:visited, #hashtag_filter .users .user .left-section .follow a:active, #hashtag_filter .users .user .left-section .follow a:active:visited, #hashtag_filter .categories .tweet .left-section .follow a:active, #hashtag_filter .categories .tweet .left-section .follow a:active:visited, #hashtag_filter .categories .list .left-section .follow a:active, #hashtag_filter .categories .list .left-section .follow a:active:visited, #hashtag_filter .categories .user .left-section .follow a:active, #hashtag_filter .categories .user .left-section .follow a:active:visited, #trends .tweets .tweet .left-section .follow a:active, #trends .tweets .tweet .left-section .follow a:active:visited, #trends .tweets .list .left-section .follow a:active, #trends .tweets .list .left-section .follow a:active:visited, #trends .tweets .user .left-section .follow a:active, #trends .tweets .user .left-section .follow a:active:visited, #trends .users .tweet .left-section .follow a:active, #trends .users .tweet .left-section .follow a:active:visited, #trends .users .list .left-section .follow a:active, #trends .users .list .left-section .follow a:active:visited, #trends .users .user .left-section .follow a:active, #trends .users .user .left-section .follow a:active:visited, #trends .categories .tweet .left-section .follow a:active, #trends .categories .tweet .left-section .follow a:active:visited, #trends .categories .list .left-section .follow a:active, #trends .categories .list .left-section .follow a:active:visited, #trends .categories .user .left-section .follow a:active, #trends .categories .user .left-section .follow a:active:visited, .modal .tweets .tweet .left-section .follow a:active, .modal .tweets .tweet .left-section .follow a:active:visited, .modal .tweets .list .left-section .follow a:active, .modal .tweets .list .left-section .follow a:active:visited, .modal .tweets .user .left-section .follow a:active, .modal .tweets .user .left-section .follow a:active:visited, .modal .users .tweet .left-section .follow a:active, .modal .users .tweet .left-section .follow a:active:visited, .modal .users .list .left-section .follow a:active, .modal .users .list .left-section .follow a:active:visited, .modal .users .user .left-section .follow a:active, .modal .users .user .left-section .follow a:active:visited, .modal .categories .tweet .left-section .follow a:active, .modal .categories .tweet .left-section .follow a:active:visited, .modal .categories .list .left-section .follow a:active, .modal .categories .list .left-section .follow a:active:visited, .modal .categories .user .left-section .follow a:active, .modal .categories .user .left-section .follow a:active:visited, .users_list .tweets .tweet .left-section .follow a:active, .users_list .tweets .tweet .left-section .follow a:active:visited, .users_list .tweets .list .left-section .follow a:active, .users_list .tweets .list .left-section .follow a:active:visited, .users_list .tweets .user .left-section .follow a:active, .users_list .tweets .user .left-section .follow a:active:visited, .users_list .users .tweet .left-section .follow a:active, .users_list .users .tweet .left-section .follow a:active:visited, .users_list .users .list .left-section .follow a:active, .users_list .users .list .left-section .follow a:active:visited, .users_list .users .user .left-section .follow a:active, .users_list .users .user .left-section .follow a:active:visited, .users_list .categories .tweet .left-section .follow a:active, .users_list .categories .tweet .left-section .follow a:active:visited, .users_list .categories .list .left-section .follow a:active, .users_list .categories .list .left-section .follow a:active:visited, .users_list .categories .user .left-section .follow a:active, .users_list .categories .user .left-section .follow a:active:visited, .categories_list .tweets .tweet .left-section .follow a:active, .categories_list .tweets .tweet .left-section .follow a:active:visited, .categories_list .tweets .list .left-section .follow a:active, .categories_list .tweets .list .left-section .follow a:active:visited, .categories_list .tweets .user .left-section .follow a:active, .categories_list .tweets .user .left-section .follow a:active:visited, .categories_list .users .tweet .left-section .follow a:active, .categories_list .users .tweet .left-section .follow a:active:visited, .categories_list .users .list .left-section .follow a:active, .categories_list .users .list .left-section .follow a:active:visited, .categories_list .users .user .left-section .follow a:active, .categories_list .users .user .left-section .follow a:active:visited, .categories_list .categories .tweet .left-section .follow a:active, .categories_list .categories .tweet .left-section .follow a:active:visited, .categories_list .categories .list .left-section .follow a:active, .categories_list .categories .list .left-section .follow a:active:visited, .categories_list .categories .user .left-section .follow a:active, .categories_list .categories .user .left-section .follow a:active:visited, #category_show .tweets .tweet .left-section .follow a:active, #category_show .tweets .tweet .left-section .follow a:active:visited, #category_show .tweets .list .left-section .follow a:active, #category_show .tweets .list .left-section .follow a:active:visited, #category_show .tweets .user .left-section .follow a:active, #category_show .tweets .user .left-section .follow a:active:visited, #category_show .users .tweet .left-section .follow a:active, #category_show .users .tweet .left-section .follow a:active:visited, #category_show .users .list .left-section .follow a:active, #category_show .users .list .left-section .follow a:active:visited, #category_show .users .user .left-section .follow a:active, #category_show .users .user .left-section .follow a:active:visited, #category_show .categories .tweet .left-section .follow a:active, #category_show .categories .tweet .left-section .follow a:active:visited, #category_show .categories .list .left-section .follow a:active, #category_show .categories .list .left-section .follow a:active:visited, #category_show .categories .user .left-section .follow a:active, #category_show .categories .user .left-section .follow a:active:visited, #category_chooser .tweets .tweet .left-section .follow a:active, #category_chooser .tweets .tweet .left-section .follow a:active:visited, #category_chooser .tweets .list .left-section .follow a:active, #category_chooser .tweets .list .left-section .follow a:active:visited, #category_chooser .tweets .user .left-section .follow a:active, #category_chooser .tweets .user .left-section .follow a:active:visited, #category_chooser .users .tweet .left-section .follow a:active, #category_chooser .users .tweet .left-section .follow a:active:visited, #category_chooser .users .list .left-section .follow a:active, #category_chooser .users .list .left-section .follow a:active:visited, #category_chooser .users .user .left-section .follow a:active, #category_chooser .users .user .left-section .follow a:active:visited, #category_chooser .categories .tweet .left-section .follow a:active, #category_chooser .categories .tweet .left-section .follow a:active:visited, #category_chooser .categories .list .left-section .follow a:active, #category_chooser .categories .list .left-section .follow a:active:visited, #category_chooser .categories .user .left-section .follow a:active, #category_chooser .categories .user .left-section .follow a:active:visited, .box .tweets .tweet .left-section .follow a:active, .box .tweets .tweet .left-section .follow a:active:visited, .box .tweets .list .left-section .follow a:active, .box .tweets .list .left-section .follow a:active:visited, .box .tweets .user .left-section .follow a:active, .box .tweets .user .left-section .follow a:active:visited, .box .users .tweet .left-section .follow a:active, .box .users .tweet .left-section .follow a:active:visited, .box .users .list .left-section .follow a:active, .box .users .list .left-section .follow a:active:visited, .box .users .user .left-section .follow a:active, .box .users .user .left-section .follow a:active:visited, .box .categories .tweet .left-section .follow a:active, .box .categories .tweet .left-section .follow a:active:visited, .box .categories .list .left-section .follow a:active, .box .categories .list .left-section .follow a:active:visited, .box .categories .user .left-section .follow a:active, .box .categories .user .left-section .follow a:active:visited {
   color: white;
 }
+/* line 248, ../../../app/stylesheets/application.sass */
+.category .tweets .tweet .left-section .follow .message, .category .tweets .list .left-section .follow .message, .category .tweets .user .left-section .follow .message, .category .users .tweet .left-section .follow .message, .category .users .list .left-section .follow .message, .category .users .user .left-section .follow .message, .category .categories .tweet .left-section .follow .message, .category .categories .list .left-section .follow .message, .category .categories .user .left-section .follow .message, #hashtag_filter .tweets .tweet .left-section .follow .message, #hashtag_filter .tweets .list .left-section .follow .message, #hashtag_filter .tweets .user .left-section .follow .message, #hashtag_filter .users .tweet .left-section .follow .message, #hashtag_filter .users .list .left-section .follow .message, #hashtag_filter .users .user .left-section .follow .message, #hashtag_filter .categories .tweet .left-section .follow .message, #hashtag_filter .categories .list .left-section .follow .message, #hashtag_filter .categories .user .left-section .follow .message, #trends .tweets .tweet .left-section .follow .message, #trends .tweets .list .left-section .follow .message, #trends .tweets .user .left-section .follow .message, #trends .users .tweet .left-section .follow .message, #trends .users .list .left-section .follow .message, #trends .users .user .left-section .follow .message, #trends .categories .tweet .left-section .follow .message, #trends .categories .list .left-section .follow .message, #trends .categories .user .left-section .follow .message, .modal .tweets .tweet .left-section .follow .message, .modal .tweets .list .left-section .follow .message, .modal .tweets .user .left-section .follow .message, .modal .users .tweet .left-section .follow .message, .modal .users .list .left-section .follow .message, .modal .users .user .left-section .follow .message, .modal .categories .tweet .left-section .follow .message, .modal .categories .list .left-section .follow .message, .modal .categories .user .left-section .follow .message, .users_list .tweets .tweet .left-section .follow .message, .users_list .tweets .list .left-section .follow .message, .users_list .tweets .user .left-section .follow .message, .users_list .users .tweet .left-section .follow .message, .users_list .users .list .left-section .follow .message, .users_list .users .user .left-section .follow .message, .users_list .categories .tweet .left-section .follow .message, .users_list .categories .list .left-section .follow .message, .users_list .categories .user .left-section .follow .message, .categories_list .tweets .tweet .left-section .follow .message, .categories_list .tweets .list .left-section .follow .message, .categories_list .tweets .user .left-section .follow .message, .categories_list .users .tweet .left-section .follow .message, .categories_list .users .list .left-section .follow .message, .categories_list .users .user .left-section .follow .message, .categories_list .categories .tweet .left-section .follow .message, .categories_list .categories .list .left-section .follow .message, .categories_list .categories .user .left-section .follow .message, #category_show .tweets .tweet .left-section .follow .message, #category_show .tweets .list .left-section .follow .message, #category_show .tweets .user .left-section .follow .message, #category_show .users .tweet .left-section .follow .message, #category_show .users .list .left-section .follow .message, #category_show .users .user .left-section .follow .message, #category_show .categories .tweet .left-section .follow .message, #category_show .categories .list .left-section .follow .message, #category_show .categories .user .left-section .follow .message, #category_chooser .tweets .tweet .left-section .follow .message, #category_chooser .tweets .list .left-section .follow .message, #category_chooser .tweets .user .left-section .follow .message, #category_chooser .users .tweet .left-section .follow .message, #category_chooser .users .list .left-section .follow .message, #category_chooser .users .user .left-section .follow .message, #category_chooser .categories .tweet .left-section .follow .message, #category_chooser .categories .list .left-section .follow .message, #category_chooser .categories .user .left-section .follow .message, .box .tweets .tweet .left-section .follow .message, .box .tweets .list .left-section .follow .message, .box .tweets .user .left-section .follow .message, .box .users .tweet .left-section .follow .message, .box .users .list .left-section .follow .message, .box .users .user .left-section .follow .message, .box .categories .tweet .left-section .follow .message, .box .categories .list .left-section .follow .message, .box .categories .user .left-section .follow .message {
+  background: url(../../images/correct_check.png) no-repeat;
+  font-size: 0.6em;
+  padding-left: 12px;
+}
 
-/* line 249, ../../../app/stylesheets/application.sass */
+/* line 254, ../../../app/stylesheets/application.sass */
 .category {
   float: none;
 }
 
-/* line 253, ../../../app/stylesheets/application.sass */
+/* line 258, ../../../app/stylesheets/application.sass */
 #hashtag_filter, #trends {
   display: inline;
   float: left;
@@ -853,7 +859,7 @@ body {
   width: 272.174px;
   margin-left: 0;
 }
-/* line 258, ../../../app/stylesheets/application.sass */
+/* line 263, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2, #trends h2 {
   background: #373d44;
   border-bottom: 1px solid #f6fbfe;
@@ -869,7 +875,7 @@ body {
   width: 262px;
   text-shadow: black 1px 1px 2px;
 }
-/* line 273, ../../../app/stylesheets/application.sass */
+/* line 278, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2 a, #trends h2 a {
   display: block;
   float: left;
@@ -883,16 +889,16 @@ body {
 #hashtag_filter h2 a:hover, #trends h2 a:hover {
   text-decoration: underline;
 }
-/* line 282, ../../../app/stylesheets/application.sass */
+/* line 287, ../../../app/stylesheets/application.sass */
 #hashtag_filter h2.smaller, #trends h2.smaller {
   font-size: 1.1em;
 }
-/* line 285, ../../../app/stylesheets/application.sass */
+/* line 290, ../../../app/stylesheets/application.sass */
 #hashtag_filter .tweets, #trends .tweets {
   display: block;
   margin: 5px 5px 5px 5px;
 }
-/* line 289, ../../../app/stylesheets/application.sass */
+/* line 294, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav, #trends .nav {
   background: white;
   margin: 0 auto 10px auto;
@@ -905,26 +911,26 @@ body {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 296, ../../../app/stylesheets/application.sass */
+/* line 301, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav .link, #trends .nav .link {
   padding: 5px;
   cursor: pointer;
 }
-/* line 301, ../../../app/stylesheets/application.sass */
+/* line 306, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav .link.disabled a, #trends .nav .link.disabled a {
   color: #999999;
   text-decoration: none;
   cursor: default;
 }
-/* line 306, ../../../app/stylesheets/application.sass */
+/* line 311, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav .left, #trends .nav .left {
   float: left;
 }
-/* line 308, ../../../app/stylesheets/application.sass */
+/* line 313, ../../../app/stylesheets/application.sass */
 #hashtag_filter .nav .right, #trends .nav .right {
   float: right;
 }
-/* line 311, ../../../app/stylesheets/application.sass */
+/* line 316, ../../../app/stylesheets/application.sass */
 #hashtag_filter #edit_configuration_1, #trends #edit_configuration_1 {
   background: white;
   border: 2px solid black;
@@ -943,51 +949,51 @@ body {
   border-radius: 8px;
   z-index: 1000;
 }
-/* line 324, ../../../app/stylesheets/application.sass */
+/* line 329, ../../../app/stylesheets/application.sass */
 #hashtag_filter #edit_configuration_1 input[type='text'], #trends #edit_configuration_1 input[type='text'] {
   width: 180px;
 }
-/* line 327, ../../../app/stylesheets/application.sass */
+/* line 332, ../../../app/stylesheets/application.sass */
 #hashtag_filter #edit_configuration_1 input[type='button'], #trends #edit_configuration_1 input[type='button'] {
   float: left;
 }
-/* line 330, ../../../app/stylesheets/application.sass */
+/* line 335, ../../../app/stylesheets/application.sass */
 #hashtag_filter #edit_configuration_1 .commit, #trends #edit_configuration_1 .commit {
   float: left;
 }
 
-/* line 333, ../../../app/stylesheets/application.sass */
+/* line 338, ../../../app/stylesheets/application.sass */
 #trends {
   margin-bottom: 120px;
 }
 
-/* line 336, ../../../app/stylesheets/application.sass */
+/* line 341, ../../../app/stylesheets/application.sass */
 #trends .option-box {
   margin: 5px;
   text-align: center;
 }
 
-/* line 340, ../../../app/stylesheets/application.sass */
+/* line 345, ../../../app/stylesheets/application.sass */
 .modal {
   padding: 10px;
 }
-/* line 344, ../../../app/stylesheets/application.sass */
+/* line 349, ../../../app/stylesheets/application.sass */
 .modal form textarea {
   height: 130px;
   width: 320px;
 }
 
-/* line 349, ../../../app/stylesheets/application.sass */
+/* line 354, ../../../app/stylesheets/application.sass */
 #category_show {
   width: 665px;
 }
-/* line 352, ../../../app/stylesheets/application.sass */
+/* line 357, ../../../app/stylesheets/application.sass */
 #category_show h2 {
   background: url(../../images/category-bg.png) no-repeat;
   position: relative;
   width: 655px;
 }
-/* line 357, ../../../app/stylesheets/application.sass */
+/* line 362, ../../../app/stylesheets/application.sass */
 #category_show h2 .counter {
   font-size: 0.8em;
   position: absolute;
@@ -995,43 +1001,43 @@ body {
   top: 8px;
   text-shadow: white 0 0 0;
 }
-/* line 364, ../../../app/stylesheets/application.sass */
+/* line 369, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list {
   cursor: pointer;
 }
-/* line 367, ../../../app/stylesheets/application.sass */
+/* line 372, ../../../app/stylesheets/application.sass */
 #category_show #twitter_create_list_form {
   display: none;
 }
-/* line 370, ../../../app/stylesheets/application.sass */
+/* line 375, ../../../app/stylesheets/application.sass */
 #category_show .category {
   margin-top: 5px;
   margin-right: 0;
   float: left;
 }
-/* line 375, ../../../app/stylesheets/application.sass */
+/* line 380, ../../../app/stylesheets/application.sass */
 #category_show .category h2 {
   width: 300px;
 }
-/* line 378, ../../../app/stylesheets/application.sass */
+/* line 383, ../../../app/stylesheets/application.sass */
 #category_show .category .tweets {
   display: block;
   margin-top: 5px;
 }
 
-/* line 383, ../../../app/stylesheets/application.sass */
+/* line 388, ../../../app/stylesheets/application.sass */
 #category_chooser {
   background: transparent;
   width: 665px;
 }
-/* line 387, ../../../app/stylesheets/application.sass */
+/* line 392, ../../../app/stylesheets/application.sass */
 #category_chooser h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 393, ../../../app/stylesheets/application.sass */
+/* line 398, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable, #category_chooser .action-area {
   background: #bfd9e6;
   font-size: 0.85em;
@@ -1039,7 +1045,7 @@ body {
   margin-top: 10px;
   padding: 15px;
 }
-/* line 400, ../../../app/stylesheets/application.sass */
+/* line 405, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span, #category_chooser #droppable span {
   background: #f7fcfe;
   color: #666666;
@@ -1058,25 +1064,25 @@ body {
   -o-box-shadow: #9dc2d5 0px 0px 10px;
   box-shadow: #9dc2d5 0px 0px 10px;
 }
-/* line 410, ../../../app/stylesheets/application.sass */
+/* line 415, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable span.ui-state-disabled {
   color: #999999;
   background: #eeeeee;
 }
-/* line 414, ../../../app/stylesheets/application.sass */
+/* line 419, ../../../app/stylesheets/application.sass */
 #category_chooser #draggable {
   margin: 0;
 }
-/* line 417, ../../../app/stylesheets/application.sass */
+/* line 422, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area {
   padding: 0;
 }
-/* line 420, ../../../app/stylesheets/application.sass */
+/* line 425, ../../../app/stylesheets/application.sass */
 #category_chooser .action-area #droppable {
   min-height: 30px;
   padding: 15px;
 }
-/* line 423, ../../../app/stylesheets/application.sass */
+/* line 428, ../../../app/stylesheets/application.sass */
 #category_chooser p {
   background: #373d44;
   color: white;
@@ -1086,22 +1092,22 @@ body {
   padding: 15px;
 }
 
-/* line 431, ../../../app/stylesheets/application.sass */
+/* line 436, ../../../app/stylesheets/application.sass */
 .box {
   width: 665px;
 }
-/* line 434, ../../../app/stylesheets/application.sass */
+/* line 439, ../../../app/stylesheets/application.sass */
 .box h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
   height: 40px;
   font-weight: bold;
 }
-/* line 440, ../../../app/stylesheets/application.sass */
+/* line 445, ../../../app/stylesheets/application.sass */
 .box .content {
   padding: 10px;
 }
-/* line 443, ../../../app/stylesheets/application.sass */
+/* line 448, ../../../app/stylesheets/application.sass */
 .box .content .item {
   background: #f7fcfe;
   padding: 4px;
@@ -1114,12 +1120,12 @@ body {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 450, ../../../app/stylesheets/application.sass */
+/* line 455, ../../../app/stylesheets/application.sass */
 .box .content a.item {
   color: black;
   text-decoration: none;
 }
-/* line 454, ../../../app/stylesheets/application.sass */
+/* line 459, ../../../app/stylesheets/application.sass */
 .box .rounded_box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1133,43 +1139,43 @@ body {
   height: 25px;
   text-align: center;
 }
-/* line 462, ../../../app/stylesheets/application.sass */
+/* line 467, ../../../app/stylesheets/application.sass */
 .box .rounded_box a {
   font-size: 15px;
   color: #04abe2;
   text-decoration: none;
 }
 
-/* line 468, ../../../app/stylesheets/application.sass */
+/* line 473, ../../../app/stylesheets/application.sass */
 .users_list {
   width: 665px;
 }
-/* line 471, ../../../app/stylesheets/application.sass */
+/* line 476, ../../../app/stylesheets/application.sass */
 .users_list .users {
   display: block;
 }
-/* line 474, ../../../app/stylesheets/application.sass */
+/* line 479, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet {
   width: 282px;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
 }
-/* line 480, ../../../app/stylesheets/application.sass */
+/* line 485, ../../../app/stylesheets/application.sass */
 .users_list .users .tweet .body {
   min-height: 100px;
 }
-/* line 484, ../../../app/stylesheets/application.sass */
+/* line 489, ../../../app/stylesheets/application.sass */
 .users_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 488, ../../../app/stylesheets/application.sass */
+/* line 493, ../../../app/stylesheets/application.sass */
 .categories_list {
   width: 665px;
 }
-/* line 492, ../../../app/stylesheets/application.sass */
+/* line 497, ../../../app/stylesheets/application.sass */
 .categories_list .categories .list {
   background: #f7fcfe;
   width: 292px;
@@ -1177,36 +1183,36 @@ body {
   margin-right: 10px;
   min-height: 45px;
 }
-/* line 499, ../../../app/stylesheets/application.sass */
+/* line 504, ../../../app/stylesheets/application.sass */
 .categories_list .categories .list:hover {
   background: white;
 }
-/* line 502, ../../../app/stylesheets/application.sass */
+/* line 507, ../../../app/stylesheets/application.sass */
 .categories_list .categories .list .body {
   padding-left: 10px;
 }
-/* line 505, ../../../app/stylesheets/application.sass */
+/* line 510, ../../../app/stylesheets/application.sass */
 .categories_list .categories .list .body h3 {
   margin-bottom: 0;
 }
-/* line 508, ../../../app/stylesheets/application.sass */
+/* line 513, ../../../app/stylesheets/application.sass */
 .categories_list .categories .list .body .members {
   font-size: 1.2em;
   margin-left: 3px;
 }
-/* line 512, ../../../app/stylesheets/application.sass */
+/* line 517, ../../../app/stylesheets/application.sass */
 .categories_list h2 {
   background: url(../../images/category-bg.png) no-repeat;
   width: 655px;
 }
 
-/* line 516, ../../../app/stylesheets/application.sass */
+/* line 521, ../../../app/stylesheets/application.sass */
 .pagination {
   text-align: center;
   clear: both;
 }
 
-/* line 520, ../../../app/stylesheets/application.sass */
+/* line 525, ../../../app/stylesheets/application.sass */
 #create_list_from_category {
   background: #e1f3fd;
   margin: 10px;
@@ -1223,30 +1229,30 @@ body {
   margin-right: 10px;
   width: 272.174px;
 }
-/* line 527, ../../../app/stylesheets/application.sass */
+/* line 532, ../../../app/stylesheets/application.sass */
 #create_list_from_category p {
   margin: 10px;
   text-align: center;
 }
-/* line 531, ../../../app/stylesheets/application.sass */
+/* line 536, ../../../app/stylesheets/application.sass */
 #create_list_from_category label {
   margin-left: 5px;
   width: 70px;
   display: inline-block;
 }
-/* line 536, ../../../app/stylesheets/application.sass */
+/* line 541, ../../../app/stylesheets/application.sass */
 #create_list_from_category input {
   margin: 3px;
 }
-/* line 539, ../../../app/stylesheets/application.sass */
+/* line 544, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=text] {
   width: 120px;
 }
-/* line 542, ../../../app/stylesheets/application.sass */
+/* line 547, ../../../app/stylesheets/application.sass */
 #create_list_from_category input[type=submit] {
   margin-left: 83px;
 }
-/* line 545, ../../../app/stylesheets/application.sass */
+/* line 550, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 {
   background: #0094da;
   color: white;
@@ -1260,7 +1266,7 @@ body {
   -khtml-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 553, ../../../app/stylesheets/application.sass */
+/* line 558, ../../../app/stylesheets/application.sass */
 #create_list_from_category h2 a {
   color: white;
   font-weight: bold;
@@ -1271,21 +1277,21 @@ body {
   text-decoration: underline;
 }
 
-/* line 560, ../../../app/stylesheets/application.sass */
+/* line 565, ../../../app/stylesheets/application.sass */
 #trends .title {
   float: left;
 }
-/* line 563, ../../../app/stylesheets/application.sass */
+/* line 568, ../../../app/stylesheets/application.sass */
 #trends h2 {
   position: relative;
 }
-/* line 566, ../../../app/stylesheets/application.sass */
+/* line 571, ../../../app/stylesheets/application.sass */
 #trends h2 .filters {
   position: absolute;
   right: 3px;
   top: 10px;
 }
-/* line 573, ../../../app/stylesheets/application.sass */
+/* line 578, ../../../app/stylesheets/application.sass */
 #trends h2 .filters a {
   background: #aaaaaa;
   color: black;
@@ -1304,21 +1310,21 @@ body {
   border-radius: 6px;
   text-shadow: black 0 0 0;
 }
-/* line 587, ../../../app/stylesheets/application.sass */
+/* line 592, ../../../app/stylesheets/application.sass */
 #trends h2 .filters a:hover {
   background: white;
 }
-/* line 590, ../../../app/stylesheets/application.sass */
+/* line 595, ../../../app/stylesheets/application.sass */
 #trends h2 .filters a.selected {
   background: white;
 }
 
-/* line 593, ../../../app/stylesheets/application.sass */
+/* line 598, ../../../app/stylesheets/application.sass */
 .modal {
   display: none;
 }
 
-/* line 596, ../../../app/stylesheets/application.sass */
+/* line 601, ../../../app/stylesheets/application.sass */
 .modal div.close {
   background-image: url(../../images/close.png);
   position: absolute;
@@ -1330,7 +1336,7 @@ body {
   z-index: 9999;
 }
 
-/* line 607, ../../../app/stylesheets/application.sass */
+/* line 612, ../../../app/stylesheets/application.sass */
 form .counter {
   position: absolute;
   left: 15px;
@@ -1339,25 +1345,25 @@ form .counter {
   font-weight: bold;
   color: #666666;
 }
-/* line 615, ../../../app/stylesheets/application.sass */
+/* line 620, ../../../app/stylesheets/application.sass */
 form textarea {
   resize: none;
 }
-/* line 618, ../../../app/stylesheets/application.sass */
+/* line 623, ../../../app/stylesheets/application.sass */
 form .warning {
   color: #660000;
 }
-/* line 620, ../../../app/stylesheets/application.sass */
+/* line 625, ../../../app/stylesheets/application.sass */
 form .exceeded {
   color: #ee0000;
 }
-/* line 623, ../../../app/stylesheets/application.sass */
+/* line 628, ../../../app/stylesheets/application.sass */
 form #tweet_submit {
   padding: 5px;
   float: right;
 }
 
-/* line 627, ../../../app/stylesheets/application.sass */
+/* line 632, ../../../app/stylesheets/application.sass */
 .clear {
   clear: both;
 }

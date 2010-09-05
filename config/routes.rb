@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.error '/error', :controller => "welcome", :action => "error"
 
   map.root :controller => "welcome"
-  map.resources :users
+  map.resources :users, :collection => { :follow => :post }
   map.resources :tweets, :collection => {:my => :get, :refresh => :post, :by_hashtag => :post}
   map.resources :categories, :as => :categories, :member => {:create_on_twitter => :post}
   map.resources :configurations

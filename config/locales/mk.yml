@@ -42,6 +42,7 @@ mk:
       this_month: "Овој месец"
       archive: "Архива"
     follow: "Следи"
+    you_follow: "Го следиш"
   pagination:
     previous: "Претходна"
     next: "Следна"

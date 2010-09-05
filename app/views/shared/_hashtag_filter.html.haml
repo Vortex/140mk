@@ -10,4 +10,4 @@
     .link.right{"data-hashtag" => @configuration.today_topic, "data-offset" => 0}= link_to t('global.older')
     .clear
 
-  = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :category_id => 'hashtag' }, :update => "tweets_hashtag", :complete => "reBindOverlays()")
+  // = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :category_id => 'hashtag' }, :update => "tweets_hashtag", :complete => "reBindOverlays()")

@@ -13,13 +13,7 @@
   .users
     - @users.each do |user|
       .tweet{:id => "tweet_users-#{user.id}"}
-        .left-section
-          = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"
-          .follow
-            - if current_user && current_user.follows_user?(user)
-              = "following!"
-            - else
-              = link_to t('global.follow')
+        = render :partial => 'shared/user_info_left', :locals => { :user => user }
 
         .body
           = "@#{user.screen_name}"

@@ -69,6 +69,14 @@ class User < ActiveRecord::Base
     unfollow_user
   end
 
+  # Not to be confused with follow_user method which is used by application internal
+  # TODO: refactor this code to escape this confusion
+  def follow(user)
+    unless TwitterAccess.base.friendship_exists?(self.screen_name, user.screen_name)
+      TwitterAccess.base.friendship_create(user.twitter_id, true)
+    end
+  end
+
   def to_param
     screen_name
   end

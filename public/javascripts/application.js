@@ -255,6 +255,18 @@ $(document).ready( function () {
         event.preventDefault();
     });
 
+    // Follow user action
+    $('.follow > a').live('click', function(event) {
+        var username = $(this).attr('data-username');
+        var element = $(this).parent();        
+
+        $.post('/users/follow', { username: username }, function(data) {
+            element.html(data);                
+        });
+        
+        event.preventDefault();
+    });
+
     // Check the cookies and preselect the tabs
     var cookies = getCookies();
     for(var name in cookies) {            
@@ -272,6 +284,7 @@ $(document).ready( function () {
 
     // Tooltips for trending topics filters
     $('#trends .filters > a').tipsy({gravity: 's'});
+
 });
 
 function switch_to_tweets(category_id) {
@@ -299,10 +312,7 @@ function closeOverlays() {
 
 function reBindOverlays() {
     // console.log('Overlay rebind');
-    overlayObject = $("a.modalInput").overlay(overlayOptions);
-    twttr.anywhere(function(twitter) {
-        twitter.hovercards();
-    });
+    overlayObject = $("a.modalInput").overlay(overlayOptions);    
 }
 
 function getCookies() {

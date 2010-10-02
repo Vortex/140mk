@@ -1,0 +1,263 @@
+# Macedonian translation file for 140.mk
+
+mk:
+  global:
+    logout: "Odjavi se"
+    login: "Prijavi se"
+    delete: "Briši"
+    back: "Nazad"
+    edit: "Izmeni"
+    settings: "Podešavanja"
+    time_ago: "pre {{time}}"
+    tweet: "Tvitni"
+    member: 'član'
+    tag: 'tag'
+
+    send: "pošalji"
+    failtag: "#fail и #rsfail"
+    categories: "Kategorije"
+    retweet: "RT"
+    reply: "Odgovori"
+    cancel: "Otkaži"
+    bio: "Bio"
+    location: "Lokacija"
+    web: "Sajt"
+    name: "Ime"
+    about_title: "Šta je 140.rs u 6 tvitova:"
+    login_description: "...sa svojim Twitter nalogom."
+    no_account: "Nemaš?"
+    trending_tag: "#140rs"
+    members: "članovi"
+    newer: "&laquo; noviji"
+    older: "prethodni &raquo;"
+    latest_version: "(Verzija {{version}})"
+    update: "Ažuriraj"
+    trend_filters:
+      today_short: "D"
+      this_week_short: "N"
+      this_month_short: "M"
+      archive_short: "A"
+      today: "Izmene 24 čaasa"
+      this_week: "Izmene 7 dana"
+      this_month: "Izmene mesec dana"
+      archive: "Arhiva"
+    follow: "Prati"
+    you_follow: "Ti pratiš"
+  pagination:
+    previous: "Prethodna"
+    next: "Sledeća"
+
+    tweet: "Tvitni"
+  category:
+    users: "Članovi"
+    tweets: "Twitovi"
+    title: "Spisak kategorija"
+    total: "Ukupno"
+    create_list: "{{login}} da bi kreirao listu za ovu kategoriju"
+    create_list_title: "Kreiraj listu za kategoriju"
+    last_tweets: "Poslednji tvitovi"
+    subscribed_users_count: "{{count}} članova"
+  tags:
+    title: "Spisak tagova"
+    tagging: "tag"
+  trends:
+    title: "Aktuelne teme"
+    view_all: "Svi tagovi"
+  settings:
+    select_categories: "Odaberite kategoriju"
+    select_categories_info: "Izaberite najviše 6 kategorija u kojima želite da vaš profil bude izlistan, prostim prevlačenjem iz prvog u drugo polje. Ukoliko se predomislite, samo vratite kategoriju nazad."
+    deactivate: "Deaktiviranje profila"
+    next_action: "Sledeća akcija"
+
+    index:
+      page_title: "Podešavanja"
+  navigation:
+    home: "Naslovna"
+    users: "Članovi"
+    categories: "Kategorije"
+
+    about_service: "O servisu"
+    blog: "Blog"
+  tweet:
+    timeline: "Twitovi od {{user}}"
+
+  user:
+    created_at: "Registrovan pre {{time}}"
+    tweet: 'tvit'
+    activate: 'Aktiviraj'
+    deactivate: 'Deaktiviraj'
+    deactivate_account: 'Da li ste sigurni da želite da deaktivirate Vaš profil?'
+    title: "Lista registrovanih korisnika"
+    to_tweet_area: "Nazad u kokošinjac"
+    errors:
+      private_account: "Vaši tvitovi su privatni. Morate da pratite korisnika {{user}} ili da Vaš profil bude javan da bismo imali pristup vašim tvitovima. Kada to sredite prijavite se ponovo."
+
+  title:
+    last_tweets: "Poslednji tvitovi"
+    last_members: "Poslednji članovi"
+
+    tweeted: "Tvitao"
+  subscriptions:
+    subscribe_message: "Nemate izabranu kategoriju. Molimo Vas da izaberete."
+    subscribed_message: "Odabrane kategorije:"
+    create:
+      notice: "Uspešno izmenjena lista kategorija."
+      error: "Ne možete imati više od {{count}} kategorija!"
+
+  messages:
+    confirm: "Da li si siguran"
+
+  buttons:
+    create: "Kreiraj"
+    "yes": "Da"
+
+  twitter:
+    list:
+      private: "Privatna"
+      name: "{{name}} - kreirao 140.rs"
+      create:
+        notice: "Uspešno ste kreirali listu za ovu kategoriju."
+        error: "Pojavila se greška prilikom kreiranja liste za ovu kategoriju"
+
+# Macedonian translations for Ruby on Rails
+# by Dejan Dimić (dejan.dimic@gmail.com)
+
+    flash_error: "Тwitter trenutno ne reaguje, pokušaj malo kasnije."
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%B %e, %Y"
+      only_day: "%e"
+ 
+    day_names: [Nedelja, Ponedeljak, Utorak, Sreda, Četvrtak, Petak, Subota]
+    abbr_day_names: [Ned, Pon, Uto, Sre, Čet, Pet, Sub]
+    month_names: [~, Januar, Februar, Mart, April, Maj, Jun, Jul, Avgust, Septembar, Oktobar, Novembar, Decembar]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, Maj, Jun, Jul, Avg, Sep, Okt, Nov, Dec]
+    order: [ :day, :month, :year ]
+ 
+  time:
+    formats:
+      default: "%a %b %d %H:%M:%S %Z %Y"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+      only_second: "%S"
+ 
+    am: 'AM'
+    pm: 'PM'
+ 
+  datetime:
+    formats:
+      default: "%Y-%m-%dT%H:%M:%S%Z"
+    distance_in_words:
+      half_a_minute: 'pola minuta'
+      less_than_x_seconds:
+        zero: 'manje od sekunde'
+        one: 'manje od 1 sekunde'
+        few: 'manje od {{count}} sekunde'
+        other: 'manje od {{count}} sekundi'
+      x_seconds:
+        one: '1 sekunda'
+        few: '{{count}} sekunde'
+        other: '{{count}} sekundi'
+      less_than_x_minutes:
+        zero: 'manje od minuta'
+        one: 'manje od 1 minuta'
+        other: 'manje od {{count}} minuta'
+      x_minutes:
+        one: '1 minut'
+        other: '{{count}} minuta'
+      about_x_hours:
+        one: 'oko 1 sat'
+        few: 'oko {{count}} sata'
+        other: 'oko {{count}} sati'
+      x_days:
+        one: '1 dan'
+        other: '{{count}} dana'
+      about_x_months:
+        one: 'oko 1 mesec'
+        few: 'oko {{count}} meseca'
+        other: 'oko {{count}} meseci'
+      x_months:
+        one: '1 mesec'
+        few: '{{count}} meseca'
+        other: '{{count}} meseci'
+      about_x_years:
+        one: 'oko 1 godine'
+        other: 'oko {{count}} godina'
+      over_x_years:
+        one: 'više od 1 godine'
+        other: 'više od {{count}} godina'
+ 
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'RSD'
+        precision: 2
+        format: '%n %u'
+ 
+  support:
+    array:
+      sentence_connector: "i"
+ 
+  activerecord:
+    errors:
+      template:
+        header:
+          one: 'Nisam uspeo da sačuvam {{model}}: 1 greška.'
+          few: 'Nisam uspeo da sačuvam {{model}}: {{count}} greške.'
+          other: 'Nisam uspeo da sačuvam {{model}}: {{count}} grešaka.'
+        body: "Molimo proverite sledeća polja:"
+      messages:
+        inclusion: "nije u listi"
+        exclusion: "nije dostupno"
+        invalid: "nije ispravno"
+        confirmation: "ne slaže se sa potvrdom"
+        accepted: "mora da bude prihvaćeno"
+        empty: "mora da bude popunjeno"
+        blank: "mora da bude popunjeno"
+        too_long: "predugačko(ne sme biti duže od {{count}} karaktera)"
+        too_short: "prekratko (ne sme biti kraće od {{count}} karaktera)"
+        wrong_length: "neodgovarajuća dužina (morate da imate {{count}} karaktera)"
+        taken: "zauzeto"
+        not_a_number: "nije broj "
+        greater_than: "mora da bude veće od {{count}}"
+        greater_than_or_equal_to: "mora da bude veće ili jednako {{count}}"
+        equal_to: "mora da bude jednako {{count}}"
+        less_than: "mora da bude manje od {{count}}"
+        less_than_or_equal_to: "mora da bude manje ili jednako {{count}}"
+        odd: "mora da bude neparno"
+        even: "mora da bude parno"
+
+
+  welcome:
+    index:
+      page_title: "Srpska tvitosfera na jednom mestu"
+      seo_description: "Prati srpsku tvitosferu i lokalne trendove. 140.rs je referentna lokacija za sve srpske tviteraše."
+      seo_keywords: "Twitter, Ruby on Rails, direktorijum, local trends, twitter nalog, rs twitter, korisnici, kategorije"
+  about:
+    index:
+      page_title: "Šta je 140.rs?"
+      seo_description: "140.rs je servis baziran na  popularnom mikrobloging servisu Twitter koji ima za cilj promociju servisa, ali i lokalnih Twitter korisnika i trendova na jednom mestu."
+      seo_keywords: "Twitter, Ruby on Rails, direktorijum, local trends, twitter nalog, rs twitter, korisnici, kategorije, trendovi"
+  users:
+    index:
+      page_title: "Srpski korisnici na Twitter-u"
+      seo_description: "Prati srpsku tvitosferu na jednom mestu. Priključi se i budi deo diskusije zajedno sa ostalim korisnicima."
+      seo_keywords: "Twitter, Ruby on Rails, direktorijum, local trends, twitter nalog, rs twitter, korisnici, kategorije, trendovi"
+  categories:
+    index:
+      page_title: "Kategorije na 140.rs"
+      seo_description: "Prati kategorije sa tvitovima i korisnicima koji su relevatni u sferi tvojih interesovanja: Internet, Tehnologija, Muzika, Zanimljivosti, Mediji, Linux i mnogi drugi."
+      seo_keywords: "Twitter, Ruby on Rails, direktorijum, local trends, twitter nalog, rs twitter, korisnici, kategorije"
+    show:
+      page_title: "{{name}} | Kategorije na 140.rs"
+  formtastic:
+    actions:
+      update: "Ažuriraj"
+      cancel: "Otkaži"

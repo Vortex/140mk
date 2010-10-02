@@ -5,6 +5,7 @@ Version 0.3.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Serbian locale introduced
+  * Deployment scripts for localized version (temporary solution, will be replaced by better method)
 
 05.09.2010
 ==========

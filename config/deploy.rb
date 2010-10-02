@@ -3,7 +3,7 @@ set :application, "140mk"
 #set :deploy_to, "/home/blitzkrieg/apps/#{application}"
 
 # Stages
-set :stages, %w(staging production)
+set :stages, %w(staging production staging_sr production_sr)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 

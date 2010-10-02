@@ -1,6 +1,6 @@
-# Macedonian translation file for 140.mk
+# Serbian translation
 
-mk:
+sr:
   global:
     logout: "Odjavi se"
     login: "Prijavi se"

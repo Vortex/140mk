@@ -17,8 +17,8 @@ Rails::Initializer.run do |config|
   config.gem 'fancy-buttons'  
   config.gem "simple-navigation", :lib => "simple_navigation"
   config.gem "jrails"
-  config.gem 'formtastic'
-  config.gem 'jintastic'
+  config.gem 'formtastic', :version => '0.9.8'
+  config.gem 'jintastic', :version => '1.1.0'
   config.gem 'responders', :version => "= 0.4.2"
   config.gem 'inherited_resources', :version => "= 1.0.2"
   config.gem 'cyrillizer'

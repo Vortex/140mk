@@ -13,6 +13,14 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
 
+  def require_admin
+    if !current_user || !current_user.is_admin?
+      flash[:notice] = "You must be admin to access requested page"
+      redirect_to root_url
+      return false
+    end
+  end
+
   private
 
   def get_filtered_tweets

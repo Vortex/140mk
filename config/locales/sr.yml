@@ -12,6 +12,7 @@ sr:
     tweet: "Tvitni"
     member: 'član'
     tag: 'tag'
+    administration: 'Administracija'
 
     send: "pošalji"
     failtag: "#fail и #rsfail"

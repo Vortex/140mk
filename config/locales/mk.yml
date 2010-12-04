@@ -12,6 +12,7 @@ mk:
     tweet: "Твитај"
     member: 'член'
     tag: 'таг'
+    administration: 'Администрација'
 
     send: "Испрати"
     failtag: "#fail и #mkfail"
@@ -75,6 +76,7 @@ mk:
     home: "Дома"
     users: "Членови"
     categories: "Категории"
+    poll: "Анкета"
 
     about_service: "За сервисот"
     blog: "Блог"
@@ -261,3 +263,12 @@ mk:
     actions:
       update: "Ажурирај"
       cancel: "Откажи"
+
+  poll:
+    already_taken: "Веќе гласавте на анкетата."
+    not_all_answered: "Не ги одговоривте сите прашања од анкетата."
+    vote: "Гласај"
+    no_poll: "Сеуште нема објевено анкета."
+    answer:
+      notice: "Ви благодариме што одговоривте на анкетата"
+

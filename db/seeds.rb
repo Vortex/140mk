@@ -62,3 +62,17 @@ end
 if Configuration.first.nil?
   Configuration.create(:today_topic => '#140mk')
 end
+
+admins = %w(
+  140mk
+  blackflasher
+  VortexDNR
+)
+
+admins.each do |admin|
+  user = User.find_by_screen_name(admin)
+  if user
+    user.is_admin = true
+    user.save
+  end
+end

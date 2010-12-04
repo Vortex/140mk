@@ -12,6 +12,7 @@ en:
     tweet: 'tweet'
     member: 'member'
     trends: "Trends"
+    administration: 'Administration'
 
   pagination:
     previous: "Previous"
@@ -35,6 +36,7 @@ en:
     home: "Home"
     users: "Users"
     categories: "Categories"
+    poll: "Poll"
 
   tweet:
     created_at: "{{time}} ago"
@@ -76,3 +78,11 @@ en:
       create:
         notice: "You have successfully created list from this category"
         error: "Error while creating list from this category"
+
+  poll:
+    already_taken: "You have already taken this poll"
+    not_all_answered: "You haven't answered all questions of this poll"
+    vote: "Vote"
+    no_poll: "No poll published yet."
+    answer:
+      notice: "Thank you for taking the poll"

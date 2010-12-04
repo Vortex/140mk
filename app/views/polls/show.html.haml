@@ -1,0 +1,32 @@
+.poll
+  - if @poll
+    %h1= @poll.name
+    %p.description= @poll.description
+
+    - if current_user && current_user.has_taken_poll?(@poll)
+      - @poll_response.poll_answers.each do |poll_answer|
+        .question
+          %p.name= poll_answer.poll_question.name
+          - poll_answer.poll_question.poll_choices.each do |poll_choice|
+            %span.answer= poll_choice.name
+
+    - else
+      - form_for @poll_response, :url => poll_path do |f|
+        %p.error= t('poll.not_all_answered') unless f.error_messages.empty?
+
+        = f.hidden_field :poll_id
+
+        - f.fields_for :poll_answers do |p|
+          .question
+            %p.name= p.object.poll_question.name
+
+            - p.object.poll_question.poll_choices.each do |poll_choice|
+              %span.answer
+                = p.hidden_field :poll_question_id
+                = p.label :"poll_choice_id_#{poll_choice.id}", poll_choice.name
+                = p.radio_button :poll_choice_id, poll_choice.id
+
+        %p= submit_tag t('poll.vote')
+
+  - else
+    %p.error= t('poll.no_poll')

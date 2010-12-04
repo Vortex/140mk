@@ -7,12 +7,20 @@ class User < ActiveRecord::Base
   has_many :categories, :through => :subscriptions
   has_many :tweets
   has_many :followings
+  has_many :poll_responses, :dependent => :destroy
 
   # Validations
   validates_presence_of :screen_name
 
   # Callbacks
   after_create :follow_user
+
+  # Model can accept nested attributes
+  accepts_nested_attributes_for :poll_responses, :allow_destroy => true
+
+  def has_taken_poll?(poll)
+    poll_responses.find(:first, :conditions => {:poll_id => poll.id})
+  end
 
   def authorized?
     atoken.present? && asecret.present?

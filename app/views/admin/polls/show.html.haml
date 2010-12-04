@@ -1,0 +1,37 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to t("web-app-theme.list", :default => "List"), admin_polls_path
+      %li= link_to t("web-app-theme.new", :default => "New"), new_admin_poll_path
+      %li.active= link_to t("web-app-theme.show", :default => "Show"), admin_poll_path
+  .content
+    .inner
+      %p
+        <b>#{ t("activerecord.attributes.admin_poll.name", :default => t("activerecord.labels.name", :default => "Name")) }:</b>
+        = @poll.name
+      %p
+        <b>#{ t("activerecord.attributes.admin_poll.description", :default => t("activerecord.labels.description", :default => "Description")) }:</b>
+        = @poll.description
+      %p
+        <b>#{ t("activerecord.attributes.admin_poll.display", :default => t("activerecord.labels.display", :default => "Display")) }:</b>
+        = @poll.display
+
+      %table.table
+        %tr
+          %th.first Question
+          %th.last Answer
+        - @poll.poll_questions.each do |poll_question|
+          %tr{:class => cycle("odd", "even")}
+            %td= poll_question.name
+            %td
+              %table.table
+                - poll_question.poll_choices.each do |poll_choice|
+                  %tr{:class => cycle("odd", "even")}
+                    %td= poll_choice.name
+                    %td= poll_choice.poll_answers.size
+
+      .wat-cf
+        #{ link_to "#{image_tag("web-app-theme/application_edit.png", :alt => t("web-app-theme.edit", :default=> "Edit"))} #{t("web-app-theme.edit", :default=> "Edit")}", edit_admin_poll_path(@poll), :class => "button" } 
+        #{ link_to "#{image_tag("web-app-theme/cross.png", :alt => t("web-app-theme.delete", :default=> "Delete"))} #{t("web-app-theme.delete", :default => "Delete")}", admin_poll_path(@poll), :method => "delete", :class => "button", :confirm => t("web-app-theme.confirm", :default => "Are you sure?") }
+
+- content_for :sidebar, render(:partial => 'sidebar')

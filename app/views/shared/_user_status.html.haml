@@ -13,4 +13,5 @@
         = link_to t('global.tweet'), nil, :id => "tweet_link", :class => "modalInput", :rel => "#tweet"
         = link_to t('global.settings'), settings_path
         = link_to t('global.logout'), logout_path
+        = link_to t('global.administration'), admin_root_path if current_user.is_admin?
       .clear

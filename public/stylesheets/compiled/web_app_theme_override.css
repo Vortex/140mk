@@ -1,0 +1,21 @@
+/* line 1, ../../../app/stylesheets/web_app_theme_override.sass */
+.nested_form_fields {
+  margin: 10px 0 20px 20px;
+}
+
+/* line 4, ../../../app/stylesheets/web_app_theme_override.sass */
+.nested_form_fields .fields {
+  padding: 5px 10px;
+  margin: 5px 10px;
+  border: 2px solid black;
+}
+
+/* line 9, ../../../app/stylesheets/web_app_theme_override.sass */
+.remove_field {
+  text-align: right;
+}
+
+/* line 12, ../../../app/stylesheets/web_app_theme_override.sass */
+table tr.odd {
+  background-color: white;
+}

@@ -9,6 +9,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :subscriptions
   map.resources :tags, :only => [:index, :show], :collection => { :by_period => :post }
   map.resource :session, :collection => {:callback => :get}
+  map.resource :poll
+
+  map.namespace :admin do |admin|
+    admin.root :controller => 'welcome'
+    admin.resources :polls
+  end
   
   map.login "/login", :controller => "sessions", :action => "create"
   map.logout "/logout", :controller => "sessions", :action => "destroy"

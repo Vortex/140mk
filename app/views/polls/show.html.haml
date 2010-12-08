@@ -1,32 +1,45 @@
-.poll
+- title t('.page_title')
+- seo_description('.seo_description')
+- seo_keywords t('.seo_keywords')
+
+- content_for(:sidebar) do
+  = render :partial => 'shared/user_status'
+  = render :partial => 'shared/hashtag_filter'
+  = render :partial => 'shared/trending_tags'
+
+.categories_list
   - if @poll
-    %h1= @poll.name
-    %p.description= @poll.description
+    %h2= @poll.name
 
-    - if current_user && current_user.has_taken_poll?(@poll)
-      - @poll_response.poll_answers.each do |poll_answer|
-        .question
-          %p.name= poll_answer.poll_question.name
-          - poll_answer.poll_question.poll_choices.each do |poll_choice|
-            %span.answer= poll_choice.name
+    .categories.poll
+      %p.description= @poll.description
 
-    - else
-      - form_for @poll_response, :url => poll_path do |f|
-        %p.error= t('poll.not_all_answered') unless f.error_messages.empty?
-
-        = f.hidden_field :poll_id
-
-        - f.fields_for :poll_answers do |p|
+      - if (current_user && current_user.has_taken_poll?(@poll)) || !current_user
+        - @poll_response.poll_answers.each do |poll_answer|
           .question
-            %p.name= p.object.poll_question.name
+            %h3.name= poll_answer.poll_question.name
+            %ul
+            - poll_answer.poll_question.poll_choices.each do |poll_choice|
+              %li.answer= poll_choice.name
 
-            - p.object.poll_question.poll_choices.each do |poll_choice|
-              %span.answer
-                = p.hidden_field :poll_question_id
-                = p.label :"poll_choice_id_#{poll_choice.id}", poll_choice.name
-                = p.radio_button :poll_choice_id, poll_choice.id
+      - else
+        - form_for @poll_response, :url => poll_path do |f|
+          %p.error= t('poll.not_all_answered') unless f.error_messages.empty?
 
-        %p= submit_tag t('poll.vote')
+          = f.hidden_field :poll_id
+
+          - f.fields_for :poll_answers do |p|
+            .question
+              %h3.name= p.object.poll_question.name
+              
+              %ul
+              - p.object.poll_question.poll_choices.each do |poll_choice|
+                %li.answer
+                  = p.hidden_field :poll_question_id
+                  = p.radio_button :poll_choice_id, poll_choice.id
+                  = p.label :"poll_choice_id_#{poll_choice.id}", poll_choice.name
+                  
+          %p= submit_tag t('poll.vote')
 
   - else
     %p.error= t('poll.no_poll')

@@ -1,10 +1,21 @@
 class PollsController < ApplicationController
   before_filter :authenticate, :only => :create
+  before_filter :get_filtered_tweets, :only => :show
+  before_filter :get_trending_tags, :only => [:index, :show]
 
   def show
     @poll = Poll.published.first
-
+    
     if @poll
+      # Notice if user is not logged in
+      unless current_user
+        flash.now[:notice] = t('poll.not_logged')
+      end
+      
+      if current_user && current_user.has_taken_poll?(@poll)
+        flash.now[:notice] = t('poll.already_taken')
+      end
+
       @poll_response = @poll.poll_responses.new
       @poll.poll_questions.each do |poll_question|
         @poll_response.poll_answers.build(:poll_question => poll_question)

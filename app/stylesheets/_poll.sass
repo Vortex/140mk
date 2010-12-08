@@ -1,15 +1,36 @@
 .poll
+  background: #fff
+  padding: 10px 10px 0 10px      
+  min-height: 100px
+  margin-bottom: 10px
+  box-shadow: 0 0 10px #9dc2d5
+  -moz-box-shadow: 0 0 10px #9dc2d5
+  -webkit-box-shadow: 0 0 10px #9dc2d5
+  position: relative
+  z-index: 0
+  +border-radius(4px)
+
   .error
     color: #FF0000
 
-  h1
+  h3
+    font-size: 2em
+    font-weight: bold
     margin-bottom: 10px
+    margin-left: 10px
 
   p.description
     font-size: 15px
 
+  input[type='submit']
+    margin-left: 290px
+
   .question
     margin: 15px 0 25px
+
+    li
+      list-style: none
+
 
     p
       margin-bottom: 7px
@@ -17,3 +38,5 @@
     span
       display: inline-block
       margin: 0 10px
+
+

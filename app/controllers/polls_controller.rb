@@ -1,7 +1,7 @@
 class PollsController < ApplicationController
   before_filter :authenticate, :only => :create
-  before_filter :get_filtered_tweets, :only => :show
-  before_filter :get_trending_tags, :only => [:index, :show]
+  before_filter :get_filtered_tweets, :only => [:show, :create]
+  before_filter :get_trending_tags, :only => [:index, :show, :create]
 
   def show
     @poll = Poll.published.first

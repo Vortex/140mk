@@ -1,10 +1,6 @@
 module TwitterAccess
   extend self
 
-  def base
-    @base ||= authenticate(ConsumerConfig['user']['username'], ConsumerConfig['user']['password'])
-  end
-
   def save_tweets(tweets)
     Tweet.transaction do
       tweets.each do |tweet|
@@ -27,12 +23,12 @@ module TwitterAccess
     if last_tweet # when there are tweets in the database collect only new ones
       page = 1
       begin
-        tweets = base.friends_timeline({:count => 200, :page => page, :since_id => last_tweet.original_tweet_id})
+        tweets = client.friends_timeline({:count => 200, :page => page, :since_id => last_tweet.original_tweet_id})
         save_tweets(tweets)
         page += 1
       end while tweets.length > 0
     else # when there are no tweets in database, collect initial ones
-      tweets = base.friends_timeline({:count => 200, :page => 1})
+      tweets = client.friends_timeline({:count => 200, :page => 1})
       save_tweets(tweets)
     end
   end
@@ -48,19 +44,19 @@ module TwitterAccess
   def get_users
     cursor = -1
     begin
-      results = base.friends({:cursor => cursor})
+      results = client.friends({:cursor => cursor})
       cursor = results.next_cursor
       save_users(results.users)
     end while cursor > 0
   end
 
-  private
-  def authenticate(username, password)
-    # httpauth = Twitter::HTTPAuth.new(username, password)
-    oauth = Twitter::OAuth.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'])
-    oauth.authorize_from_access(ConsumerConfig['consumer']['atoken'], ConsumerConfig['consumer']['asecret'])
-    
-    # Twitter::Base.new(httpauth)
-    Twitter::Base.new(oauth) 
+  def client
+     Twitter.configure do |config|
+      config.consumer_key = ConsumerConfig['consumer']['token']
+      config.consumer_secret = ConsumerConfig['consumer']['secret']
+      config.oauth_token = ConsumerConfig['consumer']['atoken']
+      config.oauth_token_secret = ConsumerConfig['consumer']['asecret']
+    end
+    @client ||= Twitter::Client.new
   end
 end

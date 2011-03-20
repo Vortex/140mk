@@ -69,10 +69,10 @@ class User < ActiveRecord::Base
     self.description = account.description
   end
 
-  def save_with_profile_and_oauth(profile, oauth)
+  def save_with_profile_and_oauth(profile, access_token)
     self.set_profile_data(profile)
-    self.atoken = oauth.access_token.token
-    self.asecret = oauth.access_token.secret
+    self.atoken = access_token.token
+    self.asecret = access_token.secret
     self.status == 1 ? self.save : self.activate!
   end
 
@@ -91,7 +91,7 @@ class User < ActiveRecord::Base
   # Not to be confused with follow_user method which is used by application internal
   # TODO: refactor this code to escape this confusion
   def follow(user)
-    unless TwitterAccess.base.friendship_exists?(self.screen_name, user.screen_name)
+    unless TwitterAccess.client.friendship_exists?(self.screen_name, user.screen_name)
       client.friendship_create(user.twitter_id, true)
     end
   end
@@ -105,16 +105,16 @@ class User < ActiveRecord::Base
   def follow_user
     return if Rails.env == "test" # don't follow users when in test environment
 
-    unless TwitterAccess.base.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
-      TwitterAccess.base.friendship_create(twitter_id, true)
+    unless TwitterAccess.client.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
+      TwitterAccess.client.friendship_create(twitter_id, true)
     end
-  rescue Twitter::General => e
-    if e.message =~ /\(403\): Forbidden .*/
-      self.status = 2 # protected account
-      self.save
-    else
-      raise e
-    end
+  # rescue Twitter::General => e
+  #  if e.message =~ /\(403\): Forbidden .*/
+  #    self.status = 2 # protected account
+  #    self.save
+  #  else
+  #    raise e
+  #  end
   end
 
   def unfollow_user

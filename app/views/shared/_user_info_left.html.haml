@@ -1,5 +1,5 @@
 .left-section
-  = link_to image_tag(user.photo), twitter_path(user.screen_name), :target => "_blank"
+  = link_to image_tag(user.photo), user.url, :target => "_blank"
   - if current_user && (current_user != user)
     .follow
       - if current_user.follows_user?(user)

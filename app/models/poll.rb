@@ -11,5 +11,5 @@ class Poll < ActiveRecord::Base
   accepts_nested_attributes_for :poll_questions, :allow_destroy => true
 
   # Named scopes
-  named_scope :published, :conditions => {:published => true}, :order => 'id DESC'
+  scope :published, :conditions => {:published => true}, :order => 'id DESC'
 end

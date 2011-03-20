@@ -8,7 +8,7 @@ mk:
     back: "Назад"
     edit: "Измени"
     settings: "Подесувања"
-    time_ago: "пред {{time}}"
+    time_ago: "пред %{time}"
     tweet: "Твитај"
     member: 'член'
     tag: 'таг'
@@ -31,7 +31,7 @@ mk:
     members: "членови"
     newer: "&laquo; понови"
     older: "постари &raquo;"
-    latest_version: "(Верзија {{version}})"
+    latest_version: "(Верзија %{version})"
     update: "Ажурирај"
     trend_filters:
       today_short: "Д"
@@ -54,10 +54,10 @@ mk:
     tweets: "Твитови"
     title: "Листа на категории"
     total: "Вкупно"
-    create_list: "{{login}} за да креираш листа од оваа категорија"
+    create_list: "%{login} за да креираш листа од оваа категорија"
     create_list_title: "Креирај листа од категорија"
     last_tweets: "Последни твитови"
-    subscribed_users_count: "{{count}} членови"
+    subscribed_users_count: "%{count}членови"
   tags:
     title: "Листа на тагови"
     tagging: "таг"
@@ -81,10 +81,10 @@ mk:
     about_service: "За сервисот"
     blog: "Блог"
   tweet:
-    timeline: "Твитови од {{user}}"
+    timeline: "Твитови од %{user}"
 
   user:
-    created_at: "регистриран пред {{time}}"
+    created_at: "регистриран пред %{time}"
     tweet: 'твит'
     activate: 'Активирај'
     deactivate: 'Деактивирај'
@@ -104,7 +104,7 @@ mk:
     subscribed_message: "Избрани категори:"
     create:
       notice: "Успешно измената листа на категории."
-      error: "Не се дозволени повеќе од {{count}} категории!"
+      error: "Не се дозволени повеќе од %{count} категории!"
 
   messages:
     confirm: "Дали си сигурен?"
@@ -116,7 +116,7 @@ mk:
   twitter:
     list:
       private: "Приватна"
-      name: "{{name}} - креаирана од 140.mk"
+      name: "%{name} - креаирана од 140.mk"
       create:
         notice: "Успешно креиравте листа од оваа категорија"
         error: "Се појави грешка при креирање на листа од оваа категорија"
@@ -157,34 +157,34 @@ mk:
       less_than_x_seconds:
         zero: 'помалку од секунда'
         one: 'помалку од 1 секунда'
-        few: 'помалку од {{count}} секунди'
-        other: 'помалку од {{count}} секунди'
+        few: 'помалку од %{count} секунди'
+        other: 'помалку од %{count} секунди'
       x_seconds:
         one: '1 секунда'
-        few: '{{count}} секунди'
-        other: '{{count}} секунди'
+        few: '%{count} секунди'
+        other: '%{count} секунди'
       less_than_x_minutes:
         zero: 'помалку од минута'
         one: 'помалку од 1 минута'
-        other: 'помалку од {{count}} минути'
+        other: 'помалку од %{count} минути'
       x_minutes:
         one: '1 минута'
-        other: '{{count}} минути'
+        other: '%{count} минути'
       about_x_hours:
         one: 'околу 1 час'
-        few: 'околу {{count}} часа'
-        other: 'околу {{count}} часа'
+        few: 'околу %{count} часа'
+        other: 'околу %{count} часа'
       x_days:
         one: '1 ден'
-        other: '{{count}} дена'
+        other: '%{count} дена'
       about_x_months:
         one: 'околу 1 месец'
-        few: 'околу {{count}} месеци'
-        other: 'околу {{count}} месеци'
+        few: 'околу %{count} месеци'
+        other: 'околу %{count} месеци'
       x_months:
         one: '1 месец'
-        few: '{{count}} месеци'
-        other: '{{count}} месеци'
+        few: '%{count} месеци'
+        other: '%{count} месеци'
       about_x_years:
         one: 'околу 1 година'
         other: 'околу {{count}} години'

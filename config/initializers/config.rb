@@ -1,3 +1,4 @@
+# encoding: utf-8
 ConsumerConfig = YAML.load(File.read(Rails.root + 'config' + 'twitter.yml'))
 
 G140 = {

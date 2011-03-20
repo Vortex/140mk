@@ -1,27 +1,37 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
+require 'twitter/authentication_helpers'
 class ApplicationController < ActionController::Base
   include Twitter::AuthenticationHelpers
 
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  helper :all
+  protect_from_forgery
+  # rescue_from Twitter::Unauthorized, :with => :force_sign_in
+
+  # Helper methods
+  helper_method :current_user
 
   # Filters
   before_filter :load_configuration
 
-  # Scrub sensitive parameters from your log
-  filter_parameter_logging :password
-
-  def require_admin
-    if !current_user || !current_user.is_admin?
-      flash[:notice] = "You must be admin to access requested page"
-      redirect_to root_url
-      return false
-    end
+  def current_user
+    User.find_by_screen_name(session[:screen_name])
   end
 
-  private
+private
+
+  def oauth_consumer
+    @auth_consumer ||= OAuth::Consumer.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'], :site => 'http://api.twitter.com', :request_endpoint => 'http://api.twitter.com', :sign_in => true)
+  end
+
+  def client
+    Twitter.configure do |config|
+      config.consumer_key = ConsumerConfig['consumer']['token']
+      config.consumer_secret = ConsumerConfig['consumer']['secret']
+      config.oauth_token = session['access_token']
+      config.oauth_token_secret = session['access_secret']
+    end
+    @client ||= Twitter::Client.new
+  end
+  helper_method :client
 
   def get_filtered_tweets
     @filtered_tweets = Tweet.find(:all, :conditions => ["text like ?", "%#{@configuration.try(:today_topic)}%"], :order => 'original_tweet_id DESC', :limit => G140[:tweets_per_hashtag], :include => :user)
@@ -39,11 +49,15 @@ class ApplicationController < ActionController::Base
     else
       @trending_tags = Tag.trending_tags
     end
-
-  end
+  end 
 
   def load_configuration
     @configuration = Configuration.first
   end
 
+  def force_sign_in(exception)
+    reset_session
+    flash[:error] = "It seems your credentials are not good anymore. Please sign in again."
+    # redirect_to root_path
+  end
 end

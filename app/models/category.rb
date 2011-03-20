@@ -9,7 +9,7 @@ class Category < ActiveRecord::Base
   validates_presence_of :name
 
   # Named scopes
-  named_scope :ordered_by_subscriptions, :joins => :subscriptions, :group => 'categories.id', :order => 'count(subscriptions.id) desc'
+  scope :ordered_by_subscriptions, :joins => :subscriptions, :group => 'categories.id', :order => 'count(subscriptions.id) desc'
 
   def self.most_subscribed_categories(categories_limit)
     find :all,

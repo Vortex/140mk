@@ -1,24 +1,108 @@
-ActionController::Routing::Routes.draw do |map|
-  map.error '/error', :controller => "welcome", :action => "error"
+T140mk::Application.routes.draw do
 
-  map.root :controller => "welcome"
-  map.resources :users, :collection => { :follow => :post }
-  map.resources :tweets, :collection => {:my => :get, :refresh => :post, :by_hashtag => :post}
-  map.resources :categories, :as => :categories, :member => {:create_on_twitter => :post}
-  map.resources :configurations
-  map.resources :subscriptions
-  map.resources :tags, :only => [:index, :show], :collection => { :by_period => :post }
-  map.resource :session, :collection => {:callback => :get}
-  map.resource :poll
+  # Resources
+  resources :users do
+    collection do
+      post 'follow'
+    end
+  end
 
-  map.namespace :admin do |admin|
-    admin.root :controller => 'welcome'
-    admin.resources :polls
+  resources :tweets do
+    collection do
+      get 'my'
+      post 'refresh'
+      post 'by_hashtag'
+    end
   end
   
-  map.login "/login", :controller => "sessions", :action => "create"
-  map.logout "/logout", :controller => "sessions", :action => "destroy"
-  map.settings "/settings", :controller => "settings", :action => "index"
-  map.deactivate "/deactivate", :controller => "users", :action => "deactivate"
-  map.about '/about', :controller => 'about', :action => 'index'
+  resources :categories do
+    member do
+      post 'create_on_twitter'
+    end
+  end
+
+  resources :configurations
+  resources :subscriptions
+  resources :tags, :only => [ :index, :show ] do
+    collection do
+      post 'by_period'
+    end
+  end
+
+  resource :session do
+    collection do
+      get 'callback'
+    end
+  end
+
+  resource :poll
+
+  namespace :admin do
+    root :to => "welcome#index"
+    resources :polls
+  end
+
+  # Regular routes
+  match 'login' => 'sessions#create'
+  match 'logout' => 'sessions#destroy'
+  match 'settings' => 'settings#index'
+  match 'deactivate' => 'users#deactivate'
+  match 'about' => 'about#index'
+  match 'error' => 'welcome#error'
+
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
+
+  # Sample of regular route:
+  #   match 'products/:id' => 'catalog#view'
+  # Keep in mind you can assign values other than :controller and :action
+
+  # Sample of named route:
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Sample resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Sample resource route with more complex sub-resources
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', :on => :collection
+  #     end
+  #   end
+
+  # Sample resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
+
+  # Root
+  root :to => "welcome#index"
+
+  # See how all your routes lay out with "rake routes"
+
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end

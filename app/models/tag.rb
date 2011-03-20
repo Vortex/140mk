@@ -8,7 +8,7 @@ class Tag < ActiveRecord::Base
   validates_presence_of :name
 
   # Named scopes
-  named_scope :trending_from, lambda { |from|
+  scope :trending_from, lambda { |from|
               { :select => 'tags.id, tags.name, COUNT(*) as count',
                 :joins => :taggings,
                 :conditions => ["taggings.created_at BETWEEN ? and ?", from, Time.now],

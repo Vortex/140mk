@@ -1,8 +1,9 @@
 .left-section
-  = link_to image_tag(user.photo), user.url, :target => "_blank"
-  - if current_user && (current_user != user)
-    .follow
-      - if current_user.follows_user?(user)
-        = render :partial => 'shared/you_follow'
-      - else
-        = link_to t('global.follow'), nil, "data-username" => user.screen_name
+  - if user
+    = link_to image_tag(user.photo), user.url, :target => "_blank"
+    - if current_user && (current_user != user)
+      .follow
+        - if current_user.follows_user?(user)
+          = render :partial => 'shared/you_follow'
+        - else
+          = link_to t('global.follow'), nil, "data-username" => user.screen_name

@@ -31,5 +31,6 @@ module Jobs
   end
 end
 
+Delayed::Job.delete_all
 Delayed::Job.enqueue FetchTweetsJob.new
 Delayed::Job.enqueue FetchUsersJob.new

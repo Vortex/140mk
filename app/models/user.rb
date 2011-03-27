@@ -60,6 +60,17 @@ class User < ActiveRecord::Base
   end
 
   def set_profile_data(account)
+    # Check if there are more than one accounts connected to this screen name
+    attached_users = User.where("twitter_id = ?", account.id)
+    if attached_users.size > 1
+      # Delete the duplicates
+      attached_users.each do |user|
+        unless user == attached_users.last
+          puts "Deleting duplicate user: #{user.screen_name}"
+          user.delete
+        end
+      end
+    end
     self.twitter_id = account.id
     self.twitter_account_created_at = account.created_at
     self.name = account.name

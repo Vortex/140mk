@@ -1,34 +1,35 @@
 .tweet{:id => "tweet_#{name}-#{tweet.id}"}
   = render :partial => 'shared/user_info_left', :locals => { :user => tweet.user }
-  .body
-    %span.who= "@#{tweet.user.screen_name}"
-    %span.when= link_to(t('global.time_ago', :time => time_ago_in_words(tweet.created_at)), tweet_url(tweet), :target => '_blank')
-    .text= auto_link_resources(auto_link(tweet.text))
-  - if signed_in?
-    .actions
-      %span.reply= link_to t('global.reply'), nil, :title => t('global.reply'), :id => "user_#{tweet.user.screen_name}", :class => "modalInput", :rel => "#tweet"
-      %span.retweet= link_to t('global.retweet'), nil, :title => "RT", :id => "tweet_#{name}-#{tweet.id}", :class => "modalInput", :rel => "#tweet"
-  .info{:id => "info_#{name}-#{tweet.id}"}
-    .categories
-      %b= t('global.categories')
-      = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
+  - if tweet.user
+    .body
+      %span.who= "@#{tweet.user.screen_name}"
+      %span.when= link_to(t('global.time_ago', :time => time_ago_in_words(tweet.created_at)), tweet_url(tweet), :target => '_blank')
+      .text= auto_link_resources(auto_link(tweet.text))
+    - if signed_in?
+      .actions
+        %span.reply= link_to t('global.reply'), nil, :title => t('global.reply'), :id => "user_#{tweet.user.screen_name}", :class => "modalInput", :rel => "#tweet"
+        %span.retweet= link_to t('global.retweet'), nil, :title => "RT", :id => "tweet_#{name}-#{tweet.id}", :class => "modalInput", :rel => "#tweet"
+    .info{:id => "info_#{name}-#{tweet.id}"}
+      .categories
+        %b= t('global.categories')
+        = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
 
-    - if tweet.user.description
-      .bio
-        %b= t('global.bio')
-        = tweet.user.description
+      - if tweet.user.description
+        .bio
+          %b= t('global.bio')
+          = tweet.user.description
 
-    - if tweet.user.location
-      .location
-        %b= t('global.location')
-        = tweet.user.location
+      - if tweet.user.location
+        .location
+          %b= t('global.location')
+          = tweet.user.location
 
-    - if tweet.user.url
-      .web
-        %b= t('global.web')
-        = link_to tweet.user.url, tweet.user.url
-    .when= t('user.created_at', :time => time_ago_in_words(tweet.user.created_at))
+      - if tweet.user.url
+        .web
+          %b= t('global.web')
+          = link_to tweet.user.url, tweet.user.url
+      .when= t('user.created_at', :time => time_ago_in_words(tweet.user.created_at))
 
-  .handle
-    &nbsp;    
-    
+    .handle
+      &nbsp;    
+      

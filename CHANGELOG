@@ -1,6 +1,11 @@
-Version 0.4.0
+Version 0.3.5
 =============
-* Upgraded to Rails 3
+
+27.03.2011
+==========
+  Peco Danajlovski <vortexmk@gmail.com>
+  * Upgraded to Rails 3
+  * Reimplemented the fetching of user info/tweets with delayed_job
 
 Version 0.3.4
 =============

@@ -25,6 +25,9 @@ gem 'newrelic_rpm'
 gem 'web-app-theme'
 gem 'haml-rails'
 
+# Background processes
+gem 'delayed_job'
+
 # Capistrano
 gem 'capistrano'
 gem 'capistrano-ext'

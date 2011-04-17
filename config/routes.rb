@@ -43,8 +43,11 @@ T140mk::Application.routes.draw do
   end
 
   # Regular routes
-  match 'login' => 'sessions#create'
-  match 'logout' => 'sessions#destroy'
+  get '/auth/twitter/callback', :to => 'sessions#callback', :as => :callback
+  get '/auth/failure', :to => 'sessions#error', :as => :error
+  delete '/logout', :to => 'sessions#destroy', :as => :logout
+  #match 'login' => 'sessions#create'
+  #match 'logout' => 'sessions#destroy'
   match 'settings' => 'settings#index'
   match 'deactivate' => 'users#deactivate'
   match 'about' => 'about#index'

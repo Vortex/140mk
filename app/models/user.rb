@@ -26,19 +26,8 @@ class User < ActiveRecord::Base
     atoken.present? && asecret.present?
   end
   
-  def oauth
-    @oauth ||= Twitter::OAuth.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'])
-  end
-  
   delegate :request_token, :access_token, :authorize_from_request, :to => :oauth
   
-  def client
-    @client ||= begin
-      oauth.authorize_from_access(atoken, asecret)
-      Twitter::Base.new(oauth)
-    end
-  end
-
   def has_subscriptions?
     subscriptions.count > 0
   end
@@ -103,7 +92,7 @@ class User < ActiveRecord::Base
   # TODO: refactor this code to escape this confusion
   def follow(user)
     unless TwitterAccess.client.friendship_exists?(self.screen_name, user.screen_name)
-      client.friendship_create(user.twitter_id, true)
+      TwitterAccess.client.friendship_create(user.twitter_id, true)
     end
   end
 

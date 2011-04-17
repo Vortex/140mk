@@ -397,7 +397,7 @@ set backspace=indent,eol,start
 set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set formatoptions=l
-set guifont=Monaco\ 11
+set guifont=Monaco\ 9
 set guioptions=aegimrLt
 set guitablabel=%M%t
 set helplang=en
@@ -428,7 +428,7 @@ set visualbell
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set wildmode=list:longest
-set window=38
+set window=42
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -456,199 +456,20 @@ badd +13 app/views/shared/_hashtag_filter.html.haml
 badd +1 app/views/welcome/_tweets.html.haml
 badd +19 app/views/shared/_tweet.html.haml
 badd +8 app/views/shared/_user_info_left.html.haml
-badd +0 app/helpers/application_helper.rb.rails2
+badd +60 app/helpers/application_helper.rb.rails2
 badd +3 app/helpers/application_helper.rb
 badd +6 app/views/shared/_trending_tags.html.haml
 badd +14 app/views/shared/_categories.html.haml
 badd +1 app/views/layouts/application.html.erb
 badd +1 app/views/layouts/admin.html.haml
 silent! argdel *
-edit app/views/layouts/application.html.erb
+edit app/helpers/application_helper.rb.rails2
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
 argglobal
-let s:cpo_save=&cpo
-set cpo&vim
-imap <buffer> <SNR>56_ragtagOclose  ><Left><Left>
-inoremap <buffer> <SNR>56_ragtagOopen <%= 
-inoremap <buffer> <SNR>56_xhtmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-inoremap <buffer> <SNR>56_htmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-nmap <buffer> gf <Plug>RailsTabFind
-nmap <buffer> f <Plug>RailsSplitFind
-nnoremap <buffer> <silent> g} :exe        "ptjump =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> } :exe          "ptag =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g] :exe      "stselect =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g :exe        "stjump =RubyCursorIdentifier()"
-nnoremap <buffer> <silent>  :exe v:count1."stag =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> ] :exe v:count1."stag =RubyCursorIdentifier()"
-nmap <buffer> A <Plug>ZenCodingAnchorizeSummary
-nmap <buffer> a <Plug>ZenCodingAnchorizeURL
-nmap <buffer> k <Plug>ZenCodingRemoveTag
-nmap <buffer> j <Plug>ZenCodingSplitJoinTagNormal
-nmap <buffer> / <Plug>ZenCodingToggleComment
-nmap <buffer> i <Plug>ZenCodingImageSize
-nmap <buffer> N <Plug>ZenCodingPrev
-nmap <buffer> n <Plug>ZenCodingNext
-vmap <buffer> D <Plug>ZenCodingBalanceTagOutwardVisual
-nmap <buffer> D <Plug>ZenCodingBalanceTagOutwardNormal
-vmap <buffer> d <Plug>ZenCodingBalanceTagInwardVisual
-nmap <buffer> d <Plug>ZenCodingBalanceTagInwardNormal
-nmap <buffer> ; <Plug>ZenCodingExpandWord
-nmap <buffer> , <Plug>ZenCodingExpandNormal
-vmap <buffer> , <Plug>ZenCodingExpandVisual
-nnoremap <buffer> <silent>  :exe  v:count1."tag =RubyCursorIdentifier()"
-nmap <buffer> [f <Plug>RailsAlternate
-nmap <buffer> ]f <Plug>RailsRelated
-nmap <buffer> gf <Plug>RailsFind
-nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
-nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
-nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
-nnoremap <buffer> <silent> <Plug>RailsFind :REfind
-nnoremap <buffer> <silent> <Plug>RailsRelated :R
-nnoremap <buffer> <silent> <Plug>RailsAlternate :A
-cnoremap <buffer> <expr>  fugitive#buffer().rev()
-imap <buffer> & <Plug>ragtagXmlV
-imap <buffer> % <Plug>ragtagUrlV
-imap <buffer> & <Plug>ragtagXmlEncode
-imap <buffer> % <Plug>ragtagUrlEncode
-inoremap <buffer> _ <NL>I<% A -%>F<NL>s
-inoremap <buffer> - <%  -%>3hi
-imap <buffer> ] <>O
-inoremap <buffer> > %>
-inoremap <buffer> < <%
-imap <buffer>  /
-imap <buffer> A <Plug>ZenCodingAnchorizeSummary
-imap <buffer> a <Plug>ZenCodingAnchorizeURL
-imap <buffer> k <Plug>ZenCodingRemoveTag
-imap <buffer> j <Plug>ZenCodingSplitJoinTagInsert
-imap <buffer> / <Plug>ZenCodingToggleComment
-imap <buffer> i <Plug>ZenCodingImageSize
-imap <buffer> N <Plug>ZenCodingPrev
-imap <buffer> n <Plug>ZenCodingNext
-imap <buffer> D <Plug>ZenCodingBalanceTagOutwardInsert
-imap <buffer> d <Plug>ZenCodingBalanceTagInwardInsert
-imap <buffer> ; <Plug>ZenCodingExpandWord
-imap <buffer> , <Plug>ZenCodingExpandAbbr
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal balloonexpr=RubyBalloonexpr()
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal comments=:#
-setlocal commentstring=<%#%s%>
-setlocal complete=.,w,b,u,t,i
-setlocal completefunc=syntaxcomplete#Complete
-setlocal nocopyindent
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'eruby'
-setlocal filetype=eruby
-endif
-setlocal foldcolumn=0
-set nofoldenable
-setlocal nofoldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-set foldmethod=indent
-setlocal foldmethod=indent
-setlocal foldminlines=1
-set foldnestmax=3
-setlocal foldnestmax=3
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=^\\s*\\<\\(load\\|w*require\\)\\>
-setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetErubyIndent()
-setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=ri\ -T
-set linebreak
-setlocal linebreak
-setlocal nolisp
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=rubycomplete#Complete
-setlocal path=.,~/dev/t140mk,~/dev/t140mk/app,~/dev/t140mk/app/models,~/dev/t140mk/app/controllers,~/dev/t140mk/app/helpers,~/dev/t140mk/config,~/dev/t140mk/lib,~/dev/t140mk/app/views,~/dev/t140mk/app/views/application,~/dev/t140mk/public,~/dev/t140mk/test,~/dev/t140mk/test/unit,~/dev/t140mk/test/functional,~/dev/t140mk/test/integration,~/dev/t140mk/spec,~/dev/t140mk/spec/models,~/dev/t140mk/spec/controllers,~/dev/t140mk/spec/helpers,~/dev/t140mk/spec/views,~/dev/t140mk/spec/lib,~/dev/t140mk/spec/requests,~/dev/t140mk/spec/integration,~/dev/t140mk/app/*,~/dev/t140mk/vendor,~/dev/t140mk/vendor/plugins/*/lib,~/dev/t140mk/vendor/plugins/*/test,~/dev/t140mk/vendor/rails/*/lib,~/dev/t140mk/vendor/rails/*/test,/var/lib/gems/1.8/gems/bundler-0.8.1/bin,/var/lib/gems/1.8/gems/bundler-0.8.1/lib,/var/lib/gems/1.8/gems/json_pure-1.2.3/bin,/var/lib/gems/1.8/gems/json_pure-1.2.3/lib,/var/lib/gems/1.8/gems/gemcutter-0.5.0/bin,/var/lib/gems/1.8/gems/gemcutter-0.5.0/lib,/usr/local/lib/site_ruby/1.8,/usr/local/lib/site_ruby/1.8/x86_64-linux,/usr/local/lib/site_ruby,/usr/lib/ruby/vendor_ruby/1.8,/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux,/usr/lib/ruby/vendor_ruby,/usr/lib/ruby/1.8,/usr/lib/ruby/1.8/x86_64-linux,,~/.gem/ruby/1.8/gems/newrelic_rpm-2.12.3/lib,~/.gem/ruby/1.8/gems/rvm-1.0.5/lib,~/.gem/ruby/1.8/gems/technicalpickles-jeweler-1.2.1/lib,~/.gem/ruby/1.8/gems/test-unit-1.2.3/lib,/var/lib/gems/1.8/gems/RedCloth-4.2.2/ext,/var/lib/gems/1.8/gems/RedCloth-4.2.2/lib,/var/lib/gems/1.8/gems/RedCloth-4.2.2/lib/case_sensitive_require,/var/lib/gems/1.8/gems/RedCloth-4.2.3/ext,/var/lib/gems/1.8/gems/RedCloth-4.2.3/lib,/var/lib/gems/1.8/gems/RedCloth-4.2.3/lib/case_sensitive_require,/var/lib/gems/1.8/gems/ZenTest-4.2.1/lib,/var/lib/gems/1.8/gems/ZenTest-4.3.1/lib,/var/lib/gems/1.8/gems/abstract-1.0.0/lib,/var/lib/gems/1.8/gems/actionmailer-2.1.0/lib,/var/lib/gems/1.8/gems/actionmailer-2.3.2/lib,/var/lib/gems/1.8/gems/actionmailer-2.3.4/lib,/var/lib/gems/1.8/gems/actionmailer-2.3.5/lib,/var/lib/gems/1.8/gems/actionpack-2.1.0/lib,/var/lib/gems/1.8/gems/actionpack-2.3.2/lib,/var/lib/gems/1.8/gems/actionpack-2.3.4/lib,/var/lib/gems/1.8/gems/actionpack-2.3.5/lib,/var/lib/gems/1.8/gems/activemerchant-1.5.1/lib,/var/lib/gems/1.8/gems/activemodel-3.0.pre/lib,/var/lib/gems/1.8/gems/activerecord-2.1.0/lib,/var/lib/gems/1.8/gems/activerecord-2.3.2/lib,/var/lib/gems/1.8/gems/activerecord-2.3.4/lib,/var/lib/gems/1.8/gems/activerecord-2.3.5/lib,/var/lib/gems/1.8/gems/activeresource-2.1.0/lib,/var/lib/gems/1.8/gems/activeresource-2.3.2/lib,/var/lib/gems/1.8/gems/activeresource-2.3.4/lib,/var/lib/gems/1.8/gems/activeresource-2.3.5/lib,/var/lib/gems/1.8/gems/activesupport-2.1.0/lib,/var/lib/gems/1.8/gems/activesupport-2.3.2/lib,/var/lib/gems/1.8/gems/activesupport-2.3.4/lib,/var/lib/gems/1.8/gems/activesupport-2.3.5/lib,/var/lib/gems/1.8/gems/activesupport-3.0.pre/lib,/var/lib/gems/1.8/gems/acts_as_sanitiled-1.1.1/lib,/var/lib/gems/1.8/gems/ae-1.1.0/lib,/var/lib/gems/1.8/gems/ae-1.2/lib,/var/lib/gems/1.8/gems/agnostic-will_paginate-3.0.0/lib,/var/lib/gems/1.8/gems/ajaxful_rating-2.1.5/lib,/var/lib/gems/1.8/gems/ajaxful_rating-2.2.3/lib,/var/lib/gems/1.8/gems/ansi-1.1.0/lib,/var/lib/gems/1.8/gems/archive-tar-minitar-0.5.2/lib,/var/lib/gems/1.8/gems/arel-0.1.2/lib,/var/lib/gems/1.8/gems/arel-0.2.0/lib,/var/lib/gems/1.8/gems/arrayfields-4.7.4/lib,/var/lib/gems/1.8/gems/authlogic-2.1.3/lib,/var/lib/gems/1.8/gems/autotest-4.1.4/lib,/var/lib/gems/1.8/gems/autotest-4.2.3/lib,/var/lib/gems/1.8/gems/autotest-4.2.4/lib,/var/lib/gems/1.8/gems/autotest-4.2.9/lib,/var/lib/gems/1.8/gems/autotest-rails-4.1.0/lib,/var/lib/gems/1.8/gems/bcrypt-ruby-2.1.2/lib,/var/lib/gems/1.8/gems/builder-2.1.2/lib,/var/lib/gems/1.8/gems/bundler-0.8.1/lib,/var/lib/gems/1.8/gems/bundler-0.9.3/lib,/var/lib/gems/1.8/gems/calendar_date_select-1.15/lib,/var/lib/gems/1.8/gems/calendar_date_select-1.16.1/lib,/var/lib/gems/1.8/gems/cancan-1.0.2/lib,/var/lib/gems/1.8/gems/capistrano-2.5.11/lib,/var/lib/gems/1.8/gems/capistrano-2.5.13/lib,/var/lib/gems/1.8/gems/capistrano-2.5.14/lib,/var/lib/gems/1.8/gems/capistrano-
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=%f[%{GitBranch()}]%{exists('g:loaded_rvm')?rvm#statusline():''}%{rails#statusline()}%=%c,%l/%L\ %P
-setlocal suffixesadd=.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.rb,.css,.js,.html,.yml,.csv
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'eruby'
-setlocal syntax=eruby
-endif
-setlocal tabstop=8
-setlocal tags=~/dev/t140mk/tmp/tags,./tags,./TAGS,tags,TAGS,~/dev/t140mk/.git/tags,~/dev/t140mk/tags
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-let s:l = 14 - ((13 * winheight(0) + 18) / 37)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-14
-normal! 06l
-wincmd w
-argglobal
-edit app/helpers/application_helper.rb.rails2
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
@@ -763,15 +584,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 60 - ((14 * winheight(0) + 18) / 37)
+let s:l = 60 - ((4 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 60
 normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 86 + 86) / 173)
-exe 'vert 2resize ' . ((&columns * 86 + 86) / 173)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

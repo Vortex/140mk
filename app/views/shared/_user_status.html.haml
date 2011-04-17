@@ -1,6 +1,6 @@
 - unless signed_in?
   .login
-    = link_to image_tag('140priklucisebtn.png'), login_path, :method => :post
+    = link_to image_tag('140priklucisebtn.png'), '/auth/twitter'
     .description
       = t('global.login_description')
       = link_to t('global.no_account'), 'https://twitter.com/signup'
@@ -12,6 +12,6 @@
       .links
         = link_to t('global.tweet'), nil, :id => "tweet_link", :class => "modalInput", :rel => "#tweet"
         = link_to t('global.settings'), settings_path
-        = link_to t('global.logout'), logout_path
+        = link_to t('global.logout'), logout_path, :method => :delete
         = link_to t('global.administration'), admin_root_path if current_user.is_admin?
       .clear

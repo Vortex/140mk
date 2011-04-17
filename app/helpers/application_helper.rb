@@ -54,4 +54,7 @@ module ApplicationHelper
     auto_link_screen_names(auto_link_hashtags(text))
   end
 
+  def tweet_url(tweet)
+    "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.original_tweet_id}"
+  end
 end

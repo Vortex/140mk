@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
   before_filter :authenticate, :except => [:refresh, :by_hashtag]
+
+  respond_to :js, :only => :create
   
   def index
     @tweets = Tweet.paginate :per_page => G140[:tweets_per_page], :page => params[:page]
@@ -16,15 +18,15 @@ class TweetsController < ApplicationController
 
   def create
     content = params[:tweet]
-    current_user.client.update(content)
+    client.update(content)
+    # current_user.client.update(content)
 
     respond_to do |format|
-      format.js
+      format.js { render :layout => false }
     end
 
-  rescue NoMethodError
-    @error = true
-
+  # rescue NoMethodError
+  #   @error = true
   end
 
   def refresh

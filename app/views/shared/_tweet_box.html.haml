@@ -1,7 +1,7 @@
 #tweet.modal
   %div
     %h2= t('global.tweet')
-    - form_for Tweet.new, :remote => true do
+    = form_for Tweet.new, :remote => true do
       = text_area_tag :tweet
       = submit_tag t('global.send'), :id => 'tweet_submit'
       // = link_to_function t('global.cancel'), "closeOverlays()"

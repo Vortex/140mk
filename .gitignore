@@ -14,3 +14,4 @@ db/schema.rb
 .sass-cache
 mkmf.log
 .rvmrc
+Session.vim

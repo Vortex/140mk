@@ -12,7 +12,7 @@
     .info{:id => "info_#{name}-#{tweet.id}"}
       .categories
         %b= t('global.categories')
-        = tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
+        != tweet.user.categories.map { |category| link_to category.name, category }.join(', ')
 
       - if tweet.user.description
         .bio

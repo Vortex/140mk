@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
       return following.status
     else
       # Create cached value
-      status = TwitterAccess.base.friendship_exists?(screen_name, some_user.screen_name)
+      status = TwitterAccess.client.friendship_exists?(screen_name, some_user.screen_name)
       Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)      
 
       return status

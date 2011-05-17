@@ -57,7 +57,7 @@ mk:
     create_list: "%{login} за да креираш листа од оваа категорија"
     create_list_title: "Креирај листа од категорија"
     last_tweets: "Последни твитови"
-    subscribed_users_count: "%{count}членови"
+    subscribed_users_count: "%{count} члена"
   tags:
     title: "Листа на тагови"
     tagging: "таг"

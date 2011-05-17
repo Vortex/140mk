@@ -12,7 +12,7 @@
 
 #category_show
   %h2
-    = @tag.name
+    = "##{@tag.name}"
     .counter= t('category.subscribed_users_count', :count => @tag.users.size)
 
   .category

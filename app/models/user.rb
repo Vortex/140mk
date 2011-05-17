@@ -71,8 +71,8 @@ class User < ActiveRecord::Base
 
   def save_with_profile_and_oauth(profile, access_token)
     self.set_profile_data(profile)
-    self.atoken = access_token.token
-    self.asecret = access_token.secret
+    # self.atoken = access_token.token
+    # self.asecret = access_token.secret
     self.status == 1 ? self.save : self.activate!
   end
 
@@ -106,7 +106,7 @@ class User < ActiveRecord::Base
     return if Rails.env == "test" # don't follow users when in test environment
 
     unless TwitterAccess.client.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
-      TwitterAccess.client.friendship_create(twitter_id, true)
+      TwitterAccess.client.follow(twitter_id)
     end
   # rescue Twitter::General => e
   #  if e.message =~ /\(403\): Forbidden .*/
@@ -118,8 +118,8 @@ class User < ActiveRecord::Base
   end
 
   def unfollow_user
-    if TwitterAccess.base.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
-      TwitterAccess.base.friendship_destroy(twitter_id)
+    if TwitterAccess.client.friendship_exists?(ConsumerConfig['user']['username'], screen_name)
+      TwitterAccess.client.unfollow(twitter_id)
     end
   end
 end

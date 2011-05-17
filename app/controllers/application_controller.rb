@@ -18,9 +18,9 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def oauth_consumer
-    @auth_consumer ||= OAuth::Consumer.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'], :site => 'http://api.twitter.com', :request_endpoint => 'http://api.twitter.com', :sign_in => true)
-  end
+  #def oauth_consumer
+    #@auth_consumer ||= OAuth::Consumer.new(ConsumerConfig['consumer']['token'], ConsumerConfig['consumer']['secret'], :site => 'http://api.twitter.com', :request_endpoint => 'http://api.twitter.com', :sign_in => true)
+  #end
 
   def client
     Twitter.configure do |config|

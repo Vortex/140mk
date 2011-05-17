@@ -20,7 +20,23 @@ class SessionsController < ApplicationController
   end
 
   def callback
+    # Sign in on twitter
     sign_in(request.env['omniauth.auth'])
-    redirect_to root_path
+
+    # Check if user exists
+    screen_name = session[:screen_name]
+    user = User.find_by_screen_name(screen_name)
+    twitter_profile = client.user(screen_name)
+
+    unless user
+      user = User.new
+      user.screen_name = twitter_profile.screen_name
+      new_user = { :new_user => "true" }
+    end
+
+    user.save_with_profile_and_oauth(twitter_profile, nil)
+
+    # redirect_to current_user.has_subscriptions? ? root_url : settings_url(new_user)
+    redirect_to root_url
   end
 end

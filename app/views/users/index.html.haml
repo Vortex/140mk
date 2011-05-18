@@ -23,7 +23,7 @@
           //%br= link_to user.url, user.url, :target => "_blank" unless user.url.blank?
           .categories
             %b= t('global.categories')
-            = user.categories.map { |category| link_to category.name, category }.join(', ')
+            != user.categories.map { |category| link_to category.name, category }.join(', ')
         .clear
         .info{:id => "info_users-#{user.id}"}
           - if user.description

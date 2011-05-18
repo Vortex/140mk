@@ -2,9 +2,9 @@
   = render :partial => 'shared/user_info_left', :locals => { :user => tweet.user }
   - if tweet.user
     .body
-      %span.who= "@#{tweet.user.screen_name}"
+      %span.who= link_to "@#{tweet.user.screen_name}", twitter_path(tweet.user.screen_name), :target => '_blank'
       %span.when= link_to(t('global.time_ago', :time => time_ago_in_words(tweet.created_at)), tweet_url(tweet), :target => '_blank')
-      .text!= auto_link_resources(auto_link(tweet.text))
+      .text!= auto_link_resources(auto_link(tweet.text, :all, :target => '_blank'))
     - if signed_in?
       .actions
         %span.reply= link_to t('global.reply'), nil, :title => t('global.reply'), :id => "user_#{tweet.user.screen_name}", :class => "modalInput", :rel => "#tweet"

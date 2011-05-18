@@ -2,7 +2,7 @@
   = render :partial => 'shared/user_info_left', :locals => { :user => user }
 
   .body
-    %span.who= "@#{user.screen_name}"
+    %span.who= link_to "@#{user.screen_name}", twitter_path(user.screen_name), :target => '_blank'
     %span.when= t('user.created_at', :time => time_ago_in_words(user.created_at))
     .categories
       %b= t('global.categories')

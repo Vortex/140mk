@@ -1,6 +1,0 @@
-consumer:
-  token: oauth_token_from_twitter
-  secret: oauth_secret_from_twitter
-user:
-  username: twitter_username
-  password: twitter_password

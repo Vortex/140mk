@@ -17,9 +17,9 @@ class Tag < ActiveRecord::Base
                 :limit => G140[:trends_count] }}
 
   def self.trending_tags
-    Tag.find(:all, 
-             :select => 'tags.id, tags.name, COUNT(*) as count', 
-             :joins => :taggings, 
+    Tag.find(:all,
+             :select => 'tags.id, tags.name, COUNT(*) as count',
+             :joins => :taggings,
              :group => 'tags.name',
              :order => 'count DESC',
              :limit => G140[:trends_count])

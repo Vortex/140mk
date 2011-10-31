@@ -7,7 +7,7 @@
       = link_to t('global.trend_filters.this_month_short'), nil, "data-period" => '30', :title => t('global.trend_filters.this_month'), :class => is_trending_filter_selected(30)
       = link_to t('global.trend_filters.archive_short'), nil, "data-period" => 'archive', :title => t('global.trend_filters.archive'), :class => is_trending_filter_selected(0)
       .clear
-        
+
   .topics
     = render :partial => 'shared/trending_topics'
 

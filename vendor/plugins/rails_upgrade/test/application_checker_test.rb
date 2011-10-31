@@ -57,18 +57,18 @@ class ApplicationCheckerTest < ActiveSupport::TestCase
 
     assert @checker.alerts.has_key?("Soon-to-be-deprecated ActiveRecord calls")
   end
-  
+
   def test_check_validation_on_methods
     make_file("app/models", "post.rb", "validate_on_create :comments_valid?")
     @checker.check_validation_on_methods
-    
+
     assert @checker.alerts.has_key?("Updated syntax for validate_on_* methods")
   end
-  
+
   def test_check_before_validation_on_methods
     make_file("app/models", "post.rb", "before_validation_on_create :comments_valid?")
     @checker.check_before_validation_on_methods
-    
+
     assert @checker.alerts.has_key?("Updated syntax for before_validation_on_* methods")
   end
 
@@ -244,16 +244,16 @@ class ApplicationCheckerTest < ActiveSupport::TestCase
     @checker.check_old_helpers
 
     assert @checker.alerts.has_key?("Deprecated ERb helper calls")
-    
+
   end
-  
+
   def test_check_old_helpers_lets_regular_blocks_pass
     make_file("app/views/users/", "another_test.html.erb", "<b>blah blah blah</b><% @some_items.each do |item| %> <label>doo dah</label> <%= item %> <% end %>")
     @checker.check_old_helpers
 
     assert_equal @checker.alerts.has_key?("Deprecated ERb helper calls"), false
   end
-  
+
   def test_check_old_helpers_lets_regular_blocks_pass
     make_file("app/views/users/", "another_test.html.erb", "<b>blah blah blah</b><% @some_items.each do |item| %> <label>doo dah</label> <%= item %> <% end %>")
     @checker.check_old_helpers

@@ -21,6 +21,6 @@ class Category < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}-#{name.gsub(' ', '-').gsub('/', '-').to_lat.downcase}"    
+    "#{id}-#{name.gsub(' ', '-').gsub('/', '-').to_lat.downcase}"
   end
 end

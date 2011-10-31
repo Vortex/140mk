@@ -4,4 +4,4 @@ Feature: Fail hashtags in the sidebar
   I want to look all the latest tweets with #fail hashtags on the front page
 
   Scenario: Tweets with "#fail" hashtags
-    
+

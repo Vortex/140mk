@@ -7,5 +7,5 @@ class Tagging < ActiveRecord::Base
   # Validations
   validates_presence_of :tag_id
   validates_presence_of :tweet_id
-  
+
 end

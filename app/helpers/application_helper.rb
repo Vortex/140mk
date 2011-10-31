@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def twitter_path screen_name
     "http://twitter.com/#{screen_name}"
-  end 
+  end
 
   def is_trending_filter_selected(days_count)
     saved_count = session[:trending_from]
@@ -48,7 +48,7 @@ module ApplicationHelper
     end
 
     return result
-  end 
+  end
 
   def auto_link_resources(text)
     auto_link_screen_names(auto_link_hashtags(text))

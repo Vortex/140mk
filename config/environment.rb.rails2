@@ -14,7 +14,7 @@ Rails::Initializer.run do |config|
   config.gem 'compass'
   config.gem 'compass-960-plugin', :lib => false
   config.gem 'compass-colors'
-  config.gem 'fancy-buttons'  
+  config.gem 'fancy-buttons'
   config.gem 'simple-navigation', :lib => 'simple_navigation'
   config.gem 'jrails'
   config.gem 'formtastic', :version => '0.9.8'
@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'cyrillizer'
   config.gem 'newrelic_rpm'
   config.gem 'web-app-theme', :version => '0.5.3', :lib => 'web_app_theme'
-  
+
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
@@ -33,7 +33,7 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = :mk
 end
 
-ActionView::Base.field_error_proc = Proc.new do |html_tag, instance| 
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   if html_tag =~ /<label/
     %|<div class="fieldWithErrors">#{html_tag} <span class="error">#{[instance.error_message].join(', ')}</span></div>|.html_safe
   else

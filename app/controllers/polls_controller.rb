@@ -5,13 +5,13 @@ class PollsController < ApplicationController
 
   def show
     @poll = Poll.published.first
-    
+
     if @poll
       # Notice if user is not logged in
       unless current_user
         flash.now[:notice] = t('poll.not_logged')
       end
-      
+
       if current_user && current_user.has_taken_poll?(@poll)
         flash.now[:notice] = t('poll.already_taken')
       end

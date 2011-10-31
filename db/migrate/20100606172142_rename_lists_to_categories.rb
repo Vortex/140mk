@@ -10,6 +10,6 @@ class RenameListsToCategories < ActiveRecord::Migration
     rename_table :categories, :lists
     rename_table :categories_tweets, :lists_tweets
     rename_column :subscriptions, :category_id, :list_id
-    rename_column :lists_tweets, :category_id, :list_id    
+    rename_column :lists_tweets, :category_id, :list_id
   end
 end

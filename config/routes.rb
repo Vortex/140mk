@@ -14,7 +14,7 @@ T140mk::Application.routes.draw do
       post 'by_hashtag'
     end
   end
-  
+
   resources :categories do
     member do
       post 'create_on_twitter'

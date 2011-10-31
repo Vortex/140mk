@@ -49,7 +49,7 @@ private
     else
       @trending_tags = Tag.trending_tags
     end
-  end 
+  end
 
   def load_configuration
     @configuration = Configuration.first

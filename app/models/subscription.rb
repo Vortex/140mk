@@ -17,5 +17,5 @@ class Subscription < ActiveRecord::Base
       errors.add(:base, "Error") # we don't dispay error message it in UI
     end
   end
-  
+
 end

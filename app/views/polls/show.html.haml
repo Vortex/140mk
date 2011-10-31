@@ -31,14 +31,14 @@
           - f.fields_for :poll_answers do |p|
             .question
               %h3.name= p.object.poll_question.name
-              
+
               %ul
               - p.object.poll_question.poll_choices.each do |poll_choice|
                 %li.answer
                   = p.hidden_field :poll_question_id
                   = p.radio_button :poll_choice_id, poll_choice.id
                   = p.label :"poll_choice_id_#{poll_choice.id}", poll_choice.name
-                  
+
           %p= submit_tag t('poll.vote')
 
   - else

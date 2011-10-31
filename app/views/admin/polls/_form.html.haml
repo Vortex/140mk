@@ -18,7 +18,7 @@
       = render :partial => 'admin/polls/forms/poll_question_fields', :locals => {:f => p}
     .add
       = link_to_add_fields "Add question", f, :poll_questions, "admin/polls/forms/"
-        
+
 .group.navform.wat-cf
   %button.button{:type => 'submit'}
     = image_tag("web-app-theme/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}")

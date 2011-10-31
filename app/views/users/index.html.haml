@@ -5,7 +5,7 @@
 - content_for(:sidebar) do
   = render :partial => 'shared/user_status'
   = render :partial => 'shared/hashtag_filter'
-  = render :partial => 'shared/trending_tags' 
+  = render :partial => 'shared/trending_tags'
 
 .users_list
   %h2= t('user.title')
@@ -42,6 +42,6 @@
               = link_to user.url, user.url
 
         .handle
-          &nbsp;          
+          &nbsp;
     %p
       = will_paginate @users

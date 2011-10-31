@@ -1,6 +1,6 @@
 module Jobs
   module ScheduledJob
-  
+
     def self.included(base)
       base.extend(ClassMethods)
     end # self.includedi
@@ -9,7 +9,7 @@ module Jobs
       Delayed::Job.enqueue self, 0, self.class.schedule.from_now.getutc
       perform_without_schedule
     end
-  
+
     module ClassMethods
       def method_added(name)
         if name.to_s == "perform" && !@redefined
@@ -25,9 +25,9 @@ module Jobs
       def run_every(time)
         @schedule = time
       end
-  
+
     end # ClassMethods
-  
+
   end
 end
 

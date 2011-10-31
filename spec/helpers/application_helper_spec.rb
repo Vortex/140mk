@@ -52,7 +52,7 @@ describe ApplicationHelper do
 
       result.should == "I'm a jester without tears and I'm playing on your fears #{helper.link_to '#' + tag1.name, tag1} #{helper.link_to '#' + tag2.name, tag2}"
     end
-    
+
   end
 
 end

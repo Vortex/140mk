@@ -1,17 +1,17 @@
 # Configures your navigation
-SimpleNavigation::Configuration.run do |navigation|  
-  # Specify a custom renderer if needed. 
+SimpleNavigation::Configuration.run do |navigation|
+  # Specify a custom renderer if needed.
   # The default renderer is SimpleNavigation::Renderer::List which renders HTML lists.
   # navigation.renderer = Your::Custom::Renderer
-  
+
   # Specify the class that will be applied to active navigation items. Defaults to 'selected'
   # navigation.selected_class = 'your_selected_class'
-  
+
   # Normally only the current sub menu is renderedwhen render_navigation is called
   # setting this to true render all submenus which is useful for javascript
   # driven hovering menus like the jquery superfish plugin
   # navigation.render_all_levels = true
-  
+
   # Item keys are normally added to list items as id.
   # This setting turns that off
   # navigation.autogenerate_item_ids = false
@@ -28,18 +28,18 @@ SimpleNavigation::Configuration.run do |navigation|
     # url - the address that the generated item links to. You can also use url_helpers (named routes, restful routes helper, url_for etc.)
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #
-    # primary.item :poll, t('navigation.poll'), poll_path    
+    # primary.item :poll, t('navigation.poll'), poll_path
     primary.item :categories, t('navigation.categories'), categories_path
     primary.item :users, t('navigation.users'), users_path
     primary.item :blog, t('navigation.blog'), "http://blog.140.mk"
-    primary.item :home, t('navigation.about_service'), about_path    
-    
+    primary.item :home, t('navigation.about_service'), about_path
+
     # Add an item which has a sub navigation (same params, but with block)
     #    primary.item :key_2, 'name', url, options do |sub_nav|
     #      # Add an item to the sub navigation (same params again)
     #      sub_nav.item :key_2_1, 'name', url, options
     #    end
-  
+
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
     # thus you can use all the methods and vars you have available in the views.
@@ -50,10 +50,10 @@ SimpleNavigation::Configuration.run do |navigation|
     # works for all levels of the menu
     # primary.dom_id = 'menu-id'
     # primary.dom_class = 'menu-class'
-    
+
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false
-  
+
   end
-  
+
 end

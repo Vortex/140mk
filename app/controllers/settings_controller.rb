@@ -4,8 +4,8 @@ class SettingsController < ApplicationController
   def index
     @selected_categories = current_user.categories.find(:all, :select => "categories.id, categories.name", :order => 'name ASC')
     @unselected_categories = Category.find(:all,
-                                    :select => "categories.id, categories.name", 
-                                    :order => 'name ASC', 
+                                    :select => "categories.id, categories.name",
+                                    :order => 'name ASC',
                                     :conditions => @selected_categories.empty? ? nil : ["categories.id NOT IN (?)", @selected_categories.map(&:id)])
   end
 end

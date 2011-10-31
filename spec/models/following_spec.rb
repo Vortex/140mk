@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Following do
   before(:each) do
     @valid_attributes = {
-      
+
     }
   end
 

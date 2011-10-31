@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_filter :authenticate, :except => [:refresh, :by_hashtag]
 
   respond_to :js, :only => :create
-  
+
   def index
     @tweets = Tweet.paginate :per_page => G140[:tweets_per_page], :page => params[:page]
 

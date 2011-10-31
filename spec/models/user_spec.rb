@@ -39,7 +39,7 @@ describe User do
 
       result = user1.follows_user? user2
 
-      assert_equal result, true      
+      assert_equal result, true
     end
 
   end

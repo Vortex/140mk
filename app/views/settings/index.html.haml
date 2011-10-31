@@ -17,7 +17,7 @@
       - @selected_categories.each do |category|
         %span{:id => "category_#{category.id}"}= category.name
 
-    %p= t('settings.select_categories_info')    
+    %p= t('settings.select_categories_info')
 - if params[:new_user] == 'true'
   .box
     %h2= t('settings.next_action')

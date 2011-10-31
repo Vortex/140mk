@@ -3,7 +3,7 @@
   %head
     = stylesheet_link_tag 'compiled/grid.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/text.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'    
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
     = javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.2.custom.min'
     = javascript_include_tag 'jquery.tools.min', 'charCount', 'jquery.masonry.min', 'jintastic', 'jquery.cookie', 'jquery.tipsy'
     = javascript_include_tag 'rails', 'application'
@@ -11,9 +11,9 @@
     %title
       = "#{yield(:title)} #{G140[:site_name]}"
     %meta(name="keywords" content="#{yield(:seo_keywords)}")
-    %meta(name="description" content="#{yield(:seo_description)}")   
+    %meta(name="description" content="#{yield(:seo_description)}")
     = csrf_meta_tag
-    
+
   %body.two-column{:id => "#{controller.controller_name}_#{controller.action_name}"}
     // = debug session
     #error
@@ -26,7 +26,7 @@
       .navigation
         = render_navigation
         = render :partial => 'shared/member_counter'
-          
+
 
     .clear
 
@@ -60,5 +60,5 @@
 
     = render :partial => "shared/tweet_box"
     // = render :partial => "shared/get_satisfaction_widget"
-    = render :partial => "shared/ga"   
+    = render :partial => "shared/ga"
 

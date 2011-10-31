@@ -3,8 +3,8 @@ class TagsController < ApplicationController
   before_filter :get_trending_tags, :only => [:index, :show]
 
   def index
-    @tags = Tag.paginate :per_page => G140[:tags_per_page], :page => params[:page], 
-                         :select => 'tags.id, tags.name, COUNT(*) as count', :joins => :taggings, 
+    @tags = Tag.paginate :per_page => G140[:tags_per_page], :page => params[:page],
+                         :select => 'tags.id, tags.name, COUNT(*) as count', :joins => :taggings,
                          :group => 'tags.name', :order => 'count DESC'
   end
 

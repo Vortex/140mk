@@ -10,5 +10,5 @@
     .tweets{:id => "tweets_#{category.id}"}
       = render :partial => 'tweets', :locals => { :tweets => @categories_tweets[category.name], :name => category.id }
     = render :partial => 'users', :locals => { :users => @categories_users[category.name], :name => category.id }
-    
+
     // = periodically_call_remote(:url => { :controller => 'tweets', :action => 'refresh', :category_id => category.id }, :update => "tweets_#{category.id}")

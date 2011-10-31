@@ -53,7 +53,7 @@ Version 0.3.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Created simple interface for switching between filters
-  * Added follow button 
+  * Added follow button
 
 31.08.2010
 ==========
@@ -71,7 +71,7 @@ Version 0.3.3
   Peco Danajlovski <vortexmk@gmail.com>
   * Removed the @anywhere script
   * Introduced method for checking if user is followed
-  
+
 
 22.08.2010
 ==========
@@ -135,7 +135,7 @@ Version 0.3.1
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Introducing descriptions and keywords for better SEO
-  * Simple pagination for the sidebar trending topic  
+  * Simple pagination for the sidebar trending topic
 
 18.06.2010
 ==========
@@ -286,7 +286,7 @@ Version 0.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Live tweet stream
-  * Fragmented caching 
+  * Fragmented caching
 
 30.03.2010
 ==========
@@ -314,7 +314,7 @@ Version 0.3
 ==========
   Peco Danajlovski <vortexmk@gmail.com>
   * Fixing the tweeting functionality
-  * Added info with toggle function  
+  * Added info with toggle function
 
 08.02.2010
 ==========
@@ -394,8 +394,8 @@ Version 0.2
   Peco Danajlovski <vortexmk@gmail.com>
   * Introduced RSpec & Cucumber for testing
   * Added tweets with fail tags to sidebar
-  
-  
+
+
 
 05.01.2010
 ==========

@@ -23,7 +23,7 @@
 
         rake twitter:get_users
 
-    - Get newest tweets 
+    - Get newest tweets
 
         rake twitter:get_tweets
 

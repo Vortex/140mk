@@ -25,9 +25,9 @@ class User < ActiveRecord::Base
   def authorized?
     atoken.present? && asecret.present?
   end
-  
+
   delegate :request_token, :access_token, :authorize_from_request, :to => :oauth
-  
+
   def has_subscriptions?
     subscriptions.count > 0
   end
@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
     else
       # Create cached value
       status = TwitterAccess.client.friendship_exists?(screen_name, some_user.screen_name)
-      Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)      
+      Following.create(:follower_id => self.id, :followed_user_id => some_user.id, :status => status)
 
       return status
     end

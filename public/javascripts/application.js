@@ -178,7 +178,7 @@ $(document).ready( function () {
         $(this).toggleClass('opened');
         var id = $(this).parent().attr("id");
         var id_number = id.split('_', 3)[1];
-        $("#info_" +id_number).toggle('slow')        
+        $("#info_" +id_number).toggle('slow')
     });
 
     // Character limiter
@@ -258,18 +258,18 @@ $(document).ready( function () {
     // Follow user action
     $('.follow > a').live('click', function(event) {
         var username = $(this).attr('data-username');
-        var element = $(this).parent();        
+        var element = $(this).parent();
 
         $.post('/users/follow', { username: username }, function(data) {
-            element.html(data);                
+            element.html(data);
         });
-        
+
         event.preventDefault();
     });
 
     // Check the cookies and preselect the tabs
     var cookies = getCookies();
-    for(var name in cookies) {            
+    for(var name in cookies) {
             if (name.indexOf('selected_tab') >= 0) {
                 // Get the category id
                 var categoryId = name.split('_')[3];
@@ -312,7 +312,7 @@ function closeOverlays() {
 
 function reBindOverlays() {
     // console.log('Overlay rebind');
-    overlayObject = $("a.modalInput").overlay(overlayOptions);    
+    overlayObject = $("a.modalInput").overlay(overlayOptions);
 }
 
 function getCookies() {

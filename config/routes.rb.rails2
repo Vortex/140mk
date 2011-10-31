@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'welcome'
     admin.resources :polls
   end
-  
+
   map.login "/login", :controller => "sessions", :action => "create"
   map.logout "/logout", :controller => "sessions", :action => "destroy"
   map.settings "/settings", :controller => "settings", :action => "index"

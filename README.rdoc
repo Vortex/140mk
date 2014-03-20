@@ -1,3 +1,5 @@
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Vortex/140mk/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 = 140.mk
 
 * http://140.mk
